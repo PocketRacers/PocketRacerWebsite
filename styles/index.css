@@ -1,0 +1,255 @@
+
+a {
+    color: #2774AE;
+    filter: brightness(1.5);
+}
+
+/* -----start of cover section----- */
+.cover_container {
+    /* text alignment */
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;
+    animation: fade_in 2s;
+
+    /* image */
+    background: url("../images/coverphoto.gif") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+    /* image dimensions and styling */
+    width: 100vw;
+    height: 85vh;
+}
+
+/* cover photo */
+.cover_photo {
+    /* positioning */
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+    /* styling */
+    background-color: #15181b;
+    opacity: 0.35;
+}
+
+/* adjectives over cover photo */
+.text_overlay {
+    /* font syling */
+    font-family: "Darker Grotesque", sans-serif;
+    font-weight: 600;
+    font-size: 6vh;
+    text-align: center;
+    letter-spacing: 7.5px;
+    line-height: 50px;
+
+    /* centering text in middle of photo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    .text_overlay {
+        font-size: 24px;
+    }
+}
+/* -----end of cover section----- */
+
+
+
+/*-----start of about-----*/
+.about {
+    /* positioning */
+    position: relative;
+    top: 75px;
+    margin: 125px;
+
+    /* font */
+    text-align: left;
+    font-size: 34px;
+}
+/*-----end of about-----*/
+
+
+
+/*-----start of avatar-----*/
+
+.avatar {
+    height: 25%;
+    width: 25%;
+}
+
+.user {
+    display: flex;
+    padding-top: 30px;
+}
+
+.user_says {
+    /* positioning */
+    display: flex;
+    padding-left: 20px;
+
+    /* font styling */
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .avatar {
+        height: 15%;
+        width: 15%;
+    }
+    .user {
+        flex-direction: column;
+        align-items: center;
+        margin: 25px;
+    }
+}
+/*-----end of avatar-----*/
+
+
+/*-----start of curriculum-----*/
+.curriculum {
+    /* positioning */
+    position: relative;
+    margin: 75px;
+}
+
+.about_section {
+    /* font styling */
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+
+    /* positioning */
+    margin-left: 125px;
+    margin-right: 125px;
+    margin-bottom: 50px;
+
+}
+
+@media (max-width: 768px) {
+    .curriculum, .about_section {
+        margin: 25px;
+    }
+}
+/*-----end of curriculum-----*/
+
+
+
+/*-----start of projects-----*/
+.projects {
+    margin: 125px;
+}
+
+@media (max-width: 768px) {
+    .projects {
+        margin: -100px; /* double check this value */
+    }
+}
+
+.section_title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 34px;
+    letter-spacing: 1.5px;
+}
+
+.project_title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 0.75em;
+}
+
+.projects_wrapper {
+    display: flex;
+}
+
+.projects_image_wrapper {
+    /* positioning DOUBLE CHECK THESE*/
+    position: relative;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .projects_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.navigation_project {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+}
+
+.overlay {
+    /* overlay */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.container:hover .overlay {
+    /* opacity on hover */
+    opacity: 0.75;
+}
+
+.project_image {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.image_description {
+    font-size: 20px;
+    text-align: left;
+}
+
+.project_about {
+    padding: 0px 0.5em;
+    display: grid;
+    margin: 10px;
+    width: 50%;
+    /*border: 1px solid blue;*/
+}
+
+.more_info {
+    /* font styling */
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-size: 2.5vw;
+    /*font-size: 24px;*/
+
+    /* center text */
+    margin:  0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+/*-----end of projects-----*/

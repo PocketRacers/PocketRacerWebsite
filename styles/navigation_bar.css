@@ -1,0 +1,95 @@
+
+.navigation_container {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.home_link {
+    /* positioning */
+    position: absolute;
+    top: -5px;
+    left: 50px;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+
+    /* animation */
+    animation: fade_in 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.home_buttom_image {
+    /* styling */
+    max-height: auto;
+    width: 85px;
+    filter: brightness(0) invert(1);
+
+    /* animation */
+    opacity: 0;
+    animation: fade_in 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.pages_container {
+    /* positioning */
+    top: 20px;
+    right: 0px;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navigation_link {
+    /* positioning */
+    margin-right: 50px;
+    margin-bottom: 0px;
+
+    /* font styling */
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    opacity: 0;
+    text-decoration: none;
+
+    /* animation */
+    animation: fade_in 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.underline {
+  position: relative;
+}
+
+/* Animate an underline when hovering over machine */
+.navigation_link:before, .underline:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -1px;
+  /*bottom: -2%;*/
+  left: 0;
+  background-color: #FFF;
+  opacity: 1;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navigation_link:hover:before, .underline:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    .pages_container {
+        justify-content: safe center;
+    }
+
+    .navigation_link {
+        margin: 5px;
+    }
+}

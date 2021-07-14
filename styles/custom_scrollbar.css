@@ -1,0 +1,23 @@
+
+/* entire scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* track of scrollbar */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* draggable scrolling handle */
+::-webkit-scrollbar-thumb {
+    /* make it with rounded edges */
+    border-radius: 10px;
+}
+
+/* handle */
+::-webkit-scrollbar-thumb {
+    background: #1295D8; 
+ 
+}
+

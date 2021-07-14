@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruin Electric Autonomous Racing</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- style sheets -->
+    <link href="./styles/all_pages.css" rel="stylesheet">
+    <link href="./styles/index.css" rel="stylesheet">
+    <link href="./styles/animations.css" rel="stylesheet">
+    <link href="./styles/custom_scrollbar.css" rel="stylesheet">
+    <link href="./styles/navigation_bar.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- cover animation gif -->
+    <article class="cover_container">
+        <div class="text_overlay">
+            <p>ENGINEERING</p>
+            <p>ACCESSIBILITY</p>
+            <p>RESEARCH</p>
+        </div>
+    </article>
+
+    <!-- home bar -->
+    <nav class="navigation_container">
+        <a class="home_link" href="./index.html">
+            <img class="home_buttom_image" src="./images/home_button_image.svg" alt="home_button_image">
+        </a>
+        <div class="pages_container">
+            <a class="navigation_link" href="./pages/machine.html">MACHInE</a>
+            <a class="navigation_link" href="./index.html">OP-CAS</a>
+            <a class="navigation_link" href="./pages/team.html">TEAM</a>
+            <a class="navigation_link" href="./index.html">CONTACT</a>
+            <a class="navigation_link" href="./pages/index_korean.html">한국어</a>
+        </div>
+    </nav>
+
+    <!-- about -->
+    <section class="about">
+        <p>At <b class="bold">Bruin Electric Autonomous Racing</b>, our goal is to enable researchers tackle difficult problems concerning high-speed autonomy through scalable methods. To achieve that, we've made our miniature platforms open-source as to encourage autonomous races to race together and have fun!</p>
+    </section>
+
+    <section class="gap">
+    </section>
+
+    <!-- curriculum -->
+    <section class="curriculum">
+        <h1 class="section_title">BEAR x IEEE</h1>
+        <p class="about_section">In an effort to realize our goal of making autonomous racing fun, we've connected with the <a href="http://ieeebruins.com/about">Institute of Electrical and Electronics Engineers</a> at the University of California, Los Angeles to allow undergraduate students to race their autonomous vehicles against each other. Check out what the BEAR team has to say:</p>
+        <div class="user">
+            <!-- curriclum developer 1 -->
+            <img class="avatar" src="./images/user3.png">
+            <p class="user_says">"Arteque et negabant. Fidentibusque uelutique de hispaniam. Confecto miscenturque priscique, ab adspiranta imperitum, proferamini, et e arcebas proferebas crudelitate sideremusque iuvaveroque, laqueum collabamque. Uersabitis altorumque."<br>Jesse Cha – UCLA PhD Candidate / SCaR Research Lead</p>
+        </div>
+        <div class="user">
+            <!-- curriclum developer 2 -->
+            <img class="avatar" src="./images/user1.png">
+            <p class="user_says">"Ipateant a suspectus a adgnosciebatque ab populus. Percontatione quotannis memoraverimus saeveruntque, aut fugiebasque humanarum et ueniamusque, purgandoque levabamusque dissimulantem. Commiseras."<br>Jeremy Louie – Curriculum Developer / ScAR Undergraduate Researcher</p>
+        </div>
+        <div class="user">
+            <!-- curriclum developer 3 -->
+            <img class="avatar" src="./images/user2.png">
+            <p class="user_says">"Fidimus fundebaris et ululavi decertamusque, piscesque e cesserisque adiecit exploravero vitavissimus depromimus in de acceptus aut destituaverat, implessabamus, potitiorum aut in gesturosque de deaeque, comparatque, trepidabantque, ex paraverintque per pandenteque."<br>Aaron Kuo – Curriculum Developer / IEEE Aircopter Lead</p>
+        </div>
+    </section>
+
+    <section class="gap" style="height: 25px">
+    </section>
+
+    <!-- projects -->
+    <section class="projects">
+        <h1 class="section_title">Our Projects</h1>
+        <div class="projects_wrapper">
+
+            <!-- MACHInE -->
+            <div class="project_about">
+                <div class="projects_image_wrapper">
+                    <a class="navigation_project" href="./pages/machine.html">
+                        <h2 class="project_title">Multi-agent Autonomous Cars for<br>High-speed, Indoor Environments</h2>
+                        <div class="container">
+                            <img class="project_image" src="./images/machine.gif" alt="machine.gif">
+                            <div class="overlay">
+                                <p class="more_info">The Science Behind MACHInE</p>
+                            </div>
+                        </div>
+                    </a>                        
+                        <p class="image_description">Moving at 24 mph (350 mph to scale) these Multi-Agent Autonomous Cars for High-Speed, Indoor Environments (MACHInE) dominate the highway scenario without the need for any driver.</p>
+                </div>
+            </div>
+
+            <!-- OP-CAS -->
+            <div class="project_about">
+                <div class="projects_image_wrapper">
+                    <a class="navigation_project" href="./pages/opcas.html">
+                        <h2 class="project_title">Collision Avoidance with<br>Overtaking Maneuvers</h2>
+                        <div class="container">
+                            <img class="project_image" src="./images/op_cas.gif" alt="op_cas.gif">
+                            <div class="overlay">
+                                <p class="more_info">The Research Behind OP-CAS</p>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="image_description">With an end-to-end autonomous driving algorithm, the Overtaking Procedure for Collision Avoidance Systems (OP-CAS) is not only cheap on hardware, but also easy to deploy on embedded systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gap">
+    </section>
+
+    <!-- footer -->
+    <footer class="document_footer">
+        <p>Robotics and Mechanisms Laboratory (RoMeLa)<br>Department of Mechanical and Aerospace Engineering<br>University of California, Los Angeles (UCLA)<br>LA, CA, USA, 90095</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,217 @@
+
+a {
+    text-decoration: underline;
+    color: var(--blue);
+}
+
+.about {
+    font-size: 20px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+.title {
+    /* font styling */
+    text-align: center;
+}
+
+.bear_team, .curriculum_dev_team {
+    /* positioning */
+    position: relative;
+    margin: 225px;
+}
+
+@media (max-width: 768px) and (max-aspect-ratio: 3/2) {
+    .bear_team, .curriculum_dev_team {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+    }
+}
+
+.avatar {
+    /* image dimensions */
+    height: auto;
+    width: 75%;
+}
+
+@media (max-width: 768px) and (max-aspect-ratio: 3/2) {
+    .avatar {
+        /* padding */
+        margin-bottom: 35px;
+    }
+}
+
+/*.team-page {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    min-height: 43.89vh;
+
+    display: flex;
+}*/
+
+.jesse, .alex, .dennis, .jeremy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: auto;
+
+    background-size: cover;
+}
+
+.alex:hover > .team-member-title, .alex:hover > .team-member-subtitle, .alex:hover > .team-member-description,
+.jesse:hover > .team-member-title, .jesse:hover > .team-member-subtitle, .jesse:hover > .team-member-description,
+.dennis:hover > .team-member-title, .dennis:hover > .team-member-subtitle, .dennis:hover > .team-member-description, 
+.jeremy:hover > .team-member-title, .jeremy:hover > .team-member-subtitle, .jeremy:hover > .team-member-description, {
+    visibility: visible;
+    transition-delay: visibility 0s;
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media (min-width: 768px) and (max-aspect-ratio: 3/2)  {
+    .jesse, .alex, .dennis {
+        background-size: cover;
+
+        width: 33.3vw;
+        height: 43.89vh;
+
+        position: relative;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-page {
+        flex-direction: column;
+    }
+
+    .team-member-subtitle {
+        padding-bottom: 16px;
+    }
+
+    .team-member-description {
+        padding-bottom: 40px;
+    }
+}
+
+.team-member-title {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.team-member-description {
+    font-size: 100%;
+    max-width: min(95%, 25em);
+    text-align: center;
+    margin: auto;
+}
+
+.team-member-title, .team-member-subtitle, .team-member-description {
+    visibility: hidden;
+    /* transition-delay: visibility 0.1s; */
+
+}
+
+.team-member-linkedin {
+    text-decoration: underline;
+    color: rgb(94, 153, 255); /* light blue */
+}
+
+@media (max-width: 768px) {
+    .member-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member__image-wrapper {
+        width: 75%;
+    }
+
+    .member__about {
+        width: 100%;
+        margin-left: 4px;
+    }
+
+    .member__about p {
+        margin-top: -4px;
+    }
+}
+
+@media (min-width: 769px) {
+    .member-wrapper {
+        flex-direction: row;
+    }
+
+    .member__about p {
+        margin-top: -4px;
+        font-size: 20px;
+    }
+
+    .member__image-wrapper {
+        width: 45%;
+    }
+
+    .member__about {
+        width: 50%;
+    }
+}
+
+.member {
+    margin-top: 100px;
+}
+
+.member-wrapper {
+    display: flex;
+}
+
+.member__image-wrapper {
+    text-align: center;
+    /* width: 50%; */
+}
+
+.member__about {
+    /* width: 50%; */
+    /*padding: 0px 1em;*/
+    /* margin-top: 40px; */
+
+    display: grid;
+
+     /*flex-direction: column; */
+    /* align-items: stretch; */
+}
+
+.member__image-wrapper img {
+    max-width: 100%;
+}
+
+.member__name {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 0px;
+    /*margin-bottom: 0.75em;*/
+}
+
+.member__role {
+    /* framing */
+    /*margin-top: 5px;*/
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+    /* font styling */
+    font-size: 20px;
+    text-align: center;
+    /* padding-bottom: 20px; */
+}
+
+body {
+     /* page fade */
+    opacity: 0;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; /* Safari */
+}
