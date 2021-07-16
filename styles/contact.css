@@ -1,0 +1,94 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact__label {
+    padding-bottom: 4px;
+  }
+  .contact__input {
+    margin-bottom: 8px;
+  }
+  .contact__submit {
+    width: auto;
+  }
+  
+  /* .contact__email { width: 50%; } */
+  /* .contact__email { width: 100%; } */
+  .contact__email,
+  #subject {
+    height: 32px;
+  }
+  #message,
+  .contact__submit {
+    font-family: 'Oxygen';
+  }
+  #message {
+    height: 160px;
+    margin-bottom: 12px;
+  }
+  
+  .contact__submit {
+    width: 100px;
+    padding: 8px 0px;
+  
+    color: white;
+    background-color: #121212;
+    border-radius: 4px;
+    font-size: 24px;
+  }
+  
+  .contact__submit:hover {
+    cursor: pointer;
+  }
+  
+  .contact-wrapper {
+    display: grid;
+    grid-column-gap: 8px;
+  }
+  @media (min-width: 767px) {
+    .contact-wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact__image {
+      max-width: 50%;
+    }
+  }
+  
+  .contact__image {
+    display: block;
+  
+    /* margin: 0 auto; */
+  
+    width: 95%;
+    border-radius: 6px;
+    /* text-align: center; */
+  }
+  
+  .mailing-list__wrapper {
+    display: flex;
+    flex-direction: column;
+  
+    /* justify-content: center; */
+    align-items: center;
+  }
+  
+  .mailing-list {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  
+    min-width: 50%;
+    width: 50%;
+  }
+  
+  /*.contact__submit {
+     align-self: center; 
+  }*/
