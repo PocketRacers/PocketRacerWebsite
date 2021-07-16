@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Website designed & developed by Raj Piskala / https://github.com/RogueArt -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" href="../favicon.jpg"/>
+  <link rel="stylesheet" href="../styles/contact.css">
+  <link rel="stylesheet" href="../styles/team.css">
+  <link rel="stylesheet" href="../styles/docs.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet"> 
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">  -->
+  <script src="https://kit.fontawesome.com/ed0f1d3a9f.js" crossorigin="anonymous"></script>
+  <title>Contact</title>
+</head>
+<body>
+  <!-- Header -->
+  <docs-header></docs-header>
+
+  <!-- Contains documentation -->
+  <article  class="docs-content"> 
+    <!-- Contact Section -->
+    <section>
+      <h1 class="section-title">
+        <a class="no-underline toc-link" href="#algorithm">✉️ Contact </a>
+      </h1>
+
+      <p>If you're interested in autonomous vehicles, shoot us an email and get involved with us! </p>
+    
+      <div class="contact-wrapper">
+        <img class="contact__image" src="../images/landing-page/machine.gif" alt="Gif of one of the cars being placed on a rotating pedestal, with the car displayed at all angles.">
+
+        <!-- Sends the data as JSON to EmailJS -->
+        <!-- Serverless - Set action to this https://api.emailjs.com/api/v1.0/email/send -->
+        <form id="contact-form" class="contact-form" action="/contact-mail" method="POST"> 
+          <label for="email" class="contact__label">* Email: </label>
+          <input type="email" class="contact__input contact__email" id="email" name="email" required autofocus>
+
+          <label for="subject" class="contact__label">* Subject: </label>
+          <input type="text" class="contact__input" id="subject" name="subject" required>
+
+          <label for="message" class="contact__label">* Message: </label>
+          <textarea type="text" class="contact__input" id="message" name="message" required></textarea>
+
+          <input type="submit" class="contact__submit" id="submit" value="Submit" />
+        </form>
+      </div>
+
+      <section class="mailing-list__wrapper"> 
+        <form class="mailing-list contact-form" action="">
+          <h1 class="section-title">
+            <a class="no-underline toc-link" href="#algorithm">✉️ Mailing List </a>
+          </h1>
+      
+          <p>Or just join our mailing list here:</p>
+
+          <label for="email" class="contact__label">* Email: </label>
+          <input type="email" class="contact__input contact__email mailing-list__email" required autofocus>
+
+          <input style="margin-top: 8px;" type="submit" class="contact__submit" value="Submit" />
+        </form>
+      </section>
+
+    </section>
+      
+
+  </article>
+  <!-- Website designed & developed by Raj Piskala / https://github.com/RogueArt -->
+  <!-- Footer with information about the site -->
+  <docs-footer></docs-footer>
+</body>
+<script src="../common/docs.js"></script>
+</html>
