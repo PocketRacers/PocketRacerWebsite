@@ -77,6 +77,13 @@ a {
     text-align: left;
     font-size: 34px;
 }
+
+@media (max-width: 768px) {
+    .about {
+        margin: 35px;
+        font-size: 22px;
+    }
+}
 /*-----end of about-----*/
 
 
@@ -141,6 +148,7 @@ a {
 @media (max-width: 768px) {
     .curriculum, .about_section {
         margin: 25px;
+        font-size: 22px;
     }
 }
 /*-----end of curriculum-----*/

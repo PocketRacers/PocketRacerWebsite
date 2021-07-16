@@ -85,11 +85,20 @@
 }
 
 @media (max-width: 768px) {
-    .pages_container {
-        justify-content: safe center;
+    .cover_container {
+        height: 110vh;
     }
 
-    .navigation_link {
-        margin: 5px;
+    .home_link {
+        top: 5px;
+        left: 15px;
+    }
+
+    .pages_container {
+         visibility: hidden;        
+    }
+
+    .body {
+        margin: auto;
     }
 }

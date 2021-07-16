@@ -8,10 +8,11 @@
 .table_of_contents {
     /* positiong */
     position: fixed;
-    left: 1em;
-    top: 5em;
+    left: 3.5em;
+    top: 8em;
     padding: 1em;
-    width: 14em;
+    height: 100%;
+    width: 12em;
 
     /* font syling */
     line-height: 2;
@@ -21,8 +22,15 @@
     justify-content: flex-end;
 
     /* styling */
-/*    background-color: var(--light_blue);
-    opacity: 0.85;*/
+    /*background: rgb(31,34,37);*/
+    /*border: 2px solid white;*/
+    /*border-radius: 5px;*/
+}
+
+@media (max-width: 768px) {
+    .table_of_contents {
+        visibility: hidden;
+    }
 }
 
 .table_of_contents ul {
@@ -37,7 +45,8 @@
 
 .table_of_contents li a {
     display: inline-block;
-    color: var(--light_gray);
+    color: white;
+    opacity: 0.85;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.230, 1.000, 0.320, 1.000);
 }
@@ -73,5 +82,6 @@
     
     /* on hover, fade color */
     color: white;
+    opacity: 1;
     transition: 1s;
 }
