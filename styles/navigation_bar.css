@@ -1,4 +1,5 @@
 
+/*-----desktop stuff-----*/
 .navigation_container {
     position: absolute;
     top: 0px;
@@ -102,3 +103,102 @@
         margin: auto;
     }
 }
+
+.mobile_pages_container, .close_menu_bar {
+    display: none;
+}
+/*-----desktop stuff-----*/
+
+
+
+/*-----mobile stuff-----*/
+.mobile_navigation_container {
+    visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    .mobile_navigation_container {
+        visibility: visible;
+
+        /* positioning */
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: auto;
+    }
+
+    .mobile_menu_bar {
+        height: 64px;
+        width: auto;
+
+        /* animations */
+        opacity: 0;
+        animation: fade_in 1s forwards;
+        animation-delay: 0.5s;
+    }
+
+    .mobile_pages_container {
+        /* positioning */
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+
+        /* background color */
+        background-color: gray;
+
+        /* fade in */
+        animation: mobile_fade_in 0.5s forwards;
+    }
+
+    .mobile_navigation_link {
+        /* positiong */
+        position: relative;
+        top: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        /* framing */
+        width: 100px;
+        padding: 10px;
+
+        /* text styling */
+        font-weight: 600;
+        font-size: 32px;
+    }
+
+    .mobile_navigation_link {
+        text-decoration: none;
+        color: white;
+    }
+
+    .mobile_navigation_link:visited {
+        text-decoration: none;
+        color: white;
+    }
+
+    .close_menu_bar {
+        /* positiong */
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+
+        /* styling */
+        opacity: 0.85;
+
+        /* framing */
+        height: 48px;
+        width: auto;
+    }
+
+    .close_div {
+        display: block;
+    }
+}
+/*-----mobile stuff-----*/
