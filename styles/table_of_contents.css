@@ -30,6 +30,7 @@
 @media (max-width: 768px) {
     .table_of_contents {
         visibility: hidden;
+        display: flex;
     }
 }
 
