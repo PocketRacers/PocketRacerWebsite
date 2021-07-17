@@ -1,35 +1,73 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Website designed & developed by Raj Piskala / https://github.com/RogueArt -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/jpg" href="../favicon.jpg"/>
-  <link rel="stylesheet" href="../styles/contact.css">
-  <link rel="stylesheet" href="../styles/team.css">
-  <link rel="stylesheet" href="../styles/docs.css">
-  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet"> 
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">  -->
-  <script src="https://kit.fontawesome.com/ed0f1d3a9f.js" crossorigin="anonymous"></script>
-  <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+
+    
+    <!-- style sheets -->
+    <link href="../styles/all_pages.css" rel="stylesheet">
+    <link href="../styles/animations.css" rel="stylesheet">
+    <link href="../styles/custom_scrollbar.css" rel="stylesheet">
+    <link href="../styles/fade_load.css" rel="stylesheet">
+    <link href="../styles/navigation_bar.css" rel="stylesheet">
+    <link href="../styles/contact.css" rel="stylesheet">
+    <!-- scripts <script src="../scripts/table_of_contents.js"></script> -->
+    
+   
+  
 </head>
-<body>
+<body onload="document.body.style.opacity='1'">
+
+    <div class="left"></div>
+    <div class="right"></div>
+
+<!-- Spacer-->
+<section class="gap" style="height: 50px">
+
+  </section>
+    <!-- home bar -->
+    <nav class="navigation_container">
+        <!-- home bar -->
+        <a class="home_link" href="../index.html">
+            <img class="home_buttom_image" src="../images/home_button_image.svg" alt="home_button_image">
+        </a>
+        <div class="pages_container">
+            <a class="navigation_link" href="./machine.html">MACHInE</a>
+            <a class="navigation_link" href="./opcas.html">OP-CAS</a>
+            <a class="navigation_link" href="./team.html">TEAM</a>
+            <a class="navigation_link" href="./contact.html">CONTACT</a>
+        </div>
+    </nav>
   <!-- Header -->
   <docs-header></docs-header>
 
   <!-- Contains documentation -->
   <article  class="docs-content"> 
+    
     <!-- Contact Section -->
     <section>
-      <h1 class="section-title">
-        <a class="no-underline toc-link" href="#algorithm">✉️ Contact </a>
-      </h1>
+      <section>
+        <div class="contact-wrapper">
+            <h2 class="contact_title">Contact</h2>
+            
+        </div>
+    </section>
+      
 
       <p>If you're interested in autonomous vehicles, shoot us an email and get involved with us! </p>
     
       <div class="contact-wrapper">
-        <img class="contact__image" src="../images/landing-page/machine.gif" alt="Gif of one of the cars being placed on a rotating pedestal, with the car displayed at all angles.">
+        <img class="contact__image" src="../images/machine.gif" alt="Gif of one of the cars being placed on a rotating pedestal, with the car displayed at all angles.">
 
         <!-- Sends the data as JSON to EmailJS -->
         <!-- Serverless - Set action to this https://api.emailjs.com/api/v1.0/email/send -->

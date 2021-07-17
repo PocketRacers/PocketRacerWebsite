@@ -45,6 +45,7 @@
   .contact-wrapper {
     display: grid;
     grid-column-gap: 8px;
+    width: auto;
   }
   @media (min-width: 767px) {
     .contact-wrapper {
