@@ -24,6 +24,13 @@ a {
     height: 85vh;
 }
 
+@media (max-width: 768px) {
+    .cover_container {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 /* cover photo */
 .cover_photo {
     /* positioning */
@@ -243,6 +250,12 @@ a {
 .image_description {
     font-size: 20px;
     text-align: left;
+}
+
+@media (max-width: 768px)  {
+    .image_description {
+        font-size: 18px;
+    }
 }
 
 .project_about {
