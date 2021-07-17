@@ -45,6 +45,23 @@
     scroll-behavior: smooth;
 }
 
+@media (max-width: 768px) {
+    .machine_image {
+        height: 50%;
+        width: auto;
+    }
+
+    .machine_title {
+        size: 12px;
+    }
+
+    .content {
+        float: right;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .content::-webkit-scrollbar {
   display: none;
@@ -112,11 +129,25 @@
     filter: brightness(1.5);
 }
 
+.project_body {
+    /*background-color: yellow;*/
+}
+
 body {
     margin: 0px;
     height: 100%;
 
     /* page fade */
-    opacity: 0;
-    transition: opacity 1.25s;
+/*    opacity: 0;
+    transition: opacity 1.25s;*/
+}
+
+@media (max-width: 768px) {
+    .left {
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
 }
