@@ -1,0 +1,58 @@
+
+.content {
+    /* positoning and framing */
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: auto;
+    margin-left: 300px;
+    margin-right: 125px;
+
+    /* enable smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+.title_wrapper {
+    text-align: center;
+}
+
+.machine_title {
+    font-size: 36px;
+}
+
+.project_body {
+    font-size: 20px;
+}
+
+.hardware {
+    text-align: center;
+    /*width: 55%;*/
+    /*height: auto*/
+
+    background-color: yellow;
+}
+
+.sub_note {
+    margin-left: 50px;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+} 
+
+.col {
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+body {
+    /* animations */
+    animation: fade_in 1.75s ease forwards;
+}
