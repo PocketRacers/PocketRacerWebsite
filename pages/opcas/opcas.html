@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <title>MACHInE</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- style sheets -->
+    <link href="../../styles/all_pages.css" rel="stylesheet">
+    <link href="../../styles/opcas_table_of_contents.css" rel="stylesheet">
+    <link href="../../styles/opcas.css" rel="stylesheet">
+    <link href="../../styles/animations.css" rel="stylesheet">
+    <link href="../../styles/custom_scrollbar.css" rel="stylesheet">
+    <link href="../../styles/navigation_bar.css" rel="stylesheet">
+
+    <!-- scripts -->
+    <script src="../../scripts/table_of_contents.js"></script>
+    <script async src="../../scripts/index.js"></script>
+</head>
+<body>
+    <!-- home bar -->
+    <nav class="navigation_container">
+        <!-- home bar -->
+        <a class="home_link" href="../../index.html">
+            <img class="home_buttom_image" src="../../images/home_button_image.svg" alt="home_button_image">
+        </a>
+        <div class="pages_container">
+            <a class="navigation_link" href="../machine.html">MACHInE</a>
+            <a class="navigation_link" href="./opcas.html">OP-CAS</a>
+            <a class="navigation_link" href="../team.html">TEAM</a>
+            <a class="navigation_link" href="../contact.html">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- mobile home bar -->
+    <nav class="mobile_navigation_container">
+        <a href="javascript:void(0);" onclick="toggleMenuBar()">
+            <img class="mobile_menu_bar" src="../../images/ios_images/menu_bar.png" alt="hamburger_menu_bar">
+        </a>
+        <div class="mobile_pages_container" id="mobile_pages_container_1">
+            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()">
+                <img class="close_menu_bar" src="../../images/ios_images/close_menu_bar.png" alt="close_menu_bar">
+            </a>
+            <a class="mobile_navigation_link" href="../machine.html">MACHInE</a>
+            <a class="mobile_navigation_link" href="./index.html">OP-CAS</a>
+            <a class="mobile_navigation_link" href="../team.html">TEAM</a>
+            <a class="mobile_navigation_link" href="../contact.html">CONTACT</a>
+            <a class="mobile_navigation_link" href="../index_korean.html">한국어</a>
+        </div>
+    </nav>
+
+    <!-- table of contents -->
+    <!-- credit: https://codepen.io/pubwriter/pen/ZgLzYV -->
+    <nav class="table_of_contents">
+        <p class="table_of_contents_section" style="color: #2774AE; filter: brightness(1.5); opacity: 0.9">GETTING STARTED</p>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#scenarios">Scenarios</a></li>
+        </ul>
+
+        <p class="table_of_contents_section">OVERVIEW</p>
+        <ul>
+            <li><a href="#hardware_setup">Hardware Setup</a></li>
+            <li><a href="#algorithm">Algorithm</a></li>
+            <li><a href="#results">Results</a></li>
+        </ul>
+        <!-- this doesn't work -->
+        <svg class="table_of_contents_marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="#fff" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+        </svg>
+    </nav>
+
+    <section class="content">
+        <!-- cover intro -->
+        <section>
+            <div class="title_wrapper">
+                <h2 class="machine_title">Multi-Agent Autonomous Cars for High-Speed, Indoor Environments</h2>
+                <img class="machine_image" src="../../images/op_cas.gif" alt="op_cas">
+                <p><i>Figure 1: two radio control (RC) cars demonstration</i></p>
+            </div>
+        </section>
+
+        <section class="gap" style="height: 25px">
+        </section>
+
+        <!-- intro -->
+        <h2 id="introduction">Introduction</h2>
+        <section class="project_body">
+            <p>With MACHInE, we present a <b class="bold">novel collision avoidance system</b> for autonomous vehicles that focuses on overtaking procedures. Our algorithm selectively records the expert’s corrective driving behavior during data collection. This is performed while recording oscillatory driving behavior when the vehicle is returning to the center of the lane. This data augmentation method addresses the issue of covariate shift – of which is also commonly found in behavioral cloning methods. This approach is computationally inexpensive, thus making it a <b class="bold">viable option for real time embedded deployment.</b> Despite the small data subset to model the overtaking sequence, the results indicated that two expert drivers demonstrated overtaking behaviors. The overtaking maneuvers were deployed in real-time on an 1/8th scale radio control car platform, thus validating OP-CAS for <b class="bold">civilian vehicle safety applications.</b></p>
+        </section>
+
+        <section class="gap">
+        </section>
+
+        <h2 id="scenarios">Scenarios</h2>
+        <section class="project_body">
+            <p>Our research is divided into two scenarios – of which are imitative of realistic scenarios.</p>
+            <div class="row">
+                <!-- scenario A -->
+                <div class="col">
+                    <h3>Case A: Overtaking Straights</h3>
+                    <img style="width: 50%; height: auto;" src="../../images/caseA.png" alt="caseA">
+                    <p style="text-align: left;">One of the vehicles performs overtaking procedures on straights. This is commonly seen in cases of road obstruction – such as swerving to avoid animals or pedestrians.</p>
+                </div>
+
+                <!-- scenario B -->
+                <div class="col">
+                    <h3>Case B: Overtaking Corners</h3>
+                    <img style="width: 50%; height: auto" src="../../images/caseB.png" alt="caseB">
+                    <p>The other vehicle overtakes the opposing vehicle (through the inside / outside lane). This is commonly seen in cases of the opposing vehicle driving slower than the other.</p>
+                </div>
+            </div>
+        </section>
+
+        <p class="next_page">
+            Check out our&nbsp;<a class="next_page_link" href="./overview/opcas_overview.html">OP-CAS algorithm</a>&nbsp;>>>
+        </p>
+    </section>
+
+    <section class="gap">
+    </section>
+
+    <!-- footer -->
+    <footer class="document_footer">
+        <p>Robotics and Mechanisms Laboratory (RoMeLa)<br>Department of Mechanical and Aerospace Engineering<br>University of California, Los Angeles (UCLA)<br>LA, CA, USA, 90095</p>
+    </footer>
+</body>
+</html>
