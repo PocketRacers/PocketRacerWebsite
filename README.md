@@ -1,3 +1,3 @@
 ## Bruin Engineer Autonomous Racing
 
-Working on OPCAS page
+A static website
