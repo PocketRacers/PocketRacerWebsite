@@ -19,35 +19,44 @@
     <link href="../styles/custom_scrollbar.css" rel="stylesheet">
     <link href="../styles/navigation_bar.css" rel="stylesheet">
 </head>
-<body onload="document.body.style.opacity='1'">
+<body>
 
     <!-- home bar -->
     <nav class="navigation_container">
+        <!-- home bar -->
         <a class="home_link" href="../index.html">
             <img class="home_buttom_image" src="../images/home_button_image.svg" alt="home_button_image">
         </a>
         <div class="pages_container">
-            <a class="navigation_link" href="./machine.html">MACHInE</a>
-            <a class="navigation_link" href="./opcas.html">OP-CAS</a>
+            <a class="navigation_link" href="./machine/machine.html">MACHInE</a>
+            <a class="navigation_link" href="./opcas/opcas.html">OP-CAS</a>
             <a class="navigation_link" href="./team.html">TEAM</a>
             <a class="navigation_link" href="./contact.html">CONTACT</a>
         </div>
     </nav>
 
-<!--     <section class="gap">
-    </section> -->
-
-    <div class="left"></div>
-    <div class="right"></div>    
+    <!-- mobile home bar -->
+    <nav class="mobile_navigation_container">
+        <a href="javascript:void(0);" onclick="toggleMenuBar()">
+            <img class="mobile_menu_bar" src="../images/ios_images/menu_bar.png" alt="hamburger_menu_bar">
+        </a>
+        <div class="mobile_pages_container" id="mobile_pages_container_1">
+            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()">
+                <img class="close_menu_bar" src="../images/ios_images/close_menu_bar.png" alt="close_menu_bar">
+            </a>
+            <a class="mobile_navigation_link" href="./machine/machine.html">MACHInE</a>
+            <a class="mobile_navigation_link" href="./index.html">OP-CAS</a>
+            <a class="mobile_navigation_link" href="./team.html">TEAM</a>
+            <a class="mobile_navigation_link" href="./contact.html">CONTACT</a>
+            <a class="mobile_navigation_link" href="./index_korean.html">한국어</a>
+        </div>
+    </nav>    
 
     <!-- bear team -->
     <section class="bear_team">
         <h1 class="title">Bruin Electric Autonomous Racing (BEAR) Team</h1>
         <p class="about">It's safe to say that building autonomous vehicles is a difficult task to be completed by one person alone. Meet the team of individuals who have came together to align their passions and innovate technology.</p>
 
-<!--         <section class="gap" style="height: 50px">
-        </section>
- -->
         <!-- dennis -->
         <section class="member">
             <h2 class="member__name"><b>Dr. Dennis Hong</b></h2>
@@ -112,8 +121,22 @@
         <h1 class="title">Curriculum Development Team</h1>
         <p class="about">Building the curriculum needed to allow undergraduate students to build their own self-driving autonomous vehicles is no easy feat as well. Meet the team of undergraduate students who have dedicated their time to make the small scale robots truly open-source.</p>
 
-<!--         <section class="gap" style="height: 50px">
-        </section> -->
+         <!-- aaron -->
+        <section class="member">
+            <h2 class="member__name"><b>Aaron Kuo</b></h2>
+            <p class="member__role"><i>IEEE Aircopter Lead & Curriculum Developer</i></p>
+            <div class="member-wrapper">
+                <div class="member__image-wrapper">
+                    <!-- image -->
+                    <img class="avatar" src="../images/aaron_kuo.jpg" alt="aaron">
+                </div>
+
+                <!-- about -->
+                <div class="member__about">
+                    <p>My name is <a class="team-member-linkedin" href="https://www.linkedin.com/in/aaronjameskuo/">Aaron Kuo</a>, and I am fourth year undergraduate studying Electrical Engineering at UCLA. For these past two years, I've been an Officer Board of Institute of Electrical and Electronics Engineers (IEEE) at UCLA as an Aircopter Co-Lead during 2020 - 2021, and as R&D Lead during 2021 - 2022.<br><br>I enjoy extending the skills and concepts I've learned in courses in the real world, which is why I've been heavily involved in IEEE throughout my college experience. From Aircopter to Micromouseto Digital Audio Visualizer, I've enjoyed every second of my timewith the IEEE projects offered at UCLA.<br><br>My passion for electrical engineering has also paved the way formy interest in computers as well. Assembling computers, building keyboards, playing video games, coding, you name it. Outside of the house, I love playing and watching just about all sports, namely hockey, football, basketball, and soccer.</p>
+                </div>
+            </div>
+        </section>
 
         <!-- jeremy -->
         <section class="member">
@@ -132,19 +155,19 @@
             </div>
         </section>
 
-         <!-- aaron -->
+         <!-- david -->
         <section class="member">
-            <h2 class="member__name"><b>Aaron Kuo</b></h2>
-            <p class="member__role"><i>IEEE Aircopter Lead & Curriculum Developer</i></p>
+            <h2 class="member__name"><b>David</b></h2>
+            <p class="member__role"><i>BEAR Undergradatuate Researcher / Curriculum Developer</i></p>
             <div class="member-wrapper">
                 <div class="member__image-wrapper">
                     <!-- image -->
-                    <img class="avatar" src="../images/aaron_kuo.jpg" alt="aaron">
+                    <img class="avatar" src="../images/david_feng.jpg" alt="david">
                 </div>
 
                 <!-- about -->
                 <div class="member__about">
-                    <p>My name is <a class="team-member-linkedin" href="https://www.linkedin.com/in/aaronjameskuo/">Aaron Kuo</a>, and I am fourth year undergraduate studying Electrical Engineering at UCLA. For these past two years, I've been an Officer Board of Institute of Electrical and Electronics Engineers (IEEE) at UCLA as an Aircopter Co-Lead during 2020 - 2021, and as R&D Lead during 2021 - 2022.<br><br>I enjoy extending the skills and concepts I've learned in courses in the real world, which is why I've been heavily involved in IEEE throughout my college experience. From Aircopter to Micromouseto Digital Audio Visualizer, I've enjoyed every second of my timewith the IEEE projects offered at UCLA.<br><br>My passion for electrical engineering has also paved the way formy interest in computers as well. Assembling computers, building keyboards, playing video games, coding, you name it. Outside of the house, I love playing and watching just about all sports, namely hockey, football, basketball, and soccer.</p>
+                    <p>Hi my name is <a class="team-member-linkedin" href="https://www.linkedin.com/in/davidlcfeng/">David Feng</a>, and I am currently a sophomore undergraduate student studying Electrical Engineering at UCLA. I have always enjoyed engineering and the challenges that come with it and despite my freshman year being online, I was still able to join the Aircopter Project at IEEE and participate in the planning of the Prometheus Hybrid Rocket at Rocket Project.<br><br>I love working with my hands, working my way from Legos as a kid to assembling desktops and soldering my own custom designed printed circuit boards in high school and college. I hope to continue to apply this passion towards bigger and better projects like BEAR at UCLA and beyond.<br><br>Outside of school, I enjoy video games, reading, and hanging out with friends. I find that especially after a year of COVID, friends that appreciate who you are are key to a stable mental health.</p>
                 </div>
             </div>
         </section>

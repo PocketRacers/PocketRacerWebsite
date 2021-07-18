@@ -1,4 +1,9 @@
 
+html {
+        /* enable smooth scrolling */
+    scroll-behavior: smooth;
+}
+
 .content {
     /* positoning and framing */
     position: relative;

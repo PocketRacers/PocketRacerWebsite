@@ -1,4 +1,9 @@
 
+html {
+        /* enable smooth scrolling */
+    scroll-behavior: smooth;
+}
+
 .hyperlink {
     color: #2774AE;
     filter: brightness(1.5);
@@ -11,9 +16,6 @@
     margin-bottom: auto;
     margin-left: 390px;
     margin-right: 125px;
-
-    /* enable smooth scrolling */
-    scroll-behavior: smooth;
 }
 
 .machine_image {
