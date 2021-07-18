@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
-    <title>MACHInE</title>
+    <title>OP-CAS< – Getting Started</title>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +27,7 @@
     <script async src="../../scripts/index.js"></script>
 </head>
 <body>
+
     <!-- home bar -->
     <nav class="navigation_container">
         <!-- home bar -->
@@ -69,9 +70,9 @@
 
         <p class="table_of_contents_section">OVERVIEW</p>
         <ul>
-            <li><a href="#hardware_setup">Hardware Setup</a></li>
-            <li><a href="#algorithm">Algorithm</a></li>
-            <li><a href="#results">Results</a></li>
+            <li><a href="./overview/opcas_overview.html#hardware_setup">Hardware Setup</a></li>
+            <li><a href="./overview/opcas_overview.html#algorithm">Algorithm</a></li>
+            <li><a href="./overview/opcas_overview.html#results">Results</a></li>
         </ul>
         <!-- this doesn't work -->
         <svg class="table_of_contents_marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -83,8 +84,8 @@
         <!-- cover intro -->
         <section>
             <div class="title_wrapper">
-                <h2 class="machine_title">Multi-Agent Autonomous Cars for High-Speed, Indoor Environments</h2>
-                <img class="machine_image" src="../../images/op_cas.gif" alt="op_cas">
+                <h2 class="opcas_title">Collision Avoidance with Overtaking Maneuvers</h2>
+                <img class="opcas_image" src="../../images/op_cas.gif" alt="op_cas">
                 <p><i>Figure 1: two radio control (RC) cars demonstration</i></p>
             </div>
         </section>
@@ -95,7 +96,7 @@
         <!-- intro -->
         <h2 id="introduction">Introduction</h2>
         <section class="project_body">
-            <p>With MACHInE, we present a <b class="bold">novel collision avoidance system</b> for autonomous vehicles that focuses on overtaking procedures. Our algorithm selectively records the expert’s corrective driving behavior during data collection. This is performed while recording oscillatory driving behavior when the vehicle is returning to the center of the lane. This data augmentation method addresses the issue of covariate shift – of which is also commonly found in behavioral cloning methods. This approach is computationally inexpensive, thus making it a <b class="bold">viable option for real time embedded deployment.</b> Despite the small data subset to model the overtaking sequence, the results indicated that two expert drivers demonstrated overtaking behaviors. The overtaking maneuvers were deployed in real-time on an 1/8th scale radio control car platform, thus validating OP-CAS for <b class="bold">civilian vehicle safety applications.</b></p>
+            <p>With OP-CAS, we present a <b class="bold">novel collision avoidance system</b> for autonomous vehicles that focuses on overtaking procedures. Our algorithm selectively records the expert’s corrective driving behavior during data collection. This is performed while recording oscillatory driving behavior when the vehicle is returning to the center of the lane. This data augmentation method addresses the issue of covariate shift – of which is also commonly found in behavioral cloning methods. This approach is computationally inexpensive, thus making it a <b class="bold">viable option for real time embedded deployment.</b> Despite the small data subset to model the overtaking sequence, the results indicated that two expert drivers demonstrated overtaking behaviors. The overtaking maneuvers were deployed in real-time on an 1/8th scale radio control car platform, thus validating OP-CAS for <b class="bold">civilian vehicle safety applications.</b></p>
         </section>
 
         <section class="gap">
@@ -108,14 +109,14 @@
                 <!-- scenario A -->
                 <div class="col">
                     <h3>Case A: Overtaking Straights</h3>
-                    <img style="width: 50%; height: auto;" src="../../images/caseA.png" alt="caseA">
+                    <img style="width: 75%; height: auto;" src="../../images/caseA.png" alt="caseA">
                     <p style="text-align: left;">One of the vehicles performs overtaking procedures on straights. This is commonly seen in cases of road obstruction – such as swerving to avoid animals or pedestrians.</p>
                 </div>
 
                 <!-- scenario B -->
                 <div class="col">
                     <h3>Case B: Overtaking Corners</h3>
-                    <img style="width: 50%; height: auto" src="../../images/caseB.png" alt="caseB">
+                    <img style="width: 75%; height: auto" src="../../images/caseB.png" alt="caseB">
                     <p>The other vehicle overtakes the opposing vehicle (through the inside / outside lane). This is commonly seen in cases of the opposing vehicle driving slower than the other.</p>
                 </div>
             </div>

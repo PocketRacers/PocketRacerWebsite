@@ -105,7 +105,7 @@
 }
 
 .mobile_pages_container, .close_menu_bar {
-    display: none;
+    visibility: hidden;
 }
 /*-----desktop stuff-----*/
 
