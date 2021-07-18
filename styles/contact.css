@@ -45,20 +45,26 @@
   .contact-wrapper {
     display: grid;
     grid-column-gap: 8px;
+    
+    text-align: center;
+    font-size: 24px;
     width: auto;
   }
   @media (min-width: 767px) {
     .contact-wrapper {
-      grid-template-columns: 1fr 1fr;
+      
+      grid-template-columns: 1fr 15fr 15fr 1fr;
     }
   }
   
   @media (max-width: 768px) {
     .contact-wrapper {
+      
       grid-template-columns: 1fr;
     }
   
     .contact__image {
+      
       max-width: 50%;
     }
   }
@@ -79,8 +85,15 @@
   
     /* justify-content: center; */
     align-items: center;
+    
+    font-size: 24px;
+    
   }
-  
+  .contact_title{
+    text-align: center;
+    font-size: 36px;
+    width: auto;
+  }
   .mailing-list {
     display: flex;
     flex-direction: column;
@@ -90,6 +103,11 @@
     width: 50%;
   }
   
+  .mailing-list-title {
+    text-align: center;
+    font-size: 36px;
+    width: auto;
+  }
   /*.contact__submit {
      align-self: center; 
   }*/
