@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <title>MACHInE - Assembly</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- style sheets -->
+    <link href="../../../styles/all_pages.css" rel="stylesheet">
+    <link href="../../../styles/machine_table_of_contents.css" rel="stylesheet">
+    <link href="../../../styles/machine.css" rel="stylesheet">
+    <link href="../../../styles/animations.css" rel="stylesheet">
+    <link href="../../../styles/custom_scrollbar.css" rel="stylesheet">
+    <link href="../../../styles/navigation_bar.css" rel="stylesheet">
+
+    <!-- scripts -->
+    <script src="../../scripts/table_of_contents.js"></script>
+    <script async src="../../scripts/index.js"></script>
+</head>
+<body>
+    <!-- home bar -->
+    <nav class="navigation_container">
+        <!-- home bar -->
+        <a class="home_link" href="../../index.html">
+            <img class="home_buttom_image" src="../../../images/home_button_image.svg" alt="home_button_image">
+        </a>
+        <div class="pages_container">
+            <a class="navigation_link" href="../machine.html">MACHInE</a>
+            <a class="navigation_link" href="../../opcas/opcas.html">OP-CAS</a>
+            <a class="navigation_link" href="../../team.html">TEAM</a>
+            <a class="navigation_link" href="../../contact.html">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- mobile home bar -->
+    <nav class="mobile_navigation_container">
+        <a href="javascript:void(0);" onclick="toggleMenuBar()">
+            <img class="mobile_menu_bar" src="../images/ios_images/menu_bar.png" alt="hamburger_menu_bar">
+        </a>
+        <div class="mobile_pages_container" id="mobile_pages_container_1">
+            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()">
+                <img class="close_menu_bar" src="../../images/ios_images/close_menu_bar.png" alt="close_menu_bar">
+            </a>
+            <a class="mobile_navigation_link" href="../machine.html">MACHInE</a>
+            <a class="mobile_navigation_link" href="../../opcas/opcas.html">OP-CAS</a>
+            <a class="mobile_navigation_link" href="../../team.html">TEAM</a>
+            <a class="mobile_navigation_link" href="../../contact.html">CONTACT</a>
+            <a class="mobile_navigation_link" href="../../index_korean.html">한국어</a>
+        </div>
+    </nav>
+
+    <!-- table of contents -->
+    <!-- credit: https://codepen.io/pubwriter/pen/ZgLzYV -->
+    <nav class="table_of_contents">
+        <p class="table_of_contents_section">GETTING STARTED</p>
+        <ul>
+            <li><a href="../machine.html#introduction">Introduction</a></li>
+            <li><a href="../machine.html#background">Background</a></li>
+            <li><a href="../machine.html#bill_of_materials">Bill of Materials</a></li>
+                <ul>
+                    <li><a href="../machine.html#vehicle_components">Vehicle Components</a></li>
+                    <li><a href="../machine.html#racing_circuits_components">Racing Circuit Components</a></li>
+                    <li><a href="../machine.html#tool_diagram_components">Tool Diagram Components</a></li>
+                </ul>
+        </ul>
+
+        <p class="table_of_contents_section" style="color: #2774AE; filter: brightness(1.5); opacity: 0.9">Assembly</p>
+        <ul>
+            <li><a href="#hardware_assembly">Hardware Assembly</a></li>
+            <li><a href="#behaviorial_conditioning_algorithm">Behavioral Conditioning Algorithm</a></li>
+            <li><a href="#github">Github Code</a></li>
+        </ul>
+        <!-- this doesn't work -->
+        <svg class="table_of_contents_marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="#fff" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+        </svg>
+    </nav>
+
+    <section class="content">
+
+        <section class="gap">
+        </section>
+
+        <h2 id="hardware_assembly">Hardware Assembly</h2>
+        <section class="project_body">
+            <p>We made piecing together all the components more convenient with this video.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/U2yloLSmdBk" title="MACHInE Instructional Build Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <section class="gap" style="height: 25px;">
+            </section>
+
+            <div class="image_wrapper">
+                <img class="project_image" src="../../../images/wiring.png" alt="wiring" style="width: 35%; height: auto">
+                <p><i>Figure 6: simplified wiring diagram</i></p> 
+            </div>
+            <p>As supplemental content, we provide an overhead diagram for wiring the vehicle electronic components together. To <b class="bold">avoid inhaling soldering fumes,</b> it is highly recommended that a mini desk fan is bought. It is also <b class="bold">recommend</b> to buy multiple soldering tips (considering the fact that they wear out). Lastly, it is recommend that soldering paste is used (however, make sure to minimize the amount of paste to prevent the wires from shorting).</p>
+        </section>
+
+        <section class="gap" style="height: 25px">
+        </section>
+
+        <h2 id="behaviorial_conditioning_algorithm">Behaviorial Conditioning Algorithm</h2>
+        <section class="project_body">
+            <p>Using our proposed testbed, we propose <b class="bold">Behavioral Conditioning</b> (BCo): an improved end-to-end controller specifically designed for high-speed autonomous driving. An LSTM-VAE neural network creates an approximator policy that predicts the desired steering action and motor-speed given an image input. A PID controller is also used to track the desired motor-speed with the observed target motor-speed using throttle action. Our algorithm is specifically designed to address the issue of noisy action outputs (of which is prevalent when directly correlating image inputs to action outputs).</p>
+
+            <div class="image_wrapper">
+                <img src="../../../images/machine_alg.png" alt="machine_alg">
+                <p><i>Figure 7: autonous radio controlled car algorithm</i></p>
+            </div>
+
+            <p>First, BCo decouples both the task of low level vehicle control and high level path planning to address noise in throttle action outputs. While existing work attempts to solve the issue of noisy inference output via hardware, a hardware constrained scenario within this open-source platform makes it difficult to achieve. By decoupling the task of high speed autonomous driving using a PID controller, it is possible to directly track desired motor shaft speed as to <b class="bold">alleviate</b> any noisy throttle commands when inferencing action commands directly with convolutional neural networks.</p>
+
+            <div class="image_wrapper">
+                <img src="../../../images/3d_cnn_model.png" alt="3d_cnn_model">
+                <p><i>Figure 8: Three-dimensional CNN model</i></p>
+            </div>
+
+            <p>Second, BCo <b class="bold">addresses</b> noisy outputs by using a Variational Auto-Encoder (VAE) architecture to make the neural network output continuous. Continuous action outputs are achieved by using the KL-divergence equation as shown to regularize the latent variables. The latent variables (which consist of gaussians) use the KL-divergence as a regularization term such that their distributions closely match a standard normal distribution – thus encouraging continuity between action outputs when given similar image inputs.</p>
+        </section>
+
+        <section class="gap" style="height: 25px">
+        </section>
+
+        <h2 id="github">Github Code</h2>
+        <section class="project_body">
+            <p>Our <a class="hyperlink" href="https://github.com/jessecha/MACHInE">Github repository</a> contains all the necessary code needed for the open-source racecar project. The purpose of each folder and what it contains is also documented below.</p>
+
+            <div class="row">
+                <div class="col">
+                    <h3>1. Data Collection</h3>
+                    <p>The ‘data_collection’ folder includes six folders for the Robot Operating System (ROS). It also contains the launch file for data collection. One can selectively record specific ROS topics after launching the launch file using the ‘rosbag record‘ command. During data collection, it is important to use the <b class="bold">isocpus command</b> to isolate CPU core: 0 within the Raspberry Pi (as to maximize the number of collected frames).</p>
+                </div>
+
+                <div class="col">
+                    <h3>2. Train</h3>
+                    <p>The ‘train‘ folder contains the ‘dataparser‘ folder to convert rosbag recordings into a csv file format. The ‘lrcn_motor.py‘ script is used to <b class="bold">train</b> the model. Tensorflow 2.4 was used with Tensorflow lite to convert and quantize the model. There are several models to choose from in the model folder (however, it's worth noting that that the vision transformer model might not be supported with tflite during conversion).</p>
+                </div>
+
+                <div class="col">
+                    <h3>3. Deploy</h3>
+                    <p>The ‘deploy‘ folder contains a script to deploy the tflite model.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h3>4. Evaluate</h3>
+                    <p>The ‘evaluate‘ folder contains the following: a ROS folder to record the logitech brio stream and a script called, the ‘ground_truth_tracker.ipynb‘ which processes the rosbag into a video, and scripts for salient feature representation.</p>
+                </div>
+
+                <div class="col">
+                    <h3>5. Tools</h3>
+                    <p>The ‘tools‘ folder contains <b class="bold">useful</b> commands. The usb_list.sh command lists all the devices linked to the Raspberry Pi board / desktop via USB port.</p>
+                </div>
+
+                <div class="col">
+                    <h3>6. STL Files</h3>
+                    <p>This folder contains all the necessary STL files needed to <b class="bold">print</b> the vehicle mounts. It is important to note that all the Ethernet ports and USB ports must be <b class="bold">stripped</b> prior to assembly. A quality print is necessary for the ‘t_connector.stl‘ file as an uneven print will cause the vehicle to warp, resulting in unwanted behavior when trying to drive straight</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gap" style="height: 25px">
+        </section>
+
+        <section class="project_body">
+            <p>As a result of reading up until this point, hopefully you now have an adequate understanding in building your own fully autonomous scaled-down radio control car. Of course, we <b class="bold">encourage</b> you to connect with racers and have fun! If you have any questions, feel free to contact us.</p>
+        </section>
+
+         <p class="next_page">
+            <<< Check out our&nbsp;<a class="next_page_link" href="../machine.html">MACHInE components</a>&nbsp;
+        </p>
+    </section>
+
+    <section class="gap">
+    </section>
+
+    <!-- footer -->
+    <footer class="document_footer">
+        <p>Robotics and Mechanisms Laboratory (RoMeLa)<br>Department of Mechanical and Aerospace Engineering<br>University of California, Los Angeles (UCLA)<br>LA, CA, USA, 90095</p>
+    </footer>
+</body>
+</html>

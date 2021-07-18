@@ -1,88 +1,113 @@
 
-.title_wrapper {
-    /* framing */
-    height: 350px;
-    width: auto;
-}
-
-.machine_image {
-    /* image dimensions */
-    height: 90%;
-    width: auto;
-
-    /* center image */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.machine_title {
-    /* font styling */
-    text-align: center;
-    font-size: 36px;
-    width: auto;
+.hyperlink {
+    color: #2774AE;
+    filter: brightness(1.5);
 }
 
 .content {
-    /* positioning */
-/*    position: relative;
-    top: 100px;*/
-    padding: 1em;
-
-    /* framing */
-    width: 65vw;
-    /*width: auto;*/
-    height: 100vh;
-    overflow: auto;
-    padding: 2em 2em 2em 17em;
-
-    /* font styling */
-    font-size: 20px;
-    /*font-size: 1.1em;*/
-    line-height: 1.5;
+    /* positoning and framing */
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: auto;
+    margin-left: 390px;
+    margin-right: 125px;
 
     /* enable smooth scrolling */
     scroll-behavior: smooth;
 }
 
-@media (max-width: 768px) {
-    .machine_image {
-        height: 50%;
-        width: auto;
-    }
+.machine_image {
+    width: 75%;
+    height: auto;
+}
 
-    .machine_title {
-        size: 12px;
-    }
-
+@media (max-width: 900px) {
     .content {
-        float: right;
-        display: flex;
-        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .machine_image {
+        width: 85%;
+        height: auto;
     }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.content::-webkit-scrollbar {
-  display: none;
+.title_wrapper {
+    text-align: center;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.content {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+.opcas_title {
+    font-size: 36px;
 }
 
-.introduction {
-    display: flex;
-    justify-content: flex-end;
+.project_body {
+    font-size: 20px;
+}
+
+.hardware {
+    text-align: center;
+    /*width: 55%;*/
+    /*height: auto*/
+
+    background-color: yellow;
 }
 
 .sub_note {
-    margin-left: 50px;
+    margin-left: 25px;
 }
 
-.opcas_link {
+.image_wrapper {
+    text-align: center;
+}
+
+.image_wrapper img {
+    width: 50%;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    .image_wrapper img {
+        width: 90%;
+        height: auto;
+    }
+
+    .image_wrapper p {
+        width: 100%;
+        transform: translateX(-45%);
+    }
+}
+
+.image_wrapper p {
+    margin-left: 150px;
+    margin-right: 150px;
+    /*background-color: yellow;*/
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+} 
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
+    /*align-items: center;*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.col h3 {
+    margin-bottom: 0px;
+}
+
+.next_page {
     /* framing */
     position: relative;
     top: 75px;
@@ -95,59 +120,46 @@
     font-weight: 600;
 }
 
-.opcas_link a {
-    color: var(--light_blue);
+@media (max-width: 900px) {
+    .next_page {
+        font-size: 20px;
+    }
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-} 
-
-.row .alg_img {
-    /* positioning and padding */
-    margin: auto;
-
-    /* image dimensions */
-    height: auto;
-    width: 85%
-}
-
-.col {
-    margin-left: 15px;
-    margin-right: 15px;
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-}
-
-.github_link {
+.next_page_link {
     color: #2774AE;
     filter: brightness(1.5);
+    z-index: 99;
 }
 
-.project_body {
-    /*background-color: yellow;*/
+.next_page_link:visited {
+    color: #2774AE;
+    filter: brightness(1.5);
+    z-index: 99;
+}
+
+.next_page_link:hover {
+    color: #2774AE;
+    filter: brightness(1.5);
+    z-index: 99; 
+
+    animation: hover_fade 1s forwards;
 }
 
 body {
-    margin: 0px;
-    height: 100%;
-
-    /* page fade */
-/*    opacity: 0;
-    transition: opacity 1.25s;*/
+    /* animations */
+    animation: fade_in 1.75s ease forwards;
+    overflow-x: none;
 }
 
-@media (max-width: 768px) {
-    .left {
-        display: none;
+@media (max-width: 900px) {
+    .table_of_contents {
+        visibility: hidden;
     }
 
-    .right {
-        display: none;
+    .content {
+        padding-top: 200px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
