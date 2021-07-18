@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
     <title>MACHInE</title>
 
     <!-- fonts -->
@@ -18,13 +20,13 @@
     <link href="../styles/machine.css" rel="stylesheet">
     <link href="../styles/animations.css" rel="stylesheet">
     <link href="../styles/custom_scrollbar.css" rel="stylesheet">
-    <link href="../styles/fade_load.css" rel="stylesheet">
     <link href="../styles/navigation_bar.css" rel="stylesheet">
 
     <!-- scripts -->
     <script src="../scripts/table_of_contents.js"></script>
+    <script async src="../scripts/index.js"></script>
 </head>
-<body onload="document.body.style.opacity='1'">
+<body>
 
     <div class="left"></div>
     <div class="right"></div>
@@ -40,6 +42,23 @@
             <a class="navigation_link" href="./opcas.html">OP-CAS</a>
             <a class="navigation_link" href="./team.html">TEAM</a>
             <a class="navigation_link" href="./contact.html">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- mobile home bar -->
+    <nav class="mobile_navigation_container">
+        <a href="javascript:void(0);" onclick="toggleMenuBar()">
+            <img class="mobile_menu_bar" src="../images/ios_images/menu_bar.png" alt="hamburger_menu_bar">
+        </a>
+        <div class="mobile_pages_container" id="mobile_pages_container_1">
+            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()">
+                <img class="close_menu_bar" src="../images/ios_images/close_menu_bar.png" alt="close_menu_bar">
+            </a>
+            <a class="mobile_navigation_link" href="./machine.html">MACHInE</a>
+            <a class="mobile_navigation_link" href="./index.html">OP-CAS</a>
+            <a class="mobile_navigation_link" href="./team.html">TEAM</a>
+            <a class="mobile_navigation_link" href="./contact.html">CONTACT</a>
+            <a class="mobile_navigation_link" href="./index_korean.html">한국어</a>
         </div>
     </nav>
 
@@ -70,22 +89,15 @@
     </nav>
 
     <article class="content">
-        <section class="gap" style="height: 155px">
-        </section>
-
         <section>
             <div class="title_wrapper">
                 <h2 class="machine_title">Multi-Agent Autonomous Cars for High-Speed, Indoor Environments</h2>
                 <img class="machine_image" src="../images/machine_cover.gif" alt="machine_cover">
             </div>
         </section>
-        
-        <section class="gap" style="height: 155px">
-        </section>
-
 
         <h2 id="introduction">Introduction</h2>
-        <section class="body">
+        <section class="project_body">
             <p>One of the most pressing challenges within autonomous mobility lies within highway scenarios: where autonomous vehicles would be interacting with human drivers at high speeds. These scenarios are indeed challenging because autonomous vehicles require data driven methods to identify the intent of opposing vehicles while also simultaneously planning its trajectory. Although full-scale and high-speed testbeds exist (i.e. Roborace), the space and cost requirements are highly demanding. For this reason, we created an <b class="bold">open-source</b>, 1:28 scale research platform for high-speed autonomous driving research that is <b class="bold">accessible to everyone.</b></p>
         </section>
 
@@ -96,7 +108,7 @@
         </section>
 
         <h2 id="getting_started">Getting Started</h2>
-        <section class="body">
+        <section class="project_body">
             <p>Building a scaled-down autonomous vehicle is quite a complex task. Please keep in mind of the following considerations:</p>
 
             <div class="sub_note">
@@ -145,7 +157,7 @@
         </section>
 
         <h2 id="bill_of_materials">Bill of Materials</h2>
-        <section class="body">
+        <section class="project_body">
             <p>Several materials are needed for MACHiNE. Note that the cost of components does not reflect shipping cost. In addition, there are a total of three ways of controlling the vehicle for data collection. The <b class="bold">recommended method</b> is the low latency option – as this offers the quickest communication protocols.</p>
 
             <div class="sub_note">                
@@ -278,7 +290,7 @@
 
         <h2 id="hardware_assembly">Hardware Assembly</h2>
         <section>
-            <p>We made piecing together all the components more convenient with this instructional video.</p>
+            <p class="project_body">We made piecing together all the components more convenient with this instructional video.</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/U2yloLSmdBk" title="MACHInE Instructional Build Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
 
@@ -311,11 +323,11 @@
                 </div>
 
                 <div class="col">
-                    <p>Using our proposed testbed, we propose Behavioral Conditioning (BCo): an improved end-to-end controller <b class="bold">specifically designed</b> for high-speed autonomous driving. An LSTM-VAE neural network creates an approximator policy that predicts the desired steering action and motor-speed given an image input. A PID controller is also used to track the desired motor-speed with the observed target motor-speed using throttle action. Our algorithm is specifically designed to address the issue of noisy action outputs (of which is prevalent when directly correlating image inputs to action outputs)</p>
+                    <p class="project_body">Using our proposed testbed, we propose Behavioral Conditioning (BCo): an improved end-to-end controller <b class="bold">specifically designed</b> for high-speed autonomous driving. An LSTM-VAE neural network creates an approximator policy that predicts the desired steering action and motor-speed given an image input. A PID controller is also used to track the desired motor-speed with the observed target motor-speed using throttle action. Our algorithm is specifically designed to address the issue of noisy action outputs (of which is prevalent when directly correlating image inputs to action outputs)</p>
 
-                    <p>First, BCo decouples both the task of low level vehicle control and high level path planning to address noise in throttle action outputs. While existing work attempts to solve the issue of noisy inference output via hardware, a hardware constrained scenario within this open-source platform makes it difficult to achieve. By decoupling the task of high speed autonomous driving using a PID controller, it is possible to directly track desired motor shaft speed as to alleviate and noisy throttle commands when inferencing action commands directly with convolutional neural networks.</p>
+                    <p class="project_body">First, BCo decouples both the task of low level vehicle control and high level path planning to address noise in throttle action outputs. While existing work attempts to solve the issue of noisy inference output via hardware, a hardware constrained scenario within this open-source platform makes it difficult to achieve. By decoupling the task of high speed autonomous driving using a PID controller, it is possible to directly track desired motor shaft speed as to alleviate and noisy throttle commands when inferencing action commands directly with convolutional neural networks.</p>
 
-                    <p>Second, BCo addresses noisy outputs by using a Variational Auto-Encoder (VAE) architecture to make the neural network output continuous. Continuous action outputs are achieved by using the KL-divergence equation as shown to regularize the latent variables. The latent variables (which consist of gaussians) use the KL-divergence as a regularization term such that their distributions closely match a standard normal distribution – thus encouraging continuity between action outputs when given similar image inputs.</p>
+                    <p class="project_body">Second, BCo addresses noisy outputs by using a Variational Auto-Encoder (VAE) architecture to make the neural network output continuous. Continuous action outputs are achieved by using the KL-divergence equation as shown to regularize the latent variables. The latent variables (which consist of gaussians) use the KL-divergence as a regularization term such that their distributions closely match a standard normal distribution – thus encouraging continuity between action outputs when given similar image inputs.</p>
                 </div>
             </div>
         </section>

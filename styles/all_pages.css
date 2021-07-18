@@ -14,7 +14,7 @@
 /* left and right borders */
 .left, .right {
     position: fixed;
-    width: 3%;
+    width: 7.5%;
     /*width: 2.5vw;*/
     height: 100%;
     top: 0;
