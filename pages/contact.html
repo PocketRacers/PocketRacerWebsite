@@ -31,23 +31,41 @@
     <div class="left"></div>
     <div class="right"></div>
 
-<!-- Spacer-->
-<section class="gap" style="height: 50px">
-
+  <!-- Spacer-->
+  <section class="gap" style="height: 50px">
   </section>
-    <!-- home bar -->
-    <nav class="navigation_container">
-        <!-- home bar -->
-        <a class="home_link" href="../index.html">
-            <img class="home_buttom_image" src="../images/home_button_image.svg" alt="home_button_image">
-        </a>
-        <div class="pages_container">
-            <a class="navigation_link" href="./machine.html">MACHInE</a>
-            <a class="navigation_link" href="./opcas.html">OP-CAS</a>
-            <a class="navigation_link" href="./team.html">TEAM</a>
-            <a class="navigation_link" href="./contact.html">CONTACT</a>
-        </div>
-    </nav>
+  
+  <!-- home bar -->
+  <nav class="navigation_container">
+      <!-- home bar -->
+      <a class="home_link" href="../index.html">
+          <img class="home_buttom_image" src="../images/home_button_image.svg" alt="home_button_image">
+      </a>
+      <div class="pages_container">
+          <a class="navigation_link" href="./machine/machine.html">MACHInE</a>
+          <a class="navigation_link" href="./opcas/opcas.html">OP-CAS</a>
+          <a class="navigation_link" href="./team.html">TEAM</a>
+          <a class="navigation_link" href="./contact.html">CONTACT</a>
+      </div>
+  </nav>
+
+  <!-- mobile home bar -->
+  <nav class="mobile_navigation_container">
+      <a href="javascript:void(0);" onclick="toggleMenuBar()">
+          <img class="mobile_menu_bar" src="../images/ios_images/menu_bar.png" alt="hamburger_menu_bar">
+      </a>
+      <div class="mobile_pages_container" id="mobile_pages_container_1">
+          <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()">
+              <img class="close_menu_bar" src="../../../images/ios_images/close_menu_bar.png" alt="close_menu_bar">
+          </a>
+          <a class="mobile_navigation_link" href="./machine/machine.html">MACHInE</a>
+          <a class="mobile_navigation_link" href="./opcas/opcas.html">OP-CAS</a>
+          <a class="mobile_navigation_link" href="./team.html">TEAM</a>
+          <a class="mobile_navigation_link" href="./contact.html">CONTACT</a>
+          <a class="mobile_navigation_link" href="./index_korean.html">한국어</a>
+      </div>
+  </nav>
+
   <!-- Header -->
   <docs-header></docs-header>
 

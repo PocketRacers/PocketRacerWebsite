@@ -79,6 +79,7 @@ a {
     position: relative;
     top: 75px;
     margin: 125px;
+    margin-top: -250px;
 
     /* font */
     text-align: left;
@@ -98,13 +99,16 @@ a {
 /*-----start of avatar-----*/
 
 .avatar {
-    height: 25%;
-    width: 25%;
+    height: 10%;
+    width: 10%;
 }
 
 .user {
     display: flex;
     padding-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 25px;
 }
 
 .user_says {
@@ -120,8 +124,8 @@ a {
 
 @media (max-width: 768px) {
     .avatar {
-        height: 15%;
-        width: 15%;
+        height: 25%;
+        width: 25%;
     }
     .user {
         flex-direction: column;
