@@ -12,7 +12,7 @@ html {
 .content {
     /* positoning and framing */
     position: relative;
-    margin-top: 150px;
+    margin-top: 0px;
     margin-bottom: auto;
     margin-left: 390px;
     margin-right: 125px;
@@ -35,6 +35,7 @@ html {
 }
 
 .title_wrapper {
+    margin-top: -250px;
     text-align: center;
 }
 

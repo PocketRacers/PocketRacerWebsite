@@ -28,6 +28,7 @@ html {
 }
 
 .title_wrapper {
+    margin-top: -250px;
     text-align: center;
 }
 
