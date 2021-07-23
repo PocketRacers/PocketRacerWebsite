@@ -1,4 +1,9 @@
 
+#map {
+    height: 425px;
+    width: 95%;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -15,7 +20,7 @@
     /*align-items: center;*/
     margin-top: 0px;
     /*margin-bottom: 0px;*/
-    margin-left: 35px;
+    /*margin-left: 35px;*/
     /*margin-right: 35px;*/
 }
 
@@ -30,7 +35,7 @@
     margin-bottom: -5px;
 }
 
-.rotating_car {
+.rotating_car_image {
     width: 75%;
     height: auto;
 }
@@ -62,10 +67,14 @@
 }
 
 #submit {
+    /* dimensions */
     width: 100px;
     padding-top: 8px;
     padding-right: 0px;
 
+    /* styling */
+    font-family: "Darker Grotesque", sans-serif;
+    font-weight: 600;
     color: white;
     background-color: #121212;
     border-radius: 4px;

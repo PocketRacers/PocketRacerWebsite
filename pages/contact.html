@@ -25,7 +25,11 @@
     <link href="../styles/navigation_bar.css" rel="stylesheet">
 
     <!-- scripts -->
-    <script async src="./scripts/index.js"></script>
+    <!-- api key: AIzaSyBQeoVTAiJYZV5GPhF4vVEGTI0vqAsPtFw -->
+    <script async src="../scripts/index.js"></script>
+    <script async src="../scripts/google_maps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQeoVTAiJYZV5GPhF4vVEGTI0vqAsPtFw&callback=initMap&libraries=&v=weekly" async></script>     <!-- google maps -->
+
 </head>
 <body>
 
@@ -68,19 +72,22 @@
 
             <!-- image -->
             <div class="col">
-                <img class="rotating_car" src="../images/machine_cover.gif" alt="machine_cover.gif">
+                <!-- <img class="rotating_car_image" src="../images/machine_cover.gif" alt="machine_cover.gif"> -->
+                <div id="map">
+                    
+                </div>
             </div>
 
             <!-- contact fill in -->
             <div class="col">
                 <form id="contact_form" class="contact_form" action="https://api.emailjs.com/api/v1.0/email/send" method="post">
-                    <label for="email" class="contact_label"><i class="uil uil-envelope-alt"></i>  Email: </label>
+                    <label for="email" class="contact_label"><i class="uil uil-envelope-alt"></i> Email</label>
                     <input type="email" class="contact_input" id="email" required autofocus>
 
-                    <label for="subject" class="contact_label"><i class="uil uil-user"></i> Subject: </label>
+                    <label for="subject" class="contact_label"><i class="uil uil-user"></i> Subject</label>
                     <input type="text" class="contact_input" id="subject" required>
 
-                    <label for="message" class="contact_label"><i class="uil uil-comment-alt-lines"></i> Message: </label>
+                    <label for="message" class="contact_label"><i class="uil uil-comment-alt-lines"></i> Message</label>
                     <textarea type="text" class="contact_input" id="message" required></textarea>
 
                     <input type="submit" class="contact__submit" id="submit" value="Submit" />
