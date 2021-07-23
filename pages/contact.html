@@ -62,7 +62,7 @@
 
     <!-- contact section -->
     <section class="contact">
-        <p class="title"><i class="uil uil-envelope-alt"></i> Contact</p>
+        <p class="title">Contact</p>
         <p>We're always open and willing to answer any questions you have. Shoot us an email, and let's connect!</p>
         <div class="row">
 
@@ -74,14 +74,14 @@
             <!-- contact fill in -->
             <div class="col">
                 <form id="contact_form" class="contact_form" action="https://api.emailjs.com/api/v1.0/email/send" method="post">
-                    <label for="email" class="contact__label">* Email: </label>
-                    <input type="email" class="contact__input" id="email" required autofocus>
+                    <label for="email" class="contact_label"><i class="uil uil-envelope-alt"></i>  Email: </label>
+                    <input type="email" class="contact_input" id="email" required autofocus>
 
-                    <label for="subject" class="contact__label">* Subject: </label>
-                    <input type="text" class="contact__input" id="subject" required>
+                    <label for="subject" class="contact_label"><i class="uil uil-user"></i> Subject: </label>
+                    <input type="text" class="contact_input" id="subject" required>
 
-                    <label for="message" class="contact__label">* Message: </label>
-                    <textarea type="text" class="contact__input" id="message" required></textarea>
+                    <label for="message" class="contact_label"><i class="uil uil-comment-alt-lines"></i> Message: </label>
+                    <textarea type="text" class="contact_input" id="message" required></textarea>
 
                     <input type="submit" class="contact__submit" id="submit" value="Submit" />
                 </form>

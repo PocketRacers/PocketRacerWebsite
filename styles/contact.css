@@ -1,4 +1,24 @@
 
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+} 
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
+    /*align-items: center;*/
+    margin-top: 0px;
+    /*margin-bottom: 0px;*/
+    margin-left: 35px;
+    /*margin-right: 35px;*/
+}
+
 .contact {
     font-size: 20px;
     margin-left: 100px;
@@ -11,13 +31,45 @@
 }
 
 .rotating_car {
-    width: 35%;
-    height: autp;
+    width: 75%;
+    height: auto;
 }
 
 .contact_form {
     display: flex;
     flex-direction: column;
+}
+
+.contact_label {
+    padding-bottom: 4px;
+}
+
+.contact_input {
+    margin-bottom: 8px;
+}
+
+#email {
+    height: 32px;
+}
+
+#subject {
+    height: 32px;
+}
+
+#message {
+    height: 160px;
+    margin-bottom: 12px;
+}
+
+#submit {
+    width: 100px;
+    padding-top: 8px;
+    padding-right: 0px;
+
+    color: white;
+    background-color: #121212;
+    border-radius: 4px;
+    font-size: 24px;
 }
 
 body {
