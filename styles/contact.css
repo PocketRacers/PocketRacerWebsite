@@ -4,6 +4,10 @@
     width: 95%;
 }
 
+.location {
+    display: flex;
+}
+
 .row {
     display: flex;
     flex-direction: row;
