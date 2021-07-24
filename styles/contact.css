@@ -30,6 +30,7 @@
 
 .contact {
     font-size: 20px;
+    margin-top: -275px;
     margin-left: 100px;
     margin-right: 100px;
 }
@@ -71,18 +72,22 @@
 }
 
 #submit {
-    /* dimensions */
+    /* dimensions of submit button*/
     width: 100px;
-    padding-top: 8px;
-    padding-right: 0px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-right: auto;
+    padding-left: auto;
+
 
     /* styling */
     font-family: "Darker Grotesque", sans-serif;
+    text-align: center;
+    font-size: 24px;
     font-weight: 600;
     color: white;
     background-color: #121212;
     border-radius: 4px;
-    font-size: 24px;
 }
 
 body {
