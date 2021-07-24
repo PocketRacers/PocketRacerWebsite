@@ -2,6 +2,10 @@
 #map {
     height: 425px;
     width: 95%;
+
+    /* if map doesn't show up, show placeholder instead */
+    background-color: rgb(156, 156, 156);
+    /*border: 1px solid white;*/
 }
 
 .location {
