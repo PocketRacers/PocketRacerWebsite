@@ -4,7 +4,6 @@ window.onload = function() {
     document.body.style.backgroundColor = "#15181b";
 }
 
-
 function toggleMenuBar() {
     var mobilePageContainer = document.getElementById("mobile_pages_container_1");
     if (mobilePageContainer.style.display === "block") {
