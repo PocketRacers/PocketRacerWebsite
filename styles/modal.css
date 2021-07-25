@@ -1,43 +1,63 @@
 
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
+
 .modal {
-    /* positiong */
+    /* positioning */
     position: fixed;
-    left: 0;
     bottom: 0;
-
-    padding-bottom: 5px;
-
-    /* framing */
-    height: 25px;
+    left: 0;
+    height: auto;
     width: 100%;
     z-index: 1;
 
-    /* styling */
-    background: rgb(30, 30, 30);
-}
-
-.content_wrapper {
-    margin-top: auto;
-    margin-left: 2%;
-    width: 80%;
-
+    /* font styling */
+    font-size: 14px;
     display: flex;
+    justify-content: flex-start;
+
+    /* modal styling */
+    background: #15181b;
 }
 
-.cookie_icon {
-    top: auto;
+.modal button {
+    /* positioning */
+    position: relative;
+    padding: 3px;
 
-    /* image dimensions */
-    max-height: 16px;
-    width: auto;
-}
+    /* font styling */
+    font-family: "Darker Grotesque", sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 14px;
 
-.content_wrapper p {
-    font-size: 16px;
-    margin: 0;
-}
-
-.accept_cookies {
-    font-size: 16px;
+    /* button styling */
     background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    animation: fade 1s forwards;
+}
+
+.accept_button {
+    left: 50px;
+}
+
+.decline_button {
+    left: 100px;
+}
+
+@media (max-width: 750px) {
+    .modal {
+        visibility: hidden;
+    }
 }
