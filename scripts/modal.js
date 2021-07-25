@@ -14,7 +14,7 @@ function closeAndOptOut() {
     gtag("js", new Date());
     gtag("config", "UA-199894373-1", { "send_page_view": false });
 
-    document.getElementById("popup-1").style.display = "none";
+    document.getElementById("modal").style.display = "none";
     localStorage.setItem("show_popup", "false");
 }
 
@@ -26,7 +26,7 @@ function closeAndOptIn() {
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "UA-199894373-1");
-    document.getElementById("popup-1").style.display = "none";
+    document.getElementById("modal").style.display = "none";
     localStorage.setItem("show_popup", "false");
 }
 
@@ -67,9 +67,9 @@ window.onload = function() {
 
     if (localStorage.getItem("show_popup") === "true") {   // if "show_popup" has value true 
         // show modal
-        document.getElementById("popup-1").style.display = "block";
+        document.getElementById("modal").style.display = "block";
     } else {    // if "show_popup" has value false
-        document.getElementById("popup-1").style.display = "none"; // don't show popup
+        document.getElementById("modal").style.display = "none"; // don't show popup
         localStorage.setItem("show_popup", "false");        // reassign "show_popup=true" to "show_popup=false"
     }
 };
