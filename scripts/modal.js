@@ -65,11 +65,10 @@ window.onload = function() {
         localStorage.setItem("show_popup", "true");
     }
 
-    if (localStorage.getItem("show_popup") === "true") {   // if "show_popup" has value true 
-        // show modal
-        document.getElementById("modal").style.display = "block";
-    } else {    // if "show_popup" has value false
-        document.getElementById("modal").style.display = "none"; // don't show popup
-        localStorage.setItem("show_popup", "false");        // reassign "show_popup=true" to "show_popup=false"
+    if (localStorage.getItem("show_popup") === "true") {            // if "show_popup" has value true 
+        document.getElementById("modal").style.display = "block";   // show modal
+    } else {                                                        // if "show_popup" has value false
+        document.getElementById("modal").style.display = "none";    // don't show popup
+        localStorage.setItem("show_popup", "false");                // reassign "show_popup=true" to "show_popup=false"
     }
 };
