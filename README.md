@@ -1,8 +1,6 @@
 ## Bruin Engineer Autonomous Racing
 
 To Do:
-- mobile support
-- fix Contact page 
-  - Google Maps styling
-  - text boxes and button styling
+- mobile support / testing 
 - add BEAR x IEEE page
+- small stylistic changes (i.e. changing bolded color fonts)
