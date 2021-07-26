@@ -150,16 +150,16 @@ a {
     text-align: left;
 
     /* positioning */
-    margin-left: 125px;
-    margin-right: 125px;
+    margin-left: 75px;
+    margin-right: 75px;
     margin-bottom: 50px;
 
 }
 
 @media (max-width: 768px) {
     .curriculum, .about_section {
-        margin: 25px;
         font-size: 22px;
+        width: 100%;
     }
 }
 /*-----end of curriculum-----*/
