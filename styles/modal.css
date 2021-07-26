@@ -1,18 +1,8 @@
 
-@keyframes fade {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0.6;
-    }
-}
-
 .modal {
     /* positioning */
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     height: auto;
     width: 100%;
@@ -25,11 +15,20 @@
 
     /* modal styling */
     background: #15181b;
+    opacity: 0;
+    animation: slide_up 1s forwards;
+    animation-delay: 1.5s;
+}
+
+.modal p {
+    margin-bottom: 0px;
 }
 
 .modal button {
     /* positioning */
     position: relative;
+    margin-left: -15px;
+    margin-bottom: 2px;
     padding: 3px;
 
     /* font styling */
@@ -45,7 +44,7 @@
 }
 
 .modal button:hover {
-    animation: fade 1s forwards;
+    animation: hover_fade 1s forwards;
 }
 
 .accept_button {
@@ -56,7 +55,7 @@
     left: 100px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .modal {
         visibility: hidden;
     }
