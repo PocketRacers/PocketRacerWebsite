@@ -7,6 +7,7 @@
     height: auto;
     width: 100%;
     z-index: 1;
+    visibility: visible;
 
     /* font styling */
     font-size: 14px;

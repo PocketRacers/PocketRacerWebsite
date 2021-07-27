@@ -47,3 +47,10 @@
         transform: translateY(0px);
     }
 }
+
+@keyframes slide_down {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
