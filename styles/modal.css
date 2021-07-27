@@ -8,29 +8,36 @@
     width: 100%;
     z-index: 1;
     visibility: visible;
+    margin: 0px;
 
     /* font styling */
     font-size: 14px;
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
 
     /* modal styling */
-    background: #15181b;
+    background: rgb(41, 42, 45);
     opacity: 0;
     animation: slide_up 1s forwards;
     animation-delay: 1.5s;
 }
 
 .modal p {
+    margin-top: 5px;
     margin-bottom: 0px;
+    height: auto;
+}
+
+.button_wrapper {
+    display: flex;
+    margin-bottom: 2px;
 }
 
 .modal button {
-    /* positioning */
-    position: relative;
-    margin-left: -15px;
-    margin-bottom: 2px;
-    padding: 3px;
+    /* dimensions and framing */
+    margin-left: 25px;
+    width: 75px;
 
     /* font styling */
     font-family: "Darker Grotesque", sans-serif;
@@ -46,14 +53,6 @@
 
 .modal button:hover {
     animation: hover_fade 1s forwards;
-}
-
-.accept_button {
-    left: 50px;
-}
-
-.decline_button {
-    left: 100px;
 }
 
 @media (max-width: 768px) {

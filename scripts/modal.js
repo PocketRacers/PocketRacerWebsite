@@ -64,7 +64,6 @@ window.onload = function() {
 
     if (localStorage.getItem("show_popup") === "true") {            // if "show_popup" has value true 
         document.getElementById("modal").style.visibility = "visible"    // show modal
-        alert("happend")
     } else {                                                        // if "show_popup" has value false
         document.getElementById("modal").style.visibility = "hidden"     // don't show popup
         localStorage.setItem("show_popup", "false")                 // reassign "show_popup=true" to "show_popup=false"
