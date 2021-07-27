@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <title>Team</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- style sheets -->
+    <link href="../styles/all_pages.css" rel="stylesheet">
+    <link href="../styles/team.css" rel="stylesheet">
+    <link href="../styles/animations.css" rel="stylesheet">
+    <link href="../styles/custom_scrollbar.css" rel="stylesheet">
+    <link href="../styles/navigation_bar.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- home bar -->
+    <nav class="navigation_container">
+        <!-- home bar -->
+        <a class="home_link" href="../index.html">
+            <img class="home_buttom_image" src="../images/home_button_image.svg" alt="home_button_image">
+        </a>
+        <div class="pages_container">
+            <a class="navigation_link" href="./index_korean.html">홈페이지</a>
+            <a class="navigation_link" href="./machine/machine.html">MACHInE</a>
+            <a class="navigation_link" href="./opcas/opcas.html">OP-CAS</a>
+            <a class="navigation_link" href="./team_korean.html">팀</a>
+            <a class="navigation_link" href="./contact.html">연락처</a>
+            <a class="navigation_link" href="./team.html">English</a>
+        </div>
+    </nav>
+
+    <!-- mobile home bar -->
+    <nav class="mobile_navigation_container">
+        <a href="javascript:void(0);" onclick="toggleMenuBar()">
+            <img class="mobile_menu_bar" src="../images/ios_images/menu_bar.png" alt="hamburger_menu_bar">
+        </a>
+        <div class="mobile_pages_container" id="mobile_pages_container_1">
+            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()">
+                <img class="close_menu_bar" src="../images/ios_images/close_menu_bar.png" alt="close_menu_bar">
+            </a>
+            <a class="mobile_navigation_link" href="./index_korean.html">홈페이지</a>
+            <a class="mobile_navigation_link" href="./machine/machine.html">MACHInE</a>
+            <a class="mobile_navigation_link" href="./index.html">OP-CAS</a>
+            <a class="mobile_navigation_link" href="./team_korean.html">팀</a>
+            <a class="mobile_navigation_link" href="./contact.html">연락처</a>
+            <a class="mobile_navigation_link" href="../index.html">English</a>
+        </div>
+    </nav>    
+
+    <!-- bear team -->
+    <section class="bear_team">
+        <h1 class="title">Bruin Electric Autonomous Racing (BEAR) Team</h1>
+        <p class="about">It's safe to say that building autonomous vehicles is a difficult task to be completed by one person alone. Meet the team of individuals who have came together to align their passions and innovate technology.</p>
+
+        <!-- dennis -->
+        <section class="member">
+            <h2 class="member__name"><b>Dr. Dennis Hong</b></h2>
+            <p class="member__role"><i>Principal Investigator</i></p>
+            <div class="member-wrapper">
+                <div class="member__image-wrapper">
+                    <!-- image -->
+                    <img class="avatar" src="../images/dennis.jpg" alt="dennis">
+                </div>
+
+                <!-- about -->
+                <div class="member__about">
+                    <p>My name is <a href="https://www.linkedin.com/in/dehong">Dr. Dennis Hong</a>, and I am not only a TED alumnus, but also the Professor and Founding Director of the Robotics & Mechanisms Laboratory of the Mechanical & Aerospace (RoMeLa) Engineer Department at the University of California, Los Angeles.</p>
+                    <p>My research primarily focuses on robot locomotion and automation, autonomous vehicles, and humanoid robots. I am also recognized as the first inventor for the world’s first car that can be driven by the blind. In fact, the Washington Post magazine has nicknamed me as “The Leonardo da Vinci of robots.”</p>
+                    <p>Beyond robotics, I enjoy two things: cooking meals as a gourmet chef, and performing annual charity magic shows and lectures on the science of magic.</p>
+                </div>
+            </div>
+        </section>
+        <!-- end of dennis -->
+
+        <!-- jesse -->
+        <section class="member">
+            <h2 class="member__name"><b>Jesse Cha</b></h2>
+            <p class="member__role"><i>Lead Autonomous Racing Pilot</i></p>
+            <div class="member-wrapper">
+                <div class="member__image-wrapper">
+                    <!-- image -->
+                    <img class="avatar" src= "../images/jesse.jpg" alt="jesse">
+                </div>
+
+                <!-- about -->
+                <div class="member__about">
+                    <p>My name is <a href = "https://www.linkedin.com/in/jessecha">Eun Sang (Jesse) Cha</a>, and I am a University of California, Los Angeles (UCLA) Mechanical Engineering PhD student based in Bel Air, Los Angeles.</p>
+                    <p>I've always had a passion for all things engineering – namely building fully autonomous self-driving vehicles. In fact, my passion all started at my condo lounge when my roommate said, "Take racing to the next level... by going autonomous."</p>
+                    <p>I replied with "Dope nasty."</p>
+                    <p>Four years later, the autonomous racing project is now my PhD research topic under the tuleage of Professor Dennis Hong.
+                    Outside of racing with code, I spend a lot of my time playing golf and doing pilates. I'm also married to my lovely wife, Lauren – of whom has always supported my racing passion.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- alexander -->
+        <section class="member">
+            <h2 class="member__name"><b>Alexander Schperberg</b></h2>
+            <p class="member__role"><i>MPC & SLAM Adivsor</i></p>
+            <div class="member-wrapper">
+                <div class="member__image-wrapper">
+                    <!-- image -->
+                    <img class="avatar" src="../images/alex.jpg" alt="alex">
+                </div>
+
+                <!-- about -->
+                <div class="member__about">
+                    <p>My name is <a href="https://www.linkedin.com/in/alexander-schperberg-bb531053">Alexander Schperberg</a>, and I am a PhD student at the Robotics & Mechanisms Laboratory of the Mechanical & Aerospace (RoMeLa) of the Mechanical & Aerospace Engineering Department at UCLA. Having originally grown up in Austria and attending Acalenes High School in Lafayette, California, I’ve also always been passionate for all things engineering.<br><br>My interests are primarily invested in both solving problems of Active SLAM and simultaneous planning, localization, and mapping. These problems often require a full integration of planning, a sharp vision, a strong understanding of mapping, and deep understanding in machine learning modularities as to achieve complete autonomous behavior in robotic systems.<br><br>Other than engineering autonomous robots, I am not only fluent in both English and German, but an avid tennis player.</p>
+                </div>
+            </div>  
+        </section>
+    </section>
+
+    <!-- curriculum team -->
+    <section class="curriculum_dev_team">
+        <h1 class="title">Curriculum Development Team</h1>
+        <p class="about">Building the curriculum needed to allow undergraduate students to build their own self-driving autonomous vehicles is no easy feat as well. Meet the team of undergraduate students who have dedicated their time to make the small scale robots truly open-source.</p>
+
+         <!-- aaron -->
+        <section class="member">
+            <h2 class="member__name"><b>Aaron Kuo</b></h2>
+            <p class="member__role"><i>IEEE Aircopter Lead & Curriculum Developer</i></p>
+            <div class="member-wrapper">
+                <div class="member__image-wrapper">
+                    <!-- image -->
+                    <img class="avatar" src="../images/aaron_kuo.jpg" alt="aaron">
+                </div>
+
+                <!-- about -->
+                <div class="member__about">
+                    <p>My name is <a class="team-member-linkedin" href="https://www.linkedin.com/in/aaronjameskuo/">Aaron Kuo</a>, and I am fourth year undergraduate studying Electrical Engineering at UCLA. For these past two years, I've been an Officer Board of Institute of Electrical and Electronics Engineers (IEEE) at UCLA as an Aircopter Co-Lead during 2020 - 2021, and as R&D Lead during 2021 - 2022.<br><br>I enjoy extending the skills and concepts I've learned in courses in the real world, which is why I've been heavily involved in IEEE throughout my college experience. From Aircopter to Micromouseto Digital Audio Visualizer, I've enjoyed every second of my timewith the IEEE projects offered at UCLA.<br><br>My passion for electrical engineering has also paved the way formy interest in computers as well. Assembling computers, building keyboards, playing video games, coding, you name it. Outside of the house, I love playing and watching just about all sports, namely hockey, football, basketball, and soccer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- jeremy -->
+        <section class="member">
+            <h2 class="member__name"><b>Jeremy Louie</b></h2>
+            <p class="member__role"><i>Web & Curriculum Developer</i></p>
+            <div class="member-wrapper">
+                <div class="member__image-wrapper">
+                    <!-- image -->
+                    <img class="avatar" src="../images/jeremy.jpg" alt="jeremy">
+                </div>
+
+                <!-- about -->
+                <div class="member__about">
+                    <p>My name is <a class="team-member-linkedin" href="https://www.linkedin.com/in/jeremylouie98/">Jeremy Louie</a>, and I am a fourth-year undergraduate studying Mathematics of Computation student at UCLA.<br><br>I’ve always had a strong interest in extending the academia I learned beyond the classroom. That’s why I’ve engaged in projects such as examining the accuracy in estimating two ordinary differential equations using the Range Kutta Method.<br><br>While programming has given me many sleepless nights, it has also given rise to my hobby as a barista. In fact, you can find me making up coffee and tea concoctions on the weekends. Beyond that, I’m also passionate in photography – a hobby I hope to make into a side career as a professional.<br><br>Above all, I’m always willing to keep up with the rapidly changing pace of technology by learning something new everyday.</p>
+                </div>
+            </div>
+        </section>
+
+         <!-- rosa -->
+         <section class="member">
+            <h2 class="member__name"><b>Rosa Son</b></h2>
+            <p class="member__role"><i>Curriculum Developer</i></p>
+            <div class="member-wrapper">
+                <div class="member__image-wrapper">
+                    <!-- image -->
+                    <img class="avatar" src="../images/rosa.jpg" alt="rosa">
+                </div>
+
+                <!-- about -->
+                <div class="member__about">
+                    <p>My name is <a class="team-member-linkedin" href="https://www.linkedin.com/in/rosa-son-21b390199/">Rosa Son</a>, and I am a fourth year undergraduate student studying mechanical engineering at UCLA. <br><br>I have been involved in various engineering organizations, such as ASME and Bruin Racing’s SMV team. Through these experiences, I’ve had the opportunity to learn about mechanical design and manufacturing, allowing me to apply theoretical knowledge outside of the classroom.<br><br>I am also excited about entrepreneurship and bringing new ideas and technologies to the market. I’m passionate about learning about how emerging technologies can be applied to existing and emerging industries. Outside of academics, I like to spend my free time playing the guitar and golfing.</p>
+                </div>
+            </div>
+        </section>
+
+    </section>
+    
+
+    <!-- footer -->
+    <footer class="document_footer">
+        <p>Robotics and Mechanisms Laboratory (RoMeLa)<br>Department of Mechanical and Aerospace Engineering<br>University of California, Los Angeles (UCLA)<br>LA, CA, USA, 90095</p>
+    </footer>
+</body>
+</html>
+
