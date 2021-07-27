@@ -2,6 +2,8 @@
 // links: https://webgilde.com/en/analytics-opt-out/
 //        https://developers.google.com/analytics/devguides/collection/gtagjs/user-opt-out
 
+var disableStr = "ga-disable-UA-199894373-1" 
+
 // closes popup button
 function optOut() {
     document.cookie = disableStr + "=true expires=Thu, 31 Dec 2099 23:59:59 UTC path=/"
@@ -55,7 +57,6 @@ if (findCookie(disableStr + "=true") == true) {   // if tracking disabled
        i)  reassign "show_popup=true" to "show_popup=false"
 */
 
-var disableStr = "ga-disable-UA-199894373-1" 
 window.onload = function() {
     checkAndTrack()     // perform google analytic tracking only if enabled
     if (localStorage.getItem("show_popup") === null) {      // if "show_popup" doesn't exist in local storage

@@ -6,6 +6,8 @@
     call this function in all webpages
 */
 
+var disableStr = "ga-disable-UA-199894373-1" 
+
 function checkAndTrack() {
     if (localStorage.getItem("start_tracking") === "true") {
         window[disableStr] = false
