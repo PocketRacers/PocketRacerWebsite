@@ -12,7 +12,7 @@ html {
 .content {
     /* positoning and framing */
     position: relative;
-    margin-top: 0px;
+    margin-top: -150px;
     margin-bottom: auto;
     margin-left: 390px;
     margin-right: 125px;

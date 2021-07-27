@@ -17,18 +17,20 @@
 
     /* animation */
     animation: fade_in 1s forwards;
+    -webkit-animation: fade_in 1s forwards;
     animation-delay: 0.5s;
 }
 
 .home_buttom_image {
     /* styling */
-    max-height: auto;
+    height: 85px;
     width: 85px;
     filter: brightness(0) invert(1);
 
     /* animation */
     opacity: 0;
     animation: fade_in 1s forwards;
+    -webkit-animation: fade_in 1s forwards;
     animation-delay: 0.5s;
 }
 
@@ -57,6 +59,7 @@
 
     /* animation */
     animation: fade_in 1s forwards;
+    -webkit-animation: fade_in 1s forwards;    
     animation-delay: 0.5s;
 }
 
@@ -151,6 +154,7 @@
 
         /* fade in */
         animation: mobile_fade_in 0.5s forwards;
+        -webkit-animation: mobile_fade_in 0.5s forwards;
     }
 
     .mobile_navigation_link {
