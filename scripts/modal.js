@@ -4,7 +4,6 @@
 
 // closes popup button
 function optOut() {
-    // close + return to landing page
     document.cookie = disableStr + "=true expires=Thu, 31 Dec 2099 23:59:59 UTC path=/"
     window[disableStr] = true
     window.dataLayer = window.dataLayer || []
@@ -18,7 +17,6 @@ function optOut() {
 
 // google analytics set by default is property not set  
 function optIn() {
-    // close + return to landing page
     window[disableStr] = false
     window.dataLayer = window.dataLayer || []
     function gtag(){dataLayer.push(arguments)}
@@ -26,6 +24,7 @@ function optIn() {
     gtag("config", "UA-199894373-1")
     document.getElementById("modal").style.visibility = "hidden"
     localStorage.setItem("show_popup", "false")
+    localStorage.setItem("start_tracking", "true")
 }
 
 // check if cookie exists
@@ -34,6 +33,23 @@ function findCookie(cookie_name) {
         return true
     }
     return false
+}
+
+/*
+    if opt in, create local stroage cookie item
+    check if that item exists
+    if it does, enable tracking
+    otherwise, do nothing
+    call this function in all webpages
+*/
+function checkAndTrack() {
+    if (localStorage.getItem("start_tracking") === "true") {
+        window[disableStr] = false
+        window.dataLayer = window.dataLayer || []
+        function gtag(){dataLayer.push(arguments)}
+        gtag("js", new Date())
+        gtag("config", "UA-199894373-1")
+    }
 }
 
 // check if tracking enabled / disabled
@@ -58,6 +74,7 @@ if (findCookie(disableStr + "=true") == true) {   // if tracking disabled
 
 var disableStr = "ga-disable-UA-199894373-1" 
 window.onload = function() {
+    checkAndTrack()     // perform google analytic tracking only if enabled
     if (localStorage.getItem("show_popup") === null) {      // if "show_popup" doesn't exist in local storage
         localStorage.setItem("show_popup", "true")          // create it, initially set it to false 
     }
