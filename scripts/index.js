@@ -5,7 +5,7 @@ window.onload = function() {
 }
 
 function toggleMenuBar() {
-    var mobilePageContainer = document.getElementById("mobile_pages_container_1");
+    var mobilePageContainer = document.getElementById("mobile_pages_container");
     if (mobilePageContainer.style.display === "block") {
         mobilePageContainer.style.display = "none";
     } else {    // if menu bar selected

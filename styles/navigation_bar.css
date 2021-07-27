@@ -131,8 +131,9 @@
     }
 
     .mobile_menu_bar {
-        height: 64px;
-        width: auto;
+        /* font styling */
+        font-size: 46px;
+        color: white;
 
         /* animations */
         opacity: 0;
