@@ -108,7 +108,8 @@
 }
 
 .mobile_pages_container, .close_menu_bar {
-    visibility: hidden;
+    /*visibility: hidden;*/
+    display: none;
 }
 /*-----desktop stuff-----*/
 
@@ -170,7 +171,7 @@
 
         /* framing */
         width: 100px;
-        padding: 10px;
+        padding: 25px;
 
         /* text styling */
         font-weight: 600;
@@ -198,8 +199,8 @@
         opacity: 0.85;
 
         /* framing */
-        height: 48px;
-        width: auto;
+        font-size: 46px;
+        color: white;
     }
 
     .close_div {
