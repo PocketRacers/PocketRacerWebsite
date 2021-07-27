@@ -4,6 +4,10 @@ html {
     scroll-behavior: smooth;
 }
 
+#hardware_assembly {
+    margin-top: 150px;
+}
+
 .hyperlink {
     color: #2774AE;
     filter: brightness(1.5);
@@ -129,6 +133,10 @@ body {
 @media (max-width: 900px) {
     .table_of_contents {
         visibility: hidden;
+    }
+
+    #hardware_assembly {
+        margin-top: 0px;
     }
 
     .title_wrapper {
