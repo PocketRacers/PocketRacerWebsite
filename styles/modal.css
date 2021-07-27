@@ -20,18 +20,13 @@
     background: rgb(41, 42, 45);
     opacity: 0;
     animation: slide_up 1s forwards;
-    animation-delay: 1.5s;
+    /*animation-delay: 1.5s;*/
 }
 
 .modal p {
     margin-top: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     height: auto;
-}
-
-.button_wrapper {
-    display: flex;
-    margin-bottom: 2px;
 }
 
 .modal button {
