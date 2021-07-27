@@ -15,7 +15,6 @@ function checkAndTrack() {
         function gtag(){dataLayer.push(arguments)}
         gtag("js", new Date())
         gtag("config", "UA-199894373-1")
-        alert("called")
     }
 }
 
