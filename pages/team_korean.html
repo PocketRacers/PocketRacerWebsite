@@ -9,6 +9,9 @@
     <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
     <title>Team</title>
 
+    <!-- icons -->
+    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +23,9 @@
     <link href="../styles/animations.css" rel="stylesheet">
     <link href="../styles/custom_scrollbar.css" rel="stylesheet">
     <link href="../styles/navigation_bar.css" rel="stylesheet">
+
+    <!-- general scripts -->
+    <script async src="../scripts/index.js"></script>
 </head>
 <body>
 
@@ -41,13 +47,9 @@
 
     <!-- mobile home bar -->
     <nav class="mobile_navigation_container">
-        <a href="javascript:void(0);" onclick="toggleMenuBar()">
-            <img class="mobile_menu_bar" src="../images/ios_images/menu_bar.png" alt="hamburger_menu_bar">
-        </a>
-        <div class="mobile_pages_container" id="mobile_pages_container_1">
-            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()">
-                <img class="close_menu_bar" src="../images/ios_images/close_menu_bar.png" alt="close_menu_bar">
-            </a>
+        <a href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-bars mobile_menu_bar"></i></a>
+        <div class="mobile_pages_container" id="mobile_pages_container">
+            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-multiply close_menu_bar"></i></a>
             <a class="mobile_navigation_link" href="./index_korean.html">홈페이지</a>
             <a class="mobile_navigation_link" href="./machine/machine.html">MACHInE</a>
             <a class="mobile_navigation_link" href="./index.html">OP-CAS</a>
@@ -105,22 +107,22 @@
         </section>
 
         <!-- alexander -->
-        <section class="member">
+        <!-- <section class="member">
             <h2 class="member__name"><b>알렉산더 슈페르베르크</b></h2>
             <p class="member__role"><i>MPC & SLAM 어드바이저</i></p>
             <div class="member-wrapper">
                 <div class="member__image-wrapper">
-                    <!-- image -->
+
                     <img class="avatar" src="../images/alex.jpg" alt="alex">
                 </div>
 
-                <!-- about -->
+
                 <div class="member__about">
                     <p>제 이름은<a href="https://www.linkedin.com/in/alexander-schperberg-bb531053">알렉산더 슈퍼버그</a>이고 UCLA 기계항공공학부 로봇공학 & 항공우주 연구소의 박사과정 학생입니다. 원래 오스트리아에서 자랐고 캘리포니아 라파예트에 있는 아칼레니스 고등학교에 다녔던 저는 항상 공학적인 모든 것에 열정적이었습니다.
                         <br><br>저는 주로 Active SLAM의 문제 해결과 동시 계획 수립, 현지화 및 매핑에 모두 관심이 있습니다. 이러한 문제는 로봇 시스템에서 완전한 자율 동작을 달성하기 위해 계획, 예리한 비전, 매핑에 대한 강력한 이해 및 기계 학습 모듈에 대한 깊은 이해가 필요한 경우가 많습니다.<br><br>저는 자율 로봇 공학 이외에도 영어와 독일어를 유창하게 구사하고, 열렬한 테니스 선수입니다. </p>
                 </div>
             </div>  
-        </section>
+        </section> -->
     </section>
 
     <!-- curriculum team -->

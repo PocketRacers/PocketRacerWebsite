@@ -4,6 +4,7 @@
     position: absolute;
     top: 0px;
     width: 100%;
+    z-index: 99;
 }
 
 .home_link {
@@ -46,7 +47,7 @@
 
 .navigation_link {
     /* positioning */
-    margin-right: 50px;
+    margin-right: 35px;
     margin-bottom: 0px;
 
     /* font styling */
@@ -162,7 +163,7 @@
     .mobile_navigation_link {
         /* positiong */
         position: relative;
-        top: 200px;
+        top: 150px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -170,12 +171,12 @@
         margin-right: auto;
 
         /* framing */
-        width: 100px;
+        width: 125px;
         padding: 25px;
 
         /* text styling */
         font-weight: 600;
-        font-size: 32px;
+        font-size: 31px;
     }
 
     .mobile_navigation_link {

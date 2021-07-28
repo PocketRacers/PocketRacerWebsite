@@ -6,8 +6,9 @@ a {
 
 .about {
     font-size: 20px;
-    margin-left: 75px;
-    margin-right: 75px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 220px;
 }
 
 .title {
@@ -18,17 +19,9 @@ a {
 .bear_team, .curriculum_dev_team {
     /* positioning */
     position: relative;
-    margin: 225px;
-    margin-top: -100px;
-}
-
-@media (max-width: 900px) {
-    .bear_team, .curriculum_dev_team {
-        flex-direction: column;
-        align-items: center;
-        margin: 50px;
-        padding-top: 250px;
-    }
+    margin-left: 225px;
+    margin-right: 225px;
+    margin-top: 225px;
 }
 
 .avatar {
@@ -36,21 +29,6 @@ a {
     height: auto;
     width: 75%;
 }
-
-@media (max-width: 900px) {
-    .avatar {
-        /* padding */
-        margin-bottom: 35px;
-    }
-}
-
-/*.team-page {
-    background-color: rgba(0, 0, 0, 0.9);
-    width: 100vw;
-    min-height: 43.89vh;
-
-    display: flex;
-}*/
 
 .jesse, .alex, .dennis, .jeremy {
     display: flex;
@@ -76,31 +54,6 @@ a {
     to   { opacity: 1; }
 }
 
-@media (min-width: 900px) and (max-aspect-ratio: 3/2)  {
-    .jesse, .alex, .dennis {
-        background-size: cover;
-
-        width: 33.3vw;
-        height: 43.89vh;
-
-        position: relative;
-    }
-}
-
-@media (max-width: 900px) {
-    .team-page {
-        flex-direction: column;
-    }
-
-    .team-member-subtitle {
-        padding-bottom: 16px;
-    }
-
-    .team-member-description {
-        padding-bottom: 40px;
-    }
-}
-
 .team-member-title {
     font-size: 30px;
     text-align: center;
@@ -123,45 +76,6 @@ a {
 .team-member-linkedin {
     text-decoration: underline;
     color: rgb(94, 153, 255); /* light blue */
-}
-
-@media (max-width: 900px) {
-    .member-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .member__image-wrapper {
-        width: 75%;
-    }
-
-    .member__about {
-        width: 100%;
-        margin-left: 4px;
-    }
-
-    .member__about p {
-        margin-top: -4px;
-    }
-}
-
-@media (min-width: 769px) {
-    .member-wrapper {
-        flex-direction: row;
-    }
-
-    .member__about p {
-        margin-top: -4px;
-        font-size: 20px;
-    }
-
-    .member__image-wrapper {
-        width: 45%;
-    }
-
-    .member__about {
-        width: 50%;
-    }
 }
 
 .member {
@@ -213,6 +127,92 @@ a {
 
 body {
     /* animations */
+    margin-top: 0px;
     animation: fade_in 1.75s ease forwards;
     overflow-x: none;
+}
+
+@media (max-width: 900px) {
+    .about {
+        margin-left: 25px;
+        margin-right: 25px;
+        padding: 0px
+    }
+
+    .member-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member__image-wrapper {
+        width: 100%;
+    }
+
+    .member__about {
+        width: 100%;
+        margin-left: 4px;
+    }
+
+    .member__about p {
+        margin-top: -4px;
+    }
+
+    .avatar {
+        height: auto;
+        width: 95%;
+
+        /* padding */
+        margin-bottom: 35px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .team-page {
+        flex-direction: column;
+    }
+
+    .team-member-subtitle {
+        padding-bottom: 16px;
+    }
+
+    .team-member-description {
+        padding-bottom: 40px;
+    }
+
+    .bear_team, .curriculum_dev_team {
+        flex-direction: column;
+        align-items: center;
+        margin: 25px;
+        padding-top: 250px;
+    }
+
+    .jesse, .alex, .dennis {
+        background-size: cover;
+
+        width: 33.3vw;
+        height: 43.89vh;
+
+        position: relative;
+    }
+
+    .member-wrapper {
+        flex-direction: row;
+    }
+
+    .member__about p {
+        margin-top: -4px;
+        font-size: 20px;
+    }
+
+    .member__image-wrapper {
+        width: 45%;
+    }
+
+    .member__about {
+        width: 50%;
+    }
+
+    body {
+        margin-top: -30px;
+    }
 }

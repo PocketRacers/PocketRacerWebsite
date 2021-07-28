@@ -9,6 +9,9 @@
     <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
     <title>Bruin Electric Autonomous Racing</title>
 
+    <!-- icons -->
+    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +23,7 @@
     <link href="../styles/animations.css" rel="stylesheet">
     <link href="../styles/custom_scrollbar.css" rel="stylesheet">
     <link href="../styles/navigation_bar.css" rel="stylesheet">
-    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">    <!-- this causes errors for some reason -->
+    <link href="../styles/modal.css" rel="stylesheet">
 
     <!-- general scripts -->
     <script async src="../scripts/index.js"></script>
@@ -58,13 +61,9 @@
 
     <!-- mobile home bar -->
     <nav class="mobile_navigation_container">
-        <a href="javascript:void(0);" onclick="toggleMenuBar()">
-            <img class="mobile_menu_bar" src="./images/ios_images/menu_bar.png" alt="hamburger_menu_bar">
-        </a>
-        <div class="mobile_pages_container" id="mobile_pages_container_1">
-            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()">
-                <img class="close_menu_bar" src="./images/ios_images/close_menu_bar.png" alt="close_menu_bar">
-            </a>
+        <a href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-bars mobile_menu_bar"></i></a>
+        <div class="mobile_pages_container" id="mobile_pages_container">
+            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-multiply close_menu_bar"></i></a>
             <a class="mobile_navigation_link" href="./index_korean.html">홈페이지</a>
             <a class="mobile_navigation_link" href="./machine/machine.html">MACHInE</a>
             <a class="mobile_navigation_link" href="./opcas/opcas.html">OP-CAS</a>
@@ -74,7 +73,6 @@
         </div>
     </nav>
 
-    <!-- temporary -->
     <section class="gap">
     </section>
     <section class="gap">
@@ -95,17 +93,17 @@
         <div class="user">
             <!-- curriclum developer 1 -->
             <img class="avatar" src="../images/user3.png">
-            <p class="user_says">"Arteque et negabant. Fidentibusque uelutique de hispaniam. Confecto miscenturque priscique, ab adspiranta imperitum, proferamini, et e arcebas proferebas crudelitate sideremusque iuvaveroque, laqueum collabamque. Uersabitis altorumque."<br>Jesse Cha – UCLA PhD Candidate / SCaR Research Lead</p>
+            <p class="user_says">"BEAR is a mini F1 sandbox for roboticists. It’s racing, with code.”<br>Jesse Cha – UCLA PhD Candidate / SCaR Research Lead</p>
         </div>
         <div class="user">
             <!-- curriclum developer 2 -->
             <img class="avatar" src="../images/user1.png">
-            <p class="user_says">"Ipateant a suspectus a adgnosciebatque ab populus. Percontatione quotannis memoraverimus saeveruntque, aut fugiebasque humanarum et ueniamusque, purgandoque levabamusque dissimulantem. Commiseras."<br>Jeremy Louie – Curriculum Developer / ScAR Undergraduate Researcher</p>
+            <p class="user_says">"The BEAR curriculum is full of surprises. You not only have the opportunity to engineer your own customizable RC car, but enjoy the experience of racing your design against others. It's really self-rewarding on its own."<br>Jeremy Louie – Curriculum Developer / ScAR Undergraduate Researcher</p>
         </div>
         <div class="user">
             <!-- curriclum developer 3 -->
             <img class="avatar" src="../images/user2.png">
-            <p class="user_says">"Fidimus fundebaris et ululavi decertamusque, piscesque e cesserisque adiecit exploravero vitavissimus depromimus in de acceptus aut destituaverat, implessabamus, potitiorum aut in gesturosque de deaeque, comparatque, trepidabantque, ex paraverintque per pandenteque."<br>Aaron Kuo – Curriculum Developer / IEEE Aircopter Lead</p>
+            <p class="user_says">"BEAR provides an opportunity for interested students of all disciplines to gain experience in both hardware and software engineering."<br>Aaron Kuo – Curriculum Developer / IEEE Aircopter Lead</p>
         </div>
     </section>
 
