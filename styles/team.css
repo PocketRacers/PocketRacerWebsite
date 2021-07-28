@@ -6,8 +6,9 @@ a {
 
 .about {
     font-size: 20px;
-    margin-left: 75px;
-    margin-right: 75px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 220px;
 }
 
 .title {
@@ -19,7 +20,7 @@ a {
     /* positioning */
     position: relative;
     margin: 225px;
-    margin-top: -100px;
+    margin-top: 75px;
 }
 
 @media (max-width: 900px) {
@@ -213,6 +214,7 @@ a {
 
 body {
     /* animations */
+    margin-top: 0px;
     animation: fade_in 1.75s ease forwards;
     overflow-x: none;
 }

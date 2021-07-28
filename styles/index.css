@@ -77,9 +77,8 @@ a {
 .about {
     /* positioning */
     position: relative;
-    top: 75px;
     margin: 125px;
-    margin-top: -250px;
+
 
     /* font */
     text-align: left;

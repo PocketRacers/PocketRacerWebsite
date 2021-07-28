@@ -4,6 +4,7 @@
     position: absolute;
     top: 0px;
     width: 100%;
+    z-index: 1;
 }
 
 .home_link {
@@ -46,7 +47,7 @@
 
 .navigation_link {
     /* positioning */
-    margin-right: 50px;
+    margin-right: 35px;
     margin-bottom: 0px;
 
     /* font styling */
