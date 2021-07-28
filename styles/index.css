@@ -24,13 +24,6 @@ a {
     height: 85vh;
 }
 
-@media (max-width: 768px) {
-    .cover_container {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
 /* cover photo */
 .cover_photo {
     /* positioning */
@@ -63,12 +56,6 @@ a {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-
-@media (max-width: 768px) {
-    .text_overlay {
-        font-size: 24px;
-    }
-}
 /* -----end of cover section----- */
 
 
@@ -83,13 +70,6 @@ a {
     /* font */
     text-align: left;
     font-size: 34px;
-}
-
-@media (max-width: 768px) {
-    .about {
-        margin: 35px;
-        font-size: 22px;
-    }
 }
 /*-----end of about-----*/
 
@@ -120,18 +100,6 @@ a {
     font-weight: 400;
     text-align: left;
 }
-
-@media (max-width: 768px) {
-    .avatar {
-        height: 25%;
-        width: 25%;
-    }
-    .user {
-        flex-direction: column;
-        align-items: center;
-        margin: 25px;
-    }
-}
 /*-----end of avatar-----*/
 
 
@@ -154,13 +122,6 @@ a {
     margin-bottom: 50px;
 
 }
-
-@media (max-width: 768px) {
-    .curriculum, .about_section {
-        font-size: 22px;
-        width: 100%;
-    }
-}
 /*-----end of curriculum-----*/
 
 
@@ -169,12 +130,6 @@ a {
 .projects {
     margin: 125px;
     padding-bottom: 100px;
-}
-
-@media (max-width: 768px) {
-    .projects {
-        margin: -100px; /* double check this value */
-    }
 }
 
 .section_title {
@@ -200,21 +155,6 @@ a {
     /* positioning DOUBLE CHECK THESE*/
     position: relative;
     width: auto;
-}
-
-@media (max-width: 768px) {
-    .project_title {
-        font-size: 22px;
-    }
-
-    .projects_wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project_about {
-        font-size: 22px;
-    }
 }
 
 .navigation_project {
@@ -256,12 +196,6 @@ a {
     text-align: left;
 }
 
-@media (max-width: 768px)  {
-    .image_description {
-        font-size: 18px;
-    }
-}
-
 .project_about {
     padding: 0px 0.5em;
     display: grid;
@@ -287,3 +221,68 @@ a {
     transform: translate(-50%, -50%);
 }
 /*-----end of projects-----*/
+
+
+@media (max-width: 768px) {
+    .cover_container {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .text_overlay {
+        font-size: 24px;
+    }
+
+    .curriculum {
+        font-size: 22px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .avatar {
+        height: 50%;
+        width: 50%;
+    }
+    .user {
+        flex-direction: column;
+        align-items: center;
+        margin: 25px;
+    }
+
+    .about {
+        margin-top: 150px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .project_title {
+        font-size: 22px;
+    }
+
+    .projects_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project_about {
+        font-size: 22px;
+    }
+
+    .projects {
+        margin: -100px; /* double check this value */
+    }
+
+    .image_description {
+        font-size: 18px;
+    }
+
+    .about_section {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .about_section_mobile {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+}
