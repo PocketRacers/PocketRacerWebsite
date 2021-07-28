@@ -58,7 +58,6 @@ if (findCookie(disableStr + "=true") == true) {   // if tracking disabled
 */
 
 window.onload = function() {
-    checkAndTrack()     // perform google analytic tracking only if enabled
     if (localStorage.getItem("show_popup") === null) {      // if "show_popup" doesn't exist in local storage
         localStorage.setItem("show_popup", "true")          // create it, initially set it to false 
     }

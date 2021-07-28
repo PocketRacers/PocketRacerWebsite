@@ -5,7 +5,6 @@
 
     /* if map doesn't show up, show placeholder instead */
     background-color: rgb(156, 156, 156);
-    /*border: 1px solid white;*/
 }
 
 .location {
@@ -25,21 +24,18 @@
     flex-basis: 100%;
     flex: 1;
 
-    /*align-items: center;*/
     margin-top: 0px;
-    /*margin-bottom: 0px;*/
-    /*margin-left: 35px;*/
-    /*margin-right: 35px;*/
 }
 
 .contact {
     font-size: 20px;
-    margin-top: -275px;
+    margin-top: 100px;
     margin-left: 100px;
     margin-right: 100px;
 }
 
 .title {
+    font-weight: 600;
     font-size: 28px;
     margin-bottom: -5px;
 }
@@ -83,7 +79,6 @@
     padding-right: auto;
     padding-left: auto;
 
-
     /* styling */
     font-family: "Darker Grotesque", sans-serif;
     text-align: center;
@@ -98,4 +93,47 @@ body {
     /* animations */
     animation: fade_in 1.75s ease forwards;
     overflow-x: none;
+}
+
+@media (max-width: 768px) {
+    .title {
+        position: relative;
+        margin-top: 150px;
+    }
+
+    .contact_about {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .contact {
+        /* positiong */
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 15px;
+        margin-right: 15px;
+
+        /* alignment */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        align-items: center;
+    }
+
+    .contact_form {
+        width: 95%;
+    }
+
+    #map {
+        height: 350px;
+        width: 80%;
+        margin-bottom: 25px;
+    }
 }

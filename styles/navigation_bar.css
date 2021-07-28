@@ -108,7 +108,8 @@
 }
 
 .mobile_pages_container, .close_menu_bar {
-    visibility: hidden;
+    /*visibility: hidden;*/
+    display: none;
 }
 /*-----desktop stuff-----*/
 
@@ -131,8 +132,9 @@
     }
 
     .mobile_menu_bar {
-        height: 64px;
-        width: auto;
+        /* font styling */
+        font-size: 46px;
+        color: white;
 
         /* animations */
         opacity: 0;
@@ -169,7 +171,7 @@
 
         /* framing */
         width: 100px;
-        padding: 10px;
+        padding: 25px;
 
         /* text styling */
         font-weight: 600;
@@ -186,6 +188,13 @@
         color: white;
     }
 
+    .home_buttom_image {
+        opacity: 0;
+        animation: fade_in 1s forwards;
+        -webkit-animation: fade_in 1s forwards;
+        animation-delay: 0.5s;
+    }
+
     .close_menu_bar {
         /* positiong */
         display: block;
@@ -197,8 +206,8 @@
         opacity: 0.85;
 
         /* framing */
-        height: 48px;
-        width: auto;
+        font-size: 46px;
+        color: white;
     }
 
     .close_div {
