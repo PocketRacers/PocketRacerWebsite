@@ -194,9 +194,7 @@ body {
 
         position: relative;
     }
-}
 
-@media (min-width: 769px) {
     .member-wrapper {
         flex-direction: row;
     }
@@ -212,5 +210,9 @@ body {
 
     .member__about {
         width: 50%;
+    }
+
+    body {
+        margin-top: -30px;
     }
 }
