@@ -47,32 +47,37 @@
             <img class="home_buttom_image" src="../images/home_button_image.svg" alt="home_button_image">
         </a>
         <div class="pages_container">
-            <a class="navigation_link" href="../index.html">HOME</a>
+            <a class="navigation_link" href="./index_korean.html">홈페이지</a>
             <a class="navigation_link" href="./machine/machine.html">MACHInE</a>
             <a class="navigation_link" href="./opcas/opcas.html">OP-CAS</a>
-            <a class="navigation_link" href="./team.html">TEAM</a>
-            <a class="navigation_link" href="./contact.html">CONTACT</a>
-            <a class="navigation_link" href="./contact_korean.html">한</a>
+            <a class="navigation_link" href="./team_korean.html">팀</a>
+            <a class="navigation_link" href="./contact_korean.html">연락처</a>
+            <a class="navigation_link" href="./contact.html">English</a>
         </div>
     </nav>
 
     <!-- mobile home bar -->
     <nav class="mobile_navigation_container">
-        <a href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-bars mobile_menu_bar"></i></a>
-        <div class="mobile_pages_container" id="mobile_pages_container">
-            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-multiply close_menu_bar"></i></a>
-            <a class="mobile_navigation_link" href="../index.html">HOME</a>
+        <a href="javascript:void(0);" onclick="toggleMenuBar()">
+            <img class="mobile_menu_bar" src="../images/ios_images/menu_bar.png" alt="hamburger_menu_bar">
+        </a>
+        <div class="mobile_pages_container" id="mobile_pages_container_1">
+            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()">
+                <img class="close_menu_bar" src="../images/ios_images/close_menu_bar.png" alt="close_menu_bar">
+            </a>
+            <a class="mobile_navigation_link" href="./index_korean.html">홈페이지</a>
             <a class="mobile_navigation_link" href="./machine/machine.html">MACHInE</a>
-            <a class="mobile_navigation_link" href="./index.html">OP-CAS</a>
-            <a class="mobile_navigation_link" href="./team.html">TEAM</a>
-            <a class="mobile_navigation_link" href="./contact.html">CONTACT</a>
+            <a class="mobile_navigation_link" href="./opcas/opcas.html">OP-CAS</a>
+            <a class="mobile_navigation_link" href="./team_korean.html">팀</a>
+            <a class="mobile_navigation_link" href="./contact_korean.html">연락처</a>
+            <a class="mobile_navigation_link" href="./contact.html">English</a>
         </div>
     </nav>   
 
     <!-- contact section -->
     <section class="contact">
-        <p class="title">Contact</p>
-        <p class="contact_about">We're always open and willing to answer any questions you have. Shoot us an email, and let's connect!</p>
+        <p class="title">연락처</p>
+        <p>언제든지 궁금한 점이 있다면 이메일로 연락주시기 바랍니다.</p>
         <div class="row">
 
             <!-- image -->
@@ -83,13 +88,13 @@
             <!-- contact fill in -->
             <div class="col">
                 <form id="contact_form" class="contact_form" action="https://api.emailjs.com/api/v1.0/email/send" method="post">
-                    <label for="email" class="contact_label"><i class="uil uil-envelope-alt"></i> Email</label>
+                    <label for="email" class="contact_label"><i class="uil uil-envelope-alt"></i> 이메일</label>
                     <input type="email" class="contact_input" id="email" required autofocus>
 
-                    <label for="subject" class="contact_label"><i class="uil uil-user"></i> Subject</label>
+                    <label for="subject" class="contact_label"><i class="uil uil-user"></i> 제목</label>
                     <input type="text" class="contact_input" id="subject" required>
 
-                    <label for="message" class="contact_label"><i class="uil uil-comment-alt-lines"></i> Message</label>
+                    <label for="message" class="contact_label"><i class="uil uil-comment-alt-lines"></i> 메시지</label>
                     <textarea type="text" class="contact_input" id="message" required></textarea>
 
                     <input type="submit" class="contact__submit" id="submit" value="Send" />
