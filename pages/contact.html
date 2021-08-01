@@ -27,7 +27,7 @@
 
     <!-- general scripts -->
     <script async src="../scripts/index.js"></script>
-    <script async src="../scripts/contact.js"></script>
+    <!-- <script async src="../scripts/contact.js"></script> -->
 
     <!-- google analytics scripts -->
     <script async src="../scripts/tracking.js"></script>
@@ -44,6 +44,24 @@
         (function() {
             emailjs.init("user_pqO3HtclZTUFDOwnE797p");
         })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById("contact_form").addEventListener("submit", function(event) {
+                event.preventDefault();
+            
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+            
+                // these IDs from the previous steps
+                emailjs.sendForm("contact_service", "contact_form", this)
+                    .then(function() {
+                        console.log("SUCCESS!");
+                    }, function(error) {
+                        console.log("FAILED...", error);
+                    });
+                });
+        }
     </script>
 </head>
 <body>
@@ -81,7 +99,7 @@
     <!-- contact section -->
     <section class="contact">
         <p class="title">Contact</p>
-        <p class="contact_about">We're always open and willing to answer any questions you have. Shoot us an email, and let's connect!</p>
+        <p class="contact_about">We"re always open and willing to answer any questions you have. Shoot us an email, and let"s connect!</p>
         <div class="row">
 
             <!-- image -->
