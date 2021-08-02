@@ -95,6 +95,13 @@ body {
     overflow-x: none;
 }
 
+textarea {
+    /* font styling */
+    font-family: "Darker Grotesque", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
 @media (max-width: 768px) {
     .title {
         position: relative;
