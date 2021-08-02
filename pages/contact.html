@@ -109,7 +109,8 @@
 
             <!-- contact fill in -->
             <div class="col">
-                <form id="contact_form" class="contact_form" action="https://api.emailjs.com/api/v1.0/email/send" method="post">
+                <!-- <form id="contact_form" class="contact_form" action="https://api.emailjs.com/api/v1.0/email/send" method="post"> -->
+                <form class="contact_form" id="contact_form">
                     <label for="email" class="contact_label"><i class="uil uil-envelope-alt"></i> Email</label>
                     <input type="email" class="contact_input" id="email" required autofocus>
 
@@ -119,7 +120,7 @@
                     <label for="message" class="contact_label"><i class="uil uil-comment-alt-lines"></i> Message</label>
                     <textarea type="text" class="contact_input" id="message" required></textarea>
 
-                    <input type="submit" class="contact__submit" id="submit" value="Send" />
+                    <input type="submit" id="submit" value="Send" />
                 </form>
             </div>
         </div>
