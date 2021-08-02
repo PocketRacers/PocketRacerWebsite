@@ -39,7 +39,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTg_USde_fI23m_ayLUwx3iB7cew0XQiI&callback=initMap&libraries=&v=weekly" async></script>     <!-- google maps -->
 
     <!-- email js -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
             emailjs.init("user_pqO3HtclZTUFDOwnE797p");
@@ -47,20 +47,24 @@
     </script>
     <script type="text/javascript">
         window.onload = function() {
-            document.getElementById("contact_form").addEventListener("submit", function(event) {
+            const btn = document.getElementById('button');
+
+            document.getElementById('form').addEventListener('submit', function(event) {
                 event.preventDefault();
-            
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-            
-                // these IDs from the previous steps
-                emailjs.sendForm("contact_service", "contact_form", this)
-                    .then(function() {
-                        console.log("SUCCESS!");
-                    }, function(error) {
-                        console.log("FAILED...", error);
+
+                btn.value = 'Sending...';
+
+                const serviceID = 'default_service';
+                const templateID = 'contact_form';
+
+                emailjs.sendForm(serviceID, templateID, this).then(() => {
+                        btn.value = 'Send Email';
+                        alert('Sent!');
+                    }, (err) => {
+                        btn.value = 'Send Email';
+                        alert(JSON.stringify(err));
                     });
-                });
+            });
         }
     </script>
 </head>
