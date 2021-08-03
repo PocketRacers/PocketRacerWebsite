@@ -12,11 +12,13 @@ window.onload = function() {
 
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
-                submitButton.value = "Send Email"
+                submitButton.value = "Sent"
                 alert("Email successfully sent")
+                submitButton.value = "Send"
             }, (err) => {
                 submitButton.value = "Send Email"
                 alert(JSON.stringify(err));
+                submitButton.value = "Send"
             })
     })
 }
