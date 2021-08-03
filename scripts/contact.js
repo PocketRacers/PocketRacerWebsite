@@ -1,7 +1,5 @@
 
 window.onload = function() {
-    emailjs.init("user_pqO3HtclZTUFDOwnE797p")
-
     var submitButton = document.getElementById("submit");
     document.getElementById("contact_form").addEventListener("submit", function(event) {
         event.preventDefault();
