@@ -36,38 +36,11 @@
 
     <!-- google maps scripts -->
     <script async src="../scripts/google_maps.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTg_USde_fI23m_ayLUwx3iB7cew0XQiI&callback=initMap&libraries=&v=weekly" async></script>     <!-- google maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTg_USde_fI23m_ayLUwx3iB7cew0XQiI&callback=initMap" async defer></script>     <!-- google maps -->
 
     <!-- email js -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript" src="../scripts/contact.js"></script>
-<!--     <script type="text/javascript">
-        (function() {
-            emailjs.init("user_pqO3HtclZTUFDOwnE797p");
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            const btn = document.getElementById('submit');
-
-            document.getElementById('contact_form').addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                btn.value = 'Sending...';
-
-                const serviceID = 'default_service';
-                const templateID = 'contact_form';
-
-                emailjs.sendForm(serviceID, templateID, this).then(() => {
-                        btn.value = 'Send Email';
-                        alert('Sent!');
-                    }, (err) => {
-                        btn.value = 'Send Email';
-                        alert(JSON.stringify(err));
-                    });
-            });
-        }
-    </script> -->
 </head>
 <body>
 
@@ -104,7 +77,7 @@
     <!-- contact section -->
     <section class="contact">
         <p class="title">Contact</p>
-        <p class="contact_about">We"re always open and willing to answer any questions you have. Shoot us an email, and let"s connect!</p>
+        <p class="contact_about">We're always open and willing to answer any questions you have. Shoot us an email, and let"s connect!</p>
         <div class="row">
 
             <!-- image -->
