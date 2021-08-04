@@ -1,7 +1,12 @@
 
 window.onload = function() {
     var submitButton = document.getElementById("submit");
+
+    alert("called 1")
+
     document.getElementById("contact_form").addEventListener("submit", function(event) {
+        alert("called 2")
+
         event.preventDefault();
         submitButton.value = "Sending...";
 
