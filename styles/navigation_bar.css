@@ -132,10 +132,17 @@
         width: auto;
     }
 
+    .mobile_navigation_container a {
+        display: block;
+        height: 41px;
+        width: 41px;
+    }
+
     .mobile_menu_bar {
         /* font styling */
         font-size: 46px;
         color: white;
+        background-color: yellow;
 
         /* animations */
         opacity: 0;
