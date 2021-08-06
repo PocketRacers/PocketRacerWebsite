@@ -69,7 +69,7 @@ a {
     height: auto;
 }
 
-.dennis, .jesse {
+.dennis, .jesse, .eric {
     width: 55%;
 }
 
@@ -89,4 +89,32 @@ body {
     /* animations */    
     animation: fade_in 1.75s ease forwards;
     overflow-x: none;
+}
+
+@media (max-width: 768px) {
+    .about {
+        margin-left: -100px;
+        margin-right: -100px;
+    }
+
+    .bear_team, .curriculum_dev_team {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .bear_team {
+        padding-top: 150px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        align-items: center;
+    }
+
+    body {
+        margin-top: -225px;
+    }
 }
