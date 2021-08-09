@@ -84,16 +84,17 @@
             <div class="col">
                 <form class="contact_form" action="https://formsubmit.co/9d1943e790daa208c62102d4ac7540bf" method="POST">
                     <label for="email" class="contact_label"><i class="uil uil-envelope-alt"></i> Email</label>
-                    <input type="email" class="contact_input" id="email" required autofocus>
+                    <input type="email" name="email" class="contact_input" id="email" required autofocus>
 
                     <label for="subject" class="contact_label"><i class="uil uil-user"></i> Subject</label>
-                    <input type="text" class="contact_input" id="subject" required>
+                    <input type="email" name="_subject" class="contact_input" id="subject" required>
 
                     <label for="message" class="contact_label"><i class="uil uil-comment-alt-lines"></i> Message</label>
                     <textarea type="text" class="contact_input" id="message" required></textarea>
 
                     <input type="submit" id="submit" value="Send"/>
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">  <!-- hidden part to catch scammers -->
                 </form>
             </div>
         </div>
