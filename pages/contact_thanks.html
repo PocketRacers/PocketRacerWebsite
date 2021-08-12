@@ -82,24 +82,18 @@
 
             <!-- contact fill in -->
             <div class="col">
-                <form class="contact_form" action="https://formsubmit.co/9d1943e790daa208c62102d4ac7540bf" method="POST" enctype="multipart/form-data">
-                    <!-- user email -->
+                <form class="contact_form" action="https://formsubmit.co/9d1943e790daa208c62102d4ac7540bf" method="POST">
                     <label for="email" class="contact_label"><i class="uil uil-envelope-alt"></i> Email</label>
                     <input type="email" name="email" class="contact_input" id="email" required autofocus>
 
-                    <!-- user message -->
                     <label for="message" class="contact_label"><i class="uil uil-comment-alt-lines"></i> Message</label>
                     <textarea type="text" name="name" class="contact_input" id="message" required></textarea>
 
-                    <!-- enable user to upload attachments -->
-                    <input type="file" name="attachment" class="file_upload" accept="image/png, image/jpeg">
-
-                    <!-- submission button -->
                     <input type="submit" id="submit" value="Send"/>
-
+                    
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="_honey" style="display:none">      <!-- hidden part to catch scammers -->
-                    <!-- <input type="hidden" name="_next" value="./contact.html">   -->
+                    <input type="text" name="_honey" style="display:none">                          <!-- hidden part to catch scammers -->
+                    <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">    <!-- if submission successful, navigate to new page -->
                 </form>
             </div>
         </div>
@@ -108,7 +102,7 @@
     <section class="gap">
     </section>
 
-    <!-- footer
+    <!-- footer -->
     <footer class="document_footer">
         <p>Robotics and Mechanisms Laboratory (RoMeLa)<br>Department of Mechanical and Aerospace Engineering<br>University of California, Los Angeles (UCLA)<br>LA, CA, USA, 90095</p>
     </footer>

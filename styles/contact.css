@@ -1,6 +1,6 @@
 
 #map {
-    height: 425px;
+    height: 400px;
     width: 95%;
 
     /* if map doesn't show up, show placeholder instead */
@@ -56,6 +56,15 @@
 
 .contact_input {
     margin-bottom: 8px;
+}
+
+.file_upload {
+    /* positioning */
+    padding-top: 10px;
+    padding-bottom: 15px;
+
+    /* font styling */
+    font-family: "Darker Grotesque", sans-serif;
 }
 
 #email {
