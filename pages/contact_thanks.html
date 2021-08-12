@@ -82,7 +82,7 @@
 
             <!-- contact fill in -->
             <div class="col">
-                <form method="POST" class="contact_form" action="https://formsubmit.co/9d1943e790daa208c62102d4ac7540bf" enctype="multipart/form-data">
+                <form method="POST" action="https://formsubmit.co/9d1943e790daa208c62102d4ac7540bf" class="contact_form" enctype="multipart/form-data">
                     <!-- user email -->
                     <label for="email" class="contact_label"><i class="uil uil-envelope-alt"></i> Email</label>
                     <input type="email" name="email" class="contact_input" id="email" required autofocus>
@@ -101,7 +101,10 @@
 
                     <input type="hidden" name="_captcha" value="false">         <!-- disable captcha -->
                     <input type="text" name="_honey" style="display:none">      <!-- hidden part to catch scammers -->
-                    <input type="hidden" name="_next" value="./contact.html">   <!-- if successful submission, redirect to new page -->
+
+                    <!-- if successful submission, redirect to new page -->
+                    <!-- maybe change this? -->
+                    <input type="hidden" name="_next" value="https://scaledautonomousracing.github.io/BEAR/pages/contact_thanks.html"> 
                 </form>
             </div>
         </div>
