@@ -1,6 +1,6 @@
 
 #map {
-    height: 400px;
+    height: 425px;
     width: 95%;
 
     /* if map doesn't show up, show placeholder instead */
@@ -65,6 +65,12 @@
 
     /* font styling */
     font-family: "Darker Grotesque", sans-serif;
+}
+
+.submission_successful {
+    opacity: 0;
+    animation: fade_in_out 2s linear;
+    animation-delay: 0.5s;
 }
 
 #email {
