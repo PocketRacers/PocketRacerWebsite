@@ -4,6 +4,26 @@ a {
     filter: brightness(1.5);
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+} 
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
+    /*align-items: center;*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
 /* -----start of cover section----- */
 .cover_container {
     /* text alignment */
@@ -243,6 +263,11 @@ a {
         height: 50%;
         width: 50%;
     }
+
+    .user_says {
+        text-align: center;
+    }
+
     .user {
         flex-direction: column;
         align-items: center;
