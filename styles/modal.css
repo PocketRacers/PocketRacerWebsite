@@ -51,7 +51,37 @@
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal p {
+        /* positiong */
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        /* font styling */
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .modal span {
+        display: block;
+    }
+
+    .modal i {
         visibility: hidden;
+    }
+
+    .modal button {
+        /* positiong */
+        vertical-align: center;
+        display: inline-block;
+        margin-top: 7.5px;
+        margin-left: auto;
+        margin-right: auto;
+
+        /* font styling */
+        font-size: 18px;
     }
 }
