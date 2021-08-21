@@ -132,7 +132,7 @@ a {
 
 .about_section {
     /* font styling */
-    font-size: 24px;
+    font-size: 2px;
     font-weight: 400;
     text-align: left;
 
@@ -172,7 +172,7 @@ a {
 }
 
 .projects_image_wrapper {
-    /* positioning DOUBLE CHECK THESE*/
+    /* positioning DOUBLE CHECK these*/
     position: relative;
     width: auto;
 }
@@ -213,7 +213,7 @@ a {
 
 .image_description {
     font-size: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .project_about {
@@ -244,6 +244,20 @@ a {
 
 
 @media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        align-items: center;
+    }
+
+    .projects_image_wrapper {
+/*        margin-left: 25px;
+        margin-right: 25px;*/
+        max-width: 65%;
+    }
+
     .cover_container {
         max-width: 100%;
         height: auto;
