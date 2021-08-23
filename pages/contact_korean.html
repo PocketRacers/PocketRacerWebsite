@@ -71,8 +71,8 @@
 
     <!-- contact section -->
     <section class="contact">
-        <p class="title">연락처</p>
-        <p>언제든지 궁금한 점이 있다면 이메일로 연락주시기 바랍니다.</p>
+        <p class="title">연락하다</p>
+        <p class="contact_about">언제든지 궁금한 점이 있다면 이메일로 연락주시기 바랍니다.</p>
         <div class="row">
 
             <!-- image -->
@@ -82,20 +82,30 @@
 
             <!-- contact fill in -->
             <div class="col">
-                <form id="contact_form" class="contact_form" action="https://api.emailjs.com/api/v1.0/email/send" method="post">
+                <form class="contact_form" action="https://formsubmit.co/fd3eaaa0ee420433d344fe43827cd9c0" method="POST" enctype="multipart/form-data">
+                    <!-- user email -->
                     <label for="email" class="contact_label"><i class="uil uil-envelope-alt"></i> 이메일</label>
-                    <input type="email" class="contact_input" id="email" required autofocus>
+                    <input type="email" name="email" class="contact_input" id="email" required autofocus>
 
-                    <label for="subject" class="contact_label"><i class="uil uil-user"></i> 제목</label>
-                    <input type="text" class="contact_input" id="subject" required>
-
+                    <!-- user message -->
                     <label for="message" class="contact_label"><i class="uil uil-comment-alt-lines"></i> 메시지</label>
-                    <textarea type="text" class="contact_input" id="message" required></textarea>
+                    <textarea type="text" name="name" class="contact_input" id="message" required></textarea>
 
-                    <input type="submit" class="contact__submit" id="submit" value="Send" />
+                    <!-- enable user to upload attachments -->
+                    <input type="file" name="attachment" class="file_upload" accept="image/png, image/jpeg">
+
+                    <!-- submission button -->
+                    <input type="submit" id="submit" value="Send"/>
+
+                    <input type="hidden" name="_captcha" value="false">         <!-- disable captcha -->
+                    <input type="text" name="_honey" style="display:none">      <!-- hidden part to catch scammers -->
+                    <!-- <input type="hidden" name="_next" value="./contact.html">  -->
                 </form>
             </div>
         </div>
+    </section>
+
+    <section class="gap">
     </section>
 
     <section class="gap">
