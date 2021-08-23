@@ -80,7 +80,6 @@ html {
     flex-basis: 100%;
     flex: 1;
 
-    /*align-items: center;*/
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 35px;
@@ -131,6 +130,11 @@ body {
 }
 
 @media (max-width: 900px) {
+    .blank {
+        visibility: hidden;
+        display: none;
+    }
+
     .table_of_contents {
         visibility: hidden;
     }
@@ -145,6 +149,11 @@ body {
 
     .machine_title {
         font-size: 25px;
+    }
+
+    .image_wrapper {
+/*        margin-left: -60px;
+        margin-right: -60px;*/
     }
 
     .image_wrapper img {
