@@ -11,17 +11,16 @@
     --blue:       #1295D8;    
 }
 
-/* section gaps */
-.gap {
-    position: relative;
-    height: 100px;
-}
-
 /* weighted font */
 .bold {
     /* font colors */
     color: var(--blue);
     flex-wrap: nowrap;
+}
+
+.gap {
+    position: relative;
+    height: 100px;
 }
 
 /* body styling */
@@ -42,7 +41,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Portrait */
+/* Portrait mode */
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 

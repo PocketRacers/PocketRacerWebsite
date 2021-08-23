@@ -78,8 +78,6 @@ html {
 
 .next_page {
     /* framing */
-    position: relative;
-    top: 75px;
     display: flex;
     justify-content: flex-end;
     padding-left: 30px;
@@ -116,6 +114,10 @@ body {
 }
 
 @media (max-width: 900px) {
+    .opcas_title {
+        padding-top: 150px;
+    }
+
     .table_of_contents {
         visibility: hidden;
     }
