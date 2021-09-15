@@ -116,7 +116,7 @@ a {
     padding-left: 20px;
 
     /* font styling */
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     text-align: left;
 }
@@ -162,7 +162,6 @@ a {
 .project_title {
     /*font-size: 28px;*/
     font-size: 28px;
-    font-size: 2.2vw;
     text-align: center;
     margin-bottom: 0.75em;
 }
@@ -274,7 +273,7 @@ a {
     }
 
     .avatar {
-        height: 50%;
+        height: auto;
         width: 50%;
     }
 
