@@ -130,6 +130,14 @@ a {
     margin: 75px;
 }
 
+.curriculum a {
+    transition: 1s;    
+}
+
+.curriculum a:hover {
+    filter: brightness(1.75);
+}
+
 .about_section {
     /* font styling */
     font-size: 22px;
