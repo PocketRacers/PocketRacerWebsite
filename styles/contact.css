@@ -69,7 +69,15 @@
 
 .submission_successful {
     opacity: 0;
+
+    -moz-animation: fade_in_out 2s linear;
+    -webkit-animation: fade_in_out 2s linear;
+    -o-animation: fade_in_out 2s linear;
     animation: fade_in_out 2s linear;
+
+    -moz-animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
     animation-delay: 0.5s;
 }
 
@@ -106,7 +114,9 @@
 
 body {
     /* animations */
-    animation: fade_in 1.75s ease forwards;
+    -moz-animation: fade_in 1.75s ease forwards;
+    -webkit-animation: fade_in 1.75s ease forwards;
+    -o-animation: fade_in 1.75s ease forwards;
     overflow-x: none;
 }
 
