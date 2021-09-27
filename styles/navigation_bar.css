@@ -23,9 +23,13 @@
 }
 
 .home_buttom_image {
+    /* positioning */
+    position: relative;
+    top: 25px;
+
     /* styling */
-    height: 85px;
-    width: 85px;
+    height: auto;
+    width: 7.5%;
     filter: brightness(0) invert(1);
 
     /* animation */
