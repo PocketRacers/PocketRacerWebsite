@@ -19,8 +19,10 @@
     /* modal styling */
     background: rgb(41, 42, 45);
     opacity: 0;
+    -moz-animation: slide_up 1s forwards;
+    -webkit-animation: slide_up 1s forwards;
+    -o-animation: slide_up 1s forwards;
     animation: slide_up 1s forwards;
-    /*animation-delay: 1.5s;*/
 }
 
 .modal p {
@@ -47,6 +49,9 @@
 }
 
 .modal button:hover {
+    -moz-animation: hover_fade 1s forwards;
+    -webkit-animation: hover_fade 1s forwards;
+    -o-animation: hover_fade 1s forwards;
     animation: hover_fade 1s forwards;
 }
 

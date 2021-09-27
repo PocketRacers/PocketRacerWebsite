@@ -17,8 +17,14 @@
     justify-content: flex-start;
 
     /* animation */
-    animation: fade_in 1s forwards;
+    -moz-animation: fade_in 1s forwards;
     -webkit-animation: fade_in 1s forwards;
+    -o-animation: fade_in 1s forwards;
+    animation: fade_in 1s forwards;
+
+    -moz-animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
     animation-delay: 0.5s;
 }
 
@@ -34,8 +40,15 @@
 
     /* animation */
     opacity: 0;
-    animation: fade_in 1s forwards;
+
+    -moz-animation: fade_in 1s forwards;
     -webkit-animation: fade_in 1s forwards;
+    -o-animation: fade_in 1s forwards;
+    animation: fade_in 1s forwards;
+
+    -moz-animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
     animation-delay: 0.5s;
 }
 
@@ -63,8 +76,14 @@
     text-decoration: none;
 
     /* animation */
+    -moz-animation: fade_in 1s forwards;
+    -webkit-animation: fade_in 1s forwards;
+    -o-animation: fade_in 1s forwards;
     animation: fade_in 1s forwards;
-    -webkit-animation: fade_in 1s forwards;    
+
+    -moz-animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
     animation-delay: 0.5s;
 }
 
@@ -149,7 +168,15 @@
 
         /* animations */
         opacity: 0;
+
+        -moz-animation: fade_in 1s forwards;
+        -webkit-animation: fade_in 1s forwards;
+        -o-animation: fade_in 1s forwards;
         animation: fade_in 1s forwards;
+
+        -moz-animation-delay: 0.5s; 
+        -webkit-animation-delay: 0.5s;
+        -o-animation-delay: 0.5s;
         animation-delay: 0.5s;
     }
 
@@ -166,8 +193,10 @@
         background-color: gray;
 
         /* fade in */
-        animation: mobile_fade_in 0.5s forwards;
+        -moz-animation: mobile_fade_in 0.5s forwards;
         -webkit-animation: mobile_fade_in 0.5s forwards;
+        -o-animation: mobile_fade_in 0.5s forwards;
+        animation: mobile_fade_in 0.5s forwards;
     }
 
     .mobile_navigation_link {
@@ -215,8 +244,16 @@
 
     .home_buttom_image {
         opacity: 0;
-        animation: fade_in 1s forwards;
+
+        -moz-animation: fade_in 1s forwards;
         -webkit-animation: fade_in 1s forwards;
+        -o-animation: fade_in 1s forwards;
+        animation: fade_in 1s forwards;
+
+
+        -moz-animation-delay: 0.5s;
+        -webkit-animation-delay: 0.5s;
+        -o-animation-delay: 0.5s;
         animation-delay: 0.5s;
     }
 
