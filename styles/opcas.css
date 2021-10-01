@@ -104,11 +104,17 @@ html {
     filter: brightness(1.5);
     z-index: 99; 
 
+    -moz-animation: hover_fade 1s forwards;
+    -webkit-animation: hover_fade 1s forwards;
+    -o-animation: hover_fade 1s forwards;
     animation: hover_fade 1s forwards;
 }
 
 body {
     /* animations */
+    -moz-animation: fade_in 1.75s ease forwards;
+    -webkit-animation: fade_in 1.75s ease forwards;
+    -o-animation: fade_in 1.75s ease forwards;
     animation: fade_in 1.75s ease forwards;
     overflow-x: none;
 }

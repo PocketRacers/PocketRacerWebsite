@@ -31,6 +31,9 @@ a {
     text-align: center;
     color: white;
     display: flex;
+    -moz-animation: fade_in 2s;
+    -webkit-animation: fade_in 2s;
+    -o-animation: fade_in 2s;
     animation: fade_in 2s;
 
     /* image */

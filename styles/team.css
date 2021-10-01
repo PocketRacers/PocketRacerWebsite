@@ -87,6 +87,9 @@ body {
     /*margin-right: 150px;*/
 
     /* animations */    
+    -moz-animation: fade_in 1.75s ease forwards;
+    -webkit-animation: fade_in 1.75s ease forwards;
+    -o-animation: fade_in 1.75s ease forwards;
     animation: fade_in 1.75s ease forwards;
     overflow-x: none;
 }
