@@ -1,166 +1,323 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
-    <title>Pocket Racer</title>
-
-    <!-- icons -->
-    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- style sheets -->
-    <link href="./styles/all_pages.css" rel="stylesheet">
-    <link href="./styles/index.css" rel="stylesheet">
-    <link href="./styles/animations.css" rel="stylesheet">
-    <link href="./styles/custom_scrollbar.css" rel="stylesheet">
-    <link href="./styles/navigation_bar.css" rel="stylesheet">
-    <link href="./styles/modal.css" rel="stylesheet">
-    <link href="./styles/footer.css" rel="stylesheet">
-
-    <!-- general scripts -->
-    <script async src="./scripts/index.js"></script>
-
-    <!-- google analytics scripts -->
-    <script async src="./scripts/modal.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>     <!-- for pop up modal -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199894373-1"></script>     <!-- Google Analytics -->
-</head>
-<body>
-
-    <!-- modal -->
-    <div class="modal" id="modal">
-        <p>&ensp;<i class="uil uil-map-marker-info"></i> We use cookies to improve your website experience. By using our website, you consent the use of cookies<span><button class="accept_button" onclick="optIn()">Accept</button><button class="decline_button" onclick="optOut()">Decline</button></span></p>
-    </div>
-
-    <!-- cover animation gif -->
-    <article class="cover_container">
-        <div class="text_overlay">
-            <p>ACCESSIBLE</p>
-            <p>AUTONOMOUS</p>
-            <p>RACING</p>
-        </div>
-    </article>
-
-    <!-- home bar -->
-    <nav class="navigation_container">
-        <!-- home bar -->
-        <a class="home_link" href="./index.html">
-            <img class="home_buttom_image" src="./images/logo.png" alt="home_button_image">
-        </a>
-        <div class="pages_container">
-            <a class="navigation_link" href="./index.html">HOME</a>
-            <a class="navigation_link" href="./pages/machine/machine.html">POCKET RACER</a>
-            <a class="navigation_link" href="./pages/opcas/opcas.html">OP-CAS</a>
-            <a class="navigation_link" href="./pages/team.html">TEAM</a>
-            <a class="navigation_link" href="./pages/contact.html">CONTACT</a>
-            <a class="navigation_link" href="./pages/index_korean.html">한</a>
-        </div>
-    </nav>
-
-    <!-- mobile home bar -->
-    <nav class="mobile_navigation_container">
-        <a class="open_menu_bar" href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-bars mobile_menu_bar"></i></a>
-        <div class="mobile_pages_container" id="mobile_pages_container">
-            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-multiply close_menu_bar"></i></a>
-            <a class="mobile_navigation_link" href="./index.html">HOME</a>
-            <a class="mobile_navigation_link" href="./pages/machine/machine.html">POCKET RACER</a>
-            <a class="mobile_navigation_link" href="./pages/opcas/opcas.html">OP-CAS</a>
-            <a class="mobile_navigation_link" href="./pages/team.html">TEAM</a>
-            <a class="mobile_navigation_link" href="./pages/contact.html">CONTACT</a>
-            <a class="mobile_navigation_link" href="./pages/index_korean.html">한</a>
-        </div>
-    </nav>
-    
-    <!-- about -->
-    <section class="about">
-        <p>Our goal with <b class="bold">Pocket Racer</b> is to enable researchers tackle difficult problems concerning high-speed autonomy through scalable methods. To achieve that, we've made our miniature platforms open-source as to encourage autonomous races to race together and have fun!</p>
-    </section>
-
-    <section class="gap">
-    </section>
-
-    <!-- curriculum -->
-    <section class="curriculum">
-        <h1 class="section_title">Pocket Racer x IEEE</h1>
-        <p class="about_section">In an effort to realize our goal of making autonomous racing fun, we've connected with the <a href="http://ieeebruins.com/about" target="_blank" rel="noopener noreferrer">Institute of Electrical and Electronics Engineers</a> at the University of California, Los Angeles to allow undergraduate students to race their autonomous vehicles against each other. Check out what the Pocket Racer team has to say:</p>
-        <div class="user">
-            <!-- curriclum developer 1 -->
-            <img class="avatar" src="./images/user3.png">
-            <p class="user_says">"Pocket Racer is a mini F1 sandbox for roboticists. It’s racing, with code.”<br>Jesse Cha – UCLA PhD Candidate / Pocket Racer Research Lead</p>
-        </div>
-        <div class="user">
-            <!-- curriclum developer 2 -->
-            <img class="avatar" src="./images/user1.png">
-            <p class="user_says">"The Pocket Racer curriculum is full of surprises. You not only have the opportunity to engineer your own customizable RC car, but enjoy the experience of racing your design against others. It's really self-rewarding on its own."<br>Jeremy Louie – Curriculum Developer / Pocket Racer Undergraduate Researcher</p>
-        </div>
-        <div class="user">
-            <!-- curriclum developer 3 -->
-            <img class="avatar" src="./images/user2.png">
-            <p class="user_says">"Pocket Racer provides an opportunity for interested students of all disciplines to gain experience in both hardware and software engineering."<br>Aaron Kuo – Curriculum Developer / IEEE Aircopter Lead</p>
-        </div>
-    </section>
-
-    <section class="gap">
-    </section>
-
-    <!-- projects -->
-    <section class="projects">
-
-        <h1 class="section_title">Our Projects</h1>
-        <p class="about_section about_section_mobile">Outside of delivering accessible curriculum to undergraduate students, we also perform <b class="bold">research</b> that primarily focuses on fully autonomous driving radio control cars. Feel free to check out our breakthroughs.</p>
-        <div class="projects_wrapper">
-
-            <div class="row">
-                <!-- pocket racer -->
-                <div class="col">
-                    <div class="projects_image_wrapper">
-                        <a class="navigation_project" href="./pages/machine/machine.html">
-                            <h2 class="project_title">Pocket Racer</h2>
-                            <div class="container">
-                                <img class="project_image" src="./images/machine.gif" alt="machine.gif">
-                                <div class="overlay">
-                                    <p class="more_info">The Science Behind Pocket Racer</p>
-                                </div>
-                            </div>
-                        </a>                        
-                        <p class="image_description">Moving at 24 mph (350 mph to scale) these pocket racers dominate the highway scenario without the need for any driver.</p>
-                    </div>
-                </div>
-
-                <!-- OP-CAS -->
-                <div class="col">
-                    <div class="projects_image_wrapper">
-                        <a class="navigation_project" href="./pages/opcas/opcas.html">
-                            <h2 class="project_title">Collision Avoidance with Overtaking Maneuvers</h2>
-                            <div class="container">
-                                <img class="project_image" src="./images/op_cas.gif" alt="op_cas.gif">
-                                <div class="overlay">
-                                    <p class="more_info">The Research Behind OP-CAS</p>
-                                </div>
-                            </div>
-                        </a>
-                        <p class="image_description">With an end-to-end autonomous driving algorithm, the Overtaking Procedure for Collision Avoidance Systems (OP-CAS) is not only cheap on hardware, but also easy to deploy on embedded systems.</p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Password Protected Page</title>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #dialogText {
+            padding: 10px 30px;
+            color: white;
+            background-color: #333333;
+        }
+        
+        #dialogWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+            background-color: #EEEEEE;
+        }
+        
+        #dialogWrapCell {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        #mainDialog {
+            max-width: 400px;
+            margin: 5px;
+            border: solid #AAAAAA 1px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px 3px #AAAAAA;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            text-align: left;
+        }
+        #passArea {
+            padding: 20px 30px;
+            background-color: white;
+        }
+        #passArea > * {
+            margin: 5px auto;
+        }
+        #pass {
+            width: 100%;
+            height: 40px;
+            font-size: 30px;
+        }
+        
+        #messageWrapper {
+            float: left;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+        
+        .notifyText {
+            display: none;
+        }
+        
+        #invalidPass {
+            color: red;
+        }
+        
+        #success {
+            color: green;
+        }
+        
+        #submitPass {
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: #E7E7E7;
+            border: solid gray 1px;
+            float: right;
+        }
+        #contentFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #attribution {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+        #attribution, #attribution a {
+            color: #999;
+        }
+    </style>
+  </head>
+  <body>
+    <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
+    <div id="dialogWrap">
+        <div id="dialogWrapCell">
+            <div id="mainDialog">
+                <div id="dialogText">This page is password protected.</div>
+                <div id="passArea">
+                    <p id="passwordPrompt">Password</p>
+                    <input id="pass" type="password" name="pass" autofocus>
+                    <div>
+                        <span id="messageWrapper">
+                            <span id="invalidPass" class="notifyText">Sorry, please try again.</span>
+                            <span id="success" class="notifyText">Success!</span>
+                            &nbsp;
+                        </span>
+                        <button id="submitPass" type="button">Submit</button>
+                        <div style="clear: both;"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <script>
+/*
+CryptoJS v3.1.2
+code.google.com/p/crypto-js
+(c) 2009-2013 by Jeff Mott. All rights reserved.
+code.google.com/p/crypto-js/wiki/License
+*/
+var CryptoJS=CryptoJS||function(u,p){var d={},l=d.lib={},s=function(){},t=l.Base={extend:function(a){s.prototype=this;var c=new s;a&&c.mixIn(a);c.hasOwnProperty("init")||(c.init=function(){c.$super.init.apply(this,arguments)});c.init.prototype=c;c.$super=this;return c},create:function(){var a=this.extend();a.init.apply(a,arguments);return a},init:function(){},mixIn:function(a){for(var c in a)a.hasOwnProperty(c)&&(this[c]=a[c]);a.hasOwnProperty("toString")&&(this.toString=a.toString)},clone:function(){return this.init.prototype.extend(this)}},
+r=l.WordArray=t.extend({init:function(a,c){a=this.words=a||[];this.sigBytes=c!=p?c:4*a.length},toString:function(a){return(a||v).stringify(this)},concat:function(a){var c=this.words,e=a.words,j=this.sigBytes;a=a.sigBytes;this.clamp();if(j%4)for(var k=0;k<a;k++)c[j+k>>>2]|=(e[k>>>2]>>>24-8*(k%4)&255)<<24-8*((j+k)%4);else if(65535<e.length)for(k=0;k<a;k+=4)c[j+k>>>2]=e[k>>>2];else c.push.apply(c,e);this.sigBytes+=a;return this},clamp:function(){var a=this.words,c=this.sigBytes;a[c>>>2]&=4294967295<<
+32-8*(c%4);a.length=u.ceil(c/4)},clone:function(){var a=t.clone.call(this);a.words=this.words.slice(0);return a},random:function(a){for(var c=[],e=0;e<a;e+=4)c.push(4294967296*u.random()|0);return new r.init(c,a)}}),w=d.enc={},v=w.Hex={stringify:function(a){var c=a.words;a=a.sigBytes;for(var e=[],j=0;j<a;j++){var k=c[j>>>2]>>>24-8*(j%4)&255;e.push((k>>>4).toString(16));e.push((k&15).toString(16))}return e.join("")},parse:function(a){for(var c=a.length,e=[],j=0;j<c;j+=2)e[j>>>3]|=parseInt(a.substr(j,
+2),16)<<24-4*(j%8);return new r.init(e,c/2)}},b=w.Latin1={stringify:function(a){var c=a.words;a=a.sigBytes;for(var e=[],j=0;j<a;j++)e.push(String.fromCharCode(c[j>>>2]>>>24-8*(j%4)&255));return e.join("")},parse:function(a){for(var c=a.length,e=[],j=0;j<c;j++)e[j>>>2]|=(a.charCodeAt(j)&255)<<24-8*(j%4);return new r.init(e,c)}},x=w.Utf8={stringify:function(a){try{return decodeURIComponent(escape(b.stringify(a)))}catch(c){throw Error("Malformed UTF-8 data");}},parse:function(a){return b.parse(unescape(encodeURIComponent(a)))}},
+q=l.BufferedBlockAlgorithm=t.extend({reset:function(){this._data=new r.init;this._nDataBytes=0},_append:function(a){"string"==typeof a&&(a=x.parse(a));this._data.concat(a);this._nDataBytes+=a.sigBytes},_process:function(a){var c=this._data,e=c.words,j=c.sigBytes,k=this.blockSize,b=j/(4*k),b=a?u.ceil(b):u.max((b|0)-this._minBufferSize,0);a=b*k;j=u.min(4*a,j);if(a){for(var q=0;q<a;q+=k)this._doProcessBlock(e,q);q=e.splice(0,a);c.sigBytes-=j}return new r.init(q,j)},clone:function(){var a=t.clone.call(this);
+a._data=this._data.clone();return a},_minBufferSize:0});l.Hasher=q.extend({cfg:t.extend(),init:function(a){this.cfg=this.cfg.extend(a);this.reset()},reset:function(){q.reset.call(this);this._doReset()},update:function(a){this._append(a);this._process();return this},finalize:function(a){a&&this._append(a);return this._doFinalize()},blockSize:16,_createHelper:function(a){return function(b,e){return(new a.init(e)).finalize(b)}},_createHmacHelper:function(a){return function(b,e){return(new n.HMAC.init(a,
+e)).finalize(b)}}});var n=d.algo={};return d}(Math);
+(function(){var u=CryptoJS,p=u.lib.WordArray;u.enc.Base64={stringify:function(d){var l=d.words,p=d.sigBytes,t=this._map;d.clamp();d=[];for(var r=0;r<p;r+=3)for(var w=(l[r>>>2]>>>24-8*(r%4)&255)<<16|(l[r+1>>>2]>>>24-8*((r+1)%4)&255)<<8|l[r+2>>>2]>>>24-8*((r+2)%4)&255,v=0;4>v&&r+0.75*v<p;v++)d.push(t.charAt(w>>>6*(3-v)&63));if(l=t.charAt(64))for(;d.length%4;)d.push(l);return d.join("")},parse:function(d){var l=d.length,s=this._map,t=s.charAt(64);t&&(t=d.indexOf(t),-1!=t&&(l=t));for(var t=[],r=0,w=0;w<
+l;w++)if(w%4){var v=s.indexOf(d.charAt(w-1))<<2*(w%4),b=s.indexOf(d.charAt(w))>>>6-2*(w%4);t[r>>>2]|=(v|b)<<24-8*(r%4);r++}return p.create(t,r)},_map:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="}})();
+(function(u){function p(b,n,a,c,e,j,k){b=b+(n&a|~n&c)+e+k;return(b<<j|b>>>32-j)+n}function d(b,n,a,c,e,j,k){b=b+(n&c|a&~c)+e+k;return(b<<j|b>>>32-j)+n}function l(b,n,a,c,e,j,k){b=b+(n^a^c)+e+k;return(b<<j|b>>>32-j)+n}function s(b,n,a,c,e,j,k){b=b+(a^(n|~c))+e+k;return(b<<j|b>>>32-j)+n}for(var t=CryptoJS,r=t.lib,w=r.WordArray,v=r.Hasher,r=t.algo,b=[],x=0;64>x;x++)b[x]=4294967296*u.abs(u.sin(x+1))|0;r=r.MD5=v.extend({_doReset:function(){this._hash=new w.init([1732584193,4023233417,2562383102,271733878])},
+_doProcessBlock:function(q,n){for(var a=0;16>a;a++){var c=n+a,e=q[c];q[c]=(e<<8|e>>>24)&16711935|(e<<24|e>>>8)&4278255360}var a=this._hash.words,c=q[n+0],e=q[n+1],j=q[n+2],k=q[n+3],z=q[n+4],r=q[n+5],t=q[n+6],w=q[n+7],v=q[n+8],A=q[n+9],B=q[n+10],C=q[n+11],u=q[n+12],D=q[n+13],E=q[n+14],x=q[n+15],f=a[0],m=a[1],g=a[2],h=a[3],f=p(f,m,g,h,c,7,b[0]),h=p(h,f,m,g,e,12,b[1]),g=p(g,h,f,m,j,17,b[2]),m=p(m,g,h,f,k,22,b[3]),f=p(f,m,g,h,z,7,b[4]),h=p(h,f,m,g,r,12,b[5]),g=p(g,h,f,m,t,17,b[6]),m=p(m,g,h,f,w,22,b[7]),
+f=p(f,m,g,h,v,7,b[8]),h=p(h,f,m,g,A,12,b[9]),g=p(g,h,f,m,B,17,b[10]),m=p(m,g,h,f,C,22,b[11]),f=p(f,m,g,h,u,7,b[12]),h=p(h,f,m,g,D,12,b[13]),g=p(g,h,f,m,E,17,b[14]),m=p(m,g,h,f,x,22,b[15]),f=d(f,m,g,h,e,5,b[16]),h=d(h,f,m,g,t,9,b[17]),g=d(g,h,f,m,C,14,b[18]),m=d(m,g,h,f,c,20,b[19]),f=d(f,m,g,h,r,5,b[20]),h=d(h,f,m,g,B,9,b[21]),g=d(g,h,f,m,x,14,b[22]),m=d(m,g,h,f,z,20,b[23]),f=d(f,m,g,h,A,5,b[24]),h=d(h,f,m,g,E,9,b[25]),g=d(g,h,f,m,k,14,b[26]),m=d(m,g,h,f,v,20,b[27]),f=d(f,m,g,h,D,5,b[28]),h=d(h,f,
+m,g,j,9,b[29]),g=d(g,h,f,m,w,14,b[30]),m=d(m,g,h,f,u,20,b[31]),f=l(f,m,g,h,r,4,b[32]),h=l(h,f,m,g,v,11,b[33]),g=l(g,h,f,m,C,16,b[34]),m=l(m,g,h,f,E,23,b[35]),f=l(f,m,g,h,e,4,b[36]),h=l(h,f,m,g,z,11,b[37]),g=l(g,h,f,m,w,16,b[38]),m=l(m,g,h,f,B,23,b[39]),f=l(f,m,g,h,D,4,b[40]),h=l(h,f,m,g,c,11,b[41]),g=l(g,h,f,m,k,16,b[42]),m=l(m,g,h,f,t,23,b[43]),f=l(f,m,g,h,A,4,b[44]),h=l(h,f,m,g,u,11,b[45]),g=l(g,h,f,m,x,16,b[46]),m=l(m,g,h,f,j,23,b[47]),f=s(f,m,g,h,c,6,b[48]),h=s(h,f,m,g,w,10,b[49]),g=s(g,h,f,m,
+E,15,b[50]),m=s(m,g,h,f,r,21,b[51]),f=s(f,m,g,h,u,6,b[52]),h=s(h,f,m,g,k,10,b[53]),g=s(g,h,f,m,B,15,b[54]),m=s(m,g,h,f,e,21,b[55]),f=s(f,m,g,h,v,6,b[56]),h=s(h,f,m,g,x,10,b[57]),g=s(g,h,f,m,t,15,b[58]),m=s(m,g,h,f,D,21,b[59]),f=s(f,m,g,h,z,6,b[60]),h=s(h,f,m,g,C,10,b[61]),g=s(g,h,f,m,j,15,b[62]),m=s(m,g,h,f,A,21,b[63]);a[0]=a[0]+f|0;a[1]=a[1]+m|0;a[2]=a[2]+g|0;a[3]=a[3]+h|0},_doFinalize:function(){var b=this._data,n=b.words,a=8*this._nDataBytes,c=8*b.sigBytes;n[c>>>5]|=128<<24-c%32;var e=u.floor(a/
+4294967296);n[(c+64>>>9<<4)+15]=(e<<8|e>>>24)&16711935|(e<<24|e>>>8)&4278255360;n[(c+64>>>9<<4)+14]=(a<<8|a>>>24)&16711935|(a<<24|a>>>8)&4278255360;b.sigBytes=4*(n.length+1);this._process();b=this._hash;n=b.words;for(a=0;4>a;a++)c=n[a],n[a]=(c<<8|c>>>24)&16711935|(c<<24|c>>>8)&4278255360;return b},clone:function(){var b=v.clone.call(this);b._hash=this._hash.clone();return b}});t.MD5=v._createHelper(r);t.HmacMD5=v._createHmacHelper(r)})(Math);
+(function(){var u=CryptoJS,p=u.lib,d=p.Base,l=p.WordArray,p=u.algo,s=p.EvpKDF=d.extend({cfg:d.extend({keySize:4,hasher:p.MD5,iterations:1}),init:function(d){this.cfg=this.cfg.extend(d)},compute:function(d,r){for(var p=this.cfg,s=p.hasher.create(),b=l.create(),u=b.words,q=p.keySize,p=p.iterations;u.length<q;){n&&s.update(n);var n=s.update(d).finalize(r);s.reset();for(var a=1;a<p;a++)n=s.finalize(n),s.reset();b.concat(n)}b.sigBytes=4*q;return b}});u.EvpKDF=function(d,l,p){return s.create(p).compute(d,
+l)}})();
+CryptoJS.lib.Cipher||function(u){var p=CryptoJS,d=p.lib,l=d.Base,s=d.WordArray,t=d.BufferedBlockAlgorithm,r=p.enc.Base64,w=p.algo.EvpKDF,v=d.Cipher=t.extend({cfg:l.extend(),createEncryptor:function(e,a){return this.create(this._ENC_XFORM_MODE,e,a)},createDecryptor:function(e,a){return this.create(this._DEC_XFORM_MODE,e,a)},init:function(e,a,b){this.cfg=this.cfg.extend(b);this._xformMode=e;this._key=a;this.reset()},reset:function(){t.reset.call(this);this._doReset()},process:function(e){this._append(e);return this._process()},
+finalize:function(e){e&&this._append(e);return this._doFinalize()},keySize:4,ivSize:4,_ENC_XFORM_MODE:1,_DEC_XFORM_MODE:2,_createHelper:function(e){return{encrypt:function(b,k,d){return("string"==typeof k?c:a).encrypt(e,b,k,d)},decrypt:function(b,k,d){return("string"==typeof k?c:a).decrypt(e,b,k,d)}}}});d.StreamCipher=v.extend({_doFinalize:function(){return this._process(!0)},blockSize:1});var b=p.mode={},x=function(e,a,b){var c=this._iv;c?this._iv=u:c=this._prevBlock;for(var d=0;d<b;d++)e[a+d]^=
+c[d]},q=(d.BlockCipherMode=l.extend({createEncryptor:function(e,a){return this.Encryptor.create(e,a)},createDecryptor:function(e,a){return this.Decryptor.create(e,a)},init:function(e,a){this._cipher=e;this._iv=a}})).extend();q.Encryptor=q.extend({processBlock:function(e,a){var b=this._cipher,c=b.blockSize;x.call(this,e,a,c);b.encryptBlock(e,a);this._prevBlock=e.slice(a,a+c)}});q.Decryptor=q.extend({processBlock:function(e,a){var b=this._cipher,c=b.blockSize,d=e.slice(a,a+c);b.decryptBlock(e,a);x.call(this,
+e,a,c);this._prevBlock=d}});b=b.CBC=q;q=(p.pad={}).Pkcs7={pad:function(a,b){for(var c=4*b,c=c-a.sigBytes%c,d=c<<24|c<<16|c<<8|c,l=[],n=0;n<c;n+=4)l.push(d);c=s.create(l,c);a.concat(c)},unpad:function(a){a.sigBytes-=a.words[a.sigBytes-1>>>2]&255}};d.BlockCipher=v.extend({cfg:v.cfg.extend({mode:b,padding:q}),reset:function(){v.reset.call(this);var a=this.cfg,b=a.iv,a=a.mode;if(this._xformMode==this._ENC_XFORM_MODE)var c=a.createEncryptor;else c=a.createDecryptor,this._minBufferSize=1;this._mode=c.call(a,
+this,b&&b.words)},_doProcessBlock:function(a,b){this._mode.processBlock(a,b)},_doFinalize:function(){var a=this.cfg.padding;if(this._xformMode==this._ENC_XFORM_MODE){a.pad(this._data,this.blockSize);var b=this._process(!0)}else b=this._process(!0),a.unpad(b);return b},blockSize:4});var n=d.CipherParams=l.extend({init:function(a){this.mixIn(a)},toString:function(a){return(a||this.formatter).stringify(this)}}),b=(p.format={}).OpenSSL={stringify:function(a){var b=a.ciphertext;a=a.salt;return(a?s.create([1398893684,
+1701076831]).concat(a).concat(b):b).toString(r)},parse:function(a){a=r.parse(a);var b=a.words;if(1398893684==b[0]&&1701076831==b[1]){var c=s.create(b.slice(2,4));b.splice(0,4);a.sigBytes-=16}return n.create({ciphertext:a,salt:c})}},a=d.SerializableCipher=l.extend({cfg:l.extend({format:b}),encrypt:function(a,b,c,d){d=this.cfg.extend(d);var l=a.createEncryptor(c,d);b=l.finalize(b);l=l.cfg;return n.create({ciphertext:b,key:c,iv:l.iv,algorithm:a,mode:l.mode,padding:l.padding,blockSize:a.blockSize,formatter:d.format})},
+decrypt:function(a,b,c,d){d=this.cfg.extend(d);b=this._parse(b,d.format);return a.createDecryptor(c,d).finalize(b.ciphertext)},_parse:function(a,b){return"string"==typeof a?b.parse(a,this):a}}),p=(p.kdf={}).OpenSSL={execute:function(a,b,c,d){d||(d=s.random(8));a=w.create({keySize:b+c}).compute(a,d);c=s.create(a.words.slice(b),4*c);a.sigBytes=4*b;return n.create({key:a,iv:c,salt:d})}},c=d.PasswordBasedCipher=a.extend({cfg:a.cfg.extend({kdf:p}),encrypt:function(b,c,d,l){l=this.cfg.extend(l);d=l.kdf.execute(d,
+b.keySize,b.ivSize);l.iv=d.iv;b=a.encrypt.call(this,b,c,d.key,l);b.mixIn(d);return b},decrypt:function(b,c,d,l){l=this.cfg.extend(l);c=this._parse(c,l.format);d=l.kdf.execute(d,b.keySize,b.ivSize,c.salt);l.iv=d.iv;return a.decrypt.call(this,b,c,d.key,l)}})}();
+(function(){for(var u=CryptoJS,p=u.lib.BlockCipher,d=u.algo,l=[],s=[],t=[],r=[],w=[],v=[],b=[],x=[],q=[],n=[],a=[],c=0;256>c;c++)a[c]=128>c?c<<1:c<<1^283;for(var e=0,j=0,c=0;256>c;c++){var k=j^j<<1^j<<2^j<<3^j<<4,k=k>>>8^k&255^99;l[e]=k;s[k]=e;var z=a[e],F=a[z],G=a[F],y=257*a[k]^16843008*k;t[e]=y<<24|y>>>8;r[e]=y<<16|y>>>16;w[e]=y<<8|y>>>24;v[e]=y;y=16843009*G^65537*F^257*z^16843008*e;b[k]=y<<24|y>>>8;x[k]=y<<16|y>>>16;q[k]=y<<8|y>>>24;n[k]=y;e?(e=z^a[a[a[G^z]]],j^=a[a[j]]):e=j=1}var H=[0,1,2,4,8,
+16,32,64,128,27,54],d=d.AES=p.extend({_doReset:function(){for(var a=this._key,c=a.words,d=a.sigBytes/4,a=4*((this._nRounds=d+6)+1),e=this._keySchedule=[],j=0;j<a;j++)if(j<d)e[j]=c[j];else{var k=e[j-1];j%d?6<d&&4==j%d&&(k=l[k>>>24]<<24|l[k>>>16&255]<<16|l[k>>>8&255]<<8|l[k&255]):(k=k<<8|k>>>24,k=l[k>>>24]<<24|l[k>>>16&255]<<16|l[k>>>8&255]<<8|l[k&255],k^=H[j/d|0]<<24);e[j]=e[j-d]^k}c=this._invKeySchedule=[];for(d=0;d<a;d++)j=a-d,k=d%4?e[j]:e[j-4],c[d]=4>d||4>=j?k:b[l[k>>>24]]^x[l[k>>>16&255]]^q[l[k>>>
+8&255]]^n[l[k&255]]},encryptBlock:function(a,b){this._doCryptBlock(a,b,this._keySchedule,t,r,w,v,l)},decryptBlock:function(a,c){var d=a[c+1];a[c+1]=a[c+3];a[c+3]=d;this._doCryptBlock(a,c,this._invKeySchedule,b,x,q,n,s);d=a[c+1];a[c+1]=a[c+3];a[c+3]=d},_doCryptBlock:function(a,b,c,d,e,j,l,f){for(var m=this._nRounds,g=a[b]^c[0],h=a[b+1]^c[1],k=a[b+2]^c[2],n=a[b+3]^c[3],p=4,r=1;r<m;r++)var q=d[g>>>24]^e[h>>>16&255]^j[k>>>8&255]^l[n&255]^c[p++],s=d[h>>>24]^e[k>>>16&255]^j[n>>>8&255]^l[g&255]^c[p++],t=
+d[k>>>24]^e[n>>>16&255]^j[g>>>8&255]^l[h&255]^c[p++],n=d[n>>>24]^e[g>>>16&255]^j[h>>>8&255]^l[k&255]^c[p++],g=q,h=s,k=t;q=(f[g>>>24]<<24|f[h>>>16&255]<<16|f[k>>>8&255]<<8|f[n&255])^c[p++];s=(f[h>>>24]<<24|f[k>>>16&255]<<16|f[n>>>8&255]<<8|f[g&255])^c[p++];t=(f[k>>>24]<<24|f[n>>>16&255]<<16|f[g>>>8&255]<<8|f[h&255])^c[p++];n=(f[n>>>24]<<24|f[g>>>16&255]<<16|f[h>>>8&255]<<8|f[k&255])^c[p++];a[b]=q;a[b+1]=s;a[b+2]=t;a[b+3]=n},keySize:8});u.AES=p._createHelper(d)})();
+    </script>
+    <script>
+/*
+CryptoJS v3.1.2
+code.google.com/p/crypto-js
+(c) 2009-2013 by Jeff Mott. All rights reserved.
+code.google.com/p/crypto-js/wiki/License
+*/
+var CryptoJS=CryptoJS||function(g,j){var e={},d=e.lib={},m=function(){},n=d.Base={extend:function(a){m.prototype=this;var c=new m;a&&c.mixIn(a);c.hasOwnProperty("init")||(c.init=function(){c.$super.init.apply(this,arguments)});c.init.prototype=c;c.$super=this;return c},create:function(){var a=this.extend();a.init.apply(a,arguments);return a},init:function(){},mixIn:function(a){for(var c in a)a.hasOwnProperty(c)&&(this[c]=a[c]);a.hasOwnProperty("toString")&&(this.toString=a.toString)},clone:function(){return this.init.prototype.extend(this)}},
+q=d.WordArray=n.extend({init:function(a,c){a=this.words=a||[];this.sigBytes=c!=j?c:4*a.length},toString:function(a){return(a||l).stringify(this)},concat:function(a){var c=this.words,p=a.words,f=this.sigBytes;a=a.sigBytes;this.clamp();if(f%4)for(var b=0;b<a;b++)c[f+b>>>2]|=(p[b>>>2]>>>24-8*(b%4)&255)<<24-8*((f+b)%4);else if(65535<p.length)for(b=0;b<a;b+=4)c[f+b>>>2]=p[b>>>2];else c.push.apply(c,p);this.sigBytes+=a;return this},clamp:function(){var a=this.words,c=this.sigBytes;a[c>>>2]&=4294967295<<
+32-8*(c%4);a.length=g.ceil(c/4)},clone:function(){var a=n.clone.call(this);a.words=this.words.slice(0);return a},random:function(a){for(var c=[],b=0;b<a;b+=4)c.push(4294967296*g.random()|0);return new q.init(c,a)}}),b=e.enc={},l=b.Hex={stringify:function(a){var c=a.words;a=a.sigBytes;for(var b=[],f=0;f<a;f++){var d=c[f>>>2]>>>24-8*(f%4)&255;b.push((d>>>4).toString(16));b.push((d&15).toString(16))}return b.join("")},parse:function(a){for(var c=a.length,b=[],f=0;f<c;f+=2)b[f>>>3]|=parseInt(a.substr(f,
+2),16)<<24-4*(f%8);return new q.init(b,c/2)}},k=b.Latin1={stringify:function(a){var c=a.words;a=a.sigBytes;for(var b=[],f=0;f<a;f++)b.push(String.fromCharCode(c[f>>>2]>>>24-8*(f%4)&255));return b.join("")},parse:function(a){for(var c=a.length,b=[],f=0;f<c;f++)b[f>>>2]|=(a.charCodeAt(f)&255)<<24-8*(f%4);return new q.init(b,c)}},h=b.Utf8={stringify:function(a){try{return decodeURIComponent(escape(k.stringify(a)))}catch(b){throw Error("Malformed UTF-8 data");}},parse:function(a){return k.parse(unescape(encodeURIComponent(a)))}},
+u=d.BufferedBlockAlgorithm=n.extend({reset:function(){this._data=new q.init;this._nDataBytes=0},_append:function(a){"string"==typeof a&&(a=h.parse(a));this._data.concat(a);this._nDataBytes+=a.sigBytes},_process:function(a){var b=this._data,d=b.words,f=b.sigBytes,l=this.blockSize,e=f/(4*l),e=a?g.ceil(e):g.max((e|0)-this._minBufferSize,0);a=e*l;f=g.min(4*a,f);if(a){for(var h=0;h<a;h+=l)this._doProcessBlock(d,h);h=d.splice(0,a);b.sigBytes-=f}return new q.init(h,f)},clone:function(){var a=n.clone.call(this);
+a._data=this._data.clone();return a},_minBufferSize:0});d.Hasher=u.extend({cfg:n.extend(),init:function(a){this.cfg=this.cfg.extend(a);this.reset()},reset:function(){u.reset.call(this);this._doReset()},update:function(a){this._append(a);this._process();return this},finalize:function(a){a&&this._append(a);return this._doFinalize()},blockSize:16,_createHelper:function(a){return function(b,d){return(new a.init(d)).finalize(b)}},_createHmacHelper:function(a){return function(b,d){return(new w.HMAC.init(a,
+d)).finalize(b)}}});var w=e.algo={};return e}(Math);
+(function(){var g=CryptoJS,j=g.lib,e=j.WordArray,d=j.Hasher,m=[],j=g.algo.SHA1=d.extend({_doReset:function(){this._hash=new e.init([1732584193,4023233417,2562383102,271733878,3285377520])},_doProcessBlock:function(d,e){for(var b=this._hash.words,l=b[0],k=b[1],h=b[2],g=b[3],j=b[4],a=0;80>a;a++){if(16>a)m[a]=d[e+a]|0;else{var c=m[a-3]^m[a-8]^m[a-14]^m[a-16];m[a]=c<<1|c>>>31}c=(l<<5|l>>>27)+j+m[a];c=20>a?c+((k&h|~k&g)+1518500249):40>a?c+((k^h^g)+1859775393):60>a?c+((k&h|k&g|h&g)-1894007588):c+((k^h^
+g)-899497514);j=g;g=h;h=k<<30|k>>>2;k=l;l=c}b[0]=b[0]+l|0;b[1]=b[1]+k|0;b[2]=b[2]+h|0;b[3]=b[3]+g|0;b[4]=b[4]+j|0},_doFinalize:function(){var d=this._data,e=d.words,b=8*this._nDataBytes,l=8*d.sigBytes;e[l>>>5]|=128<<24-l%32;e[(l+64>>>9<<4)+14]=Math.floor(b/4294967296);e[(l+64>>>9<<4)+15]=b;d.sigBytes=4*e.length;this._process();return this._hash},clone:function(){var e=d.clone.call(this);e._hash=this._hash.clone();return e}});g.SHA1=d._createHelper(j);g.HmacSHA1=d._createHmacHelper(j)})();
+(function(){var g=CryptoJS,j=g.enc.Utf8;g.algo.HMAC=g.lib.Base.extend({init:function(e,d){e=this._hasher=new e.init;"string"==typeof d&&(d=j.parse(d));var g=e.blockSize,n=4*g;d.sigBytes>n&&(d=e.finalize(d));d.clamp();for(var q=this._oKey=d.clone(),b=this._iKey=d.clone(),l=q.words,k=b.words,h=0;h<g;h++)l[h]^=1549556828,k[h]^=909522486;q.sigBytes=b.sigBytes=n;this.reset()},reset:function(){var e=this._hasher;e.reset();e.update(this._iKey)},update:function(e){this._hasher.update(e);return this},finalize:function(e){var d=
+this._hasher;e=d.finalize(e);d.reset();return d.finalize(this._oKey.clone().concat(e))}})})();
+(function(){var g=CryptoJS,j=g.lib,e=j.Base,d=j.WordArray,j=g.algo,m=j.HMAC,n=j.PBKDF2=e.extend({cfg:e.extend({keySize:4,hasher:j.SHA1,iterations:1}),init:function(d){this.cfg=this.cfg.extend(d)},compute:function(e,b){for(var g=this.cfg,k=m.create(g.hasher,e),h=d.create(),j=d.create([1]),n=h.words,a=j.words,c=g.keySize,g=g.iterations;n.length<c;){var p=k.update(b).finalize(j);k.reset();for(var f=p.words,v=f.length,s=p,t=1;t<g;t++){s=k.finalize(s);k.reset();for(var x=s.words,r=0;r<v;r++)f[r]^=x[r]}h.concat(p);
+a[0]++}h.sigBytes=4*c;return h}});g.PBKDF2=function(d,b,e){return n.create(e).compute(d,b)}})();
+    </script>
+    <script>
+        /*! srcdoc-polyfill - v0.1.1 - 2013-03-01
+        * http://github.com/jugglinmike/srcdoc-polyfill/
+        * Copyright (c) 2013 Mike Pennisi; Licensed MIT */
+        (function( window, document, undefined ) {
+	
+	        var idx, iframes;
+	        var _srcDoc = window.srcDoc;
+	        var isCompliant = !!("srcdoc" in document.createElement("iframe"));
+	        var implementations = {
+		        compliant: function( iframe, content ) {
 
-    <section class="gap">
-    </section>
+			        if (content) {
+				        iframe.setAttribute("srcdoc", content);
+			        }
+		        },
+		        legacy: function( iframe, content ) {
 
-    <!-- footer -->
-    <footer class="document_footer">
-        <p><a href="https://www.romela.org/" target="_blank" rel="noopener noreferrer">Robotics and Mechanisms Laboratory (RoMeLa)</a><br>Department of Mechanical and Aerospace Engineering<br>University of California, Los Angeles (UCLA)<br>LA, CA, USA, 90095</p>
-    </footer>
-</body>
+			        var jsUrl;
+
+			        if (!iframe || !iframe.getAttribute) {
+				        return;
+			        }
+
+			        if (!content) {
+				        content = iframe.getAttribute("srcdoc");
+			        } else {
+				        iframe.setAttribute("srcdoc", content);
+			        }
+
+			        if (content) {
+				        // The value returned by a script-targeted URL will be used as
+				        // the iFrame's content. Create such a URL which returns the
+				        // iFrame element's `srcdoc` attribute.
+				        jsUrl = "javascript: window.frameElement.getAttribute('srcdoc');";
+
+				        iframe.setAttribute("src", jsUrl);
+
+				        // Explicitly set the iFrame's window.location for
+				        // compatability with IE9, which does not react to changes in
+				        // the `src` attribute when it is a `javascript:` URL, for
+				        // some reason
+				        if (iframe.contentWindow) {
+					        iframe.contentWindow.location = jsUrl;
+				        }
+			        }
+		        }
+	        };
+	        var srcDoc = window.srcDoc = {
+		        // Assume the best
+		        set: implementations.compliant,
+		        noConflict: function() {
+			        window.srcDoc = _srcDoc;
+			        return srcDoc;
+		        }
+	        };
+
+	        // If the browser supports srcdoc, no shimming is necessary
+	        if (isCompliant) {
+		        return;
+	        }
+
+	        srcDoc.set = implementations.legacy;
+
+	        // Automatically shim any iframes already present in the document
+	        iframes = document.getElementsByTagName("iframe");
+	        idx = iframes.length;
+
+	        while (idx--) {
+		        srcDoc.set( iframes[idx] );
+	        }
+
+        }( this, this.document ));
+    </script>
+    <script>
+        var pl = {"salt":"kauxq+LCZkjhJUkkdfg87G8yI/ewQcFVDBa3phLsYV0=","iv":"DIgGJFiTrI0pkIL7xKp/aw==","data":"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"};
+        
+        var submitPass = document.getElementById('submitPass');
+        var passEl = document.getElementById('pass');
+        var invalidPassEl = document.getElementById('invalidPass');
+        var successEl = document.getElementById('success');
+        var contentFrame = document.getElementById('contentFrame');
+        
+        if (pl === "") {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+            alert("This page is meant to be used with the encryption tool. It doesn't work standalone.");
+        }
+        
+        function doSubmit(evt) {
+            try {
+                var decrypted = decryptFile(CryptoJS.enc.Base64.parse(pl.data), passEl.value, CryptoJS.enc.Base64.parse(pl.salt), CryptoJS.enc.Base64.parse(pl.iv));
+                if (decrypted === "") throw "No data returned";
+                
+                // Set default iframe link targets to _top so all links break out of the iframe
+                decrypted = decrypted.replace("<head>", "<head><base href=\".\" target=\"_top\">");
+                
+                srcDoc.set(contentFrame, decrypted);
+                
+                successEl.style.display = "inline";
+                passEl.disabled = true;
+                submitPass.disabled = true;
+                setTimeout(function() {
+                    dialogWrap.style.display = "none";
+                }, 1000);
+            } catch (e) {
+                invalidPassEl.style.display = "inline";
+                passEl.value = "";
+            }
+        }
+        
+        submitPass.onclick = doSubmit;
+        passEl.onkeypress = function(e){
+            if (!e) e = window.event;
+            var keyCode = e.keyCode || e.which;
+            invalidPassEl.style.display = "none";
+            if (keyCode == '13'){
+              // Enter pressed
+              doSubmit();
+              return false;
+            }
+        }
+        
+        function decryptFile(contents, password, salt, iv) {
+            var _cp = CryptoJS.lib.CipherParams.create({
+                ciphertext: contents
+            });
+            var key = CryptoJS.PBKDF2(password, salt, { keySize: 256/32, iterations: 100 });
+            var decrypted = CryptoJS.AES.decrypt(_cp, key, {iv: iv});
+            
+            return decrypted.toString(CryptoJS.enc.Utf8);
+        }
+    </script>
+  </body>
 </html>
