@@ -5,3 +5,4 @@ To Do:
 - get quote from Eric
 - fix Jeremy's logo
 - fix alignment of projects
+- fix password protection
