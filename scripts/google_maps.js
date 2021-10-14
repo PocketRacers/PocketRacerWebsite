@@ -1,7 +1,7 @@
 
 function initMap() {
     // coord locations of Engineering IV
-    const labLocation = { lat: 34.069632890358406, lng: -118.4445256020825 };    
+    const labLocation = { lat: 34.068923803985506, lng: -118.44420989246592 };    
     const map = new google.maps.Map(document.getElementById("map"), {
           zoom: 13.5,
           center: labLocation,
