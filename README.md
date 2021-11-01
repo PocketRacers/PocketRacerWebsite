@@ -1,8 +1,8 @@
 # Pocket Racer
 
 To Do:
-- add password protection
-- get quote from Eric
 - fix Jeremy's logo
 - fix alignment of projects
 - fix password protection
+- add more images
+- add zoom magnifying on images
