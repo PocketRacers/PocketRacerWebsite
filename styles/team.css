@@ -35,11 +35,11 @@ a {
     letter-spacing: 1.5px;
 }
 
-.bear_team, .curriculum_dev_team {
+.bear_team, .curriculum_dev_team, .contributors {
     /* positioning */
     position: relative;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 125px;
+    margin-right: 125px;
     margin-top: 225px;
 }
 
@@ -75,6 +75,22 @@ a {
 
 .aaron, .jeremy, .rosa {
     width: 65%;
+}
+
+.student_name {
+    margin-bottom: 5px;
+}
+
+.student_contributor {
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+.contributor_image {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
 }
 
 body {
