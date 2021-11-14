@@ -53,6 +53,21 @@ a {
     letter-spacing: 0.75px;
 }
 
+.external_links {
+    margin-top: 15px;
+}
+
+.external_links i {
+    color: white;
+    transition: 1s;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.external_links i:hover {
+    opacity: 0.75;
+}
+
 .name {
     font-size: 34px;
     font-weight: 600;
