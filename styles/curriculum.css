@@ -1,0 +1,40 @@
+
+a {
+    color: white;
+    transition: 1s;
+}
+
+a:hover {
+    opacity: 0.75;
+}
+
+li {
+    font-size: 16.5px;
+}
+
+.content {
+    /* positoning and framing */
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: auto;
+    margin-left: 310px;
+    margin-right: 125px;
+
+    /* enable smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+.title_wrapper {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.title_wrapper img {
+    height: auto;
+    width: 65%;
+}
+
+.intro {
+    font-size: 22px;
+    margin-top: 25px;
+}

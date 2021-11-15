@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <title>Curriculum</title>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- style sheets -->
+    <link href="../../styles/all_pages.css" rel="stylesheet">
+    <link href="../../styles/curriculum_table_of_contents.css" rel="stylesheet">
+    <link href="../../styles/curriculum.css" rel="stylesheet">
+    <link href="../../styles/animations.css" rel="stylesheet">
+    <link href="../../styles/custom_scrollbar.css" rel="stylesheet">
+    <link href="../../styles/navigation_bar.css" rel="stylesheet">
+    <link href="../../styles/footer.css" rel="stylesheet">
+
+    <!-- scripts -->
+    <script src="../../scripts/table_of_contents.js"></script>
+    <script async src="../../scripts/index.js"></script>
+
+    <!-- google analytics scripts -->
+    <script async src="../../scripts/tracking.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>     <!-- for pop up modal -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199894373-1"></script>     <!-- Google Analytics -->
+</head>
+<body>
+
+    <!-- home bar -->
+    <nav class="navigation_container">
+        <!-- home bar -->
+        <a class="home_link" href="../../index.html">
+            <img class="home_buttom_image" src="../../images/logo.png" alt="home_button_image">
+        </a>
+        <div class="pages_container">
+            <a class="navigation_link" href="../../index.html">HOME</a>
+            <a class="navigation_link" href="../pocket_racer/pocket_racer.html">POCKET RACER</a>
+            <a class="navigation_link" href="../opcas/opcas.html">OP-CAS</a>
+            <a class="navigation_link" href="./curriculum.html">CURRICULUM</a>
+            <a class="navigation_link" href="../team.html">TEAM</a>
+            <a class="navigation_link" href="../contact.html">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- mobile home bar -->
+    <nav class="mobile_navigation_container">
+        <a href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-bars mobile_menu_bar"></i></a>
+        <div class="mobile_pages_container" id="mobile_pages_container">
+            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-multiply close_menu_bar"></i></a>
+            <a class="mobile_navigation_link" href="../../index.html">HOME</a>
+            <a class="mobile_navigation_link" href="../pocket_racer/pocket_racer.html">POCKET RACER</a>
+            <a class="mobile_navigation_link" href="../opcas/opcas.html">OP-CAS</a>
+            <a class="mobile_navigation_link" href="../team.html">TEAM</a>
+            <a class="mobile_navigation_link" href="../contact.html">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- table of contents -->
+    <!-- credit: https://codepen.io/pubwriter/pen/ZgLzYV -->
+    <nav class="table_of_contents">
+        <p class="table_of_contents_section" style="color: #2774AE; filter: brightness(1.5); opacity: 0.9">LECTURES</p>
+        <ul>
+            <li>Power Circuitry & RPi</li>
+            <li>Driving Motors & Feedback Control</li>
+            <li>Intro to Deep Learning & Computer Vision</li>
+            <li>Classifiers & Optimization</li>
+            <li>Data Collection & Processing</li>
+            <li>Neural Networks</li>
+            <li>Generative Models</li>
+            <li>Object Detection</li>
+            <li>Deep Reinforcement Learning</li>
+        </ul>
+
+        <!-- this doesn't work -->
+        <svg class="table_of_contents_marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="#fff" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+        </svg>
+    </nav>
+
+    <section class="content">
+        <div>
+            <div class="title_wrapper">
+                <h2>Curriculum</h2>
+                <img src="../../images/new/IMG_7513_2.jpg" alt="header_image">
+            </div>
+        </div>
+        <p class="intro">Building a fully-autonomous radio control car from scratch is no easy feat. In an effort to not only make construction easier but also accessible to everyone, we've compiled a series of lectures to help interested engineers build their very own self-driving RC vehicle. Feel free to browse our provided lectures via the table of contents on the side. If you have any questions, feel free to also direct them over <a href="../contact.html">here.</a></p>
+    </section>
+
+</body>
+</html>
