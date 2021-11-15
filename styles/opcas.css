@@ -4,6 +4,10 @@ html {
     scroll-behavior: smooth;
 }
 
+h2, h3 {
+    font-size: 30px;
+}
+
 .content {
     /* positoning and framing */
     position: relative;
@@ -24,6 +28,7 @@ html {
 .opcas_title {
     margin-top: 150px;
     font-size: 36px;
+    letter-spacing: 2px;
 }
 
 .project_body {
