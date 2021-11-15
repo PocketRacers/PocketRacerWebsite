@@ -107,7 +107,8 @@ a {
 
 .user {
     display: flex;
-    padding-top: 30px;
+    padding-top: 45px;
+    margin-top: 0px;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 25px;
@@ -116,10 +117,11 @@ a {
 .user_says {
     /* positioning */
     display: flex;
+    margin-top: 0px;
     padding-left: 20px;
 
     /* font styling */
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 400;
     text-align: left;
 }
@@ -143,7 +145,7 @@ a {
 
 .about_section {
     /* font styling */
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 400;
     text-align: left;
 
@@ -166,7 +168,7 @@ a {
 .section_title {
     text-align: center;
     font-weight: 600;
-    font-size: 34px;
+    font-size: 40px;
     letter-spacing: 1.5px;
 }
 
@@ -222,7 +224,7 @@ a {
 }
 
 .image_description {
-    font-size: 20px;
+    font-size: 26px;
     text-align: center;
 }
 

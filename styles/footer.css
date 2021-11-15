@@ -1,4 +1,8 @@
 
+.document_footer p {
+    font-size: 20px;
+}
+
 .document_footer a {
     color: white;
     transition: 1s;

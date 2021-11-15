@@ -106,7 +106,7 @@
 <!--             <section class="gap" style="height: 25px;">
             </section> -->
 
-            <p>As supplemental content, we provide an overhead diagram for wiring the vehicle electronic components together. To <b class="bold">avoid inhaling soldering fumes,</b> it is highly recommended that a mini desk fan is bought. It is also <b class="bold">recommend</b> to buy multiple soldering tips (considering the fact that they wear out). Lastly, it is recommend that soldering paste is used (however, make sure to minimize the amount of paste to prevent the wires from shorting).</p>
+            <p style="font-size: 23px">As supplemental content, we provide an overhead diagram for wiring the vehicle electronic components together. To <b class="bold">avoid inhaling soldering fumes,</b> it is highly recommended that a mini desk fan is bought. It is also <b class="bold">recommend</b> to buy multiple soldering tips (considering the fact that they wear out). Lastly, it is recommend that soldering paste is used (however, make sure to minimize the amount of paste to prevent the wires from shorting).</p>
             <div class="image_wrapper">
                 <img class="project_image" src="../../../images/wiring.png" alt="wiring" style="width: 35%; height: auto">
                 <p><i>Figure 6: simplified wiring diagram</i></p> 
@@ -118,21 +118,21 @@
 
         <h2 id="behaviorial_conditioning_algorithm">Behaviorial Conditioning Algorithm</h2>
         <section class="project_body">
-            <p>Using our proposed testbed, we propose <b class="bold">Behavioral Conditioning</b> (BCo): an improved end-to-end controller specifically designed for high-speed autonomous driving. An LSTM-VAE neural network creates an approximator policy that predicts the desired steering action and motor-speed given an image input. A PID controller is also used to track the desired motor-speed with the observed target motor-speed using throttle action. Our algorithm is specifically designed to address the issue of noisy action outputs (of which is prevalent when directly correlating image inputs to action outputs).</p>
+            <p style="font-size: 23px">Using our proposed testbed, we propose <b class="bold">Behavioral Conditioning</b> (BCo): an improved end-to-end controller specifically designed for high-speed autonomous driving. An LSTM-VAE neural network creates an approximator policy that predicts the desired steering action and motor-speed given an image input. A PID controller is also used to track the desired motor-speed with the observed target motor-speed using throttle action. Our algorithm is specifically designed to address the issue of noisy action outputs (of which is prevalent when directly correlating image inputs to action outputs).</p>
 
             <div class="image_wrapper">
                 <img src="../../../images/machine_alg.png" alt="machine_alg">
                 <p><i>Figure 7: autonous radio controlled car algorithm</i></p>
             </div>
 
-            <p>First, BCo decouples both the task of low level vehicle control and high level path planning to address noise in throttle action outputs. While existing work attempts to solve the issue of noisy inference output via hardware, a hardware constrained scenario within this open-source platform makes it difficult to achieve. By decoupling the task of high speed autonomous driving using a PID controller, it is possible to directly track desired motor shaft speed as to <b class="bold">alleviate</b> any noisy throttle commands when inferencing action commands directly with convolutional neural networks.</p>
+            <p style="font-size: 23px">First, BCo decouples both the task of low level vehicle control and high level path planning to address noise in throttle action outputs. While existing work attempts to solve the issue of noisy inference output via hardware, a hardware constrained scenario within this open-source platform makes it difficult to achieve. By decoupling the task of high speed autonomous driving using a PID controller, it is possible to directly track desired motor shaft speed as to <b class="bold">alleviate</b> any noisy throttle commands when inferencing action commands directly with convolutional neural networks.</p>
 
             <div class="image_wrapper">
                 <img src="../../../images/3d_cnn_model.png" alt="3d_cnn_model">
                 <p><i>Figure 8: Three-dimensional CNN model</i></p>
             </div>
 
-            <p>Second, BCo <b class="bold">addresses</b> noisy outputs by using a Variational Auto-Encoder (VAE) architecture to make the neural network output continuous. Continuous action outputs are achieved by using the KL-divergence equation as shown to regularize the latent variables. The latent variables (which consist of gaussians) use the KL-divergence as a regularization term such that their distributions closely match a standard normal distribution – thus encouraging continuity between action outputs when given similar image inputs.</p>
+            <p style="font-size: 23px">Second, BCo <b class="bold">addresses</b> noisy outputs by using a Variational Auto-Encoder (VAE) architecture to make the neural network output continuous. Continuous action outputs are achieved by using the KL-divergence equation as shown to regularize the latent variables. The latent variables (which consist of gaussians) use the KL-divergence as a regularization term such that their distributions closely match a standard normal distribution – thus encouraging continuity between action outputs when given similar image inputs.</p>
         </section>
 
         <section class="gap" style="height: 25px">
@@ -140,7 +140,7 @@
 
         <h2 id="github">Github Code</h2>
         <section class="project_body">
-            <p>Our <a class="hyperlink" href="https://github.com/jessecha/MACHInE">Github repository</a> contains all the necessary code needed for the open-source racecar project. The purpose of each folder and what it contains is also documented below.</p>
+            <p style="font-size: 23px">Our <a class="hyperlink" href="https://github.com/jessecha/MACHInE">Github repository</a> contains all the necessary code needed for the open-source racecar project. The purpose of each folder and what it contains is also documented below.</p>
 
             <div class="row">
                 <div class="col">
@@ -181,7 +181,7 @@
         </section>
 
         <section class="project_body">
-            <p>As a result of reading up until this point, hopefully you now have an adequate understanding in building your own fully autonomous scaled-down radio control car. Of course, we <b class="bold">encourage</b> you to connect with racers and have fun! If you have any questions, feel free to contact us.</p>
+            <p style="font-size: 23px">As a result of reading up until this point, hopefully you now have an adequate understanding in building your own fully autonomous scaled-down radio control car. Of course, we <b class="bold">encourage</b> you to connect with racers and have fun! If you have any questions, feel free to contact us.</p>
         </section>
 
          <p class="next_page">
