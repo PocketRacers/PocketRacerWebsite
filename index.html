@@ -25,6 +25,7 @@
     <link href="./styles/navigation_bar.css" rel="stylesheet">
     <link href="./styles/modal.css" rel="stylesheet">
     <link href="./styles/footer.css" rel="stylesheet">
+    <link href="./styles/dropdown.css" rel="stylesheet">
 
     <!-- general scripts -->
     <script async src="./scripts/index.js"></script>
@@ -58,10 +59,12 @@
         </a>
         <div class="pages_container">
             <a class="navigation_link" href="./index.html">HOME</a>
-            <a class="navigation_link" href="./pages/pocket_racer/pocket_racer.html">POCKET RACER</a>
-            <div class="pages_container_content">
-                <p><a href="./pages/pocket_racer/pocket_racer.html">GETTING STARTED</a></p>
-                <p><a href="./pages/pocket_racer/assembly/pocket_racer_assembly.html">ASSEMBLY</a></p>
+            <div class="dropdown">
+                <a class="navigation_link" href="./pages/pocket_racer/pocket_racer.html">POCKET RACER</a>
+                <div class="dropdown_content">
+                    <a href="./pages/pocket_racer/pocket_racer.html">GETTING STARTED</a>
+                    <a href="./pages/pocket_racer/assembly/pocket_racer_assembly.html">ASSEMBLY</a>
+                </div>
             </div>
             <a class="navigation_link" href="./pages/opcas/opcas.html">OP-CAS</a>
             <!-- <a class="navigation_link" href="./pages/curriculum/curriculum.html">CURRICULUM</a> -->

@@ -1,0 +1,145 @@
+
+===Lecutre 16---
+- continations == scheme's way of getting access to interpreter
+- denoted by "call/cc"
+- can think of "call/cc" as an object consisting of
+  1) instruction pointer        points to where call/cc returns
+  2) environment pointer        points to environemnt / frame to return to
+- "call/cc" is a primitve, implemented in machine code
+- can also simulate "call/cc" using different < contination passing style > (CPS)
+
+===CPS===
+- idea: simulate continuations by passing in extra arguments to extra functions
+- is basically a "calling convention"
+- *calling convention*: each function will have an extra argument (i.e. its continuation)
+- the function uses that contination by calling it before the function itself returns
+  // ex
+  (define (test-function x)
+    (if (equals? x 1)
+        #t
+        #f)
+  )
+
+  // example with CPS
+  (define (test-function x k)
+    (if (equals? x 1)
+        #t
+        (k #f))
+  )
+- example: taking product of all elements in list
+// ret == name of continutation
+(define (prod ls ret)
+    (let pr ((ls ls) (k ret))
+        (cond
+            ((null? ls) (k 1))
+            ((zero? (car ls) ret 0))
+            (else (pr (cdr ls) lambda (v) (k (* (car ls) v))))
+        )
+    )
+)
+- can implement the following using CPS:
+  1) backtracking
+  2) green threading?
+
+===CPS and Static Chain==
+- <static chain>: another way for programs (that allow nested functions) to access local data
+- can implement static chain in C / C++
+  - i.e. these functions do not support nested functions
+- can implement by passing in extra arguments (that points to definer's frame)
+
+===Continuations and Threads===
+- threads allow use of multiprocessor computers
+- continuations allow green threads (threads that all use a single CPU)
+  - concurrency is still enabled
+  - but restricted to one core
+- threads do not make continuations obsolete
+
+===Scheme Errors===
+- four major categories of errors
+  1) implementation error
+     - error: Scheme program is valid, but current implementation cannot execute (for some reason)
+     - ex: out of memory, too large of programs
+  2) unspecified behavior 
+     - ex: (equal? '(x) '(x))
+  3) on error is sginaled 
+     - suppose we try < (open-input-file "foo.txt") >
+     - but "foo.txt doesn't exist"
+     - then error is raised
+  4) undefined behavior 
+     - if program does erreoneous behavior, Scheme standard can do what it wants to do (rather than placing restrictions)
+
+===Ways to Handle Errors===
+- do exception handling 
+   - enables exception-handling to code that can sufficiently handle error
+   - must have a try-catch-finally
+   - try-catch-finally blocks can cal other functions
+- common exception handling mistake: <throw exception but no catch>
+- solution:
+  1) crash program 
+  2) uncaught exception error 
+  3) use static checking to ensure exceptions are caught
+- idea: (Java) every function declares what exceptions it might throw in it's API
+  - if function is called, then errors must
+    i)  catch the errors 
+    ii) declare more exception
+- exceptions are part of class hierarchy (i.e. there exists an Exception class)
+  - Exceptions and Errors are child classes of the Throwable class
+
+===Ways to Handle Errors cont===
+- throw exception i.e. "System.exit(1)"
+- *total definition*: instead of error, do something else
+  i.e. if function tries to divide by 0 --> return infinity
+- use preconditions 
+  - is a boolean expression associated with function and its arguments 
+  - places a constraint on calls to that function
+  [cpp]
+    int sqrt(int n) {
+        // precondition
+        if (n < 0) {
+            std::cout << "Error";
+            exit(0);
+        }
+
+        // calculate square root here
+    }
+  [end]
+- do static checking
+  - no runtime overhead
+  - all checking occurred at compile time
+  - know error cannot happen
+
+===Object Orientation===
+- OO == Object Oriented
+- there exists a difference between OO programming and OO language 
+- OO Programming 
+  - can write in a non-OO language (i.e. C) using function pointers
+- each OO has unique features 
+  - i.e. static vs dynamic checking of types 
+- class: a bundle of a bunch of data (i.e. variables and methods)
+  - must have constructors
+  - can have inherit or be inheritted  
+- class based == C++, Java
+- prototype-based (i.e. no classes)
+  - mimick class-based languages 
+  - by starting with an object, cloning it, change any data (if need be) such that the object is what is wanted
+- prototype == clone of object 
+- prototype-based languages basically take role of classes in class-based languages 
+  - enables more freedom + flexibility
+  - allows methods to be redefined / deleted (for example)
+
+===Single vs Multiple Inheritance===
+- single advantages 
+  1) simpler 
+  2) easier to implement efficiently
+- multiple advantages 
+  1) can implement children with multiple parents
+  2) issue:
+     - suppose we have two parents: Window and Geometry Rectangle
+     - suppose these two parents have their own implementation of draw()
+     - child class DrawableRectangle inherits both 
+     - if child class tries to draw, which draw() method does it call from which parent?
+
+===Parameter Passing===
+- parameters: callee's viewpoint 
+- arguments: caller's viewpoint
+- 

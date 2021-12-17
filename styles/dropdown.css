@@ -1,0 +1,31 @@
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    width: 80%;
+}
+
+.dropdown_content a {
+    height: auto;
+    width: 100%;
+    right: 0px;
+
+    font-family: "Darker Grotesque", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    text-align: right;
+
+    display: block;
+    margin-top: 7.5px;
+    padding-bottom: 5px;
+}
+
+.dropdown:hover .dropdown_content {
+    display: block;
+}
