@@ -66,6 +66,7 @@
     /* positioning */
     margin-right: 35px;
     margin-bottom: 0px;
+    z-index: 99;
 
     /* font styling */
     color: white;
