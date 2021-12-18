@@ -7,23 +7,35 @@
 .dropdown_content {
     display: none;
     position: absolute;
-    width: 80%;
+    width: 100%;
+    right: 35px;
 }
 
 .dropdown_content a {
     height: auto;
     width: 100%;
-    right: 0px;
+    /*right: 25px;*/
+    position: relative;
+    top: 0px;
+
 
     font-family: "Darker Grotesque", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 16px;
     color: white;
     text-align: right;
+    text-decoration: none;
 
     display: block;
     margin-top: 7.5px;
     padding-bottom: 5px;
+
+    transition: 1s;
+}
+
+.dropdown_content a:hover {
+    opacity: 0.75;
 }
 
 .dropdown:hover .dropdown_content {
