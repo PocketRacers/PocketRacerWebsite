@@ -117,7 +117,14 @@ a {
 .user_says {
     /* positioning */
     display: flex;
+    justify-content: center;
+    align-items: center;
+
     margin-top: 0px;
+    margin-bottom: 0px;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
     padding-left: 20px;
 
     /* font styling */
