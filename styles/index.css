@@ -121,7 +121,8 @@ a {
     padding-left: 20px;
 
     /* font styling */
-    font-size: 25px;
+    /*font-size: 25px;*/
+    font-size: 1.75vw;
     font-weight: 400;
     text-align: left;
 }
@@ -260,8 +261,10 @@ a {
     margin-top: 15px;
     margin-bottom: 15px;
 
-    height: 55%;
-    width: 55%;
+    /*height: 55%;*/
+    /*width: 55%;*/
+    max-width: 50%;
+    height: auto;
 }
 /*-----end of projects-----*/
 
@@ -297,8 +300,8 @@ a {
     }
 
     .avatar {
+        max-width: 40%;
         height: auto;
-        width: 50%;
     }
 
     .user_says {
