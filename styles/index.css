@@ -366,6 +366,6 @@ a {
     }
 
     .gap {
-        display: hidden;
+        height: 25px;
     }
 }
