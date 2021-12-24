@@ -90,10 +90,10 @@
 
         <!-- hardware setup -->
         <h2 id="hardware_setup">Hardware Setup</h2>
-        <p style="font-size: 23px;">We used an HDMI digital wireless transmitter to minimize the latency (up to sub 11ms) from a gaming monitor. An Nvidia Jetson TX2 board was also used as the embedded processor. A CMOS camera with an 185 degrees field of view (FOV) provided images at 80 frames-per-second (FPS). This setup enables us to <b class="bold">visualize exactly what our eyes radio control cars see.</b></p>
+        <p class="project_body_paragraph"">We used an HDMI digital wireless transmitter to minimize the latency (up to sub 11ms) from a gaming monitor. An Nvidia Jetson TX2 board was also used as the embedded processor. A CMOS camera with an 185 degrees field of view (FOV) provided images at 80 frames-per-second (FPS). This setup enables us to <b class="bold">visualize exactly what our eyes radio control cars see.</b></p>
         <section class="image_wrapper">
             <img class="hardware_setup_image" src="../../../images/hardware-setup.png" alt="hardware-setup">
-            <p><i>Figure 2: hardware setup</i></p>
+            <p class="figure"><i>Figure 2: hardware setup</i></p>
         </section>
 
         <section class="gap">
@@ -102,18 +102,18 @@
         <!-- algorithm -->
         <h2 id="algorithm">Algorithm</h2>
         <section class="project_body">
-            <p style="font-size: 23px">We presented two common scenarios where vehicles interact daily. As a solution to automating radio control cars with overtaking maneuvers for collision avoidance scenarios, we present OP-CAS. This algorithm <b class="bold">explicitly addresses errors</b> by concatenating an extra set of trajectories. These trajectories demonstrate the act of returning to a lane as a variance reduction technique. Even during testing when the input images differ from the trained approximate policy, <b class="bold">the algorithm can quickly recover</b> (as a result of of the covariate shift to avoid the accumulation of errors). The oversimplified mechanism behind this noise injection is as follows:</p>
-            <ol style="font-size: 23px">
+            <p class="project_body_paragraph">We presented two common scenarios where vehicles interact daily. As a solution to automating radio control cars with overtaking maneuvers for collision avoidance scenarios, we present OP-CAS. This algorithm <b class="bold">explicitly addresses errors</b> by concatenating an extra set of trajectories. These trajectories demonstrate the act of returning to a lane as a variance reduction technique. Even during testing when the input images differ from the trained approximate policy, <b class="bold">the algorithm can quickly recover</b> (as a result of of the covariate shift to avoid the accumulation of errors). The oversimplified mechanism behind this noise injection is as follows:</p>
+            <ol class="project_body_paragraph">
                 <li>Drive the vehicle in an oscillatory manner</li>
                 <li>If the vehicle moves out of lane, do not record any data</li>
             </ol>
-            <p style="font-size: 23px">When the vehicle moves back into the lane, a user-defined button is pressed to continue recording driving behavior.</p>
+            <p class="project_body_paragraph">When the vehicle moves back into the lane, a user-defined button is pressed to continue recording driving behavior.</p>
             <div class="image_wrapper">
                 <img src="../../../images/opcas_algorithm.png" alt="opcas_algorithm">
-                <p><i>Figure 3: OP-CAS algorithm</i></p>
+                <p class="figure"><i>Figure 3: OP-CAS algorithm</i></p>
             </div>
-            <p style="font-size: 23px">Our <b class="bold">3D-CNN model</b> also consists of several elements, in the following order:</p>
-            <ul style="font-size: 23px">
+            <p class="project_body_paragraph">Our <b class="bold">3D-CNN model</b> also consists of several elements, in the following order:</p>
+            <ul class="project_body_paragraph">
                 <li>a lambda layer to normal the image’s pixels</li>
                 <li>three convolutional layers</li>
                 <li>three hidden layers</li>
@@ -122,10 +122,10 @@
                 <li>two hidden layers with kernel size of 3 x 3 x 3</li>
                 <li>one layer with stride of size 1 x 1 x 1</li>
             </ul>
-            <p style="font-size: 23px">The channels are also ordered in descending order as follows: 24, 32, 64, 64, 64, and 64. These layers are flattened, passed through a fully connected layer of 1152 units, and then finally converged into a final dense layer of two units (to represent steering and throttle values). The network also has a linear output activation function – which enables the control values to fall into the range between -1 and 1.</p>
+            <p class="project_body_paragraph">The channels are also ordered in descending order as follows: 24, 32, 64, 64, 64, and 64. These layers are flattened, passed through a fully connected layer of 1152 units, and then finally converged into a final dense layer of two units (to represent steering and throttle values). The network also has a linear output activation function – which enables the control values to fall into the range between -1 and 1.</p>
             <div class="image_wrapper">
                 <img src="../../../images/3d_cnn_model.png" alt="3d_cnn_model">
-                <p><i>Figure 4: 3D-CNN model</i></p>
+                <p class="figure"><i>Figure 4: 3D-CNN model</i></p>
             </div>
         </section>
 
@@ -134,7 +134,7 @@
 
         <h2 id="results">Results</h2>
         <section class="project_body">
-            <p style="font-size: 23px">Multiple experiments were performed to find the best architecture that can accurately predict both throttle and steering values for a given image. Out of three tested architectures include 2D-CNN, 3D-CNN, and LRCN, <b class="bold">the CD-CNN model showed the greatest promise</b> in accurately predicting both steering and throttle values for overtaking maneuvers and lane keeping. Experimental results with the lane-keep assist trajectory injection show that the vehicles perform <b class="bold">substantially better</b> with an increased number of lane-keep assist demonstrations. The results also indicated that overtaking maneuver stability increased as the number of injected overtaking demonstration datasets increased.</p>
+            <p class="project_body_paragraph">Multiple experiments were performed to find the best architecture that can accurately predict both throttle and steering values for a given image. Out of three tested architectures include 2D-CNN, 3D-CNN, and LRCN, <b class="bold">the CD-CNN model showed the greatest promise</b> in accurately predicting both steering and throttle values for overtaking maneuvers and lane keeping. Experimental results with the lane-keep assist trajectory injection show that the vehicles perform <b class="bold">substantially better</b> with an increased number of lane-keep assist demonstrations. The results also indicated that overtaking maneuver stability increased as the number of injected overtaking demonstration datasets increased.</p>
 
 
             <section class="gap" style="height: 25px">
@@ -142,7 +142,7 @@
 
             <div class="image_wrapper">
                 <img src="../../../images/results1.png" alt="results1">
-                <p><i>Figure 5: CNN models</i></p>
+                <p class="figure"><i>Figure 5: CNN models</i></p>
             </div>
             <section class="gap" style="height: 25px">
             </section>
@@ -151,10 +151,10 @@
             </section>
             <div class="image_wrapper">
                 <img src="../../../images/results2.png" alt="results2">
-                <p><i>Figure 6: Accuracy results</i></p>
+                <p class="figure"><i>Figure 6: Accuracy results</i></p>
             </div>
 
-            <p style="font-size: 23px">Ultimately, our OP-CAS algorithm is able to be functionally implemented radio control vehicles for overtaking maneuvers. Despite only <b class="bold">twenty minutes</b> of data, the vehicles successfully performed overtaking maneuvers for both corners and straights with over <b class="bold">85% accuracy.</b> OP-CAS proves to be more robust during straights, where it only fails to overtake once out of twenty attempts. Vehicles are also usually able to keep within the lane before overtaking. Because the overtaking maneuvers were deployed in real-time on an 1/8th scale radio control car platform, the <b class="bold">OP-CAS algorithm validates for several civilian vehicle safety applications.</b></p>
+            <p class="project_body_paragraph">Ultimately, our OP-CAS algorithm is able to be functionally implemented radio control vehicles for overtaking maneuvers. Despite only <b class="bold">twenty minutes</b> of data, the vehicles successfully performed overtaking maneuvers for both corners and straights with over <b class="bold">85% accuracy.</b> OP-CAS proves to be more robust during straights, where it only fails to overtake once out of twenty attempts. Vehicles are also usually able to keep within the lane before overtaking. Because the overtaking maneuvers were deployed in real-time on an 1/8th scale radio control car platform, the <b class="bold">OP-CAS algorithm validates for several civilian vehicle safety applications.</b></p>
         </section>
 
         <section class="gap">
@@ -165,6 +165,8 @@
         </p>
     </section>
 
+    <section class="gap">
+    </section>
     <section class="gap">
     </section>
 

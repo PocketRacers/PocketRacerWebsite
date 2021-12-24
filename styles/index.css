@@ -97,7 +97,7 @@ h2, h3 {
 
     /* font */
     text-align: left;
-    font-size: 34px;
+    font-size: 2.25vw;
 }
 /*-----end of about-----*/
 
@@ -158,7 +158,7 @@ h2, h3 {
 
 .about_section {
     /* font styling */
-    font-size: 28px;
+    font-size: 1.75vw;
     font-weight: 400;
     text-align: left;
 
@@ -237,7 +237,7 @@ h2, h3 {
 }
 
 .image_description {
-    font-size: 26px;
+    font-size: 1.75vw;
     text-align: center;
 }
 
@@ -317,6 +317,7 @@ h2, h3 {
     }
 
     .user_says {
+        font-size: 2.5vw;
         text-align: center;
     }
 
@@ -350,16 +351,26 @@ h2, h3 {
     }
 
     .image_description {
-        font-size: 18px;
+        font-size: 2.5vw;
+    }
+
+    .about p {
+        font-size: 3.25vw;   
     }
 
     .about_section {
+        font-size: 2.5vw;
         margin-left: 25px;
         margin-right: 25px;
     }
 
     .about_section_mobile {
+        font-size: 2.5vw;
         margin-left: 150px;
         margin-right: 150px;
+    }
+
+    .gap {
+        height: 25px;
     }
 }
