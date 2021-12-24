@@ -4,6 +4,11 @@ a {
     filter: brightness(1.5);
 }
 
+h2, h3 {
+    /*font-size: 30px;*/
+    font-size: 2vw;
+}
+
 .row {
     display: flex;
     flex-direction: row;
