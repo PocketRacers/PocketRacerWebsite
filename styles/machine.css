@@ -4,12 +4,19 @@ html {
     scroll-behavior: smooth;
 }
 
+img {
+    max-width: 50%;
+    height: auto;
+}
+
 h2, h3 {
-    font-size: 30px;
+    /*font-size: 30px;*/
+    font-size: 2vw;
 }
 
 .list_elements {
-    font-size: 20px;
+    /*font-size: 20px;*/
+    font-size: 1.5vw;
 }
 
 .col h3 {
@@ -34,8 +41,18 @@ h2, h3 {
     margin-right: 125px;
 }
 
+.content h2 {
+    font-size: 2vw;
+}
+
+.figure {
+    font-size: 1.35vw;
+}
+
 .machine_image {
-    width: 75%;
+    /*width: 75%;*/
+    /*height: auto;*/
+    max-width: 50%;
     height: auto;
 }
 
@@ -45,12 +62,13 @@ h2, h3 {
 }
 
 .machine_title {
-    font-size: 40px;
+    font-size: 2.25vw !important;
     letter-spacing: 2.25px;
 }
 
-.project_body {
+.project_body_paragraph {
     /*font-size: 26px;*/
+    font-size: 1.5vw;
 }
 
 .hardware {
@@ -108,7 +126,8 @@ h2, h3 {
     padding-left: 30px;
 
     /* font syling */
-    font-size: 32px;
+    /*font-size: 32px;*/
+    font-size: 2.35vw;
     font-weight: 600;
 }
 
