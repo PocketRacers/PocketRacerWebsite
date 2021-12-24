@@ -4,6 +4,16 @@ a {
     color: var(--blue);
 }
 
+h2, h3 {
+    /*font-size: 30px;*/
+    font-size: 2vw;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -16,6 +26,10 @@ a {
 .col {
     display: flex;
     flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
     flex-basis: 100%;
     flex: 1;
     align-items: center;
@@ -24,9 +38,14 @@ a {
 }
 
 .about {
-    font-size: 20px;
+    /*font-size: 20px;*/
+    font-size: 1.5vw;
     padding-left: 125px;
     padding-right: 125px;
+}
+
+.about_team {
+    font-size: 1.5vw;
 }
 
 .title {
@@ -69,14 +88,16 @@ a {
 }
 
 .name {
-    font-size: 34px;
+    /*font-size: 34px;*/
+    font-size: 2vw;
     font-weight: 600;
     margin-bottom: 0px;
 }
 
 .role {
     margin-top: 5px;
-    font-size: 24px;
+    /*font-size: 24px;*/
+    font-size: 1.5vw;
 }
 
 .avatar {
@@ -97,7 +118,8 @@ a {
 }
 
 .student_contributor {
-    font-size: 20px;
+    /*font-size: 20px;*/
+    font-size: 1.5vw;
     margin-top: 0px;
 }
 
