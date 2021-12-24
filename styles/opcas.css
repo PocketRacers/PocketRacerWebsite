@@ -140,6 +140,23 @@ body {
 }
 
 @media (max-width: 900px) {
+    h2, h3 {
+        font-size: 2.25vw !important;
+    }
+
+    img {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .project_body_paragraph {
+        font-size: 2.25vw;
+    }
+
+    .figure {
+        font-size: 2.25vw;        
+    }
+
     .opcas_title {
         padding-top: 150px;
     }
@@ -154,11 +171,6 @@ body {
 
     .title_wrapper {
         margin-top: -350px;
-    }
-
-    .image_wrapper img {
-        width: 90%;
-        height: auto;
     }
 
     .image_wrapper p {
@@ -178,6 +190,6 @@ body {
     }
 
     .next_page {
-        font-size: 20px;
+        font-size: 2.35vw;
     }
 }

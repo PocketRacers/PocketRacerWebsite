@@ -47,6 +47,8 @@ h2, h3 {
 
 .figure {
     font-size: 1.35vw;
+    text-align: center;
+    /*background: yellow;*/
 }
 
 .machine_image {
@@ -164,13 +166,32 @@ body {
 }
 
 @media (max-width: 900px) {
-    .blank {
-        visibility: hidden;
-        display: none;
+    h2, h3 {
+        font-size: 2.25vw !important;
+    }
+
+    img {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .project_body_paragraph {
+        font-size: 2.25vw;
     }
 
     .table_of_contents {
         visibility: hidden;
+    }
+
+    .list_elements {
+        font-size: 2.25vw;
+    }
+
+    .figure {
+        font-size: 2.25vw;
+
+        /*background: yellow;*/
+        /*opacity: 0.5;*/
     }
 
     #hardware_assembly {
@@ -182,7 +203,8 @@ body {
     }
 
     .machine_title {
-        font-size: 25px;
+        /*font-size: 25px;*/
+        font-size: 2.25vw !important;        
     }
 
     .image_wrapper {
@@ -200,11 +222,6 @@ body {
         transform: translateX(-45%);
     }
 
-    .machine_image {
-        width: 85%;
-        height: auto;
-    }
-
     .content {
         margin-top: 0px;
         padding-top: 200px;
@@ -213,6 +230,7 @@ body {
     }
 
     .next_page {
-        font-size: 20px;
+        /*font-size: 20px;*/
+        font-size: 2.35vw;
     }
 }
