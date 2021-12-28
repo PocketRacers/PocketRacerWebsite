@@ -181,7 +181,8 @@ h2, h3 {
 .section_title {
     text-align: center;
     font-weight: 600;
-    font-size: 40px;
+    /*font-size: 40px;*/
+    font-size: 3.5vw;
     letter-spacing: 1.5px;
 }
 
@@ -288,6 +289,8 @@ h2, h3 {
 
     .col {
         align-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .projects_image_wrapper {
@@ -301,23 +304,8 @@ h2, h3 {
         height: auto;
     }
 
-    .text_overlay {
-        font-size: 24px;
-    }
-
-    .curriculum {
-        font-size: 22px;
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-
-    .avatar {
-        max-width: 40%;
-        height: auto;
-    }
-
     .user_says {
-        font-size: 2.5vw;
+        font-size: 6vw;
         text-align: center;
     }
 
@@ -334,7 +322,7 @@ h2, h3 {
     }
 
     .project_title {
-        font-size: 22px;
+        font-size: 7.5vw;
     }
 
     .projects_wrapper {
@@ -342,35 +330,41 @@ h2, h3 {
         align-items: center;
     }
 
-    .project_about {
+/*    .project_about {
         font-size: 22px;
-    }
+    }*/
 
     .projects {
-        margin: -100px; /* double check this value */
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .image_description {
-        font-size: 2.5vw;
+        font-size: 6vw;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .about p {
-        font-size: 3.25vw;   
+        font-size: 7.5vw;   
+    }
+
+    .section_title {
+        font-size: 7.5vw;
     }
 
     .about_section {
-        font-size: 2.5vw;
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-
-    .about_section_mobile {
-        font-size: 2.5vw;
-        margin-left: 150px;
-        margin-right: 150px;
+        font-size: 6vw;
+        margin-left: 10px;
+        margin-right: 10px;
+        /*margin-left: 150px;*/
+        /*margin-right: 150px;*/
     }
 
     .gap {
-        height: 25px;
+        display: none;
+        /*height: 0px;*/
     }
 }

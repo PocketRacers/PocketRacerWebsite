@@ -14,3 +14,8 @@
     opacity: 0.75;
 }
 
+@media (max-width: 768px) {
+    .document_footer {
+        display: none;
+    }
+}
