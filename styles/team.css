@@ -148,9 +148,40 @@ body {
 }
 
 @media (max-width: 768px) {
+    .title {
+        text-align: center;
+        font-size: 7.5vw;
+    }
+
     .about {
-        margin-left: -100px;
-        margin-right: -100px;
+        font-size: 6vw;
+
+        margin-left: 0px;
+        margin-right: 0px;
+
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .contributors {
+        margin-left: 25px;
+        margin-right: 25px;
+
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .contributor_image {
+        max-height: 100% !important;   
+        width: auto !important;
+    }
+
+    .name, .role, .about_team {
+        font-size: 6vw;
+    }
+
+    .student_name, .student_contributor {
+        font-size: 6vw;
     }
 
     .bear_team, .curriculum_dev_team {
@@ -162,15 +193,24 @@ body {
         padding-top: 150px;
     }
 
+    .student_row {
+        flex-direction: row !important;
+    }
+
     .row {
         flex-direction: column;
     }
 
     .col {
         align-items: center;
+        text-align: center;
     }
 
     body {
         margin-top: -225px;
+    }
+
+    .gap {
+        height: 25px;
     }
 }

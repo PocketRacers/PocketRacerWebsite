@@ -139,7 +139,7 @@ body {
     overflow-x: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     h2, h3 {
         font-size: 7.5vw !important;
     }
@@ -182,7 +182,7 @@ body {
     }
 
     .opcas_title {
-        padding-top: 125px;
+        padding-top: 200px;
         font-size: 7.5vw !important;
     }
 
