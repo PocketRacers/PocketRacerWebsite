@@ -9,7 +9,7 @@
 
 @media (max-width: 768px) {
     .image_cropper {
-        max-width: 15%;
+        max-width: 50%;
         height: auto;    
     }
 }
