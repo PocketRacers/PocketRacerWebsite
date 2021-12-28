@@ -293,6 +293,11 @@ h2, h3 {
         margin-right: 0px;
     }
 
+    .curriculum {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
     .projects_image_wrapper {
 /*        margin-left: 25px;
         margin-right: 25px;*/
@@ -307,6 +312,12 @@ h2, h3 {
     .user_says {
         font-size: 6vw;
         text-align: center;
+
+        margin-left: 0px;
+        margin-right: 0px;
+
+        padding-left: 0px;
+        padding-right: ;
     }
 
     .user {
@@ -357,8 +368,8 @@ h2, h3 {
 
     .about_section {
         font-size: 6vw;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
         /*margin-left: 150px;*/
         /*margin-right: 150px;*/
     }
