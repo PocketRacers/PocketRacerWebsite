@@ -145,7 +145,13 @@ body {
     }
 
     img {
-        max-width: 75% !important;
+        max-width: 85% !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+
+    .image_wrapper img {
+        max-width: 85% !important;
         height: auto !important;
     }
 
@@ -157,6 +163,10 @@ body {
         align-items: center;
         margin-left: 0px;
         margin-right: 0px;
+    }
+
+    .list_elements {
+        font-size: 5vw;
     }
 
     .project_body_paragraph {
@@ -193,13 +203,13 @@ body {
         transform: translateX(-45%);
     }
 
-    .opcas_image {
+/*    .opcas_image {
         width: 85%;
         height: auto;
-    }
+    }*/
 
     .content {
-        padding-top: 200px;
+        padding-top: 150px;
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -208,5 +218,10 @@ body {
         /*font-size: 20px;*/
         font-size: 5vw;
         text-align: right;
+    }
+
+    .gap {
+        /*display: none;*/
+        height: 50px;
     }
 }
