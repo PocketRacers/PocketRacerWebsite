@@ -1,6 +1,6 @@
 
 html {
-        /* enable smooth scrolling */
+    /* enable smooth scrolling */
     scroll-behavior: smooth;
 }
 
@@ -165,18 +165,22 @@ body {
     overflow-x: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     h2, h3 {
-        font-size: 2.25vw !important;
+        font-size: 7.5vw !important;
     }
 
     img {
-        max-width: 50%;
-        height: auto;
+        max-width: 75% !important;
+        height: auto !important;
+    }
+
+    .figure {
+        display: none;
     }
 
     .project_body_paragraph {
-        font-size: 2.25vw;
+        font-size: 6vw;
     }
 
     .table_of_contents {
@@ -184,18 +188,13 @@ body {
     }
 
     .list_elements {
-        font-size: 2.25vw;
+        font-size: 5vw;
     }
 
     .figure {
         font-size: 2.25vw;
-
         /*background: yellow;*/
         /*opacity: 0.5;*/
-    }
-
-    #hardware_assembly {
-        margin-top: 0px;
     }
 
     .title_wrapper {
@@ -204,7 +203,7 @@ body {
 
     .machine_title {
         /*font-size: 25px;*/
-        font-size: 2.25vw !important;        
+        font-size: 7.5vw !important;
     }
 
     .image_wrapper {
@@ -227,10 +226,17 @@ body {
         padding-top: 200px;
         margin-left: 20px;
         margin-right: 20px;
+
+        padding-top: 125px;
     }
 
     .next_page {
         /*font-size: 20px;*/
-        font-size: 2.35vw;
+        font-size: 5vw;
+        text-align: right;
+    }
+
+    .blank {
+        display: none;
     }
 }

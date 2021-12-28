@@ -141,12 +141,22 @@ body {
 
 @media (max-width: 900px) {
     h2, h3 {
-        font-size: 2.25vw !important;
+        font-size: 7.5vw !important;
     }
 
     img {
-        max-width: 50%;
-        height: auto;
+        max-width: 75% !important;
+        height: auto !important;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        align-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .project_body_paragraph {
@@ -154,11 +164,16 @@ body {
     }
 
     .figure {
-        font-size: 2.25vw;        
+        display: none;
+    }
+
+    .project_body_paragraph {
+        font-size: 6vw;
     }
 
     .opcas_title {
-        padding-top: 150px;
+        padding-top: 125px;
+        font-size: 7.5vw !important;
     }
 
     .table_of_contents {
@@ -190,6 +205,8 @@ body {
     }
 
     .next_page {
-        font-size: 2.35vw;
+        /*font-size: 20px;*/
+        font-size: 5vw;
+        text-align: right;
     }
 }
