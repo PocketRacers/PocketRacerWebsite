@@ -1,189 +1,299 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
-    <title>Pocket Racer</title>
-
-    <!-- icons -->
-    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- style sheets -->
-    <link href="./styles/all_pages.css" rel="stylesheet">
-    <link href="./styles/index.css" rel="stylesheet">
-    <link href="./styles/animations.css" rel="stylesheet">
-    <link href="./styles/custom_scrollbar.css" rel="stylesheet">
-    <link href="./styles/navigation_bar.css" rel="stylesheet">
-    <link href="./styles/modal.css" rel="stylesheet">
-    <link href="./styles/footer.css" rel="stylesheet">
-    <link href="./styles/dropdown.css" rel="stylesheet">
-    <link href="./styles/circle_crop.css" rel="stylesheet">
-
-    <!-- general scripts -->
-    <script async src="./scripts/index.js"></script>
-
-    <!-- google analytics scripts -->
-    <script async src="./scripts/modal.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>     <!-- for pop up modal -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199894373-1"></script>     <!-- Google Analytics -->
-</head>
-<body>
-
-    <!-- modal -->
-    <div class="modal" id="modal">
-        <p>&ensp;<i class="uil uil-map-marker-info"></i> We use cookies to improve your website experience. By using our website, you consent the use of cookies<span><button class="accept_button" onclick="optIn()">Accept</button><button class="decline_button" onclick="optOut()">Decline</button></span></p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Password Protected Page</title>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #dialogText {
+            color: white;
+            background-color: #333333;
+        }
+        
+        #dialogWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+            background-color: #EEEEEE;
+        }
+        
+        #dialogWrapCell {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        #mainDialog {
+            max-width: 400px;
+            margin: 5px;
+            border: solid #AAAAAA 1px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px 3px #AAAAAA;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            text-align: left;
+        }
+        #mainDialog > * {
+            padding: 10px 30px;
+        }
+        #passArea {
+            padding: 20px 30px;
+            background-color: white;
+        }
+        #passArea > * {
+            margin: 5px auto;
+        }
+        #pass {
+            width: 100%;
+            height: 40px;
+            font-size: 30px;
+        }
+        
+        #messageWrapper {
+            float: left;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+        
+        .notifyText {
+            display: none;
+        }
+        
+        #invalidPass {
+            color: red;
+        }
+        
+        #success {
+            color: green;
+        }
+        
+        #submitPass {
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: #E7E7E7;
+            border: solid gray 1px;
+            float: right;
+            cursor: pointer;
+        }
+        #contentFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #attribution {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+        #attribution, #attribution a {
+            color: #999;
+        }
+        .error {
+            display: none;
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
+    <div id="dialogWrap">
+        <div id="dialogWrapCell">
+            <div id="mainDialog">
+                <div id="dialogText">This page is password protected.</div>
+                <div id="passArea">
+                    <p id="passwordPrompt">Password</p>
+                    <input id="pass" type="password" name="pass" autofocus>
+                    <div>
+                        <span id="messageWrapper">
+                            <span id="invalidPass" class="error">Sorry, please try again.</span>
+                            <span id="trycatcherror" class="error">Sorry, something went wrong.</span>
+                            <span id="success" class="notifyText">Success!</span>
+                            &nbsp;
+                        </span>
+                        <button id="submitPass" type="button">Submit</button>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <div id="securecontext" class="error">
+                    <p>
+                        Sorry, but password protection only works over a secure connection. Please load this page via HTTPS.
+                    </p>
+                </div>
+                <div id="nocrypto" class="error">
+                    <p>
+                        Your web browser appears to be outdated. Please visit this page using a modern browser.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
+    <div id="attribution">
+        Protected by <a href="https://www.maxlaumeister.com/pagecrypt/">PageCrypt</a>
+    </div>
+    <script>
+    (function() {
 
-    <!-- cover animation gif -->
-    <article class="cover_container">
-        <div class="text_overlay">
-            <p>ACCESSIBLE</p>
-            <p>AUTONOMOUS</p>
-            <p>RACING</p>
-        </div>
-    </article>
+        var pl = "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";
+        
+        var submitPass = document.getElementById('submitPass');
+        var passEl = document.getElementById('pass');
+        var invalidPassEl = document.getElementById('invalidPass');
+        var trycatcherror = document.getElementById('trycatcherror');
+        var successEl = document.getElementById('success');
+        var contentFrame = document.getElementById('contentFrame');
+        
+        // Sanity checks
 
-    <!-- home bar -->
-    <nav class="navigation_container">
-        <!-- home bar -->
-        <a class="home_link" href="./index.html">
-            <img class="home_buttom_image" src="./images/logo.png" alt="home_button_image">
-        </a>
-        <div class="pages_container">
-            <a class="navigation_link" href="./index.html">HOME</a>
-            <div class="dropdown">
-                <a class="navigation_link" href="./pages/pocket_racer/pocket_racer.html">POCKET RACER</a>
-                <div class="dropdown_content pocket_racer_dropdown">
-                    <a href="./pages/pocket_racer/pocket_racer.html">GETTING<br>STARTED</a>
-                    <a href="./pages/pocket_racer/assembly/pocket_racer_assembly.html">ASSEMBLY</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a class="navigation_link" href="./pages/opcas/opcas.html">OP-CAS</a>
-                <div class="dropdown_content opcas_dropdown">
-                    <a href="./pages/opcas/opcas.html">GETTING STARTED</a>
-                    <a href="./pages/opcas/overview/opcas_overview.html">OVEVIEW</a>
-                </div>
-            </div>
-            <!-- <a class="navigation_link" href="./pages/curriculum/curriculum.html">CURRICULUM</a> -->
-            <a class="navigation_link" href="./pages/team.html">TEAM</a>
-            <a class="navigation_link" href="./pages/contact.html">CONTACT</a>
-            <!-- <a class="navigation_link" href="./pages/index_korean.html">한</a> -->
-        </div>
-    </nav>
+        if (pl === "") {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+            alert("This page is meant to be used with the encryption tool. It doesn't work standalone.");
+            return;
+        }
 
-    <!-- mobile home bar -->
-    <nav class="mobile_navigation_container">
-        <a class="open_menu_bar" href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-bars mobile_menu_bar"></i></a>
-        <div class="mobile_pages_container" id="mobile_pages_container">
-            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-multiply close_menu_bar"></i></a>
-            <a class="mobile_navigation_link" href="./index.html">HOME</a>
-            <a class="mobile_navigation_link" href="./pages/pocket_racer/pocket_racer.html">POCKET RACER</a>
-            <a class="mobile_navigation_link" href="./pages/opcas/opcas.html">OP-CAS</a>
-            <a class="mobile_navigation_link" href="./pages/team.html">TEAM</a>
-            <a class="mobile_navigation_link" href="./pages/contact.html">CONTACT</a>
-            <!-- <a class="mobile_navigation_link" href="./pages/index_korean.html">한</a> -->
-        </div>
-    </nav>
-    
-    <!-- about -->
-    <section class="about">
-        <p>Our goal with <b class="bold">Pocket Racer</b> is to enable researchers to tackle difficult problems concerning high-speed autonomy through scalable methods. To achieve that, we've made our miniature platforms open-source as to encourage autonomous races to race together and have fun!</p>
-    </section>
+        if (!isSecureContext) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#securecontext").style.display = "block";
+            return;
+        }
 
-    <section class="gap" style="height: 75px">
-    </section>
+        if (!crypto.subtle) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#nocrypto").style.display = "block";
+            return;
+        }
+        
+        function str2ab(str) {
+            var ustr = atob(str);
+            var buf = new ArrayBuffer(ustr.length);
+            var bufView = new Uint8Array(buf);
+            for (var i=0, strLen=ustr.length; i < strLen; i++) {
+                bufView[i] = ustr.charCodeAt(i);
+            }
+            return bufView;
+        }
 
-    <img class="photo" src="./images/new/IMG_7475.jpg">
-    <p class="image_description">Figure 1: Pocket Racer chassis</p>
+        async function deriveKey(salt, password) {
+            const encoder = new TextEncoder()
+            const baseKey = await crypto.subtle.importKey(
+                'raw',
+                encoder.encode(password),
+                'PBKDF2',
+                false,
+                ['deriveKey'],
+            )
+            return await crypto.subtle.deriveKey(
+                { name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' },
+                baseKey,
+                { name: 'AES-GCM', length: 256 },
+                true,
+                ['decrypt'],
+            )
+        }
+        
+        async function doSubmit(evt) {
+            submitPass.disabled = true;
+            passEl.disabled = true;
 
-    <section class="gap" style="height: 75px">
-    </section>
+            let iv, ciphertext, key;
+            
+            try {
+                var unencodedPl = str2ab(pl);
 
-    <!-- curriculum -->
-    <section class="curriculum">
-        <h1 class="section_title">Pocket Racer x IEEE</h1>
-        <p class="about_section">In an effort to realize our goal of making autonomous racing fun, we've connected with the <a href="http://ieeebruins.com/about" target="_blank" rel="noopener noreferrer">Institute of Electrical and Electronics Engineers</a> at the University of California, Los Angeles to allow undergraduate students to race their autonomous vehicles against each other. Check out what the Pocket Racer team has to say:</p>
-        <div class="user">
-            <!-- curriclum developer 1 -->
-            <!-- <img class="avatar" src="./images/user3.png"> -->
-            <img class="image_cropper" src="./images/user_says_avatars/jesseCha.jpg" alt="jesse">
-            <p class="user_says">"Pocket Racer is a mini F1 sandbox for roboticists. It’s racing, with code.”<br>Jesse Cha – UCLA PhD Candidate / Pocket Racer Research Lead</p>
-        </div>
-        <div class="user">
-            <!-- curriclum developer 2 -->
-            <!-- <img class="avatar" src="./images/user1.png"> -->
-            <img class="image_cropper" src="./images/user_says_avatars/jeremyLouie.jpg" alt="jeremy">
-            <p class="user_says">"The Pocket Racer curriculum is full of surprises. You not only have the opportunity to engineer your own customizable RC car, but enjoy the experience of racing your design against others. It's really self-rewarding on its own."<br>Jeremy Louie – Curriculum Developer / Pocket Racer Undergraduate Researcher</p>
-        </div>
-        <div class="user">
-            <!-- curriclum developer 3 -->
-            <img class="image_cropper" src="./images/user_says_avatars/aaronKuo.jpg" alt="aaron">
-            <p class="user_says">"Pocket Racer provides an opportunity for interested students of all disciplines to gain experience in both hardware and software engineering."<br>Aaron Kuo – Curriculum Developer / IEEE Aircopter Lead</p>
-        </div>
-    </section>
+                const salt = unencodedPl.slice(0, 32)
+                iv = unencodedPl.slice(32, 32 + 16)
+                ciphertext = unencodedPl.slice(32 + 16)
 
-    <section class="gap">
-    </section>
+                key = await deriveKey(salt, passEl.value);
+            } catch (e) {
+                trycatcherror.style.display = "inline";
+                console.error(e);
+                return;
+            }
 
-    <!-- projects -->
-    <section class="projects">
+            try {
+                const decryptedArray = new Uint8Array(
+                    await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ciphertext)
+                );
 
-        <h1 class="section_title">Our Projects</h1>
-        <p class="about_section">Outside of delivering accessible curriculum to undergraduate students, we also perform <b class="bold">research</b> that primarily focuses on fully autonomous driving radio control cars. Feel free to check out our breakthroughs.</p>
-        <div class="projects_wrapper">
+                let decrypted = new TextDecoder().decode(decryptedArray);
 
-            <div class="row">
-                <!-- pocket racer -->
-                <div class="col">
-                    <div class="projects_image_wrapper">
-                        <a class="navigation_project" href="./pages/pocket_racer/pocket_racer.html">
-                            <h2 class="project_title">Pocket Racer</h2>
-                            <div class="container">
-                                <img class="project_image" src="./images/machine.gif" alt="machine.gif">
-                                <div class="overlay">
-                                    <p class="more_info">The Science Behind Pocket Racer</p>
-                                </div>
-                            </div>
-                        </a>                        
-                        <p class="image_description">Moving at 24 mph (350 mph to scale) these pocket racers dominate the highway scenario without the need for any driver.</p>
-                    </div>
-                </div>
+                if (decrypted === "") throw "No data returned";
 
-                <!-- OP-CAS -->
-                <div class="col">
-                    <div class="projects_image_wrapper">
-                        <a class="navigation_project" href="./pages/opcas/opcas.html">
-                            <h2 class="project_title">Collision Avoidance with Overtaking Maneuvers</h2>
-                            <div class="container">
-                                <img class="project_image" src="./images/op_cas.gif" alt="op_cas.gif">
-                                <div class="overlay">
-                                    <p class="more_info">The Research Behind OP-CAS</p>
-                                </div>
-                            </div>
-                        </a>
-                        <p class="image_description">With an end-to-end autonomous driving algorithm, the Overtaking Procedure for Collision Avoidance Systems (OP-CAS) is not only cheap on hardware, but also easy to deploy on embedded systems.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                const basestr = '<base href="." target="_top">';
+                const anchorfixstr = `
+                    <script>
+                        Array.from(document.links).forEach((anchor) => {
+                            const href = anchor.getAttribute("href");
+                            if (href.startsWith("#")) {
+                                anchor.addEventListener("click", function(e) {
+                                    e.preventDefault();
+                                    const targetId = this.getAttribute("href").substring(1);
+                                    const targetEl = document.getElementById(targetId);
+                                    targetEl.scrollIntoView();
+                                });
+                            }
+                        });
+                    <\/script>
+                `;
+                
+                // Set default iframe link targets to _top so all links break out of the iframe
+                if (decrypted.includes("<head>")) decrypted = decrypted.replace("<head>", "<head>" + basestr);
+                else if (decrypted.includes("<!DOCTYPE html>")) decrypted = decrypted.replace("<!DOCTYPE html>", "<!DOCTYPE html>" + basestr);
+                else decrypted = basestr + decrypted;
 
-    <section class="gap">
-    </section>
-
-    <!-- footer -->
-    <footer class="document_footer">
-        <p><a href="https://www.romela.org/" target="_blank" rel="noopener noreferrer">Robotics and Mechanisms Laboratory (RoMeLa)</a><br>Department of Mechanical and Aerospace Engineering<br>University of California, Los Angeles (UCLA)<br>LA, CA, USA, 90095</p>
-    </footer>
-</body>
+                // Fix fragment links
+                if (decrypted.includes("</body>")) decrypted = decrypted.replace("</body>", anchorfixstr + '</body>');
+                else if (decrypted.includes("</html>")) decrypted = decrypted.replace("</html>", anchorfixstr + '</html>');
+                else decrypted = decrypted + anchorfixstr;
+                
+                contentFrame.srcdoc = decrypted;
+                
+                successEl.style.display = "inline";
+                setTimeout(function() {
+                    dialogWrap.style.display = "none";
+                }, 1000);
+            } catch (e) {
+                invalidPassEl.style.display = "inline";
+                passEl.value = "";
+                submitPass.disabled = false;
+                passEl.disabled = false;
+                console.error(e);
+                return;
+            }
+        }
+        
+        submitPass.onclick = doSubmit;
+        passEl.onkeypress = function(e){
+            if (!e) e = window.event;
+            var keyCode = e.keyCode || e.which;
+            invalidPassEl.style.display = "none";
+            if (keyCode == '13'){
+              // Enter pressed
+              doSubmit();
+              return false;
+            }
+        }
+    })();
+    </script>
+  </body>
 </html>
