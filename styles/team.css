@@ -172,7 +172,7 @@ body {
     }
 
     .contributor_image {
-        max-height: 75% !important;   
+        max-height: 100% !important;   
         width: auto !important;
     }
 
