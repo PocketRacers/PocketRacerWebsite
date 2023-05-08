@@ -32,9 +32,10 @@
     /* positioning */
     position: relative;
     top: 25px;
+    /* positioning original  top: 25 px*/
 
     /* styling */
-    max-width: 7.5%;
+    max-width: 12.5%;
     height: auto;
     /*height: auto;*/
     /*width: 7.5%;*/
