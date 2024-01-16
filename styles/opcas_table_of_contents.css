@@ -1,4 +1,4 @@
-
+/*
 :root {
     --light_gray:  #aaa;
     --light_blue: #6ebbf6;    
@@ -6,7 +6,7 @@
 }
 
 .table_of_contents {
-    /* positiong */
+   
     position: fixed;
     left: 3.5em;
     top: 8em;
@@ -14,30 +14,30 @@
     padding-bottom: 5.5em;
     padding-left: 2.5em;
     padding-right: 2em;
-    /*min-height: 525px;*/
+    
     width: auto;
 
     height: 200px;
-    /*margin: 30px;*/
 
-    /* font syling */
+
+    /* font syling 
     line-height: 2;
 
     /* display */
 
 
-    /* styling */
+    /* styling 
     background: rgb(31,34,37);
     border: 2px solid white;
     border-radius: 5px;
 }
 
 .table_of_contents_section {
-    /* positiong */
+    /* positiong 
     position: relative;
     left: -1em;
 
-    /* font syling */
+    /* font syling 
     font-weight: 600;
     letter-spacing: 0.5px;
     line-height: 1;
@@ -97,7 +97,7 @@
 .table_of_contents a:hover {
     text-decoration: none;
     
-    /* on hover, fade color */
+    /* on hover, fade color 
     color: white;
     opacity: 1;
     transition: 1s;

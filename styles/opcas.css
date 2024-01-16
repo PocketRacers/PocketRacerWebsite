@@ -1,11 +1,11 @@
-
+/*
 html {
-    /* enable smooth scrolling */
+    /* enable smooth scrolling 
     scroll-behavior: smooth;
 }
 
 h2, h3 {
-    /*font-size: 30px;*/
+    /*font-size: 30px;
     font-size: 2vw;
 }
 
@@ -15,14 +15,14 @@ img {
 }
 
 .content {
-    /* positoning and framing */
+    /* positoning and framing 
     position: relative;
     margin-top: 150px;
     margin-bottom: auto;
     margin-left: 310px;
     margin-right: 125px;
 
-    /* enable smooth scrolling */
+    /* enable smooth scrolling 
     scroll-behavior: smooth;
 }
 
@@ -41,7 +41,7 @@ img {
 
 .opcas_title {
     margin-top: 150px;
-    /*font-size: 36px;*/
+    /*font-size: 36px;
     font-size: 2.25vw !important;
     letter-spacing: 2.25px;
 }
@@ -52,8 +52,8 @@ img {
 
 .hardware {
     text-align: center;
-    /*width: 55%;*/
-    /*height: auto*/
+    /*width: 55%;
+    /*height: auto
 
     background-color: yellow;
 }
@@ -74,7 +74,7 @@ img {
 .image_wrapper p {
     margin-left: 150px;
     margin-right: 150px;
-    /*background-color: yellow;*/
+    /*background-color: yellow;
 }
 
 .row {
@@ -97,12 +97,12 @@ img {
 }
 
 .next_page {
-    /* framing */
+    /* framing 
     display: flex;
     justify-content: flex-end;
     padding-left: 30px;
 
-    /* font syling */
+    /* font syling 
     font-size: 32px;
     font-weight: 600;
 }
@@ -131,7 +131,7 @@ img {
 }
 
 body {
-    /* animations */
+    /* animations 
     -moz-animation: fade_in 1.75s ease forwards;
     -webkit-animation: fade_in 1.75s ease forwards;
     -o-animation: fade_in 1.75s ease forwards;
@@ -206,7 +206,7 @@ body {
 /*    .opcas_image {
         width: 85%;
         height: auto;
-    }*/
+    }
 
     .content {
         padding-top: 150px;
@@ -215,13 +215,13 @@ body {
     }
 
     .next_page {
-        /*font-size: 20px;*/
+        /*font-size: 20px;
         font-size: 5vw;
         text-align: right;
     }
 
     .gap {
-        /*display: none;*/
+        /*display: none;
         height: 50px;
     }
 }
