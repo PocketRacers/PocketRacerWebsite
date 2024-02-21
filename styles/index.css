@@ -42,7 +42,7 @@ h2, h3 {
     animation: fade_in 2s;
 
     /* image */
-    background: url("../images/coverphoto.gif") no-repeat center center fixed;
+    background: url("../images/iii.gif") no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -317,7 +317,7 @@ h2, h3 {
         margin-right: 0px;
 
         padding-left: 0px;
-        padding-right: ;
+        padding-right: 0px;
     }
 
     .user {
