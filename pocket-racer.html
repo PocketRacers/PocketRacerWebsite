@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pocket Racer</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-lg-center top-header">
+          <div class="logo" data-aos="fade-left">
+            <a href="index.html" class="logo-pc"><img src="assets/images/logo.png" alt="logo" width="120"></a>
+          </div>
+          <nav class="navbar navbar-expand-lg p-0" data-aos="fade-right">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="top-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <div class="collapse navbar-collapse" id="top-menu">              
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="pocket-racer.html"> Pocket Racer </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="team.html"> Team </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <section class="p-0 banner bg-img">
+        <img src="assets/images/pocket-racer.jpg" alt="Pocket Racer" data-aos="fade-up">
+        <div class="bg-img-content">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 order-2 order-md-0">
+                  <div class="table-content" data-aos="fade-left">
+                    <h3 class="heading3 text-start">Table of Content</h3>
+                    <ul class="decimal">
+                      <li><a href="#introduction">Introduction</a></li>
+                      <li><a href="#background">Background</a></li>
+                      <li><a href="#bill-materials">Bill of Materials</a>
+                        <ul>
+                          <li><a href="#vehicle-components">Vehicle Components</a></li>
+                          <li><a href="#racing-components">Racing Circuit Components</a></li>
+                          <li><a href="#diagram-components">Tool Diagram Components</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#hardware-assembly">Hardware Assembly</a></li>
+                      <li><a href="#behavioral-algorithm">Behavioral Conditioning Algorithm</a></li>
+                      <li><a href="#github">Github Code</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 order-1 order-md-0 d-flex align-items-center justify-content-center justify-content-md-end">
+                  <h1 class="page-heading text-center text-lg-end mb-5 my-lg-0" data-aos="fade-right">Pocket Racer</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section id="introduction">
+        <div class="container">
+          <h3 class="mb-3 text-start heading2" data-aos="fade-right">Introduction</h3>
+          <p data-aos="fade-left">One of the most <b>pressing challenges</b> within autonomous mobility lies within highway scenarios: where autonomous vehicles would be interacting with human drivers at high speeds. These scenarios are indeed challenging because autonomous vehicles require data driven methods to identify the intent of opposing vehicles while also simultaneously planning its trajectory. Although full-scale and high-speed testbeds exist (i.e. Roborace), the space and cost requirements are highly demanding. For this reason, we created an open-source, 1:28 scale research platform for high-speed autonomous driving research that is <b>accessible to everyone</b>.</p>
+        </div>
+      </section>
+
+      <section id="background">
+        <div class="container">
+          <h3 class="mb-3 text-start heading2" data-aos="fade-left">Background</h3>
+          <p data-aos="fade-right">Building a scaled-down autonomous vehicle is quite a complex task. Please keep in mind the following considerations:</p>
+          <div class="row mt-4 justify-content-around">
+            <div class="col-md-5" data-aos="fade-left">
+              <h3 class="heading3">Budget</h3>
+              <p>Although the material cost of building a vehicle is less than 100 USD, several tools are needed:</p>
+              <ol class="my-4 disc">
+                <li>Bsic electronic tools (i.e. screwdriver, soldering tool, glue gun)</li>
+                <li>A computer with a GPU (alternative: cloud computing)</li>
+                <li>3D printer</li>
+              </ol>
+              <p>Thus, the <b>real cost</b> of having a fully-functioning vehicle can fluctuate (depending on which tools are readily accessible or not). Please keep this in mind before jumping immediately into the project.</p>
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-right">
+              <h3 class="heading3">Knowledge</h3>
+              <p>We provide <b>two ways</b> a vehicle can race itself autonomously. These methods and their resources are articulated below:</p>
+              <ol class="my-4 disc">
+                <li><b>Deep learning</b>: we recommend viewing <a href="https://youtu.be/5tvmMX8r_OM"> university</a> lectures with topics concerning Deep Learning via YouTube</li>
+                <li><b>Sensor Fusion and Probabilistic Robotic Methods</b>: we recommend the <a href="https://www.amazon.com/Probabilistic-Robotics-INTELLIGENT-ROBOTICS-AUTONOMOUS/dp/0262201623"> Probabilistic Robotics (Intelligent Robotics and Autonomous Agents series) 1st Edition book</a> by Sebastian Thrun</li>
+              </ol>
+              <p>In addition, most of the code that we use is <b>Python</b>. You also need to know how to code within Deep Learning language frameworks. Although the project had began with Keras for Deep Learning, TensorFlow was later used. Alternatives include Pytorch (which has potential merit considering its developments in the area of deployment).</p>
+            </div>
+          </div>
+          <div class="row mt-4 justify-content-around">
+            <div class="col-md-5" data-aos="fade-right">
+              <h3 class="heading3">3D-Printing</h3>
+              <p>It is <b>necessary</b> to have access to a 3D printer. because the parts are (at most) palm-sized, 3D printers around less than 100 USD (such as the Sondori Pico 3D printer) will be enough. We also recommend the Prusa Mini+ or MK3S+ with +0.02mm tolerance PETG filament if you are serious about getting quality prints. Knowing how to use Computer Aided Design (CAD) is also necessary, provided that you are interested in making modifications to your vehicle in the future.</p>
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-left">
+              <h3 class="heading3">Electronics</h3>
+              <p>You should be able to understand how to use the following as well:</p>
+              <ol class="my-4 disc">
+                <li>Raspberry Pi with General Purpose Input Output (GPIO) ports</li>
+                <li>hardware pulse width modulation (PWM) signaling and UART protocols</li>
+                <li>solder wires and understand how remote controlled cars work</li>
+                <li>the basics of First-Person-View (FPV) equipment (if you plan on driving your car with a FPV remote steering wheel setup)</li>
+              </ol>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="bill-materials">
+        <div class="container">
+          <h2 class="mb-3 text-start heading2" data-aos="fade-right">Bill of Materials</h2>
+          <p data-aos="fade-left">Several materials are needed to successfully build a self driving RC car. Our bill of materials will be periodically updated to reflect the latest revisions. Note that the <b>cost of components does not reflect shipping cost</b>. In addition, there are a total of <b>three ways</b> of controlling the vehicle for data collection. The <b>recommended method</b> is the low latency option – as this offers the quick communication protocols.</p>
+          <div id="vehicle-components" class="mt-5">
+            <h3 class="heading3" data-aos="fade-down">Vehicle Components</h3>
+            <img src="assets/images/home-img4.png" class="mx-auto d-block" alt="Vehicle Components" data-aos="fade-up">
+          </div>
+          <div class="d-flex flex-wrap mt-4 justify-content-center">
+            <div class="vc-block" data-aos="fade-right">
+              <h4>Chassis</h4>
+              <ul class="decimal">
+                <li>Kyosho Mini-Z MR-03 1:28 RTR Kit</li>
+                <li>PN Racing 2.5W Chassis Conversion Kit</li>
+                <li>PN Racing v3 Micro Servo Kit</li>
+              </ul>
+            </div>
+            <div class="vc-block" data-aos="fade-left">
+              <h4>Sensors</h4>
+              <ul class="decimal">
+                <li>US 1881 Latch Type Hall Sensor [x4]</li>
+                <li>Neodymium Magnet [x16]</li>
+                <li>Digital Battery Voltage Meter</li>
+                <li>Battery Current Meter</li>
+              </ul>
+            </div>
+            <div class="vc-block" data-aos="fade-right">
+              <h4>Compute Unit</h4>
+              <ul class="decimal">
+                <li>Raspberry Pi 4B 4G</li>
+                <li>Samsung Evo Plus 256G SD Card</li>
+                <li>Risun RFB2008H 5v Blower Fan</li>
+                <li>OSKJ 5V-3A DC Step-Down Buck Converter</li>
+              </ul>
+            </div>
+            <div class="vc-block" data-aos="fade-right">
+              <h4>Batteries and Shell</h4>
+              <ul class="decimal">
+                <li>Vapecell 3.7v 1S 350mAh Li-Ion Battery [x4]</li>
+                <li>Mini-Z Truck Lexan Body Shell</li>
+                <li>Wheel Encoder Ring [x4]</li>
+                <li>Tamiya PS Spray Paint</li>
+              </ul>
+            </div>
+            <div class="vc-block" data-aos="fade-left">
+              <h4>3D-Printed Parts</h4>
+              <ul class="decimal">
+                <li>Camera Mount</li>
+                <li>RPi Board Mount</li>
+                <li>Wheel Encoder Ring [x4]</li>
+                <li>Rear Mount T-Plate</li>
+                <li>Mount Standoffs</li>
+              </ul>
+            </div>
+          </div>
+          <div id="racing-components" class="mt-5">
+            <h3 class="heading3" data-aos="fade-down">Racing Circuit Components</h3>
+            <img src="assets/images/racing-circuit-diagram.png" class="mx-auto d-block" alt="Racing Circuit Components" data-aos="fade-up">
+          </div>
+          <div class="d-flex flex-wrap mt-4 justify-content-center">
+            <div class="vc-block" data-aos="fade-right">
+              <h4>First Person View</h4>
+              <ul class="decimal">
+                <li>Fatshark Scout FPV Goggles</li>
+                <li>TBS Nano Pro32 Video FPV Rx (27)</li>
+                <li>RunCam Eagle 3 FPV Camera (26)</li>
+              </ul>
+            </div>
+            <div class="vc-block" data-aos="fade-left">
+              <h4>Controller</h4>
+              <ul class="decimal">
+                <li>Futaba T6J 6Ch. 2.4Ghz Tx Controller with Trainer Mode</li>
+                <li>(Driving Mode Option) Thrustmaster 500RS / 300RS Gaming Wheel</li>
+                <li>Compufly v2.0 PPM2USB Futaba Ver.</li>
+                <li>(Budget Option) Logitech F710 Gaming Pad Controller</li>
+                <li>(Low Latency Option) Sanwa M17 RC Controller + RX 493 Receiver</li>
+              </ul>
+            </div>
+            <div class="vc-block" data-aos="fade-right">
+              <h4>Racing Circuit</h4>
+              <ul class="decimal">
+                <li>RCP Tracks Mini-96 Basic Set</li>
+                <li>RCP Tracks Mini-96 Expansion Tiles</li>
+                <li>Orange Mini Soccer Cones</li>
+                <li>Orange Lap RC 4ch. PWM2USB Dongle (23)</li>
+              </ul>
+            </div>
+          </div>
+          <div id="diagram-components" class="mt-5">
+            <h3 class="heading3" data-aos="fade-down">Tool Components</h3>
+            <div class="row">
+              <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+                <p class="fs-5 text-center mb-3"><b>Measurement Tools</b></p>
+                <img src="assets/images/tools.png" class="mx-auto d-block" alt="tools">
+                <ul class="decimal mt-3">
+                  <li>Tamiya Speed Checker</li>
+                  <li>SkyRC Corner Weight Scale</li>
+                  <li>ARR Aurora Car Setup System</li>
+                </ul>
+              </div>
+              <div class="col-md-6" data-aos="fade-left">
+                <p class="fs-5 text-center mb-3"><b>Global Tracking Tool</b></p>
+                <img src="assets/images/overhead-cam.png" class="mx-auto d-block" alt="tools">
+                <ul class="decimal mt-3">
+                  <li>Logitech Brio 4k Web Camera</li>
+                  <li>Theia Wide Angle CS Lens</li>
+                  <li>Kurokesu Brio CS Mount Kit</li>
+                  <li>USB 3.0 20ft. Extension Cable</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="fs-5 my-4" data-aos="fade-up">With our vehicle and track components <b>gathered</b>, we can now <b>assemble</b> our fully autonomous radio control car.</p>
+        </div>
+      </section>
+
+      <section id="hardware-assembly">
+        <div class="container">
+          <h2 class="mb-3 text-start heading2" data-aos="fade-up">Hardware Assembly</h2>
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md-6" data-aos="fade-left">
+              <p class="fs-5">As supplemental content, we provide an overhead diagram for wiring the vehicle electronic components together. To <b>avoid inhaling soldering fumes</b>, it is highly recommended that a mini desk fan is bought. It is also <b>recommend</b> to buy multiple soldering tips (considering the fact that they wear out). Lastly, it is recommend that soldering paste is used (however, make sure to minimize the amount of paste to prevent the wires from shorting).</p>
+            </div>
+            <div class="col-md-5" data-aos="fade-right">
+              <img src="assets/images/home-img5b.png" alt="Hardware Assembly">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="behavioral-algorithm">
+        <div class="container">
+          <h2 class="mb-3 text-start heading2" data-aos="fade-down">Behaviorial Conditioning Algorithm</h2>
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md-6" data-aos="fade-left">
+              <p>Using our proposed testbed, we propose <b>Behavioral Conditioning</b> (BCo): an improved end-to-end controller specifically designed for high-speed autonomous driving. An LSTM-VAE neural network creates an approximator policy that predicts the desired steering action and motor-speed given an image input. A PID controller is also used to track the desired motor-speed with the observed target motor-speed using throttle action. Our algorithm is specifically designed to address the issue of noisy action outputs (of which is prevalent when directly correlating image inputs to action outputs).</p>
+            </div>
+            <div class="col-md-5" data-aos="fade-right">
+              <img src="assets/images/home-img7.png" alt="Behaviorial Conditioning Algorithm">
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md-6" data-aos="fade-right">
+              <img src="assets/images/3d-cnn-model.png" alt="Behaviorial Conditioning Algorithm">
+              <p>First, BCo decouples both the task of low level vehicle control and high level path planning to address noise in throttle action outputs. While existing work attempts to solve the issue of noisy inference output via hardware, a hardware constrained scenario within this open-source platform makes it difficult to achieve. By decoupling the task of high speed autonomous driving using a PID controller, it is possible to directly track desired motor shaft speed as to <b>alleviate</b> any noisy throttle commands when inferencing action commands directly with convolutional neural networks.</p>
+            </div>
+            <div class="col-md-5" data-aos="fade-left">
+              <p>Second, BCo <b>addresses</b> noisy outputs by using a Variational Auto-Encoder (VAE) architecture to make the neural network output continuous. Continuous action outputs are achieved by using the KL-divergence equation as shown to regularize the latent variables. The latent variables (which consist of gaussians) use the KL-divergence as a regularization term such that their distributions closely match a standard normal distribution – thus encouraging continuity between action outputs when given similar image inputs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="github">
+        <div class="container">
+          <h2 class="mb-3 text-start heading2" data-aos="fade-right">Github Code</h2>
+          <p data-aos="fade-left">Our <a href="https://github.com/jessecha/MACHInE"> Github</a> repository contains all the necessary code needed for the open-source racecar project. The purpose of each folder and what it contains is also documented below.</p>
+          <div class="row mt-4">
+            <div class="col-md-4 col-lg-3 mb-4" data-aos="fade-right">
+              <h3 class="heading3">1. Data Collection</h3>
+              <p>The ‘data_collection’ folder includes six folders for the Robot Operating System (ROS). It also contains the launch file for data collection. One can selectively record specific ROS topics after launching the launch file using the ‘rosbag record‘ command. During data collection, it is important to use the <b>isocpus command</b> to isolate CPU core: 0 within the Raspberry Pi (as to maximize the number of collected frames).</p>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" data-aos="fade-left">
+              <h3 class="heading3">2. Train</h3>
+              <p>The ‘train‘ folder contains the ‘dataparser‘ folder to convert rosbag recordings into a csv file format. The ‘lrcn_motor.py‘ script is used to <b>train</b> the model. Tensorflow 2.4 was used with Tensorflow lite to convert and quantize the model. There are several models to choose from in the model folder (however, it's worth noting that that the vision transformer model might not be supported with tflite during conversion).</p>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" data-aos="fade-right">
+              <h3 class="heading3">3. Deploy</h3>
+              <p>The ‘deploy‘ folder contains a script to deploy the tflite model.</p>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" data-aos="fade-left">
+              <h3 class="heading3">4. Evaluate</h3>
+              <p>The ‘evaluate‘ folder contains the following: a ROS folder to record the logitech brio stream and a script called, the ‘ground_truth_tracker.ipynb‘ which processes the rosbag into a video, and scripts for salient feature representation.</p>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" data-aos="fade-left">
+              <h3 class="heading3">5. Tools</h3>
+              <p>The ‘tools‘ folder contains <b>useful</b> commands. The usb_list.sh command lists all the devices linked to the Raspberry Pi board / desktop via USB port.</p>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" data-aos="fade-right">
+              <h3 class="heading3">6. STL Files</h3>
+              <p>This folder contains all the necessary STL files needed to <b>print</b> the vehicle mounts. It is important to note that all the Ethernet ports and USB ports must be <b>stripped</b> prior to assembly. A quality print is necessary for the ‘t_connector.stl‘ file as an uneven print will cause the vehicle to warp, resulting in unwanted behavior when trying to drive straight</p>
+            </div>
+          </div>
+          <p class="fs-5 my-4" data-aos="fade-left">As a result of reading up until this point, hopefully you now have an adequate understanding in building your own fully autonomous scaled-down radio control car. Of course, we <b>encourage</b> you to connect with racers and have fun! If you have any questions, feel free to contact us.</p>
+        </div>
+      </section>
+
+
+      <footer class="mt-4">
+        <div class="container text-center">
+          <p class="mb-2">Natural Sciences Division. Pepperdine University. Malibu, CA, USA, 90263</p>
+          <p>&copy; All right Reserved</p>
+        </div>
+      </footer>
+
+
+    <!-- Back to Top -->
+    <button type="button" class="back-to-top"></button>
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
+

@@ -1,189 +1,372 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport"/>
-    <title>Pocket Racer</title>
-
-    <!-- icons -->
-    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
-
-    <!-- fonts -->
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="icon">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- style sheets -->
-    <link href="./styles/all_pages.css" rel="stylesheet">
-    <link href="./styles/index.css" rel="stylesheet">
-    <link href="./styles/animations.css" rel="stylesheet">
-    <link href="./styles/custom_scrollbar.css" rel="stylesheet">
-    <link href="./styles/navigation_bar.css" rel="stylesheet">
-    <link href="./styles/modal.css" rel="stylesheet">
-    <link href="./styles/footer.css" rel="stylesheet">
-    <link href="./styles/dropdown.css" rel="stylesheet">
-    <link href="./styles/circle_crop.css" rel="stylesheet">
-
-    <!-- general scripts -->
-    <script async src="./scripts/index.js"></script>
-
-    <!-- google analytics scripts -->
-    <script async src="./scripts/modal.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>     <!-- for pop up modal -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199894373-1"></script>     <!-- Google Analytics -->
-</head>
-<body>
-
-    <!-- modal -->
-    <div class="modal" id="modal">
-        <p>&ensp;<i class="uil uil-map-marker-info"></i> We use cookies to improve your website experience. By using our website, you consent the use of cookies<span><button class="accept_button" onclick="optIn()">Accept</button><button class="decline_button" onclick="optOut()">Decline</button></span></p>
-    </div>
-
-    <!-- cover animation gif -->
-    <article class="cover_container">
-        <div class="text_overlay">
-            <p>ACCESSIBLE</p>
-            <p>AUTONOMOUS</p>
-            <p>RACING</p>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-lg-center top-header">
+          <div class="logo" data-aos="fade-left">
+            <a href="index.html" class="logo-pc"><img src="assets/images/logo.png" alt="logo" width="120"></a>
+          </div>
+          <nav class="navbar navbar-expand-lg p-0" data-aos="fade-right">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="top-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <div class="collapse navbar-collapse" id="top-menu">              
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pocket-racer.html"> Pocket Racer </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="team.html"> Team </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
-    </article>
+      </header>
 
-    <!-- home bar -->
-    <nav class="navigation_container">
-        <!-- home bar -->
-        <a class="home_link" href="./index.html">
-            <img class="home_buttom_image" src="./images/logo.png" alt="home_button_image">
-        </a>
-        <div class="pages_container">
-            <a class="navigation_link" href="./index.html">HOME</a>
-            <div class="dropdown">
-                <a class="navigation_link" href="./pages/pocket_racer/pocket_racer.html">POCKET RACER</a>
-                <div class="dropdown_content pocket_racer_dropdown">
-                    <a href="./pages/pocket_racer/pocket_racer.html">GETTING<br>STARTED</a>
-                    <a href="./pages/pocket_racer/assembly/pocket_racer_assembly.html">ASSEMBLY</a>
-                </div>
+      <section class="pt-0 banner">
+        <div data-aos="fade-up">
+           <video class="ratio ratio-16x9" poster="assets/images/banner.png" autoplay muted loop>
+              <source src="assets/videos/banner.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video> 
+        </div>
+        <div class="container text-center pt-4">
+          <h1 class="page-heading" data-aos="fade-left">Accessible, Autonomous and Racing</h1>
+          <a href="#main-content" class="btn" data-aos="fade-right">Learn More</a>
+          <p class="fs-5 pt-4 mt-4"  data-aos="fade-up">Our goal with <b>Pocket Racer</b> is to enable researchers to tackle difficult problems concerning high-speed autonomy through scalable methods. To achieve that, we've made our miniature platforms open-source as to encourage autonomous races to race together and have fun!</p>
+        </div>
+      </section>
+
+<!--       <section class="pocket-racer" id="pocket-racer">
+        <div class="container">
+          <h2 class="mb-5 section-heading" data-aos="fade-down">Pocket Racer</h2>
+          <div class=" row align-items-center">
+            <div class="col-md-6">
+              <p class="fs-5" data-aos="fade-right">In an effort to realize our goal of making autonomous racing fun, we created a Robotics Club at Pepperdine University, Los Angeles to allow undergraduate students to race their autonomous vehicles against each other. Check out what the Pocket Racer team has to say:</p>
             </div>
-            <div class="dropdown">
-                <a class="navigation_link" href="./pages/opcas/opcas.html">OP-CAS</a>
-                <div class="dropdown_content opcas_dropdown">
-                    <a href="./pages/opcas/opcas.html">GETTING STARTED</a>
-                    <a href="./pages/opcas/overview/opcas_overview.html">OVEVIEW</a>
-                </div>
+            <div class="col-md-6">
+              <img src="assets/images/chas.png" alt="Pocket Racer" data-aos="fade-left">
             </div>
-            <!-- <a class="navigation_link" href="./pages/curriculum/curriculum.html">CURRICULUM</a> -->
-            <a class="navigation_link" href="./pages/team.html">TEAM</a>
-            <a class="navigation_link" href="./pages/contact.html">CONTACT</a>
-            <!-- <a class="navigation_link" href="./pages/index_korean.html">한</a> -->
+          </div>
         </div>
-    </nav>
+      </section>
 
-    <!-- mobile home bar -->
-    <nav class="mobile_navigation_container">
-        <a class="open_menu_bar" href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-bars mobile_menu_bar"></i></a>
-        <div class="mobile_pages_container" id="mobile_pages_container">
-            <a class="close_div" href="javascript:void(0);" onclick="toggleMenuBar()"><i class="uil uil-multiply close_menu_bar"></i></a>
-            <a class="mobile_navigation_link" href="./index.html">HOME</a>
-            <a class="mobile_navigation_link" href="./pages/pocket_racer/pocket_racer.html">POCKET RACER</a>
-            <a class="mobile_navigation_link" href="./pages/opcas/opcas.html">OP-CAS</a>
-            <a class="mobile_navigation_link" href="./pages/team.html">TEAM</a>
-            <a class="mobile_navigation_link" href="./pages/contact.html">CONTACT</a>
-            <!-- <a class="mobile_navigation_link" href="./pages/index_korean.html">한</a> -->
-        </div>
-    </nav>
-    
-    <!-- about -->
-    <section class="about">
-        <p>Our goal with <b class="bold">Pocket Racer</b> is to enable researchers to tackle difficult problems concerning high-speed autonomy through scalable methods. To achieve that, we've made our miniature platforms open-source as to encourage autonomous races to race together and have fun!</p>
-    </section>
-
-    <section class="gap" style="height: 75px">
-    </section>
-
-    <img class="photo" src="./images/new/IMG_7475.jpg">
-    <p class="image_description">Figure 1: Pocket Racer chassis</p>
-
-    <section class="gap" style="height: 75px">
-    </section>
-
-    <!-- curriculum -->
-    <section class="curriculum">
-        <h1 class="section_title">Pocket Racer</h1>
-        <p class="about_section">In an effort to realize our goal of making autonomous racing fun, we created a Robotics Club at Pepperdine University, Los Angeles to allow undergraduate students to race their autonomous vehicles against each other. Check out what the Pocket Racer team has to say:</p>
-        <div class="user">
-            <!-- curriclum developer 1 -->
-            <!-- <img class="avatar" src="./images/user3.png"> -->
-            <img class="image_cropper" src="./images/user_says_avatars/jesseCha.jpg" alt="jesse">
-            <p class="user_says">"Pocket Racer is a mini F1 sandbox for roboticists. It’s racing, with code.”<br>Jesse Cha – UCLA PhD Candidate / Pocket Racer Research Lead</p>
-        </div>
-        <div class="user">
-            <!-- curriclum developer 2 -->
-            <!-- <img class="avatar" src="./images/user1.png"> -->
-            <img class="image_cropper" src="./images/user_says_avatars/jeremyLouie.jpg" alt="jeremy">
-            <p class="user_says">"The Pocket Racer curriculum is full of surprises. You not only have the opportunity to engineer your own customizable RC car, but enjoy the experience of racing your design against others. It's really self-rewarding on its own."<br>Jeremy Louie – Curriculum Developer / Pocket Racer Undergraduate Researcher</p>
-        </div>
-        <div class="user">
-            <!-- curriclum developer 3 -->
-            <img class="image_cropper" src="./images/user_says_avatars/aaronKuo.jpg" alt="aaron">
-            <p class="user_says">"Pocket Racer provides an opportunity for interested students of all disciplines to gain experience in both hardware and software engineering."<br>Aaron Kuo – Curriculum Developer / IEEE Aircopter Lead</p>
-        </div>
-    </section>
-
-    <section class="gap">
-    </section>
-
-    <!-- projects -->
-    <section class="projects">
-
-        <h1 class="section_title">Our Projects</h1>
-        <p class="about_section">Outside of delivering accessible curriculum to undergraduate students, we also perform <b class="bold">research</b> that primarily focuses on fully autonomous driving radio control cars. Feel free to check out our breakthroughs.</p>
-        <div class="projects_wrapper">
-
-            <div class="row">
-                <!-- pocket racer -->
-                <div class="col">
-                    <div class="projects_image_wrapper">
-                        <a class="navigation_project" href="./pages/pocket_racer/pocket_racer.html">
-                            <h2 class="project_title">Pocket Racer</h2>
-                            <div class="container">
-                                <img class="project_image" src="./images/machine.gif" alt="machine.gif">
-                                <div class="overlay">
-                                    <p class="more_info">The Science Behind Pocket Racer</p>
-                                </div>
-                            </div>
-                        </a>                        
-                        <p class="image_description">Moving at 24 mph (350 mph to scale) these pocket racers dominate the highway scenario without the need for any driver.</p>
-                    </div>
-                </div>
-
-                <!-- OP-CAS 
-                <div class="col">
-                    <div class="projects_image_wrapper">
-                        <a class="navigation_project" href="./pages/opcas/opcas.html">
-                            <h2 class="project_title">Collision Avoidance with Overtaking Maneuvers</h2>
-                            <div class="container">
-                                <img class="project_image" src="./images/op_cas.gif" alt="op_cas.gif">
-                                <div class="overlay">
-                                    <p class="more_info">The Research Behind OP-CAS</p>
-                                </div>
-                            </div>
-                        </a>
-                        <p class="image_description">With an end-to-end autonomous driving algorithm, the Overtaking Procedure for Collision Avoidance Systems (OP-CAS) is not only cheap on hardware, but also easy to deploy on embedded systems.</p>
-                    </div>
-                </div>-->
+      <section class="user-feedback">
+        <div class="container">
+          <h2 class="mb-5 section-heading" data-aos="fade-down">User Feedback</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <img src="assets/images/pocket-Racer.png" alt="Pocket Racer" data-aos="fade-right">
             </div>
+            <div class="col-md-6">
+              <div class="row mb-3 mt-4">
+                <div class="col-sm-2">
+                  <img src="assets/images/jesseCha.jpg" class="rounded-circle" alt="user" data-aos="fade-right">
+                </div>
+                <div class="col-sm-10">
+                  <div data-aos="fade-left">
+                    <p class="fs-5">"Pocket Racer is a mini F1 sandbox for roboticists. It’s racing, with code.”</p>
+                    <small><b>Jesse Cha – UCLA PhD Candidate / Pocket Racer Research Lead</b></small>
+                  </div>
+                </div>
+              </div>
+              <div  data-aos="fade-Up"><hr></div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <img src="assets/images/jeremy.jpg" class="rounded-circle" alt="user" data-aos="fade-right">
+                </div>
+                <div class="col-sm-10">
+                  <div data-aos="fade-left">
+                    <p class="fs-5">"The Pocket Racer curriculum is full of surprises. You not only have the opportunity to engineer your own customizable RC car, but enjoy the experience of racing your design against others. It's really self-rewarding on its own."</p>
+                    <small><b>Jeremy Louie – Curriculum Developer / Pocket Racer Undergraduate Researcher</b></small>
+                  </div>
+                </div>
+              </div>
+              <div  data-aos="fade-Up"><hr></div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <img src="assets/images/aaron.jpg" class="rounded-circle" alt="user" data-aos="fade-right">
+                </div>
+                <div class="col-sm-10">
+                  <div data-aos="fade-left">
+                    <p class="fs-5">"Pocket Racer provides an opportunity for interested students of all disciplines to gain experience in both hardware and software engineering."</p>
+                    <small><b>Aaron Kuo – Curriculum Developer / IEEE Aircopter Lead</b></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="gap">
-    </section>
+      <section class="our-Projects">
+        <div class="container">
+          <h2 class="mb-5 section-heading" data-aos="fade-down">Our Projects</h2>
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p class="fs-5 mb-4" data-aos="fade-down">Outside of delivering accessible curriculum to undergraduate students, we also perform <b>research</b> that primarily focuses on fully autonomous driving radio control cars. Feel free to check out our breakthroughs.</p>
+              <p class="fs-5" data-aos="fade-up">Moving at 24 mph (350 mph to scale) these pocket racers dominate the highway scenario without the need for any driver.</p>
+            </div>
+            <div class="col-md-6">
+              <img src="assets/images/pocket-Racer.gif" alt="Pocket Racer" data-aos="fade-left">
+            </div>
+          </div>
+        </div>
+      </section> -->
 
-    <!-- footer -->
-    <footer class="document_footer">
-        <p><a href="https://www.pepperdine.edu/" target="_blank" rel="noopener noreferrer">Drescher ILaboratory </a><br>Department of Natural Sciences<br>Pepperdine University <br>Malibu, CA, USA, 90263</p>
-    </footer>
-</body>
+      <section class="main-content" id="main-content">
+        <div class="container">
+          <div class="header-links text-center">
+            <h2 class="heading2" data-aos="fade-down">MACHInE: Multi-agent Autonomous Cars for High-speed, Indoor Environments</h2>
+            <ul class="mt-4 d-flex flex-wrap justify-content-center">
+              <li data-aos="fade-right"><a href="#!" >Eun Sang Cha</a></li>
+              <li data-aos="fade-left"><a href="#!">Kittimate Chulajata</a></li>
+            </ul>
+            <p class="my-3" data-aos="fade-left">Keck Data Science Institute, Pepperdine University, Malibu, California, USA</p>
+            <p class="fs-4" data-aos="fade-right">RSS 2023 <a href="#!">Paper</a></p>
+          </div>
+          <div class="pt-5 row">
+            <div class="col-12 mb-4">
+              <p data-aos="fade-left"><b>Abstract—</b> Growing interest has been shown for wheeled robotics within a racing environment, where autonomous vehicles interact with each other at high speeds. However, the analysis of high speed scenarios for wheeled robotic vehicles is difficult for two key reasons. First, the real-time requirements of high speed autonomous vehicle control pose a challenge for constrained embedded systems. Second is the need to procure large facilities for such high speed testing. Although there exist full-scale, high-speed platforms which utilize state of the art embedded hardware (i.e. Roborace), the space and hardware requirements make such research costly and inacces- sible. Motivated by this need, we present MACHInE, Multi-agent, Autonomous Cars for High-speed Indoor Environments, which allow high speed autonomy research to be accessible in constrained, high-speed environments. Furthermore, we develop a compact autonomous driving algorithm designed for scaled high speed testing, called Behavioral Conditioning (BCo). We show that our minature highspeed testbed and BCo algorithm is effective through extensive field tests at two different indoor circuits. We open source our platform to ubiquitize high speed autonomous vehicle research.</p>
+              <p data-aos="fade-right"><i>Index Terms</i>—Scaled Autonomous Vehicle, Educational Robot, Open Source Platform,</p>
+            </div>
+            <div class="col-12 text-center">
+              <img src="assets/images/home-img1.png" alt="MACHInE Multi-agent, Autonomous Cars for Highspeed, Indoor Environments" data-aos="fade-left">
+              <p class="img-fig" data-aos="fade-left">Fig- <b><i>MACHInE:</i></b> Multi-agent, Autonomous Cars for Highspeed, Indoor Environments</p>
+            </div>
+          </div>
+          <div class="my-5"><hr></div>
+          <div class="row">
+            <div class="col-12 mb-4">
+              <h3 class="heading3" data-aos="fade-left">I. INTRODUCTION</h3>
+              <p data-aos="fade-right">The design of wheeled robots in multi-agent settings is an active area of robotic research but have been limited in speed. Recently, wheeled autonomous robots have been gaining interest in challenging areas such as a racing environment where they must function at significantly higher speeds with large space requirements. These high speed wheeled robotic cars, given sufficient space, can autonomously perform driving maneuvers such as overtaking. Full scale autonomous vehicles (Michigan MCity, Millbrook Proving Ground, Roborace) are the defacto option for the analysis of these high speed scenarios. However, they require industry-scale involvement to meet their extremely large testing facilities and space requirements. As such, this option is inaccessible for most research institutions. Another commonly used solution is within simulation. Open-source solutions in simulation exist (CARLA) and are widely used, but often do not offer the fidelity of a physical platform. Many scaled autonomous vehicles currently exist for the purposes of high speed autonomous driving, but still have significant space requirements due to their size. </p>
+            </div>
+            <div class="col-12">
+              <p data-aos="fade-left">A dilemma for researchers is the tradeoff between computational hardware and space. High speed autonomy poses a significant real-time constraint on embedded systems, making them often large and expensive for minature vehicles. However, the space requirements scale with the size of the vehicle. The allocation of a large proving ground is a current prerequisite for vehicles to achieve high speeds, but is limited for most research institutions. Thus, miniature autonomous vehicles (1/43th scale) have been proposed specifically for indoor testing. However, research in this area has been one of compromise, with vehicles going smaller at the expense of functionality. Some examples include the offloading of computation needed for localization or relying on offboard means of achieving autonomy. Existing miniature vehicles also compromise vehicle dynamics with the lack of fidelity in suspension mechanisms or differentials, hindering performance for high speed testing. Thus, existing literature indicates that a miniature, high fidelity, autonomous vehicle platform is necessary to conduct high speed autonomous driving research within space restricted environments</p>
+            </div>
+          </div>
+          <div class="my-5"><hr></div>
+          <div class="row">
+            <div class="col-12 mb-4 text-center">
+              <img src="assets/images/home-img2.png" alt="Optional: A Bluetooth gamepad ($25) can be used as a low-cost replacement" data-aos="fade-right">
+              <p class="img-fig" data-aos="fade-left">*Optional: A Bluetooth gamepad ($25) can be used as a low-cost replacement.</p>
+            </div>
+            <div class="col-12">
+              <p class="mb-2" data-aos="fade-left">We tackle the two key challenges of space and real-time constraints within high speed autonomous driving research by proposing MACHInE, Multi-agent, Autonomous Cars for Highspeed Indoor Environments. Tackling the key challenge of space, we design a scaled vehicle platform which are the smallest autonomous vehicle platforms (1/28th) to date. This open-source platform design allows high speed analysis in a small indoor environment such as a classroom. Next, our proposed platform design addresses the real-time constraints imposed by high speed autonomy without compromise, via high fidelity platform design and algorithm architecture. The vehicle achieves speeds of 15km/h which scale to 420km/h, effectively making it the fastest autonomous vehicle developed in current literature, when scale is taken into consideration. Finally, the vehicle is accessible, using 3D printed parts with off the shelf electronics and hobbyist remote-controlled car parts to achieve a cost of less than 3000 USD for a complete testbed. These unique features enable an efficient analysis of autonomous driving for high speed scenarios in a typical indoor research environment.</p>
+              <p data-aos="fade-right">We further demonstrate the capabilities of our platform by designing a algorithm for high speed autonomy, which we call Behavioral Conditioning (BCo). Our Behavioral Conditioning (BCo) algorithm utilizes Long-Short-Term Memory (LSTM) with Convolutional Neural Networks(CNN) for end-to-end autonomous driving similar to this work. However, we further improve upon this approach using two methods. First, we enable fast inference of action commands with a quantized tensorflow lite model which allow the vehicle to move at higher speeds. Second, we further augment our throttle control with a Proportional Integral Derivative (PID) controller for smooth wheelspeed output. Our platform validates our proposed algorithm against other variant Behavioral Cloning models with not just accuracy, but also deployment through empirical results.</p>
+              <p class="mt-4" data-aos="fade-left">The contributions of our work is the following:</p>
+              <ul class="decimal" data-aos="fade-left">
+                <li>The design of MACHInE, Multi-agent, Autonomous Cars for Highspeed Indoor Environments, which addresses the problem of space for high speed autonomous driving research by being the smallest platform in literature capable of onboard high speed autonomy.</li>
+                <li>The development of an end-to-end driving algorithm, Behavioral Conditioning (BCo), which allow our vehicle to reach speeds of 15km/h, which scale to 420km/h.</li>
+                <li>Field test evaluations in different indoor circuits that demonstrate the effectiveness of our autonomous platform.</li>
+                <li>An open-source repository and dedicated website for these open-source platforms to be used in autonomous vehicle research and STEM-related fields.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="my-5"><hr></div>
+          <div class="row">
+            <div class="col-12 mb-4">
+              <h3 class="heading3" data-aos="fade-left">II. EXISTING WORK</h3>
+              <p data-aos="fade-right">In recent years, the improved computational capabilities of embedded systems enabled the growth of scaled autonomous vehicle platforms via the retrofitting of hobbyist remote control (RC) racing vehicles. Many scaled autonomous vehicles testing in a typical classroom environment.</p>
+              <p data-aos="fade-left">Multi-vehicle racing competitions actively exist, but these platforms utlize expensive 2D LIDAR sensors on large 1/10th scale platforms, (MIT Racecar) [3], [4] limiting accessibility for classroom use. Recently, there has been growing participation from the industry (DJI Robomaster [20], Nvidia JetRacer [21], Amazon AWS DeepRacer [22]) to push for scaled platforms as a educational platform under an overarching theme of racing. However, these platforms often lack the vehicle specifications (off-road wheels, high-center of gravity [20], [24]) needed for on-road, high performance driving and/or are mostly designed to work with proprietary software.</p>
+              <p data-aos="fade-right">DonkeyCar and F1Tenth are prime examples of open-source platforms for autonomous racing. The communities have an active forum and extensive documentation on their platform build. However, their platform size (1/16, 1/10) still remains an issue for confined classroom use, suggesting an need to develop palm-sized platforms to further enable research in this area.</p>
+              <p data-aos="fade-left">Some low-cost, minature platforms for indoor testbeds have been developed for fleet driving (MIT DuckieTown) [23], but typically lack the Ackerman-steering configuration necessary for high speed analysis. Other miniature vehicle platforms with Ackerman-steering (Cambridge Minicar) [17] have been used for high speed testing, but do not have onboard autonomy. (ETH ORCA Racecar) [16] While it is true that some of the platforms themselves are low-cost, the platforms require expensive motion capture systems for localization, [17] making them inaccessible. Thus, it is clear that there is a need to develop an accessible and minature autonomous platform that can enable both high-speed and multi-agent driving scenarios in restricted indoor environments.</p>
+            </div>
+            <div class="col-12 text-center">
+              <img src="assets/images/home-img3.png" alt="EXISTING WORK" data-aos="fade-right">
+              <p class="img-fig" data-aos="fade-left">*The speed capabilities of the vehicle hardware, not the top speed of the vehicle running autonomously in actual experiments.</p>
+            </div>
+          </div>
+          <div class="my-5"><hr></div>
+          <div class="row">
+            <div class="col-12 mb-4">
+              <h3 class="heading3" data-aos="fade-right">III. VEHICLE DESIGN</h3>
+              <p data-aos="fade-left">The objective was to develop an open source, miniature, high performance vehicle platform for the analysis of autonomous highway driving. Thus, we designed our scaled platform to be capable of performing ”high-speed” by scaling the speed requirements to 1/28th of speeds exhibited by full scale vehicles on highways. The vehicle achieved a maximum speed of 15 km/h on straights as tested on our large circuit. The result was an autonomous platform that reached speeds scaling up to 420 mph.</p>
+              <p data-aos="fade-right">offer high-fidelity testing for speeds at the limit of handling (1/5th, 1/8th). Their size however, makes it only suitable for outdoor environments [8]. Slightly smaller indoor platforms (1/10th, 1/18th) exist for hobbyists [5] and high-school level educational outreach, [3] as well as university level research, [7] but due to its large size, is not suitable for multi-vehicle</p>
+              <p data-aos="fade-left">Further more, a modular sensor design enabled various model-free controller schemes for autonomous driving. This allows for a different number of sensor configurations, which is sometimes necessary to meet budget requirements. The chassis components housing the sensors were fully printable in less than 12 hours with a solid infill.</p>
+            </div>
+            <div class="col-12 text-center">
+              <img src="assets/images/home-img4.png" alt="MACHInE Platform" data-aos="fade-right">
+              <p class="img-fig" data-aos="fade-left">Fig- <b>MACHInE Platform</b>: An overview of the hardware components. The corresponding numbered component can be found on Table 2.</p>
+            </div>
+          </div>
+          <div class="my-5"><hr></div>
+          <div class="row">
+            <div class="col-12 mb-4">
+              <h3 class="heading3" data-aos="fade-left">IV. CIRCUIT DESIGN</h3>
+              <p data-aos="fade-right"><b>A. Circuit Layout</b></p>
+              <p class="mb-3" data-aos="fade-left">A configurable RC circuit meant for hobbyists was utilized for the high-speed testbed. The high grip puzzle-mat circuit allows for a wide range of configurations. The proposed testbed is 11 x 16 feet, with two lanes to accommodate for lane change maneuvers. A starting line was drawn to monitor time-to-destination with an on-board lap-time counter. The low latency design of the remote first-person-view (FPV) driving interface enables the human driver to reach a top speed of 7km/h in a classroom sized circuit. A second high speed circuit was designed for the final testing phase, which consisted of PVC tape in an indoor auditorium, allowing the vehicle to reach a top speed of 15km/h.</p>
+              <p data-aos="fade-right"><b>B. Overhead Tracker</b></p>
+              <p data-aos="fade-left">A concerning issue with many indoor robotic testbeds is that they heavily rely on motion capture systems as a means of providing vehicle state information. A typical motion capture system (Vicon, Optitrack) is too expensive for many laboratories with a cost going upwards of 20K+ USD for a complete rig. While these systems are necessary for applications such as drones [26] requiring tracking in space, it is not necessary for vehicle tracking on a flat, 2-D surface.</p>
+              <p data-aos="fade-right"> As an alternative approach, a commercial webcam is retrofitted with a low-distortion (<1%) CS-mount lens to function as a overhead tracker, capable of tracking the vehicle at 90FPS (in bright conditions) with an approximate error of less than 5cm for a 11 x 16 feet circuit. The tracker is positioned at a height of 7 feet and can cover the entire circuit with its 120+ degrees field of view. It uses a sequence of frames to estimate the vehicle velocity and position using color-based background subtraction.</p>
+            </div>
+            <div class="col-12 text-center mb-4">
+              <img src="assets/images/home-img5b.png" alt="CIRCUIT DESIGN" data-aos="fade-right">
+              <p class="img-fig" data-aos="fade-right">Fig- <b>Wiring Diagram</b> The wiring diagram for all the electronics components of the MACHInE Platform. A larger image can be seen on the MACHInE website.</p>
+            </div>
+            <div class="col-12" data-aos="fade-up">
+              <p>noise in throttle action outputs. By decoupling the task of high speed autonomous driving using a PID controller, we show a means of directly tracking desired motor shaftspeed to alleviate noisy throttle commands when inferencing action commands directly with convolutional neural networks. In addition, utilizing motor shaftspeed allows the autonomous model to deploy while being invariant towards the State of Charge(SoC) of the battery supply, which is not the case when directly inferencing throttle action commands.</p>
+            </div>
+          </div>
+          <div class="my-5"><hr></div>
+          <div class="row">
+            <div class="col-12 mb-4">
+              <h3 class="heading3" data-aos="fade-left">V. ALGORITHM</h3>
+              <p data-aos="fade-right">Using our proposed testbed, we propose Behavioral Conditioning (BCo), an improved end-to-end controller specifically designed for high-speed autonomous driving. Our proposed Behavioral Conditioning algorithm creates an approximator policy πˆ<sup>θ</sup> that predicts the desired steering action and motor speed given a image input. Next, the algorithm uses a PID controller to track the desired motorspeed sˆ<sup>smotorspeed</sup> with the observed target motorspeed s<sup>motorspeed</sup> using throttle action aˆ<sup>throttle</sup> .</p>
+            </div>
+            <div class="text-center mb-4">
+              <img src="assets/images/home-img7.png" alt="ALGORITHM" class="py-md-4" data-aos="fade-left">
+              <img src="assets/images/home-img6.png" alt="MACHInE Behavioral Conditioning Algorithm (BCo)" data-aos="fade-left">
+              <p class="img-fig" data-aos="fade-right">Fig- <b>MACHInE</b> Behavioral Conditioning Algorithm (BCo)</p>
+            </div>
+            <div class="col-12">
+              <p data-aos="fade-right">Our algorithm is specifically designed to address the issue of noisy action outputs, prevalent when directly correlating image inputs to action outputs. This happens because the neural network encounters a slightly different image input during test time, resulting in a failure to predict continuous action outputs. Noisy action outputs for throttle commands is highly undesirable for high speed maneuvers with wheeled vehicles because quick changes in throttle make it difficult for the electronic speed controller to control the motor. More importantly, smooth throttle control is also highly desired during high speeds to avoid unnecessary changes in the dynamics of the vehicle (Roll, Pitch). Behavioral Conditioning addresses both these issues of noise by decoupling the task of low level vehicle control and high level path planning to address. </p>
+            </div>
+          </div>
+          <div class="my-5"><hr></div>
+          <div class="row">
+            <div class="col-12 mb-4">
+              <h3 class="heading3" data-aos="fade-right">VI. EXPERIMENTS</h3>
+              <p data-aos="fade-left">We conduct several experiments with our novel Behavioral Conditioning algorithm (BCo) to show that our proposed platform is effective for highspeed autonomous driving. After verification of our autonomous driving model with ground truth information using the overhead tracking camera in the small puzzle mat circuit, we test our proposed BCo algorithm at larger indoor circuit. We show our platform design enables an analysis of autonomous driving scenarios (i.e. overtaking) encountered in high speed autonomous driving.</p>
+              <p data-aos="fade-right"><b><i>1. Data Collection:</i></b> The Robot Operating System (ROS) is used to collect sensor data after driving behaviors are collected from both autonomous and human driven vehicles. The data was collected with an hour of human driving with each session lasting 15-20 minutes. The end result was a dataset size of roughly 8GB of 164 x 92 images at a timestep of 25 Hz.</p>
+              <p data-aos="fade-left"><b><i>2. Model Training:</i></b> We demonstrate the capabilities of our testbed by demonstrating a novel End-to-End autonomous driving algorithm, Behavioral Conditioning (BCo). Specifically designed for high speed deployment, our proposed BCo algorithm outperforms existing behavioral cloning algorithms in terms of efficiency and accuracy. Our proposed model was benchmarked with an ablation test against other vanilla Behavioral Cloning (BC) algorithms. We compare our proposed algorithm against different variant behavioral cloning architectures. The results of training our models can be shown in the table below.</p>
+            </div>
+            <div class="col-12 text-center">
+              <img src="assets/images/home-img8.png" alt="EXPERIMENTS" data-aos="fade-right">
+              <p class="img-fig" data-aos="fade-left">Fig- <b>Overtaking:</b>  Model-Free Motion Planning can be used for overtaking maneuvers</p>
+              <p data-aos="fade-right"><b><i>3. Overtaking:</i></b> We demonstrate a high-speed, multi-agent scenario where the autonomous vehicle need to overtake another vehicle. This may happen for a variety of reasons, from collision avoidance to traffic optimization. In our scenario, we use an end-to-end behavioral cloning method to have the fast, first autonomous vehicle (#1) overtake a slow, second autonomous vehicle (#2) on both corners and straights.</p>
+            </div>
+          </div>
+          <div class="my-5"><hr></div>
+          <div class="row">
+            <div class="col-12 mb-4">
+              <h3 class="heading3" data-aos="fade-right">VII. DISCUSSION & RESULTS</h3>
+              <p data-aos="fade-right"><b><i>A. Hardware</i></b></p>
+              <p data-aos="fade-left">A low center of gravity design ensured high performance vehicle dynamics for stable cornering. Due to the weight of the on-board compute unit and the assortment of sensors, a high-torque, sensored brushless DC motor (3500Kv) was paired with a gear differential to provide instant torque needed to maximize throttle response. Experimental results showed more stable driving when the camera was mounted higher. In order to maintain a low center of gravity, the camera was mounted with carbon fiber rods.</p>
+              <p data-aos="fade-right">Initial experiments were conducted with a belt driven gaming wheel (minimizing deadzone) communicating with the remote controller via trainer mode for a driver interface closely replicating an automotive environment. However, this resulted in significant latencies which had a detrimental impact on the vehicle response at high speeds. Therefore, as a replacement, a high performance RC controller used by professional remote control hobbyists were used to minimize latencies within communication. Communication delay was further addressed with an dedicated analog first-person-view camera in place of a wifi video stream for remote driving. Considering that the median reaction time for human visual reflexes is 215ms, latency was minimal, with the command signal and the video stream having average latencies of 11ms and 25ms respectively. The wheel encoders are connected from the hall sensors to achieve a resolution of 90 degrees via four neodymium magnets. The shaft sensor readings from the sensored motor were used to estimate the speed of the vehicle during deployment.</p>
+            </div>
+            <div class="col-12 text-center">
+              <img src="assets/images/home-img9.png" alt="DISCUSSION & RESULTS" data-aos="fade-left">
+            </div>
+            <div class="col-12">
+              <p data-aos="fade-right"><b><i>B. Algorithm</i></b></p>
+              <p data-aos="fade-left"><b><i>1) Data Collection:</i></b> A sufficient amount of data was needed to ensure that the vehicles did not exhibit drift at a given position during test time. The amount of data needed depended on the complexity of the circuit as well as the rate at which the data was collected. For a square circuit, a vehicle showed the capability to operate at 15 km/h without lane departure with data collected for 30 minutes at 25hz. Prior work collected separate trajectories that demonstrated a return-to-lane action sequence in a lane departure event, but this proved to be unnecessary given sufficient data. A limitation with using our proposed BCo algorithm is that it only works with circuits that have explicit lane markings when the model is analyzed through salient feature representation. When the circuit is much wider than the vehicle and there are no lane markings, i.e. a motorsport circuit environment, the vehicle fails to identify lines and curves that define the road. Therefore, more work is needed to utilize this algorithm for a wide racing circuit.</p>
+              <p data-aos="fade-right"><b><i>2) Proportional Integral Derivative (PID) Controller:</i></b> A Proportinal Integral Derivative (PID) controller was used to track the desired target wheelspeed (predicted from the recurrent convolutional neural network architecture) with the throttle as the input command as seen in Figure 6. The nonlinear behavior of the motorload due to changes in slip angles was not considered. Motor plant characterization done by Matlab Simulink resulted in the following relationship between battery voltage, shaft speed of the motor and the throttle input.</p>
+              <p class="text-center mx-auto my-3" data-aos="fade-left">V<sub>ms</sub> = −((v − 3.2) ∗ 15.84) ∗ A<sub>throttle</sub> ............ (1)</p>
+              <p data-aos="fade-right">Where V<sub>ms</sub>, v and A<sub>throttle</sub> is the shaftspeed of the motor in rotations per minute, the battery voltage and the throttle input command respectively. Results showed that the PID controller rejected non-linear tire forces acting upon the vehicle robustly even when simplified as a disturbance force. Real world experimental results showed that although the use of derivative gain, Kd, allowed greater values for proportional and integral gain, (necessary for fast tracking), there was a limit to how much it could be increased before oscillations occured. A series of step response tests were conducted to quantify and reduce the settling time of our PID controller. The settling time of our best controller gain values (Kp: 3, Ki: 1, Kd: 30) was shown to be around 1 second with wheelspeed stabilizing after 20 time steps at 25hz.</p>
+              <p data-aos="fade-left"><b><i>3) Neural Network Training:</i></b> An image size of 162 x 92 pixels was used during data collection and deployment.</p>
+              <div class="text-center">
+                <img src="assets/images/home-img10.png" alt="BCo Model Output" data-aos="fade-right">
+              </div>
+              <p class="img-fig" data-aos="fade-left">Fig- <b>BCo Model Output:</b>  A comparison graph of target versus predicted motorspeed and steering values.</p>
+              <p data-aos="fade-right">The neural network consisted of five time distributed convolutional layers (3x3 kernel size) followed by a single LSTM layer. Next, the dense layers were split in a forked architecture to allow for separate steering and throttle outputs. Salient feature representation done on the collected images showed that the neural network had a high tendency to utilize not just the external environment but also the direction of light reflected on the vehicle shell.</p>
+              <p data-aos="fade-left">Results showed that our proposed BCo architecture had the highest R-squared accuracy for the indoor PVC circuit scenario, when using two stacked images into the BCo model. Different ablation tests showed that cropping the environment had a detrimental impact on the accuracy. Salient feature representation of our model showed that indeed, the BCo model utilized features of the external environment to drive the vehicle autonomously. Stacking images into the model increased the accuracy of the motorspeed values, but decreased the inference rate needed for deployment at top speeds. Therefore, for the top speed measurements, only a single image frame was fed into the BCo model. Despite this, the model was able to drive at high speeds without lane departure up to 15km/h on the large circuit.</p>
+              <p data-aos="fade-right"><b><i>4) Deployment:</i></b> Deployment speed was critical for the vehicle to sucessfully enter and exit a corner while maintaining high speeds. The Raspberry Pi V2 camera showed a varying FPS of 25-30FPS while retaining maximum allowed field of view. Empirical results showed that when the vehicle speed was increased to the limit of grip for a given corner, a model requiring two image frames before an action command had a tendency to make a wider turn, creating oscillatory behavior on the straights as it attempted to recover from the turn. The final BCo model that was used for deployment used a single image frame at the expense of a decrease in accuracy during training. (7 % decrease in R-Squared metric) For a 160 x 92 image, our final BCo model output action commands at over 70hz. Initial tests showed that there was no performance loss with converting RGB to grayscale.</p>
+              <div class="row justify-content-between align-items-center">
+                <div class="col-12 text-center mb-4">
+                  <img src="assets/images/home-img11.png" alt="Deployment" data-aos="fade-right">
+                </div>
+                <div class="col-12">
+                  <p data-aos="fade-left">The use of recurrent neural networks had the effect of smoothing steering values, even when inferencing one image at a time. Therefore, a LSTM-CNN network was used in favor of a 3D CNN network to further reduce inference latencies. Quantizing the model using tflite optimizations reduced the model size to more than a quarter and increased the inference rate with no noticeable change in performance. In addition to predicting steering, motorshaft speed was also predicted with the neural network. The motorshaft speed was later tracked with a PID controller. This was important in ensuring a smooth set of throttle commands for the electronic speed controller and the vehicle during autonomous driving.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-5"><hr></div>
+          <div class="row">
+            <div class="col-12">
+              <h3 class="heading3" data-aos="fade-right">VIII. CONCLUSION</h3>
+              <p data-aos="fade-left">Thus we present MACHInE, multi-agent, autonomous, robotic racecars purposefully designed to make high-speed autonomous driving research accessible to most research laboratories. We validate our testbed with the proposal of a novel end-to-end, high speed autonomous driving algorithm (BCo). Furthermore, all of the necessary custom parts are 3D printable and all of the electronics are off-the-shelf, allowing for educational outreach in STEM related fields. Our freely available project website and code repository details the build and design of both our hardware and software. Future work will involve the use of the IMU and wheel encoders for on-board localization and the development of novel data driven high speed trajectory planners. We hope to partake in the advancement of high speed autonomous driving through our open-source work.</p>
+            </div>
+          </div>
+          <div class="my-5"><hr></div>
+          <div class="row">
+            <div class="col-12">
+              <h3 class="heading3" data-aos="fade-right">X. REFERENCES</h3>
+              <ul class="d-flex flex-wrap decimal references">
+                <li data-aos="fade-right">Shengkang Chen, Ankur Mehta, ”CoLo: A Performance Evaluation System for Multi-robot Cooperative Localization Algorithms,” 2019 International Conference on Robotics and Automation (ICRA), 2019.</li>
+                <li data-aos="fade-left">S. Wilson, R. Gameros, M. Sheely, M. Lin. ”Pheeno, A Versatile Swarm Robotic Research and Education Platform.” IEEE Robotics and Automation Letters (RAL), 2016.</li>
+                <li data-aos="fade-right">S. Karaman, A. Anders, M. Boulet, J. Connor, K. Gregson, W. Guerra, O. Guldner, M. Mohamoud, B. Plancher, R. Shin, J. Vivilecchia, ”Project-based, collaborative, algorithmic robotics for high school students: Programming self-driving race cars at MIT”, IEEE Integrated STEM Education Conference (ISEC), 2017.</li>
+                <li data-aos="fade-left">M. O’Kelly, V. Sukhil, H. Abbas, J. Harkins, C. Kao, Y.V. Pant, R. Mangharam, D. Agarwal, M. Behl, P. Burgio, M. Bertogna, ”F1/10: An Open-Source Autonomous Cyber-Physical Platform”, CoRR abs/1901.08567, 2019</li>
+                <li data-aos="fade-right">W. Roscoe, Donkey Car: An Open Source DIY self driving platform for small scale cars. [Online]. Available: <a href="http://www.donkeycar.com/" target="_blank">http://www.donkeycar.com/</a></li>
+                <li data-aos="fade-left">J. Kabzan, M. I. Valls, V. Reijgwart, H. F. C. Hendrikx, C. Ehmke, M. Prajapat, A. B¨uhler, N. Gosala, M. Gupta, R. Sivanesan, A. Dhall, E. Chisari, N. Karnchanachari, S. Brits, M. Dangel, I. Sa, R. Dub´e, A. Gawel, M. Pfeiffer, A. Liniger, J. Lygeros, R. Siegwart, ”AMZ Driver-less: The Full Autonomous Racing System”, International Conference on Robotics and Automation (ICRA), 2019.</li>
+                <li data-aos="fade-right">Ugo Rosolia, Francesco Borrelli, ”Learning How to Autonomously Race a Car: A Predictive Control Approach”, IEEE Transactions on Control Systems Technology, 2019.</li>
+                <li data-aos="fade-left">Brian Goldfain, et al., ”AutoRally: An Open Platform for Aggressive Autonomous Driving”, IEEE Control Systems Magazine, 2019.</li>
+                <li data-aos="fade-right">Edoardo Pagot, Mattia Piccinini, Francesco Biral, ”Real-time Optimal Control of An Autonomous RC Car with Minimum Time Maneuvers and a Novel Kineto-Dynamical Model.”, International Conference on Intelligent Robots and Systems (IROS)</li>
+                <li data-aos="fade-left">Eun Sang Cha, Kee-Eung Kim, Stefano Longo, Ankur Mehta, ”OPCAS: Collision Avoidance with Overtaking Maneuvers”, International Conference on Intelligent Transportation Systems (ITSC), 2018.</li>
+                <li data-aos="fade-right">Adam Stager, Lucke Bhan, Andreas Malikopoulos, Liuhui Zhao, ”A scaled smart city for experimental validation of connected and automated vehicles.” IFAC Symposium on Control in Transportation Systems CTS, 2018.</li>
+                <li data-aos="fade-left">Milbrook: Connected and Autonomous Vehicle Testing. [Online]. Available: <a href="https://www.millbrook.us/services/connected-and-autonomous-vehicle-testing/" target="_blank">https://www.millbrook.us/services/connected-and-autonomous-vehicle-testing/</a></li>
+                <li data-aos="fade-right">S. Xu, H. Peng, Z. Song, K. Chen, Y. Tang, ”Design and Test of Speed Tracking Control for the Self-Driving Lincoln MKZ Platform”, IEEE Transactions on Intelligent Vehicles, 2019.</li>
+                <li data-aos="fade-left">J. Betz, A. Wischnewski, A. Heilmeier, F. Nobis, T. Stahl, L. Her mansdorfer, B. Lohmann, M. Lienkamp, ”What can we learn form autonomous level 5 Motorsport?”, The 10th international Chassis Symposium, ”Chassis.Tech Plus 2019”, 2018.</li>
+                <li data-aos="fade-right">Alexey Dosovitskiy, German Ros, Felipe Codevilla, Antonio Lopez, Vladlen Koltun, ”CARLA: An Open Urban Driving Simulator”, Proceedings of the 1st Annual Conference on Robot Learning, 2017.</li>
+                <li data-aos="fade-left">Alexander Liniger, John Lygeros, ”Real-Time Control for Autonomous Racing Based on Viability Theory”, IEEE Transactions on Control Systems Technology, 2019.</li>
+                <li data-aos="fade-right">Nicholas Hyldmar, Y. He, A. Prorok, ”A Fleet of Miniature Cars for Experiments in Cooperative Driving”, International Conference on Robotics and Automation (ICRA), 2019.</li>
+                <li data-aos="fade-left">M. Bojarski, D. D. Testa, D. Dworakowski, B. Firner, B. Flepp, P. Goyal, L. D Jackel, M. Monfort, U. Muller, J. Zhang, X. Zhang, J. Zhao, K. Zieba, ”End to End Learning for Self-Driving Cars”, arXiv preprint arXiv:1604.07316, 2016.</li>
+                <li data-aos="fade-right">A. Amini, I. Gilitschenski, J. Phillips, J. Moseyko, R. Banjeree, S. Karaman, D. Rus, ”Learning Robust Control Policies for End-to-End Autonomous Driving from Data-Driven Simulation”, IEEE Robotics and Automation Letters (RAL), 2020.</li>
+                <li data-aos="fade-left">DJI RoboMaster S1, [Online]. Available: <a href="http://www.dji.com/ robomaster-s1" target="_blank">http://www.dji.com/ robomaster-s1</a></li>
+                <li data-aos="fade-right">Nvidia Autonomous Machines, Jet Racer, [Online]. Available: <a href="https://github.com/ NVIDIA-AI-IOT/jetracer" target="_blank">https://github.com/ NVIDIA-AI-IOT/jetracer</a></li>
+                <li data-aos="fade-left">B. Balaji, S. Mallya, S. Genc, S. Gupta, L. Dirac, V. Khare, G. Roy, T. Sun, Y. Tao, B. Townsend, E. Calleja, DeepRacer: Educational autonomous racing platform for experimentation with sim2real reinforcement learning. arXiv preprint arXiv:1911.01562, 2019.</li>
+                <li data-aos="fade-right">Liam Paull, J.Tani, H. Ahn, J. Alonso-Mora, L. Carlone, M. Cap, Y.F. Chen, C. Choi, J. Dusek, Y. Fang, D. Hoehener, S.Y. Liu, M. Novitzky, I. F. Okuyama, J. Pazis, G. Rosman, V. Varricchio, H.C. Wang, D. Yershov, H. Zhao, M. Benjamin, C. Carr, M. Zuber, S. Karaman, E. Frazzoli, D.D. Vecchio, D. Rus, J. How, J. Leonard, A. Censi, ”Duckietown: An open, inexpensive and flexible platform for autonomy education and research”, IEEE International Conference on Robotics and Automation (ICRA), 2017.</li>
+                <li data-aos="fade-left">Up Squared Robomaker Pro Kit, [Online]. Available: <a href="https://up-board.org/up-squared-robomaker-pro-kit/" target="_blank">https://up-board.org/up-squared-robomaker-pro-kit/</a></li>
+                <li data-aos="fade-right">S. S. Srinivasa, P. Lancaster, J. Michalove, M. Schmittle, C. Summers, M. Rockett, J. R. Smith, S. Chouhury, C. Mavrogiannis, F. Sadeghi, ”MuSHR: A Low-Cost, Open-Source Robotic Racecar for Education and Research.”, Computing Research Repository (CoRR), abs/1908.08031, 2019</li>
+                <li data-aos="fade-left">Dario Brescianini, Raffaello D’Andrea, “Computationally Efficient Trajectory Generation for Fully Actuated Multirotor Vehicles”, IEEE Transactions on Robotics, 2018.</li>
+                <li data-aos="fade-right"><a href="https://humanbenchmark.com/tests/reactiontime" target="_blank">https://humanbenchmark.com/tests/reactiontime</a></li>
+                <li data-aos="fade-left">Shenbagaraj Kannapiran, Spring Berman, ”Go-CHART: A Miniature, Remotely Accessible Self-Driving Car Robot”, International Conference on Intelligent Robots and Systems (IROS), 2020.</li>
+                <li data-aos="fade-right">Diederik P. Kingma and Max Welling, ”Auto-Encoding Variational Bayes”, 2nd International Conference on Learning Representations (ICLR), 2014.</li>
+                <li data-aos="fade-left">Gene F. Franklin and J. David Powell and Abbas Emami-Naeini, ”Feedback Control of Dynamic Systems, 8th Edition, What’s New in Engineering”, Pearson, 2018.</li>
+                <li data-aos="fade-right">M. Bojarski, et. al, ”Explaining How a Deep Neural Network Trained with End-to-End Learning Steers a Car”, ArXiv, cs.CV 1704.07911, 2017.</li>
+                <li data-aos="fade-left">Jeff Donahue, Lisa Anne Hendricks, Sergio Guadarrama, Marcus Rohrbach, Subhashini Venugopalan, Kate Saenko and Trevor Darrell. ”Long-term Recurrent Convolutional Networks for Visual Recognition and Description.”, Conference on Computer Vision and Pattern Recog- nition (CVPR), 2015.</li>
+                <li data-aos="fade-right">Du Tran, Lubomir Bourdev, Rob Fergus, Lorenzo Torresani, Manohar Paluri, Facebook AI Research, Darthmouth College. ”Learning Spa- tiotemporal Features with 3D Convolutional Networks.”, International Conference on Computer Vision (ICCV), 2015.</li>
+                <li data-aos="fade-left">Niki Parmar, Ashish Vaswani, Jakob Uszkoreit, Lukasz Kaiser, Noam Shazeer, Alexander Ku, Dustin Tran, ”Image Transformer”, Proceedings of the 35th International Conference on Machine Learning (ICML), 2018.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-4">
+        <div class="container text-center">
+          <p class="mb-2">Natural Sciences Division. Pepperdine University. Malibu, CA, USA, 90263</p>
+          <p>&copy; All right Reserved</p>
+        </div>
+      </footer>
+
+
+    <!-- Back to Top -->
+    <button type="button" class="back-to-top"></button>
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
+
+
