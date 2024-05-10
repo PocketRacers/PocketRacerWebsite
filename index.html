@@ -15,6 +15,18 @@
     <!-- Stylesheet -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    
+    <!-- JavaScript for Password Protection -->
+    <script type="text/javascript">
+      function checkPassword() {
+        var password = prompt("Please enter the password:");
+        if (password !== "pr1998") {
+          alert("Incorrect password!");
+          window.location = "about:blank"; // Redirect to a blank page
+        }
+      }
+      window.onload = checkPassword;
+    </script>
   </head>
   <body>
     <header class="header">
