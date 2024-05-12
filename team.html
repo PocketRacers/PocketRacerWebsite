@@ -15,6 +15,18 @@
     <!-- Stylesheet -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+
+    
+
+<script>
+    var authenticated = sessionStorage.getItem('authenticated');
+    if (!authenticated) {
+        window.location.href = "login.html";
+    }
+</script>
+
+
+
   </head>
   <body>
     <header class="header">
@@ -71,13 +83,12 @@
                 </ul>
               </div>
               <div class="col-md-10">
-                <div class="mb-2" data-aos="fade-left">
+                <div class="mb-1" data-aos="fade-left">
                   <h3 class="heading3 mb-0 text-start">Dr. Dennis Hong</h3>
-                  <p><i>Principal Investigator</i></p>
+                  <h5><b>Principal Investigator</b></h5>
                 </div>
                 <p data-aos="fade-right">My name is <a href="https://www.linkedin.com/in/dehong"> Eun Sang (Jesse) Cha</a>, and I am a University of California, Los Angeles (UCLA) Mechanical Engineering PhD student based in Bel Air, Los Angeles.</p>
-                <p class="my-3 my-md-4" data-aos="fade-left">As a roboticist, his research focus is on high performance autonomous driving using intelligent control and imitation learning based methods. He utilizes miniature autonomous vehicular platforms for teaching in data science as well as research in transportation systems and robotic AI. 
-</p>
+                <p class="my-3 my-md-4" data-aos="fade-left">As a roboticist, my research focuses on high-performance autonomous driving using intelligent control and imitation learning-based methods. I utilize miniature autonomous vehicular platforms for teaching data science and conducting research in transportation systems and robotic AI.</p>
                 <p class="my-3 my-md-4" data-aos="fade-right"></p>
                 <p data-aos="fade-left"></p>
               </div>
@@ -95,15 +106,53 @@
                 </ul>
               </div>
               <div class="col-md-10">
-                <div class="mb-2" data-aos="fade-left">
+                <div class="mb-1" data-aos="fade-left">
                   <h3 class="heading3 mb-0 text-start">Jesse Cha</h3>
-                  <p><i>Lead Autonomous Racing Pilot</i></p>
+                  <h5><b>Lead Autonomous Racing Pilot</b></h5>
                 </div>
-                <p data-aos="fade-right">My name is <a href="https://www.linkedin.com/in/dehong"> Kittimate Chulajata, and I am a fourth-year undergraduate studying Economics and Data Science at Pepperdine University</p>
+                <p data-aos="fade-right">My name is <a href="https://www.linkedin.com/in/dehong"> Kittimate Chulajata</a>, and I am a fourth-year undergraduate studying Economics and Data Science at Pepperdine University</p>
                   <p class="my-3 my-md-4" data-aos="fade-left">My passion for applying academic knowledge beyond traditional classroom boundaries has always driven me. Valuing independent thought, I thrive on innovative problem-solving. This commitment to creativity led me to spearhead a research project. It focuses on leveraging artificial intelligence technologies, specifically transformers and LSTM networks, to develop a predictive model for real-time video game outcomes.</p>
   
                   <p class="my-3 my-md-4" data-aos="fade-right"><p class="my-3 my-md-4" data-aos="fade-right">I am deeply passionate about various pursuits. These interests fuel my curiosity and drive me to explore newcultures, stories, and experiences. Looking ahead, I aim to integrate the insights gained from travels with advanced technology to create engaging narratives. My ultimate objective is to connect cultures and inspire people globally by highlighting their unique strengths and value through innovation and empathy.</p>
                   <p data-aos="fade-left">Above all, I’m always willing to keep up with the rapidly changing pace of technology by learning something new everyday.</p>
+              </div>
+            </div>
+          </div>
+          <div class="my-5"><hr></div>
+          <div class="team-block mb-4">
+            <div class="row justify-content-between">
+              <div class="col-md-2" data-aos="fade-right">
+                <img src="assets/images/team1-daekyum.jpg" alt="Jesse Cha" class="rounded-circle mx-auto d-block">
+                <ul class="d-flex my-2 justify-content-center social">
+                  <li><a href="#!" class="linkedin"></a></li>
+                  <li><a href="#!" class="info"></a></li>
+                  <li><a href="#!" class="github"></a></li>
+                </ul>
+              </div>
+              <div class="col-md-10">
+                <div class="mb-2" data-aos="fade-left">
+                  <h3 class="heading3 mb-0 text-start">Daekyum Kim</h3>
+                </div>
+                <div data-aos="fade-right">
+                  <h5 class="mb-1">Experience</h5>
+                  <p>Assistant Professor, School of Smart Mobility, Korea University, 2023-current<br>
+                  Adjunct Professor, School of Mechanical Engineering, Korea University, 2023-current<br>
+                  Postdoctoral Research Fellow, John A. Paulson Harvard School of Engineering and Applied Sciences, <br>Harvard University, 2021-2023<br>
+                  Postdoctoral Research Fellow, Wyss Institute, 2021-2023</p>
+                </div>
+                <div data-aos="fade-left" class="my-3 my-md-4">
+                  <h5 class="mb-1">Education</h5>
+                  <p>Ph.D. in Computer Science, Korea Advanced Institute of Science and Technology (KAIST)<br>
+                  B.S. in Mechanical Engineering, University of California, Los Angeles (UCLA)</p>
+                </div>
+                <div data-aos="fade-right" class="my-3 my-md-4">
+                  <h5 class="mb-1">Biography</h5>
+                  <p>Daekyum Kim received his B.S. degree in Mechanical Engineering from the University of California, Los Angeles, ( Los Angeles, CA, USA), in 2015. He earned his Ph.D. degree in Computer Science at KAIST (Daejeon, Republic of Korea), in 2021. He was a Postdoctoral Research Fellow at the John A. Paulson School of Engineering and Applied Sciences, Harvard University (Cambridge, MA, USA), co-affiliated with Wyss Institute. Since September 2023, he has been an Assistant Professor with the School of Smart mobility at Korea University (Seoul, Republic of Korea), and an Adjunct Professor at the School of Mechanical Engineering, Korea University.</p>
+                </div>
+                <div data-aos="fade-left" class="my-3 my-md-4">
+                  <h5 class="mb-1">Research Interests</h5>
+                  <p>My research interests lies in the areas of machine learning, computer vision, robotics, and digital healthcare. The goal of our lab is to develop intelligent algorithms capable of understanding various aspects of human physiology - such as body kinematics, kinetics, activities, and intentions. We further aim to develop robotics and digital healthcare systems based on the understandings of the human physiology.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -130,9 +179,9 @@
                 </ul>
               </div>
               <div class="col-md-10">
-                <div class="mb-2" data-aos="fade-left">
+                <div class="mb-1" data-aos="fade-left">
                   <h3 class="heading3 mb-0 text-start">Kittimate Chulajata</h3>
-                  <p><i>Advisor</i></p>
+                  <h5><b>Advisor</b></h5>
                 </div>
                 <p data-aos="fade-right">My name is <a href="https://www.linkedin.com/in/dehong"> Dr. Dennis Hong</a>, and I am not only a TED alumnus, but also the Professor and Founding Director of the Robotics & Mechanisms Laboratory of the Mechanical & Aerospace (RoMeLa) Engineer Department at the University of California, Los Angeles.</p>
                 <p class="my-3 my-md-4" data-aos="fade-left">My research primarily focuses on robot locomotion and automation, autonomous vehicles, and humanoid robots. I am also recognized as the first inventor for the world’s first car that can be driven by the blind. In fact, the Washington Post magazine has nicknamed me as “The Leonardo da Vinci of robots.”</p>
@@ -141,6 +190,8 @@
             </div>
           </div>
         </div>
+      </section>
+
       <footer class="mt-4">
         <div class="container text-center">
           <p class="mb-2">Natural Sciences Division. Pepperdine University. Malibu, CA, USA, 90263</p>
