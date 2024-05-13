@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Build</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    
+
+<script>
+    var authenticated = sessionStorage.getItem('authenticated');
+    if (!authenticated) {
+        window.location.href = "login.html";
+    }
+</script>
+
+
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-lg-center top-header">
+          <div class="logo" data-aos="fade-left">
+            <a href="index.html" class="logo-pc"><img src="assets/images/logo.png" alt="logo" width="120"></a>
+          </div>
+          <nav class="navbar navbar-expand-lg p-0" data-aos="fade-right">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="top-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <div class="collapse navbar-collapse" id="top-menu">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="build.html"> Build </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="train.html"> Train </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html"> About </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="team.html">Research Team </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <section class="p-0 banner bg-img">
+        <img src="assets/images/bg.jpg" alt="Pocket Racer" data-aos="fade-up">
+        <div class="bg-img-content">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 ms-auto">
+                  <h1 class="page-heading text-start mb-5 my-lg-3" data-aos="fade-right" style="color: white;">Pocket Racer</h1>
+                  <div class="table-content" data-aos="fade-left">
+                    <h3 class="heading3 text-start" style="color: white;">Table of Content</h3>
+                    <ul class="decimal">
+                      <li><a href="#introduction">Introduction</a></li>
+                      <li><a href="#background">Background</a></li>
+                      <li><a href="#bill-materials">Bill of Materials</a>
+                        <ul>
+                          <li><a href="#vehicle-components">Vehicle Components</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section id="introduction">
+        <div class="container">
+          <h3 class="mb-3 text-start heading2" data-aos="fade-right">Introduction</h3>
+          <p data-aos="fade-left">One of the most <b>pressing challenges</b> within autonomous mobility lies within highway scenarios: where autonomous vehicles would be interacting with human drivers at high speeds. These scenarios are indeed challenging because autonomous vehicles require data driven methods to identify the intent of opposing vehicles while also simultaneously planning its trajectory. Although full-scale and high-speed testbeds exist (i.e. Roborace), the space and cost requirements are highly demanding. For this reason, we created an open-source, 1:28 scale research platform for high-speed autonomous driving research that is <b>accessible to everyone</b>.</p>
+        </div>
+      </section>
+<style type="text/css">
+  .heading3 {
+    color: black;
+  }
+</style>
+      <section id="background">
+        <div class="container">
+          <h3 class="mb-3 text-start heading2" data-aos="fade-left">Background</h3>
+          <p data-aos="fade-right">Building a scaled-down autonomous vehicle is quite a complex task. Please keep in mind the following considerations:</p>
+          <div class="row mt-4 justify-content-around">
+            <div class="col-md-5" data-aos="fade-left">
+              <h3 class="heading3">Budget</h3>
+              <p>Although the material cost of building a vehicle is less than 100 USD, several tools are needed:</p>
+              <ol class="my-4 disc">
+                <li>Bsic electronic tools (i.e. screwdriver, soldering tool, glue gun)</li>
+                <li>A computer with a GPU (alternative: cloud computing)</li>
+                <li>3D printer</li>
+              </ol>
+              <p>Thus, the <b>real cost</b> of having a fully-functioning vehicle can fluctuate (depending on which tools are readily accessible or not). Please keep this in mind before jumping immediately into the project.</p>
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-right">
+              <h3 class="heading3">Knowledge</h3>
+              <p>We provide <b>two ways</b> a vehicle can race itself autonomously. These methods and their resources are articulated below:</p>
+              <ol class="my-4 disc">
+                <li><b>Deep learning</b>: we recommend viewing <a href="https://youtu.be/5tvmMX8r_OM"> university</a> lectures with topics concerning Deep Learning via YouTube</li>
+                <li><b>Sensor Fusion and Probabilistic Robotic Methods</b>: we recommend the <a href="https://www.amazon.com/Probabilistic-Robotics-INTELLIGENT-ROBOTICS-AUTONOMOUS/dp/0262201623"> Probabilistic Robotics (Intelligent Robotics and Autonomous Agents series) 1st Edition book</a> by Sebastian Thrun</li>
+              </ol>
+              <p>In addition, most of the code that we use is <b>Python</b>. You also need to know how to code within Deep Learning language frameworks. Although the project had began with Keras for Deep Learning, TensorFlow was later used. Alternatives include Pytorch (which has potential merit considering its developments in the area of deployment).</p>
+            </div>
+          </div>
+          <div class="row mt-4 justify-content-around">
+            <div class="col-md-5" data-aos="fade-right">
+              <h3 class="heading3">3D-Printing</h3>
+              <p>It is <b>necessary</b> to have access to a 3D printer. because the parts are (at most) palm-sized, 3D printers around less than 100 USD (such as the Sondori Pico 3D printer) will be enough. We also recommend the Prusa Mini+ or MK3S+ with +0.02mm tolerance PETG filament if you are serious about getting quality prints. Knowing how to use Computer Aided Design (CAD) is also necessary, provided that you are interested in making modifications to your vehicle in the future.</p>
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-left">
+              <h3 class="heading3">Electronics</h3>
+              <p>You should be able to understand how to use the following as well:</p>
+              <ol class="my-4 disc">
+                <li>Raspberry Pi with General Purpose Input Output (GPIO) ports</li>
+                <li>hardware pulse width modulation (PWM) signaling and UART protocols</li>
+                <li>solder wires and understand how remote controlled cars work</li>
+                <li>the basics of First-Person-View (FPV) equipment (if you plan on driving your car with a FPV remote steering wheel setup)</li>
+              </ol>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="bill-materials">
+        <div class="container">
+          <h2 class="mb-3 text-start heading2" data-aos="fade-right">Bill of Materials</h2>
+          <p data-aos="fade-left">Several materials are needed to successfully build a self driving RC car. Our bill of materials will be periodically updated to reflect the latest revisions. Note that the <b>cost of components does not reflect shipping cost</b>. In addition, there are a total of <b>three ways</b> of controlling the vehicle for data collection. The <b>recommended method</b> is the low latency option – as this offers the quick communication protocols.</p>
+          <div id="vehicle-components" class="mt-5">
+            <h3 class="heading3" data-aos="fade-down">Vehicle Components</h3>
+            <img src="assets/images/home-img4.png" class="mx-auto d-block" alt="Vehicle Components" data-aos="fade-up">
+          </div>
+          <div class="d-flex flex-wrap mt-4 justify-content-center">
+            <div class="vc-block" data-aos="fade-right">
+              <h4>Chassis</h4>
+              <ul class="decimal">
+                <li>Kyosho Mini-Z MR-03 1:28 RTR Kit</li>
+                <li>PN Racing 2.5W Chassis Conversion Kit</li>
+                <li>PN Racing v3 Micro Servo Kit</li>
+              </ul>
+            </div>
+            <div class="vc-block" data-aos="fade-left">
+              <h4>Sensors</h4>
+              <ul class="decimal">
+                <li>US 1881 Latch Type Hall Sensor [x4]</li>
+                <li>Neodymium Magnet [x16]</li>
+                <li>Digital Battery Voltage Meter</li>
+                <li>Battery Current Meter</li>
+              </ul>
+            </div>
+            <div class="vc-block" data-aos="fade-right">
+              <h4>Compute Unit</h4>
+              <ul class="decimal">
+                <li>Raspberry Pi 4B 4G</li>
+                <li>Samsung Evo Plus 256G SD Card</li>
+                <li>Risun RFB2008H 5v Blower Fan</li>
+                <li>OSKJ 5V-3A DC Step-Down Buck Converter</li>
+              </ul>
+            </div>
+            <div class="vc-block" data-aos="fade-right">
+              <h4>Batteries and Shell</h4>
+              <ul class="decimal">
+                <li>Vapecell 3.7v 1S 350mAh Li-Ion Battery [x4]</li>
+                <li>Mini-Z Truck Lexan Body Shell</li>
+                <li>Wheel Encoder Ring [x4]</li>
+                <li>Tamiya PS Spray Paint</li>
+              </ul>
+            </div>
+            <div class="vc-block" data-aos="fade-left">
+              <h4>3D-Printed Parts</h4>
+              <ul class="decimal">
+                <li>Camera Mount</li>
+                <li>RPi Board Mount</li>
+                <li>Wheel Encoder Ring [x4]</li>
+                <li>Rear Mount T-Plate</li>
+                <li>Mount Standoffs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <footer class="mt-4">
+        <div class="container text-center">
+          <p class="mb-2">Natural Sciences Division. Pepperdine University. Malibu, CA, USA, 90263</p>
+          <p>&copy; All right Reserved</p>
+        </div>
+      </footer>
+
+
+    <!-- Back to Top -->
+    <button type="button" class="back-to-top"></button>
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
+

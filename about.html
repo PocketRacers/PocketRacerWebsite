@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About Us</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <!-- Favicon -->
+  <link href="assets/images/favicon.png" rel="icon">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script>
+    var authenticated = sessionStorage.getItem('authenticated');
+    if (!authenticated) {
+        window.location.href = "login.html";
+    }
+  </script>
+  
+  <style type="text/css">
+    .heading3 {
+      color: black;
+    }
+    .tab-pane ul > li {
+      width: 20%;
+    }
+    [aria-selected="true"] {
+      background: white;
+    }
+    .indent {
+      text-indent: 2em;
+    }
+    .content-section {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .content-section h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .content-section p {
+      margin-bottom: 15px;
+    }
+    .content-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .content-section ul li {
+      margin-bottom: 10px;
+    }
+    .content-section ul li p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-lg-center top-header">
+        <div class="logo" data-aos="fade-left">
+          <a href="index.html" class="logo-pc"><img src="assets/images/logo.png" alt="logo" width="120"></a>
+        </div>
+        <nav class="navbar navbar-expand-lg p-0" data-aos="fade-right">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="top-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="top-menu">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="build.html"> Build </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="train.html"> Train </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html"> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Research Team </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="brdr">
+    <div class="container">
+      <div class="mb-4 text-center">
+        <img src="assets/images/about.png" class="mx-auto d-block" width="700" alt="About Team" data-aos="fade-down">
+      </div>
+      <div class="content-section" data-aos="fade-up">
+        <p class="indent">Autonomous racing is an active area of research in Cyber Physical Systems (CPS), currently creating milestone events in the intersection of artificial intelligence and robotics. These high-speed platforms are also popularized as educational tools for undergraduate education. Given sufficient space, these platforms can autonomously perform multi-agent maneuvers such as overtaking. While full-scale autonomous platforms (A2RL, Indy Autonomous Challenge, Roborace) are the defacto options for racing, they require industry-scale involvement to meet their extremely large testing facilities and space requirements. As such, this option is inaccessible for most research institutions. Another commonly used solution is within virtual simulation. Open-source solutions in simulation exist (CARLA), but often do not offer the dynamics of a physical platform.</p>
+        <p class="indent">Due to its accessibility, many scaled autonomous platforms are open-source as an alternative within autonomous racing. Unfortunately, they still impose significant space requirements due to their large size. Furthermore, they typically utilize costly LIDAR sensors for autonomy, making it expensive to maintain a fleet of vehicles. While these requirements are achievable for the purposes of single-agent racing, it poses a significant challenge for multi-agent racing.</p>
+        <p class="indent">As a result, miniature, low-cost autonomous vehicles (1/43rd, 1/28th scale) have been proposed specifically for indoor testing in confined spaces. However, these platforms have been one of compromise, with vehicles going smaller at the expense of fidelity or autonomy. Some examples include the offloading of computation/sensors needed for localization or a compromise of vehicle dynamics; i.e., suspension geometry or a differential drive.</p>
+        <p class="indent">Thus, existing literature indicates that a miniature, high-fidelity, autonomous robotic platform may be useful for research and education. As a solution, we propose Pocket Racer, a low-cost, miniature platform for multi-agent autonomous racing. The vehicles are capable of autonomy with a single monocular camera and a Raspberry Pi Zero 2, accessibly allowing high-speed maneuvers in constrained environments. The vehicles can operate autonomously at the limit of handling with speeds upwards of 20 km/h. The vehicles are of low-cost, using only 3D-printed parts with off-the-shelf electronics to achieve a cost of less than 250 USD for a single vehicle. These accessible features enable an analysis of autonomous racing in a typical indoor hallway or classroom.</p>
+        <p class="indent">We further demonstrate the capabilities of our platform by utilizing vision transformers (ViTs) designed for efficient high-speed autonomy on the edge, which we call RaceViT. Our RaceViT algorithm captures the sequential progression of the environment scene by the use of horizontal lines as tokens to the transformer. However, we further improve upon this approach using two methods. First, we enable fast inference of actions (i.e., steering) with a quantized TensorFlow lite model which allows the vehicle to move at higher speeds. Second, our model is trained by pooling collected demonstrations across multiple platforms, allowing efficiency during data collection. Our platform validates our proposed algorithm against baseline models for not just accuracy, but also deployment through empirical results.</p>
+      </div>
+      <div class="content-section" data-aos="fade-up">
+        <ul>
+          <li><p><strong>Build</strong> - We developed Pocket Racer, a low-cost, miniature platform that is accessible and easy to construct using 3D printed parts and off-the-shelf electronics, fostering hands-on learning and innovation.</p></li>
+          <li><p><strong>Learn</strong> - We provide comprehensive resources, including build instructions and code, enabling students and researchers to delve into the principles of autonomous racing and Cyber Physical Systems.</p></li>
+          <li><p><strong>Race</strong> - We create opportunities for competitive multi-agent autonomous racing within typical indoor environments, bringing together enthusiasts and researchers from diverse backgrounds to test and enhance their racing algorithms.</p></li>
+          <li><p><strong>Research</strong> - Our platform supports a wide range of research applications, from high-speed autonomous driving and vision-based control to multi-agent coordination and reinforcement learning, making it a versatile tool for advancing autonomous systems research.</p></li>
+          <li><p><strong>Innovate</strong> - By utilizing Vision Transformers (RaceViT) and learning from demonstrations, Pocket Racer pushes the boundaries of on-device autonomy, enabling efficient high-speed maneuvers and real-world applicability in constrained spaces.</p></li>
+          <li><p><strong>Accessible</strong> - Designed to be cost-effective and requiring minimal space, Pocket Racer makes advanced autonomous racing research feasible for institutions of all sizes, democratizing access to cutting-edge technology and education in the field.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <footer class="mt-4">
+    <div class="container text-center">
+      <p class="mb-2">Natural Sciences Division. Pepperdine University. Malibu, CA, USA, 90263</p>
+      <p>&copy; All right Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button type="button" class="back-to-top"></button>
+  <!-- JavaScript Libraries -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
