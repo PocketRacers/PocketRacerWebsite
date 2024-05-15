@@ -15,18 +15,12 @@
     <!-- Stylesheet -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-
-    
-
-<script>
-    var authenticated = sessionStorage.getItem('authenticated');
-    if (!authenticated) {
-        window.location.href = "login.html";
-    }
-</script>
-
-
-
+    <script>
+      var authenticated = sessionStorage.getItem('authenticated');
+      if (!authenticated) {
+          window.location.href = "login.html";
+      }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -36,93 +30,92 @@
             <a href="index.html" class="logo-pc"><img src="assets/images/logo.png" alt="logo" width="120"></a>
           </div>
           <nav class="navbar navbar-expand-lg p-0" data-aos="fade-right">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="top-menu" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-              <div class="collapse navbar-collapse" id="top-menu">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="build.html"> Build </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="train.html"> Train </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html"> About </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="team.html"> Team </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </header>
-
-
-<style type="text/css">
-  .heading3 {
-    color: black;
-  }
-</style>
-
-
-      <section class="brdr">
-        <div class="container">
-          <div class="mb-4">
-              <img src="assets/images/pocket-racer-img2.png" class="mx-auto d-block" alt="pocket racer" data-aos="fade-down">
-              <p class="text-center mt-4 mb-2" data-aos="fade-up"><strong>III. METHODOLOGY</strong></p>
-              <div class="mb-2" data-aos="fade-down">
-                <p><b><i>A. Algorithm</i></b></p>
-                <p>Our algorithm, RaceViT, utilizes a variant of the Vision Transformer (ViT), with several improvements specific towards autonomous racing. First and foremost, the image tokens fed to the attention encoder network are processed horizontally in lieu of patches as a stack. By use of horizontal patches from the bottom of the image, the transformer is able to process images in the sequence at which the vehicle pro- gresses forward, making full use of the positional embedding found in the attention encoder. A further benefit to horizontal tokenizing of images is that it preserves spatial information otherwise lost when flattening patches of images originally used in ViTs. Other improvements include the quantization of our model via Tensorflow lite and the pooling of datasets created by multiple vehicles during data collection.</p>
-              </div>
-              <p data-aos="fade-up">Vehicle with top speeds upwards of 26 km/h. We designed the platform to be accessible only using off the shelf components with the exception of a few 3D printable parts. These custom chassis components (i.e. body shell and battery mount) were designed to be fully printable in less than 12 hours.</p>
-              <div data-aos="fade-down">
-                <p class="text-center mt-4 mb-2"><strong>IV. EXPERIMENTS & RESULTS (SKIP READING:TO-DO)</strong></p>
-                <img src="assets/images/pocket-racer-img4.png" alt="pocket racer" class="d-block mx-auto mt-3">
-              </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="top-menu" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="top-menu">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="build.html"> Build </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="train.html"> Train </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="team.html"> Team </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
             </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <style type="text/css">
+      .heading3 {
+        color: black;
+      }
+    </style>
+
+    <section class="brdr">
+      <div class="container">
+        <div class="mb-4">
+          <img src="assets/images/pocket-racer-img2.png" class="mx-auto d-block" alt="pocket racer" data-aos="fade-down">
+          <div class="mb-2" data-aos="fade-down">
+            <p style="text-indent: 1em;">
+              Our algorithm, RaceViT, utilizes a variant of the Vision Transformer (ViT), with several improvements specific towards autonomous racing. First and foremost, the image tokens fed to the attention encoder network are processed horizontally in lieu of patches as a stack. By use of horizontal patches from the bottom of the image, the transformer is able to process images in the sequence at which the vehicle progresses forward, making full use of the positional embedding found in the attention encoder. A further benefit to horizontal tokenizing of images is that it preserves spatial information otherwise lost when flattening patches of images originally used in ViTs. Other improvements include the quantization of our model via Tensorflow lite and the pooling of datasets created by multiple vehicles during data collection.
+            </p>
+          </div>
+          <p data-aos="fade-up" style="text-indent: 1em;">
+            Vehicle with top speeds upwards of 26 km/h. We designed the platform to be accessible only using off the shelf components with the exception of a few 3D printable parts. These custom chassis components (i.e. body shell and battery mount) were designed to be fully printable in less than 12 hours.
+          </p>
+          <div data-aos="fade-down">
+            <img src="assets/images/pocket-racer-img4.png" alt="pocket racer" class="d-block mx-auto mt-3">
           </div>
         </div>
-      </section>
-      <hr>
-      <section class="brdr">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12" data-aos="fade-right">
-              <p><i>A. Data Collection</i></p>
-              <p><i>B. Training</i></p>
-              <p>&nbsp;&nbsp; The table below tabulates the results of our training experiments.</p>
-              <p><i>C. Deployment</i></p>
-              <p>&nbsp;&nbsp; We conduct several comparison experiments of two high speed vehicle maneuvers to validate and test our proposed RaceViT algorithm. We compare our RaceVit against other behavioral cloning algorithms by testing maneuvers at different speeds and evaluating the frequency of collisions.</p>
-              <p><i>1) Lane Keeping:</i> We compare both our proposed Race-ViT against other working benchmarks for a single vehicle scenario involving lane keeping.</p>
-              <p><i>2) Overtaking:</i> We demonstrate a scenario where a autonomous vehicle (#1) overtakes a slower second autonomous vehicle (#2) on both corners and straights.</p>
+      </div>
+    </section>
 
-              
-            </div>
+    <hr>
+
+    <section class="brdr">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" data-aos="fade-right">
+            <p style="text-indent: 1em;">
+              We conduct several comparison experiments of two high-speed vehicle maneuvers to validate and test our proposed RaceViT algorithm. We compare our RaceViT against other behavioral cloning algorithms by testing maneuvers at different speeds and evaluating the frequency of collisions.
+            </p>
+
+            <p style="text-indent: 1em;">
+              1) Lane Keeping: We compare both our proposed RaceViT against other working benchmarks for a single vehicle scenario involving lane keeping.
+            </p>
+            
+            <p style="text-indent: 1em;">
+              2) Overtaking: We demonstrate a scenario where an autonomous vehicle (#1) overtakes a slower second autonomous vehicle (#2) on both corners and straights.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-
-
-      <footer class="mt-4">
-        <div class="container text-center">
-          <p class="mb-2">Natural Sciences Division. Pepperdine University. Malibu, CA, USA, 90263</p>
-          <p>&copy; All right Reserved</p>
-        </div>
-      </footer>
-
+    <footer class="mt-4">
+      <div class="container text-center">
+        <p class="mb-2">Natural Sciences Division. Pepperdine University. Malibu, CA, USA, 90263</p>
+        <p>&copy; All rights reserved</p>
+      </div>
+    </footer>
 
     <!-- Back to Top -->
     <button type="button" class="back-to-top"></button>
@@ -132,5 +125,3 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
-
-
