@@ -128,7 +128,7 @@
       <section id="introduction">
         <div class="container">
           <h3 class="mb-3 text-start heading2" data-aos="fade-right">Introduction</h3>
-          <p data-aos="fade-left">One of the most <b>pressing challenges</b> within autonomous mobility lies within highway scenarios: where autonomous vehicles would be interacting with human drivers at high speeds. These scenarios are indeed challenging because autonomous vehicles require data driven methods to identify the intent of opposing vehicles while also simultaneously planning its trajectory. Although full-scale and high-speed testbeds exist (i.e. Roborace), the space and cost requirements are highly demanding. For this reason, we created an open-source, 1:28 scale research platform for high-speed autonomous driving research that is <b>accessible to everyone</b>.</p>
+          <p data-aos="fade-left">One of the most <b>pressing challenges</b> within autonomous mobility lies in high-speed racing scenarios where vehicles must interact and overtake at high speeds. These scenarios are particularly challenging because autonomous vehicles require advanced data-driven methods to identify the intent of other vehicles while simultaneously planning their trajectories. Although full-scale, high-speed testbeds such as Roborace exist, their space and cost requirements are highly demanding. To address these issues, we created Pocket Racer, an open-source, 1:28 scale autonomous racing platform designed for high-speed research that is <b>accessible to everyone</b>. Our platform operates in typical indoor environments like university hallways or classrooms, making high-speed autonomous driving research more accessible and feasible.</p>
         </div>
       </section>
 <style type="text/css">
@@ -136,55 +136,61 @@
     color: black;
   }
 </style>
-      <section id="background">
-        <div class="container">
-          <h3 class="mb-3 text-start heading2" data-aos="fade-left">Background</h3>
-          <p data-aos="fade-right">Building a scaled-down autonomous vehicle is quite a complex task. Please keep in mind the following considerations:</p>
-          <div class="row mt-4 justify-content-around">
-            <div class="col-md-5" data-aos="fade-left">
-              <h3 class="heading3">Budget</h3>
-              <p>Although the material cost of building a vehicle is less than 100 USD, several tools are needed:</p>
-              <ol class="my-4 disc">
-                <li>Bsic electronic tools (i.e. screwdriver, soldering tool, glue gun)</li>
-                <li>A computer with a GPU (alternative: cloud computing)</li>
-                <li>3D printer</li>
-              </ol>
-              <p>Thus, the <b>real cost</b> of having a fully-functioning vehicle can fluctuate (depending on which tools are readily accessible or not). Please keep this in mind before jumping immediately into the project.</p>
+        <section id="background">
+          <div class="container">
+            <h3 class="mb-3 text-start heading2" data-aos="fade-left">Background</h3>
+            <p data-aos="fade-right">Building a scaled-down autonomous vehicle is quite a complex task. Please keep in mind the following considerations:</p>
+            <div class="row mt-4 justify-content-around">
+              <div class="col-md-5" data-aos="fade-left">
+                <h3 class="heading3">Budget</h3>
+                <p>Although the material cost of building a vehicle is less than 250 USD, several tools are needed:</p>
+                <ol class="my-4 disc">
+                  <li>Basic electronic tools (i.e. screwdriver, long nose, soldering tool, glue gun, gear puller recommended)</li>
+                  <li>A computer with a GPU (alternative: cloud computing)</li>
+                  <li>3D printer</li>
+                </ol>
+                <p>Thus, the <b>real cost</b> of having a fully-functioning vehicle can fluctuate (depending on which tools are readily accessible or not). Please keep this in mind before jumping immediately into the project.</p>
+              </div>
+              <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-right">
+                <h3 class="heading3">Knowledge</h3>
+                <p>We provide <b>two primary methodologies</b> for autonomous vehicle racing on our platform. These methods and their resources are detailed below:</p>
+                <ol class="my-4 disc">
+                  <li><b>Deep Learning</b>: We recommend viewing <a href="https://youtu.be/5tvmMX8r_OM">university lectures</a> on Deep Learning via YouTube. Our platform uses Vision Transformers (RaceViT) tailored for autonomous racing, leveraging Learning from Demonstrations (LfD) shared across multiple vehicles.</li>
+                  <li><b>Sensor Fusion and Probabilistic Robotics Methods</b>: We recommend the <a href="https://www.amazon.com/Probabilistic-Robotics-INTELLIGENT-ROBOTICS-AUTONOMOUS/dp/0262201623">Probabilistic Robotics (Intelligent Robotics and Autonomous Agents series) 1st Edition book</a> by Sebastian Thrun for a deeper understanding of sensor fusion and probabilistic methods.</li>
+                </ol>
+                <p>Most of the code we use is in <b>Python</b>. Familiarity with deep learning frameworks is essential. While the project initially utilized Keras, we have transitioned to TensorFlow for better performance and deployment capabilities. PyTorch is also a viable alternative, given its recent advancements in deployment.</p>
+              </div>
             </div>
-            <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-right">
-              <h3 class="heading3">Knowledge</h3>
-              <p>We provide <b>two ways</b> a vehicle can race itself autonomously. These methods and their resources are articulated below:</p>
-              <ol class="my-4 disc">
-                <li><b>Deep learning</b>: we recommend viewing <a href="https://youtu.be/5tvmMX8r_OM"> university</a> lectures with topics concerning Deep Learning via YouTube</li>
-                <li><b>Sensor Fusion and Probabilistic Robotic Methods</b>: we recommend the <a href="https://www.amazon.com/Probabilistic-Robotics-INTELLIGENT-ROBOTICS-AUTONOMOUS/dp/0262201623"> Probabilistic Robotics (Intelligent Robotics and Autonomous Agents series) 1st Edition book</a> by Sebastian Thrun</li>
-              </ol>
-              <p>In addition, most of the code that we use is <b>Python</b>. You also need to know how to code within Deep Learning language frameworks. Although the project had began with Keras for Deep Learning, TensorFlow was later used. Alternatives include Pytorch (which has potential merit considering its developments in the area of deployment).</p>
+            <div class="row mt-4 justify-content-around">
+              <div class="col-md-5" data-aos="fade-right">
+                <h3 class="heading3">3D-Printing</h3>
+                <p>It is <b>necessary</b> to have access to a 3D printer. Because the parts are (at most) palm-sized, 3D printers around less than 100 USD (such as the Sondori Pico 3D printer) will be enough. We also recommend the Prusa Mini+ or MK3S+ with +0.02mm tolerance PETG filament if you are serious about getting quality prints. Knowing how to use Computer-Aided Design (CAD) is also necessary, provided that you are interested in making modifications to your vehicle in the future.</p>
+              </div>
+              <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-left">
+                <h3 class="heading3">Electronics</h3>
+                <p>You should be able to understand how to use the following as well:</p>
+                <ol class="my-4 disc">
+                  <li>Raspberry Pi with General Purpose Input Output (GPIO) ports</li>
+                  <li>Hardware pulse width modulation (PWM) signaling and UART protocols</li>
+                  <li>Solder wires and understand how remote-controlled cars work</li>
+                  <li>The basics of First-Person-View (FPV) equipment (if you plan on driving your car with an FPV remote steering wheel setup)</li>
+                </ol>
+              </div>
+            </div>
+            <div class="row mt-4 justify-content-around">
+              <div class="col-md-12" data-aos="fade-up">
+                <p>For detailed build instructions and code, please visit our <a href="https://github.com/PocketRacers/PocketRacerRepo">GitHub repository</a> and our <a href="https://pocketracers.github.io/PocketRacerWebsite/build.html">dedicated website</a>.</p>
+              </div>
             </div>
           </div>
-          <div class="row mt-4 justify-content-around">
-            <div class="col-md-5" data-aos="fade-right">
-              <h3 class="heading3">3D-Printing</h3>
-              <p>It is <b>necessary</b> to have access to a 3D printer. because the parts are (at most) palm-sized, 3D printers around less than 100 USD (such as the Sondori Pico 3D printer) will be enough. We also recommend the Prusa Mini+ or MK3S+ with +0.02mm tolerance PETG filament if you are serious about getting quality prints. Knowing how to use Computer Aided Design (CAD) is also necessary, provided that you are interested in making modifications to your vehicle in the future.</p>
-            </div>
-            <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-left">
-              <h3 class="heading3">Electronics</h3>
-              <p>You should be able to understand how to use the following as well:</p>
-              <ol class="my-4 disc">
-                <li>Raspberry Pi with General Purpose Input Output (GPIO) ports</li>
-                <li>hardware pulse width modulation (PWM) signaling and UART protocols</li>
-                <li>solder wires and understand how remote controlled cars work</li>
-                <li>the basics of First-Person-View (FPV) equipment (if you plan on driving your car with a FPV remote steering wheel setup)</li>
-              </ol>
-              <p></p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+        
+    
 
       <section id="bill-materials">
         <div class="container">
           <h2 class="mb-3 text-start heading2" data-aos="fade-right">Bill of Materials</h2>
-          <p data-aos="fade-left">Several materials are needed to successfully build a self driving RC car. Our bill of materials will be periodically updated to reflect the latest revisions. Note that the <b>cost of components does not reflect shipping cost</b>. In addition, there are a total of <b>three ways</b> of controlling the vehicle for data collection. The <b>recommended method</b> is the low latency option – as this offers the quick communication protocols.</p>
+          <p data-aos="fade-left">Several materials are needed to successfully build a Pocket Racer autonomous vehicle. Our bill of materials will be periodically updated to reflect the latest revisions. Note that the <b>cost of components does not include shipping costs</b>. Additionally, there are a total of <b>three methods</b> for controlling the vehicle during data collection. The <b>recommended method</b> is the low latency option, as it offers the fastest communication protocols for real-time control and data collection.</p>
           <div id="vehicle-components" class="mt-5">
             <h3 class="heading3" data-aos="fade-down">Vehicle Components</h3>
             <div class="image-container">
