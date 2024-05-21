@@ -61,6 +61,20 @@
       margin: 0;
     }
   </style>
+<style>
+  .image-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .image-section img {
+    width: 45%; /* Set the width to make the images fit nicely */
+    height: auto;
+    margin: 10px; /* Add margin to ensure spacing between the images */
+    vertical-align: top; /* Align the images to the top */
+  }
+</style>
+
+  </style>
 </head>
 <body>
   <header class="header">
@@ -108,13 +122,7 @@
       <div class="mb-4 text-center">
         <img src="assets/images/about.png" class="mx-auto d-block" width="700" alt="About Team" data-aos="fade-down">
       </div>
-      <div class="content-section" data-aos="fade-up">
-        <p class="indent">Autonomous racing is an active area of research in Cyber Physical Systems (CPS), currently creating milestone events in the intersection of artificial intelligence and robotics. These high-speed platforms are also popularized as educational tools for undergraduate education. Given sufficient space, these platforms can autonomously perform multi-agent maneuvers such as overtaking. While full-scale autonomous platforms (A2RL, Indy Autonomous Challenge, Roborace) are the defacto options for racing, they require industry-scale involvement to meet their extremely large testing facilities and space requirements. As such, this option is inaccessible for most research institutions. Another commonly used solution is within virtual simulation. Open-source solutions in simulation exist (CARLA), but often do not offer the dynamics of a physical platform.</p>
-        <p class="indent">Due to its accessibility, many scaled autonomous platforms are open-source as an alternative within autonomous racing. Unfortunately, they still impose significant space requirements due to their large size. Furthermore, they typically utilize costly LIDAR sensors for autonomy, making it expensive to maintain a fleet of vehicles. While these requirements are achievable for the purposes of single-agent racing, it poses a significant challenge for multi-agent racing.</p>
-        <p class="indent">As a result, miniature, low-cost autonomous vehicles (1/43rd, 1/28th scale) have been proposed specifically for indoor testing in confined spaces. However, these platforms have been one of compromise, with vehicles going smaller at the expense of fidelity or autonomy. Some examples include the offloading of computation/sensors needed for localization or a compromise of vehicle dynamics; i.e., suspension geometry or a differential drive.</p>
-        <p class="indent">Thus, existing literature indicates that a miniature, high-fidelity, autonomous robotic platform may be useful for research and education. As a solution, we propose Pocket Racer, a low-cost, miniature platform for multi-agent autonomous racing. The vehicles are capable of autonomy with a single monocular camera and a Raspberry Pi Zero 2, accessibly allowing high-speed maneuvers in constrained environments. The vehicles can operate autonomously at the limit of handling with speeds upwards of 20 km/h. The vehicles are of low-cost, using only 3D-printed parts with off-the-shelf electronics to achieve a cost of less than 250 USD for a single vehicle. These accessible features enable an analysis of autonomous racing in a typical indoor hallway or classroom.</p>
-        <p class="indent">We further demonstrate the capabilities of our platform by utilizing vision transformers (ViTs) designed for efficient high-speed autonomy on the edge, which we call RaceViT. Our RaceViT algorithm captures the sequential progression of the environment scene by the use of horizontal lines as tokens to the transformer. However, we further improve upon this approach using two methods. First, we enable fast inference of actions (i.e., steering) with a quantized TensorFlow lite model which allows the vehicle to move at higher speeds. Second, our model is trained by pooling collected demonstrations across multiple platforms, allowing efficiency during data collection. Our platform validates our proposed algorithm against baseline models for not just accuracy, but also deployment through empirical results.</p>
-      </div>
+
       <div class="content-section" data-aos="fade-up">
         <ul>
           <li><p><strong>Build</strong> - We developed Pocket Racer, a low-cost, miniature platform that is accessible and easy to construct using 3D printed parts and off-the-shelf electronics, fostering hands-on learning and innovation.</p></li>
@@ -126,11 +134,18 @@
         </ul>
       </div>
     </div>
+    <!-- Add the images here -->
+    <div class="image-section" data-aos="fade-up">
+      <img src="assets/images/edu1.png" alt="Education Image 1">
+      <img src="assets/images/edu2.png" alt="Education Image 2">
+    </div>
   </section>
   <hr>
   <footer class="mt-4">
     <div class="container text-center">
       <p class="mb-2">Natural Sciences Division. Pepperdine University. Malibu, CA, USA, 90263</p>
+      <p>Licensed under the <a href="LICENSE.txt">MIT License</a>.</p>
+
       <p>&copy; All right Reserved</p>
     </div>
   </footer>
