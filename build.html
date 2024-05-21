@@ -32,6 +32,29 @@
       margin: 0 auto;
   }
 </style>
+<style>
+  .vc-block-container {
+    display: flex;
+    justify-content: center; /* Center align the container */
+    text-align: left; /* Left align the text within the container */
+  }
+  .vc-block {
+    margin: 10px; /* Add some margin to each block */
+  }
+</style>
+<style>
+  .vc-block {
+    flex: 1 1 20%; /* Adjust the width percentage as needed */
+    min-width: 150px; /* Ensure blocks don't get too narrow on small screens */
+  }
+  .vc-block:nth-child(1) {
+    flex: 1 1 25%; /* Give the "Chassis" section more space */
+  }
+  .vc-block.camera {
+    flex: 1 1 100%; /* Make the "Camera" section take full width */
+    text-align: center; /* Center the content of the "Camera" section */
+  }
+</style>
 
 
 
@@ -168,53 +191,48 @@
               <img src="assets/images/diagram.png" alt="Vehicle Components" data-aos="fade-up">
           </div>
                     </div>
-          <div class="d-flex flex-wrap mt-4 justify-content-center">
-            <div class="vc-block" data-aos="fade-right">
-              <h4>Chassis</h4>
-              <ul class="decimal">
-                <li>Kyosho Mini-Z MR-03 1:28 RTR Kit</li>
-                <li>PN Racing 2.5W Chassis Conversion Kit</li>
-                <li>PN Racing v3 Micro Servo Kit</li>
-              </ul>
-            </div>
-            <div class="vc-block" data-aos="fade-left">
-              <h4>Sensors</h4>
-              <ul class="decimal">
-                <li>US 1881 Latch Type Hall Sensor [x4]</li>
-                <li>Neodymium Magnet [x16]</li>
-                <li>Digital Battery Voltage Meter</li>
-                <li>Battery Current Meter</li>
-              </ul>
-            </div>
-            <div class="vc-block" data-aos="fade-right">
-              <h4>Compute Unit</h4>
-              <ul class="decimal">
-                <li>Raspberry Pi 4B 4G</li>
-                <li>Samsung Evo Plus 256G SD Card</li>
-                <li>Risun RFB2008H 5v Blower Fan</li>
-                <li>OSKJ 5V-3A DC Step-Down Buck Converter</li>
-              </ul>
-            </div>
-            <div class="vc-block" data-aos="fade-right">
-              <h4>Batteries and Shell</h4>
-              <ul class="decimal">
-                <li>Vapecell 3.7v 1S 350mAh Li-Ion Battery [x4]</li>
-                <li>Mini-Z Truck Lexan Body Shell</li>
-                <li>Wheel Encoder Ring [x4]</li>
-                <li>Tamiya PS Spray Paint</li>
-              </ul>
-            </div>
-            <div class="vc-block" data-aos="fade-left">
-              <h4>3D-Printed Parts</h4>
-              <ul class="decimal">
-                <li>Camera Mount</li>
-                <li>RPi Board Mount</li>
-                <li>Wheel Encoder Ring [x4]</li>
-                <li>Rear Mount T-Plate</li>
-                <li>Mount Standoffs</li>
-              </ul>
-            </div>
+                    <div class="d-flex flex-wrap mt-4 justify-content-center">
+                      <div class="vc-block" data-aos="fade-right">
+                          <h4>Chassis</h4>
+                          <ul>
+                              <li>1. Kyosho Mini Z series rims and tires</li>
+                              <li>2. Rocket mini DRZ Atomic Pro 3500KV Chassis Conversion Kit</li>
+                          </ul>
+                      </div>
+                      <div class="vc-block" data-aos="fade-left">
+                          <h4>3D Printed Parts</h4>
+                          <ul>
+                              <li>3. 3D printed Battery Mount</li>
+                              <li>4. 3D printed Motor Mount</li>
+                              <li>5. 3D printed Chassis</li>
+                          </ul>
+                      </div>
+                      <div class="vc-block" data-aos="fade-right">
+                          <h4>Powertrain</h4>
+                          <ul>
+                              <li>6. ESC</li>
+                              <li>7. 2S Lipo Batteries</li>
+                              <li>8. Brushless Motor</li>
+                          </ul>
+                      </div>
+                      <div class="vc-block" data-aos="fade-right">
+                          <h4>Compute Unit</h4>
+                          <ul>
+                              <li>9. Raspberry Pi Zero 2w</li>
+                              <li>10. SD card</li>
+                              <li>11. 5v DC fan</li>
+                          </ul>
+                      </div>
+                      <div class="vc-block camera" data-aos="fade-left">
+                        <h4>Camera</h4>
+                        <ul>
+                          <li>12. M12 lens</li>
+                        </ul>
+                    </div>
+                  </div>
           </div>
+</div>
+
         </div>
       </section>
 
