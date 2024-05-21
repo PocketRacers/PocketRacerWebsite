@@ -100,6 +100,205 @@
               <p class="text-start" data-aos="fade-left"><b>Abstract—</b> Scaled autonomous racing platforms are popular within Cyber Physical Systems (CPS) research and education, where Ackerman-steering robots of varying sizes compete head- 2-head at high speeds. These robots are required to drive at the limit of handling while safely overtaking other agents within its environment. However, existing platforms are inaccessible due to their large cost and/or size requirements to enable such high speeds. Addressing these issues, we present Pocket Racer, a low- cost, miniature, autonomous racing platform capable of racing within a typical university hallway or classroom setting. Pocket Racer uses Vision Transformers tailored for autonomous racing (RaceViT) while Learning from Demonstrations (LfD) shared across multiple vehicles. We open-source Pocket Racer with a dedicated website detailing build instructions and code in hopes of making autonomous racing accessible</p>
             </div>
           </div>
+      </section>
+
+      <hr>
+
+      <section>
+        <div class="container">
+          <h2 class="heading2" data-aos="fade-left">Teleoperation System</h2>
+          <div class="header-links">
+            <ul class="my-4 d-flex flex-wrap justify-content-center">
+              <li data-aos="fade-up"><a href="#!" >[Hardware Tutorial]</a></li>
+              <li data-aos="fade-down"><a href="#!"> [ALOHA Codebase]</a></li>
+              <li data-aos="fade-down"><a href="#!">[Purchase ALOHA Kit from Trossen]</a></li>
+            </ul>
+          </div>
+          <p data-aos="fade-right">We introduce ALOHA 🏖️: A Low-cost Open-source Hardware System for Bimanual Teleoperation. With a $20k budget, it is capable of teleoperating precise tasks such as threading a zip tie, dynamic tasks such as juggling a ping pong ball, and contact-rich tasks such as assembling the chain in the NIST board #2. </p>
+          <div class="my-4" data-aos="fade-left">
+            <video class="ratio ratio-16x9" controls autoplay muted loop>
+              <source src="assets/videos/teleop_all.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> 
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <section>
+        <div class="container">
+          <h2 class="heading2" data-aos="fade-left">Learning Algorithm</h2>
+          <div class="header-links">
+            <ul class="my-4 d-flex flex-wrap justify-content-center">
+              <li data-aos="fade-up"><a href="#!" >[ACT+Sim Codebase]</a></li>
+            </ul>
+          </div>
+          <p data-aos="fade-left">We introduce Action Chunking with Transformers (ACT). The key design choice is to predict a sequence of actions ("an action chunk") instead of a single action like standard Behavior Cloning. The ACT policy (figure: right) is trained as the decoder of a Conditional VAE (CVAE), i.e. a generative model. It synthesizes images from multiple viewpoints, joint positions, and style variable z with a transformer encoder, and predicts a sequence of actions with a transformer decoder. The encoder of CVAE (figure: left) compresses action sequence and joint observation into z, the "style" of the action sequence. It is also implemented with a transformer. At test time, the CVAE encoder is discarded and z is simply set to the mean of the prior (i.e. zero). </p>
+          <img src="assets/images/algo.png" class="my-4" data-aos="fade-right">
+          <p data-aos="fade-left">The videos below show real-time rollouts of ACT policies, imitating from 50 demonstrations for each task. The ACT policy directly predicts joint positions at 50Hz with a fixed chunk size of 90. For perspective, the episode length is between 600 and 1000. We randomize the object position along the 15cm white referece line for both training and testing. For the following four tasks, ACT obtains 96%, 84%, 64%, 92% success respectively. </p>
+          <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-right">
+            <video class="ratio ratio-16x9" controls autoplay muted loop>
+              <source src="assets/videos/slot_battery.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-left">
+            <video class="ratio ratio-16x9" controls autoplay muted loop>
+              <source src="assets/videos/open_lid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-right">
+            <video class="ratio ratio-16x9" controls autoplay muted loop>
+              <source src="assets/videos/prep_tape.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-left">
+            <video class="ratio ratio-16x9" controls autoplay muted loop>
+              <source src="assets/videos/put_on_shoe.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> 
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <section>
+        <div class="container">
+          <h2 class="heading2" data-aos="fade-left">Reactiveness</h2>
+          <p class="my-4 text-center" data-aos="fade-right">ACT policy can react to novel environment disturbances, instead of only memorizing the training data. </p>
+          <div id="carousel1" class="carousel slide" data-aos="fade-left">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carousel1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h4 class="text-center my-3">Open Cup</h4>
+                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
+                  <video class="ratio ratio-16x9" controls autoplay muted loop>
+                    <source src="assets/videos/reactive_cup.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video> 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <h4 class="text-center my-3">Slot Battery</h4>
+                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
+                  <video class="ratio ratio-16x9" controls autoplay muted loop>
+                    <source src="assets/videos/reactive_battery.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video> 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <h4 class="text-center my-3">Open Cup (failure)</h4>
+                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
+                  <video class="ratio ratio-16x9" controls autoplay muted loop>
+                    <source src="assets/videos/reactive_cup_fail.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video> 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <h4 class="text-center my-3">Open Cup (earlier disturbance)</h4>
+                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
+                  <video class="ratio ratio-16x9" controls autoplay muted loop>
+                    <source src="assets/videos/reactive_cup_2.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video> 
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <section>
+        <div class="container">
+          <h2 class="heading2" data-aos="fade-left">Robustness</h2>
+          <p class="my-4 text-center" data-aos="fade-right">ACT policy is also robust against certain level of distractors, shown in videos below. </p>
+          <div id="carousel2" class="carousel slide" data-aos="fade-left">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h4 class="text-center my-3">Slot Battery</h4>
+                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
+                  <video class="ratio ratio-16x9" controls autoplay muted loop>
+                    <source src="assets/videos/distractor_battery.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video> 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <h4 class="text-center my-3">Prepare Tape</h4>
+                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
+                  <video class="ratio ratio-16x9" controls autoplay muted loop>
+                    <source src="assets/videos/distractor_tape.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video> 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <h4 class="text-center my-3">Slot Battery (failure)</h4>
+                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
+                  <video class="ratio ratio-16x9" controls autoplay muted loop>
+                    <source src="assets/videos/distractor_battery_fail.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video> 
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <section>
+        <div class="container">
+          <h2 class="heading2 mb-4" data-aos="fade-left">Observations during policy execution</h2>
+          <p data-aos="fade-right">We show example image observations (i.e. the input to the ACT policy) at evaluation time. There is a total of 4 RGB cameras each streaming at 480x640. Two of the cameras are stationery and the other two are mounted on the wrist of robots. </p>
+          <div class="my-4">
+          </div>
+          <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-left">
+            <h4 class="text-center">Slide Ziploc</h4>
+            <video class="ratio ratio-16x9" controls autoplay muted loop>
+              <source src="assets/videos/ziploc_slide.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-right">
+            <h4 class="text-center">Slot Battery</h4>
+            <video class="ratio ratio-16x9" controls autoplay muted loop>
+              <source src="assets/videos/ziploc_slide.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> 
+          </div>
         </div>
       </section>
 
