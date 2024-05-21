@@ -16,7 +16,25 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .faq {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+        .question {
+            font-weight: bold;
+        }
+        .answer {
+            margin-top: 5px;
+        }
+    </style>
 
 <script>
     var authenticated = sessionStorage.getItem('authenticated');
@@ -107,6 +125,31 @@
           </div>
         </div>
       </section>
+      <h1>Pocket Racer Assembly FAQs</h1>
+    <div class="faq">
+        <p class="question">Is it mandatory to change wheels and tires?</p>
+        <p class="answer">It is optional. However, using grip tires is highly recommended since the Pocket Racer is designed to race indoors.</p>
+    </div>
+    <div class="faq">
+        <p class="question">Which tool should I use to change wheels and tires?</p>
+        <p class="answer">Using a wheel wrench is ideal to screw / unscrew wheels. However, you can also use a long nose plier too.</p>
+    </div>
+    <div class="faq">
+        <p class="question">Can I use any other motor than DRZ Atomic pro 3500kv?</p>
+        <p class="answer">If it’s hard to get the specific motor, you can use another sensored BLDC motor as long as it can endure 30A current from the ESC.</p>
+    </div>
+    <div class="faq">
+        <p class="question">Printed motor mount looks different compared to the one in the manual</p>
+        <p class="answer">The one you printed is the latest version of the motor mount. It has multiple holes for mounting the motor to allow using different gear ratios.</p>
+    </div>
+    <div class="faq">
+        <p class="question">Bolting on the chassis is too hard.</p>
+        <p class="answer">Although the chassis have holes for all the bolting places but the chassis is printed nearly 100% fill. It might be hard to bolt on the chassis especially at the step where you mount chassis on differential covers. I recommend tapping the hole using M2 screws first and then applying socket set screws for precise bolting.</p>
+    </div>
+    <div class="faq">
+        <p class="question">Wheel hub breaks away from the knuckle and diff gear too easily.</p>
+        <p class="answer">Wheel hub can be fixed to knuckle when a wheel nut is applied on it. You can put the wheel on in advance if needed.</p>
+    </div>
 
       <footer class="mt-4">
         <div class="container text-center">
