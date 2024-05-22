@@ -997,6 +997,136 @@ hr{
     color: #000;
     border: 1px solid #000;
 }
+.carousel-control-prev-icon{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%23000' d='M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z'/%3E%3C/svg%3E");
+}
+.carousel-control-next-icon{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%23000' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3E%3C/svg%3E");
+}
+.carousel-control-prev {
+    justify-content: start;
+}
+.carousel-control-next {
+    justify-content: end;
+}
+.carousel-indicators [data-bs-target] {
+    width: 18px;
+    height: 18px;
+    background: #bbb;
+    border-radius: 50%;
+    border: 0;
+}
+.carousel-indicators {
+    bottom: -40px;
+}
+
+
+
+
+/*Build.html*/
+.main-body{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.main-body-left {
+    position: sticky;
+    padding-top: 32px;
+    top: 40px;
+    width: 30%;
+    min-height: 100vh;
+    background: #001b28;
+}
+.main-body-left nav{}
+.main-body-left a {
+    padding: 5px 10px;
+    background: transparent;
+    border-radius: 15px;
+    transition: 0.3s;
+    margin-bottom: 3px;
+    border: 1px solid transparent;
+    color: white;
+}
+.main-body-left a:hover{
+    border: 1px solid rgba(0, 89, 133, 0.77);
+}
+.main-body-left a.active{
+    background: rgba(0, 89, 133, 0.77);
+    color: white;
+}
+.main-body-right{
+    width: 70%;
+}
+.main-body-right section{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.main-body-right .heading1 {
+    color: #001b28;
+}
+.main-body-right .heading2{
+    font-size: 25px;
+}
+.what-need li {
+    list-style: disc;
+    font-size: 18px;
+    font-weight: 500;
+}
+.what-need span{
+    font-size: 13px;
+    display: inline-block;
+}
+.block-img{
+    margin: 30px auto 10px;
+    max-width: 60%;
+    display: block;
+}
+.block-img.w-100{
+    max-width: 100%;
+}
+
+#preparing{
+    background: #dae6ec;
+}
+#disassembling{
+    background: #f7e8dd;;
+}
+#motor-change {
+    background: #f9f6cb;
+}
+#camera-installation{
+    background: #c0d0d0;
+}
+#electronics-installation {
+    background: #dae6ec;
+}
+#assembly-FAQs {
+    background: #f1f5f7;
+}
+.faq-block {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #005985;
+}
+.ques {
+    font-size: 25px;
+    color: #005985;
+    margin-top: 30px;
+}
+.ans{}
+.ans img {
+    margin-top: 15px;
+    max-width: 50%;
+}
+.ans p{}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1050,7 +1180,22 @@ footer {
     }
 }
 
-
+@media(max-width:1400px){
+.main-body-left {
+    width: 20%;
+}
+.main-body-right {
+    width: 80%;
+}
+}
+@media(max-width:1199px){
+.main-body-left {
+    width: 25%;
+}
+.main-body-right {
+    width: 75%;
+}
+}
 @media(max-width:991px){
     .logo img {
         max-width: 100px;
@@ -1072,7 +1217,13 @@ footer {
 .vc-block {
     width: 43%;
 }
-
+.main-body-right .heading2, .ques {
+    font-size: 20px;
+}
+.main-body-right section {
+    padding-left: 0;
+    padding-right: 0;
+}
 
 }
 @media(max-width:767px){
@@ -1082,10 +1233,22 @@ footer {
     section {
     padding: 25px 0;
 }
-
-
-
-
+.block-img {
+    margin: 20px auto 8px;
+    max-width: 100%;
+}
+.main-body-left {
+    top: 25px;
+}
+#content-blocks {
+    padding: 10px 5px !important;
+}
+.main-body-left a {
+    padding: 3px 7px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+}
 
 
 
@@ -1096,8 +1259,23 @@ footer {
         max-width: 100px;
     }
 
-.vc-block {
+.vc-block, .main-body-left, .main-body-right {
     width: 100%;
+}
+.main-body{
+    flex-direction: column;
+}
+.main-body-left {
+    top: 0;
+    padding-top: 0;
+    position: relative;
+    min-height: auto;
+}
+.main-body-right .heading2, .ques {
+    font-size: 18px;
+}
+.ans img {
+    max-width: 100%;
 }
 
 }

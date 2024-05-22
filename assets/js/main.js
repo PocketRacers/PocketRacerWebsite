@@ -224,7 +224,7 @@ $(document).ready(function(){
                 // Only prevent default if animation is actually gonna happen
                 event.preventDefault();
                 $('html, body').animate({
-                    scrollTop: target.offset().top - 150 // Adjusted to maintain 100px distance from top
+                    scrollTop: target.offset().top - 100 // Adjusted to maintain 100px distance from top
                 }, 500, function() {
                     // After animation, adjust scroll position to ensure the target is under 100px from the top
                     var windowTop = $(window).scrollTop();
