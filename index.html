@@ -107,15 +107,9 @@
 
       <section>
         <div class="container">
-          <h2 class="heading2" data-aos="fade-left">Teleoperation System</h2>
-          <div class="header-links">
-            <ul class="my-4 d-flex flex-wrap justify-content-center">
-              <li data-aos="fade-up"><a href="#!" >[Hardware Tutorial]</a></li>
-              <li data-aos="fade-down"><a href="#!"> [ALOHA Codebase]</a></li>
-              <li data-aos="fade-down" class="pb-1"><a href="#!">[Purchase ALOHA Kit from Trossen]</a></li>
-            </ul>
-          </div>
-          <p data-aos="fade-right">We introduce ALOHA 🏖️: A Low-cost Open-source Hardware System for Bimanual Teleoperation. With a $20k budget, it is capable of teleoperating precise tasks such as threading a zip tie, dynamic tasks such as juggling a ping pong ball, and contact-rich tasks such as assembling the chain in the NIST board #2. </p>
+          <h2 class="heading2" data-aos="fade-left">Welcome to Pocket Racer 🚗🏁</h2>
+          <br>
+          <p data-aos="fade-right">We introduce Pocket Racer: A low-cost, open-source platform for multi-agent autonomous racing. With a budget under $250, it can autonomously navigate high-speed tasks such as overtaking and maneuvering within typical university hallways and classrooms. Powered by Vision Transformers (RaceViT) and designed for accessibility, Pocket Racer makes advanced autonomous racing technology available for research and education.</p>
           <div class="my-4" data-aos="fade-left">
             <div class="ratio ratio-16x9">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/HbpbVkcS0hM?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -128,166 +122,24 @@
 
       <section>
         <div class="container">
-          <h2 class="heading2" data-aos="fade-left">Learning Algorithm</h2>
-          <div class="header-links">
-            <ul class="my-4 d-flex flex-wrap justify-content-center">
-              <li data-aos="fade-up" class="pb-1"><a href="#!" >[ACT+Sim Codebase]</a></li>
-            </ul>
-          </div>
-          <p data-aos="fade-left">We introduce Action Chunking with Transformers (ACT). The key design choice is to predict a sequence of actions ("an action chunk") instead of a single action like standard Behavior Cloning. The ACT policy (figure: right) is trained as the decoder of a Conditional VAE (CVAE), i.e. a generative model. It synthesizes images from multiple viewpoints, joint positions, and style variable z with a transformer encoder, and predicts a sequence of actions with a transformer decoder. The encoder of CVAE (figure: left) compresses action sequence and joint observation into z, the "style" of the action sequence. It is also implemented with a transformer. At test time, the CVAE encoder is discarded and z is simply set to the mean of the prior (i.e. zero). </p>
-          <img src="assets/images/algo.png" class="my-4" data-aos="fade-right">
-          <p data-aos="fade-left">The videos below show real-time rollouts of ACT policies, imitating from 50 demonstrations for each task. The ACT policy directly predicts joint positions at 50Hz with a fixed chunk size of 90. For perspective, the episode length is between 600 and 1000. We randomize the object position along the 15cm white referece line for both training and testing. For the following four tasks, ACT obtains 96%, 84%, 64%, 92% success respectively. </p>
+
+          <p data-aos="fade-left">The videos below show real-time demonstrations of Pocket Racer in action. Single-agent scenarios feature one car autonomously navigating high-speed tasks, while multi-agent scenarios showcase multiple cars autonomously performing maneuvers such as overtaking. Each video highlights the capabilities of the RaceViT algorithm, processing images at 50Hz for precise steering and navigation. For perspective, the typical episode length ranges between 600 and 1000 frames. The success rates for various tasks in both single-agent and multi-agent settings demonstrate the effectiveness of the Pocket Racer platform in different environments. </p>
+          <h2 class="heading2" data-aos="fade-down">Single-Agent</h2>
           <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-right">
             <div class="ratio ratio-16x9">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/HbpbVkcS0hM?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
+          <h2 class="heading2" data-aos="fade-down">Multi-Agent</h2>
           <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-left">
             <div class="ratio ratio-16x9">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
-          <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-right">
-            <div class="ratio ratio-16x9">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-left">
-            <div class="ratio ratio-16x9">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
+          
         </div>
       </section>
 
-      <hr>
-
-      <section>
-        <div class="container">
-          <h2 class="heading2" data-aos="fade-left">Reactiveness</h2>
-          <p class="my-4 text-center" data-aos="fade-right">ACT policy can react to novel environment disturbances, instead of only memorizing the training data. </p>
-          <div id="carousel1" class="carousel slide" data-aos="fade-left">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carousel1" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <h4 class="text-center my-3">Open Cup</h4>
-                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
-                  <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <h4 class="text-center my-3">Slot Battery</h4>
-                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
-                  <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <h4 class="text-center my-3">Open Cup (failure)</h4>
-                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
-                  <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <h4 class="text-center my-3">Open Cup (earlier disturbance)</h4>
-                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
-                  <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <hr>
-
-      <section>
-        <div class="container">
-          <h2 class="heading2" data-aos="fade-left">Robustness</h2>
-          <p class="my-4 text-center" data-aos="fade-right">ACT policy is also robust against certain level of distractors, shown in videos below. </p>
-          <div id="carousel2" class="carousel slide" data-aos="fade-left">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <h4 class="text-center my-3">Slot Battery</h4>
-                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
-                  <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <h4 class="text-center my-3">Prepare Tape</h4>
-                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
-                  <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div> 
-                </div>
-              </div>
-              <div class="carousel-item">
-                <h4 class="text-center my-3">Slot Battery (failure)</h4>
-                <div class="my-4 mx-0 px-0 mx-md-5 px-md-5">
-                  <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <hr>
-
-      <section>
-        <div class="container">
-          <h2 class="heading2 mb-4" data-aos="fade-left">Observations during policy execution</h2>
-          <p data-aos="fade-right">We show example image observations (i.e. the input to the ACT policy) at evaluation time. There is a total of 4 RGB cameras each streaming at 480x640. Two of the cameras are stationery and the other two are mounted on the wrist of robots. </p>
-          <div class="my-4">
-          </div>
-          <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-left">
-            <h4 class="text-center">Slide Ziploc</h4>
-            <div class="ratio ratio-16x9">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-right">
-            <h4 class="text-center">Slot Battery</h4>
-            <div class="ratio ratio-16x9">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/fBiataDpGIo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
 
