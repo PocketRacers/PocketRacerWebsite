@@ -1084,7 +1084,10 @@ hr{
 .block-img.w-100{
     max-width: 100%;
 }
-
+#build-timelapse {
+    background-color: #F2F5F7; /* Light grey background color */
+  }
+  
 #preparing{
     background: #dae6ec;
 }
