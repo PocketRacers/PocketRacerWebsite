@@ -17,7 +17,12 @@
     <link href="assets/css/style.css" rel="stylesheet">
 
     
-
+    <script>
+      var authenticated = sessionStorage.getItem('authenticated');
+      if (!authenticated) {
+          window.location.href = "login.html";
+      }
+</script>
 
 <style>
   .image-container img {

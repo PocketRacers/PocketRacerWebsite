@@ -16,7 +16,12 @@
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 
-  
+  <script>
+    var authenticated = sessionStorage.getItem('authenticated');
+    if (!authenticated) {
+        window.location.href = "login.html";
+    }
+</script>
   
   <style type="text/css">
     .heading3 {
