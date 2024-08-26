@@ -144,6 +144,7 @@
             <a href="#electronics-installation">Electronics System Installation</a>
             <a href="#chassis-installation">Chassis Installation</a>
             <a href="#assembly-FAQs">Assembly FAQs</a>
+            <a href="#ch-SSH">Connecting & Hotspotting via SSH</a>
           </nav>
         </div>
         <div class="main-body-right">
@@ -508,6 +509,62 @@
               </div>
             </div>
           </section>
+
+          <section id="ch-SSH">
+            <div class="container">
+              <h2 class="mb-3 text-center heading1" data-aos="fade-up">Connecting & Hotspotting via SSH</h2>
+              <h4 class="mb-2 fs-5">General Setup:</h4>
+              <ul class="decimal mb-4">
+                <li>Always charge batteries as a set.</li>
+                <li>Secure batteries and ensure wiring is tucked under the rubber band.</li>
+                <li>Avoid touching the camera lens to prevent data shifts.</li>
+                <li>Refrain from touching the rear of the car due to high temperatures.</li>
+              </ul>
+              <h4 class="mb-2 fs-5">Connection and Setup:</h4>
+              <ul class="mb-3">
+                <li> Turn on the mobile hotspot (Windows: SSID "hello", password "farewell"; Ubuntu: activate WiFi hotspot).</li>
+                <li> Insert freshly charged batteries.</li>
+                <li> Wait for the hotspot to detect an IP address (Ubuntu: use `arp -a` in terminal to find the IP address of the Raspberry Pi). Each SD card has a unique address—make a note of this to easily identify the correct Raspberry Pi in future sessions.</li>
+                <li> Open a terminal (Windows) or terminal (Ubuntu).</li>
+                <li> Connect via SSH: `ssh pi@IP_ADDRESS`.</li>
+                <li> Enter password "farewell" when prompted.</li>
+                <li> Once logged in, activate the PWM by typing `sudo pigpiod`.</li>
+                <li> Navigate to scripts directory: `cd miniz/scripts`.</li>
+              </ul>
+              <h4 class="mb-2 fs-5">Collecting Data:</h4>
+              <ul class="mb-3">
+                <li> Activate the Bluetooth controller by pressing the smallest button on top.</li>
+                <li> Start Bluetooth device scanning: `bluetoothctl scan on`; look for the device labeled "PRO CONTROLLER". Each controller has a unique address—connect to each controller initially to identify its unique address. Make a detailed note of these addresses so you can easily recognize and connect to the correct controller in future uses.</li>
+                <li> Connect to the controller: `bluetoothctl connect ADDRESS`.</li>
+                <li> Start the data collection script: `<code>python3 collect.py</code>`.</li>
+                <li> Record data in 1-minute intervals; the system pauses and restarts after 10 seconds.</li>
+                <li> Allow the car to rest for 1 minute after data collection before shutting down.</li>
+                <li> Recharge the used batteries.</li>
+                <li> Repeat the process as needed for additional data collection.</li>
+              </ul>
+              <h4 class="mb-2 fs-5">Deploying the Trained Model:</h4>
+              <ul class="mb-3">
+                <li> Open the deployment script for modifications: `sudo nano final3d.py`. Adjust the hyperparameters for desired speed at the beginning of your deployment session.</li>
+                <li> Launch the deployment script: `<code>python3 final3d.py</code>`.</li>
+                <li> Position the RC car at the original location where the model was trained to ensure consistency.</li>
+                <li> Carefully observe the car's behavior during operation. Note any steering issues or excessive speed. If the car steers off-course due to tire conditions or debris, or if the speed is inconsistent (potentially due to variations in battery power output), terminate the script by pressing `Ctrl+C`.</li>
+                <li> Re-open the deployment script for further modifications: `<code>sudo nano final3d.py</code>`.</li>
+                <li> Fine-tune the hyperparameters at the end of the script based on your observations.</li>
+                <li> Redeploy the script and repeat the steps until the car reliably completes laps autonomously.</li>
+              </ul>
+            </div>
+          </section>
+          <style type="text/css">
+            #ch-SSH ul{
+              padding-left: 20px;
+            }
+            #ch-SSH  li{
+              list-style: upper-alpha;
+            }
+            #ch-SSH .decimal li{
+              list-style: decimal;
+            }
+          </style>
 
           
         </div>
