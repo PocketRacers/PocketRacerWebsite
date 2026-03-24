@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Build</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+
+
+<style>
+  .image-container img {
+      max-width: 70%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+  }
+</style>
+<style>
+  .vc-block-container {
+    display: flex;
+    justify-content: center; /* Center align the container */
+    text-align: left; /* Left align the text within the container */
+  }
+  .vc-block {
+    margin: 10px; /* Add some margin to each block */
+  }
+</style>
+<style>
+  .vc-block {
+    flex: 1 1 20%; /* Adjust the width percentage as needed */
+    min-width: 150px; /* Ensure blocks don't get too narrow on small screens */
+  }
+  .vc-block:nth-child(1) {
+    flex: 1 1 25%; /* Give the "Chassis" section more space */
+  }
+  .vc-block.camera {
+    flex: 1 1 100%; /* Make the "Camera" section take full width */
+    text-align: center; /* Center the content of the "Camera" section */
+  }
+
+  .heading3 {
+    color: black;
+  }
+</style>
+
+
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-lg-center top-header">
+          <div class="logo" data-aos="fade-left">
+            <a href="index.html" class="logo-pc"><img src="assets/images/logo.png" alt="logo" width="120"></a>
+          </div>
+          <nav class="navbar navbar-expand-lg p-0" data-aos="fade-right">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="top-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <div class="collapse navbar-collapse" id="top-menu">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="build.html"> Build </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="parts.html"> Parts </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="train.html"> Train </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="education.html"> Education </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="team.html"> Team </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <section class="p-0 banner bg-img">
+        <img src="assets/images/bg.jpg" alt="Pocket Racer" data-aos="fade-up">
+        <!-- <div class="bg-img-content">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 ms-auto">
+                  <h1 class="page-heading text-start mb-5 my-lg-3" data-aos="fade-right" style="color: white;">Pocket Racer</h1>
+                  <div class="table-content" data-aos="fade-left">
+                    <h3 class="heading3 text-start" style="color: white;">Table of Content</h3>
+                    <ul class="decimal">
+                      <li><a href="#introduction">Introduction</a></li>
+                      <li><a href="#background">Background</a></li>
+                      <li><a href="#bill-materials">Bill of Materials</a>
+                        <ul>
+                          <li><a href="#vehicle-components">Vehicle Components</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+      </section>
+
+
+      <div class="d-flex justify-content-between position-relative main-body">
+        <div class="main-body-left h-100 d-block">
+          <nav id="content-blocks" class="d-flex flex-column align-items-stretch p-3" data-aos="fade-right">
+            <a href="#introduction">Introduction</a>
+            <a href="#background">Background</a>
+            <a href="#bill-materials">Bill of Materials</a>
+            <a href="#build-timelapse">Build Timelapse</a>
+            <a href="#preparing">Preparing</a>
+            <a href="#disassembling">Disassembling</a>
+            <a href="#motor-change">Motor Change</a>
+            <a href="#camera-installation">Camera Installation</a>
+            <a href="#electronics-installation">Electronics System Installation</a>
+            <a href="#chassis-installation">Chassis Installation</a>
+            <a href="#assembly-FAQs">Assembly FAQs</a>
+            <a href="#ch-SSH">Connecting & Hotspotting via SSH</a>
+          </nav>
+        </div>
+        <div class="main-body-right">
+          <section id="introduction">
+            <div class="container">
+              <h3 class="mb-3 text-center heading1" data-aos="fade-right">Introduction</h3>
+              <p data-aos="fade-left">One of the most <b>pressing challenges</b> within autonomous mobility lies in high-speed racing scenarios where vehicles must interact and overtake at high speeds. These scenarios are particularly challenging because autonomous vehicles require advanced data-driven methods to identify the intent of other vehicles while simultaneously planning their trajectories. Although full-scale, high-speed testbeds such as Roborace exist, their space and cost requirements are highly demanding. To address these issues, we created Pocket Racer, an open-source, 1:28 scale autonomous racing platform designed for high-speed research that is <b>accessible to everyone</b>. Our platform operates in typical indoor environments like university hallways or classrooms, making high-speed autonomous driving research more accessible and feasible.</p>
+            </div>
+          </section>
+
+          <section id="background">
+            <div class="container">
+              <h3 class="mb-3 text-center heading1" data-aos="fade-left">Background</h3>
+              <p data-aos="fade-right">Building a scaled-down autonomous vehicle is quite a complex task. Please keep in mind the following considerations:</p>
+              <div class="row mt-4 justify-content-around">
+                <div class="col-md-5" data-aos="fade-left">
+                  <h3 class="heading3">Budget</h3>
+                  <p>Although the material cost of building a vehicle is less than 250 USD, several tools are needed:</p>
+                  <ol class="my-4 disc">
+                    <li>Basic electronic tools (i.e. screwdriver, long nose, soldering tool, glue gun, gear puller recommended)</li>
+                    <li>A computer with a GPU (alternative: cloud computing)</li>
+                    <li>3D printer</li>
+                  </ol>
+                  <p>Thus, the <b>real cost</b> of having a fully-functioning vehicle can fluctuate (depending on which tools are readily accessible or not). Please keep this in mind before jumping immediately into the project.</p>
+                </div>
+                <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-right">
+                  <h3 class="heading3">Knowledge</h3>
+                  <p>We provide <b>two primary methodologies</b> for autonomous vehicle racing on our platform. These methods and their resources are detailed below:</p>
+                  <ol class="my-4 disc">
+                    <li><b>Deep Learning</b>: We recommend viewing <a href="https://youtu.be/5tvmMX8r_OM">university lectures</a> on Deep Learning via YouTube. Our platform uses Vision Transformers (RaceViT) tailored for autonomous racing, leveraging Learning from Demonstrations (LfD) shared across multiple vehicles.</li>
+                    <li><b>Sensor Fusion and Probabilistic Robotics Methods</b>: We recommend the <a href="https://www.amazon.com/Probabilistic-Robotics-INTELLIGENT-ROBOTICS-AUTONOMOUS/dp/0262201623">Probabilistic Robotics (Intelligent Robotics and Autonomous Agents series) 1st Edition book</a> by Sebastian Thrun for a deeper understanding of sensor fusion and probabilistic methods.</li>
+                  </ol>
+                  <p>Most of the code we use is in <b>Python</b>. Familiarity with deep learning frameworks is essential. While the project initially utilized Keras, we have transitioned to TensorFlow for better performance and deployment capabilities. PyTorch is also a viable alternative, given its recent advancements in deployment.</p>
+                </div>
+              </div>
+              <div class="row mt-4 justify-content-around">
+                <div class="col-md-5" data-aos="fade-right">
+                  <h3 class="heading3">3D-Printing</h3>
+                  <p>It is <b>necessary</b> to have access to a 3D printer. Because the parts are (at most) palm-sized, 3D printers around less than 100 USD (such as the Sondori Pico 3D printer) will be enough. We also recommend the Prusa Mini+ or MK3S+ with +0.02mm tolerance PETG filament if you are serious about getting quality prints. Knowing how to use Computer-Aided Design (CAD) is also necessary, provided that you are interested in making modifications to your vehicle in the future.</p>
+                </div>
+                <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-left">
+                  <h3 class="heading3">Electronics</h3>
+                  <p>You should be able to understand how to use the following as well:</p>
+                  <ol class="my-4 disc">
+                    <li>Raspberry Pi with General Purpose Input Output (GPIO) ports</li>
+                    <li>Hardware pulse width modulation (PWM) signaling and UART protocols</li>
+                    <li>Solder wires and understand how remote-controlled cars work</li>
+                    <li>The basics of First-Person-View (FPV) equipment (if you plan on driving your car with an FPV remote steering wheel setup)</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="row mt-4 justify-content-around">
+                <div class="col-md-12" data-aos="fade-up">
+                  <p>For detailed code, please visit our <a href="https://github.com/PocketRacers/PocketRacerRepo" style="text-decoration: underline; color: blue;">GitHub repository</a></p>
+                </div>
+              </div>
+            </div>
+          </section>
+            
+          <section id="bill-materials">
+            <div class="container">
+              <h2 class="mb-3 text-center heading1" data-aos="fade-right">Bill of Materials</h2>
+              <p data-aos="fade-left">Several materials are needed to successfully build a Pocket Racer autonomous vehicle. Our bill of materials will be periodically updated to reflect the latest revisions. Note that the <b>cost of components does not include shipping costs</b>. Additionally, there are a total of <b>three methods</b> for controlling the vehicle during data collection. The <b>recommended method</b> is the low latency option, as it offers the fastest communication protocols for real-time control and data collection.</p>
+              <div id="vehicle-components" class="mt-5">
+                <h3 class="heading3" data-aos="fade-down">Vehicle Components</h3>
+                <div class="image-container">
+                  <img src="assets/images/diagram.png" alt="Vehicle Components" data-aos="fade-up">
+                </div>
+              </div>
+              <div class="d-flex flex-wrap mt-4 justify-content-center">
+                <div class="vc-block" data-aos="fade-right">
+                    <h4>Chassis</h4>
+                    <ul>
+                        <li>1. Kyosho Mini Z series tires</li>
+                        <li>2. Wltoys A969 RTR</li>
+                    </ul>
+                </div>
+                <div class="vc-block" data-aos="fade-left">
+                    <h4>3D Printed Parts</h4>
+                    <ul>
+                        <li>3. 3D printed Battery Mount</li>
+                        <li>4. 3D printed Motor Mount</li>
+                        <li>5. 3D printed Frame</li>
+                    </ul>
+                </div>
+                <div class="vc-block" data-aos="fade-right">
+                    <h4>Powertrain</h4>
+                    <ul>
+                        <li>6. ESC</li>
+                        <li>7. 2S Lipo Batteries</li>
+                        <li>8. Brushless Motor</li>
+                    </ul>
+                </div>
+                <div class="vc-block" data-aos="fade-right">
+                    <h4>Compute Unit</h4>
+                    <ul>
+                        <li>9. Raspberry Pi Zero 2w</li>
+                        <li>10. 32GB SD card</li>
+                        <li>11. 5v DC fan</li>
+                    </ul>
+                </div>
+                <div class="vc-block camera" data-aos="fade-left">
+                    <h4>Camera</h4>
+                    <ul>
+                      <li>12. IMX708 Arducam Camera</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="build-timelapse">
+            <div class="container">
+              <h2 class="mb-3 text-center heading1" data-aos="fade-right">Build Timelapse</h2>
+              <div class="my-4 mx-0 px-0 mx-md-5 px-md-5" data-aos="fade-left">
+                <div class="ratio ratio-16x9">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/JGyEpZcslH0?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="preparing">
+            <div class="container">
+              <h2 class="mb-3 text-center heading1" data-aos="fade-up">Preparing</h2>
+              <h2 class="mb-3 text-start heading2" data-aos="fade-right">What you need</h2>
+              <ul class="what-need ps-4" data-aos="fade-left">
+                <li>3d printed chassis</li>
+                <li>Wltoys K969 or K989</li>
+                <li>Raspberry pi zero 2w</li>
+                <li>Simonk 30A ESC</li>
+                <li>Rocket mini DRZ Atomic Pro 3500KV <span>(Use one with similar spec if not available)</span></li>
+                <li>Arducam</li>
+                <li>M12 lens</li>
+                <li>5v DC fan <span>(20mm*20mm*10mm)</span></li>
+                <li>Front rims & tires</li>
+                <li>Rear rims & tires <span>(wide type recommended)</span></li>
+                <li>Screws</li>
+                <li>Tools <span>(Screw driver, long nose, soldring machine, gear puller recommended)</span></li>
+              </ul>
+              <h2 class="mb-3 text-start mt-4 heading2" data-aos="fade-right">Preparing rims & tires</h2>
+              <img src="assets/images/build-img1.png" class="block-img" data-aos="fade-left">
+              <p data-aos="fade-right">If your RC’s stock tires have grooves/patterns or are not made of rubber, changing them to slick rubber tires is recommended to enhance tire grip. Equipping rims and tires for Kyosho Mini Z series work for this set. Remember to select rims according to the wheel hub’s shape, which is square for this set. </p>
+              <h2 class="mb-3 text-start mt-4 heading2" data-aos="fade-left">3d printing</h2>
+              <img src="assets/images/CAD.png" class="block-img" data-aos="fade-right">
+              <p data-aos="fade-left">Print ‘Chassis.stl’ and ‘motormount.stl’ using 3d printer. Choose the highest fill rate possible to ensure rigidity for reducing impact on camera</p>
+              <h2 class="mb-3 text-start mt-4 heading2" data-aos="fade-right">Preparing 3d printed Chassis</h2>
+              <img src="assets/images/RemoveS.png" class="block-img" data-aos="fade-left">
+              <p data-aos="fade-right">Remove all the supports. Note that there is a slot at the back of camera holer for arducam’s CSI cable, and it can take time and effort to be destroyed.</p>
+              <h2 class="mb-3 text-start mt-4 heading2" data-aos="fade-right">Prepare RC</h2>
+              <img src="assets/images/build-img2.png" class="block-img" data-aos="fade-left">
+              <p data-aos="fade-right">This manual is based on Wltoys k969. You can also use the k989 or 284131 from Wltoys.</p>
+              <img src="assets/images/build-img3.png" class="w-100 block-img" data-aos="fade-left">
+              <p data-aos="fade-right">Disassemble cowl by detaching four R-shaped pins.</p>
+              <img src="assets/images/build-img4.png" class="w-100 block-img" data-aos="fade-left">
+              <p data-aos="fade-right">Unscrew cowl mounts at the front and rear.</p>
+              <img src="assets/images/build-img5.png" class="w-100 block-img" data-aos="fade-left">
+              <p data-aos="fade-right">Disconnect servo motor with the switch box. <br>Detach upper body plate by unscrewing the 5 points as shown.</p>
+              <img src="assets/images/build-img6.png" class="w-100 block-img" data-aos="fade-left">
+              <p data-aos="fade-right">Take all the wheels off.</p>
+              <img src="assets/images/build-img7.png" class="w-100 block-img" data-aos="fade-left">
+              <p data-aos="fade-right">Unscrew everything except battery holer and separate them from the lower body plate. <br> Take the battery out by removing R-shaped pin of the battery holder.</p>
+              <h2 class="mb-3 text-start mt-4 heading2" data-aos="fade-left">Solder electronics</h2>
+              <img src="assets/images/wire.png" class="w-100 block-img" data-aos="fade-right">
+              <p data-aos="fade-left">Solder the electronics according to this wiring diagram.</p>
+            </div>
+          </section>
+
+          <section id="disassembling">
+            <div class="container">
+              <h2 class="mb-3 text-center heading1" data-aos="fade-up">Disassembling</h2>
+              <h2 class="mb-3 text-start mt-4 heading2" data-aos="fade-left">Remove front diff</h2>
+              <img src="assets/images/build-img9.png" class="w-100 block-img" data-aos="fade-right">
+              <p data-aos="fade-left">Unscrew shock absorber mount at the front.</p>
+              <img src="assets/images/build-img10.png" class="w-100 block-img" data-aos="fade-right">
+              <p data-aos="fade-left">Unscrew and pull out the bolts holding front upper arms.</p>
+              <div class="row">
+                <div class="col-md-6">
+                <img src="assets/images/build-img11.png" class="w-100 block-img" data-aos="fade-right">
+                  <p data-aos="fade-left">Unscrew front differential case.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/build-img12.png" class="w-100 block-img" data-aos="fade-right">
+                  <p data-aos="fade-left">Remove front differential.</p>
+                </div>
+              </div>
+                  <img src="assets/images/build-img13.png" class="w-100 block-img" data-aos="fade-right">
+              <p data-aos="fade-left">Get this front wheel hub assembly out of knuckle</p>
+              <img src="assets/images/build-img14.png" class="w-100 block-img" data-aos="fade-right">
+              <p data-aos="fade-left">Detach rubber ring. <br> Push the small shaft out to separate wheel hub from cv joint</p>
+              <img src="assets/images/build-img15.png" class="w-100 block-img" data-aos="fade-right">
+              <p data-aos="fade-left">Attach rubber ring to the wheel hub again and put it back into knuckle. <br> Do not assemble the front differential case again yet.</p>
+            </div>
+          </section>
+
+          <section id="motor-change">
+            <div class="container">
+              <h2 class="mb-3 text-center heading1" data-aos="fade-up">Motor Change</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="assets/images/build-img16.png" class="w-100 block-img" data-aos="fade-right">
+                  <p data-aos="fade-up">Unscrew toe control bar at the rear.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/build-img17.png" class="w-100 block-img" data-aos="fade-left">
+                  <p data-aos="fade-up">Unscrew rear shock absorber mount.</p>
+                </div>
+                <div class="col-md-12">
+                  <img src="assets/images/build-img18.png" class="w-100 block-img" data-aos="fade-left">
+                  <p class="text-center" data-aos="fade-up">Unscrew and pull out bolts holding rear upper arms.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/build-img19.png" class="w-100 block-img" data-aos="fade-right">
+                  <p data-aos="fade-up">Unscrew and disassemble rear diff case.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/build-img20.png" class="w-100 block-img" data-aos="fade-left">
+                  <p data-aos="fade-up">Pull out the driveshaft and motor mount assembly from front and rear differential case.</p>
+                </div>
+                <div class="col-md-12">
+                  <img src="assets/images/build-img21.png" class="w-100 block-img" data-aos="fade-left">
+                  <p class="text-center" data-aos="fade-up">Disassemble all the gears and motor mount assembly from drive shaft</p>
+                </div>
+                <div class="col-md-12">
+                  <p class="text-center" data-aos="fade-up">Screw the new motor to the printed motor mount. </p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/build-img22.png" class="w-100 block-img" data-aos="fade-right">
+                  <p data-aos="fade-up">Assemble nylon gears to connect motor and driveshaft. Use the smallest gear (15T) for driveshaft and biggest one (24?T) for the motor.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/build-img23.png" class="w-100 block-img" data-aos="fade-left">
+                  <p data-aos="fade-up">Attach rear differential’s pinion gear to driveshaft.</p>
+                </div>
+                <div class="col-md-12">
+                  <img src="assets/images/build-img24.png" class="w-100 block-img" data-aos="fade-left">
+                  <p class="text-center" data-aos="fade-up">Assemble rear differential system. Put the bearing holding the differential gear at the right place. </p>
+                </div>
+                <div class="col-md-12">
+                  <img src="assets/images/build-img25.png" class="w-100 block-img" data-aos="fade-left">
+                  <p class="text-center" data-aos="fade-up">Screw shock absorber mount, rear differential case, rear upper arm and toe control bar. </p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/build-img26.png" class="w-100 block-img" data-aos="fade-right">
+                  <p data-aos="fade-up">Screw shock absorber mount, front differential case and front upper arm.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/build-img27.png" class="w-100 block-img" data-aos="fade-left">
+                  <p data-aos="fade-up">Put all the wheels back on.</p>
+                </div>
+                <div class="col-md-12">
+                  <img src="assets/images/build-img28.png" class="w-100 block-img" data-aos="fade-left">
+                  <p class="text-center" data-aos="fade-up">Screw both differential cases, servo motor and motor mount to body plate. Put the battery back into battery holder.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="camera-installation">
+            <div class="container">
+              <h2 class="mb-3 text-center heading1" data-aos="fade-up">Camera Installation</h2>
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="assets/images/build-img29.png" class="w-100 block-img" data-aos="fade-right">
+                  <p class="text-center" data-aos="fade-up">Pull out the camera connector pin of arducam and change the CSI cable to white, thinner one.</p>
+                </div>
+                <div class="col-md-12">
+                  <img src="assets/images/build-img30.png" class="w-100 block-img" data-aos="fade-left">
+                  <p class="text-center" data-aos="fade-up">Penetrate camera cable through the slot behind chassis head.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/build-img31.png" class="w-100 block-img" data-aos="fade-left">
+                  <p data-aos="fade-up">Push the arducam into the space of chassis head. Chassis can fix the camera rigidly enough without adhesive, but glue them if you need more rigidity.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/build-img32.png" class="w-100 block-img" data-aos="fade-left">
+                  <p data-aos="fade-up">The camera pin on pi zero board works just the same. Connect the other end of the camera’s CSI cable here.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="electronics-installation">
+            <div class="container">
+              <h2 class="mb-3 text-center heading1" data-aos="fade-up">Electronics System Installation</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="assets/images/rasIn.png" class="w-100 block-img" data-aos="fade-right">
+                  <p data-aos="fade-up">Screw Raspberry pi 2w zero board on chassis using 4 M2 12mm screws and nuts.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/fanIn.png" class="w-100 block-img" data-aos="fade-left">
+                  <p data-aos="fade-up">Screw 5v dc fan on chassis using 4 M2 20mm screws and nuts.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/escIn.png" class="w-100 block-img" data-aos="fade-left">
+                  <p data-aos="fade-up">Install esc to chassis using adhesive.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/images/screwIn.png" class="w-100 block-img" data-aos="fade-left">
+                  <p data-aos="fade-up">Screw chassis to RC</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="chassis-installation">
+            <div class="container">
+              <h2 class="mb-3 text-center heading1" data-aos="fade-up">Install Chassis</h2>
+              <div class="row">
+                <img src="assets/images/build-img0.png" class="block-img" data-aos="fade-right">
+                <div class="container text-center">
+                  <p data-aos="fade-left">Screw chassis to RC</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="assembly-FAQs">
+            <div class="container">
+              <h2 class="mb-3 text-center heading1" data-aos="fade-up">Assembly FAQs</h2>
+              <div class="faq-block">
+                <h3 class="ques" data-aos="fade-left">Is it mandatory to change wheels and tires?</h3>
+                <div class="ans" data-aos="fade-right">
+                  <img src="assets/images/build-img1.png" class="block-img">
+                  <p>It is optional. However, using grip tires is highly recommended since the Pocket Racer is designed to race indoors.</p>
+                </div>
+              </div>
+              <div class="faq-block">
+                <h3 class="ques" data-aos="fade-left">Which tool should I use to change wheels and tires?</h3>
+                <div class="ans" data-aos="fade-right">
+                  <img src="assets/images/build-img-faq-2.png" class="block-img">
+                  <p>Using a wheel wrench is ideal to screw / unscrew wheels. However, you can also use a long nose plier, too.</p>
+                </div>
+              </div>
+              <div class="faq-block">
+                <h3 class="ques" data-aos="fade-left">Can I use any other motor than DRZ Atomic pro 3500kv?</h3>
+                <div class="ans" data-aos="fade-right">
+                  <img src="assets/images/build-img-faq-3.png" class="block-img">
+                  <p>If it’s hard to get the specific motor, you can use another sensored BLDC motor as long as it can endure 30A current from.the ESC.</p>
+                </div>
+              </div>
+              <div class="faq-block">
+                <h3 class="ques" data-aos="fade-left">Printed motor mount looks different compared to the one in the manual</h3>
+                <div class="ans" data-aos="fade-right">
+                  <img src="assets/images/build-img-faq-4.png" class="block-img">
+                  <p>The one you printed is the latest version of the motor mount. It has multiple holes for mounting the motor to allow using different gear ratios.</p>
+                </div>
+              </div>
+              <div class="faq-block">
+                <h3 class="ques" data-aos="fade-left">Bolting on the chassis is too hard.</h3>
+                <div class="ans" data-aos="fade-right">
+                  <img src="assets/images/build-img-faq-5.png" class="block-img">
+                  <p>Although the chassis have holes for all the bolting places, but the chassis is printed nearly 100% fill. It might be hard to bolt on the chassis, especially at the step where you mount chassis on differential covers. I recommend tapping the hole using M2 screws first, and then applying socket set screws for precise bolting.</p>
+                </div>
+              </div>
+              <div class="faq-block">
+                <h3 class="ques" data-aos="fade-left">Wheel hub breaks away from the knuckle and diff gear too easily.</h3>
+                <div class="ans" data-aos="fade-right">
+                  <img src="assets/images/build-img-faq-6.png" class="block-img">
+                  <p>Wheel hub can be fixed to knuckle when a wheel nut is applied on it. You can put the wheel on in advance if needed.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="ch-SSH">
+            <div class="container">
+              <h2 class="mb-3 text-center heading1" data-aos="fade-up">Connecting & Hotspotting via SSH</h2>
+              <h4 class="mb-2 fs-5">General Setup:</h4>
+              <ul class="decimal mb-4">
+                <li>Always charge batteries as a set.</li>
+                <li>Secure batteries and ensure wiring is tucked under the rubber band.</li>
+                <li>Avoid touching the camera lens to prevent data shifts.</li>
+                <li>Refrain from touching the rear of the car due to high temperatures.</li>
+              </ul>
+              <h4 class="mb-2 fs-5">Connection and Setup:</h4>
+              <ul class="mb-3">
+                <li> Turn on the mobile hotspot (Windows: SSID "hello", password "farewell"; Ubuntu: activate WiFi hotspot).</li>
+                <li> Insert freshly charged batteries.</li>
+                <li> Wait for the hotspot to detect an IP address (Ubuntu: use `arp -a` in terminal to find the IP address of the Raspberry Pi). Each SD card has a unique address—make a note of this to easily identify the correct Raspberry Pi in future sessions.</li>
+                <li> Open a terminal (Windows) or terminal (Ubuntu).</li>
+                <li> Connect via SSH: `ssh pi@IP_ADDRESS`.</li>
+                <li> Enter password "farewell" when prompted.</li>
+                <li> Once logged in, activate the PWM by typing `sudo pigpiod`.</li>
+                <li> Navigate to scripts directory: `cd miniz/scripts`.</li>
+              </ul>
+              <h4 class="mb-2 fs-5">Collecting Data:</h4>
+              <ul class="mb-3">
+                <li> Activate the Bluetooth controller by pressing the smallest button on top.</li>
+                <li> Start Bluetooth device scanning: `bluetoothctl scan on`; look for the device labeled "PRO CONTROLLER". Each controller has a unique address—connect to each controller initially to identify its unique address. Make a detailed note of these addresses so you can easily recognize and connect to the correct controller in future uses.</li>
+                <li> Connect to the controller: `bluetoothctl connect ADDRESS`.</li>
+                <li> Start the data collection script: `<code>python3 collect.py</code>`.</li>
+                <li> Record data in 1-minute intervals; the system pauses and restarts after 10 seconds.</li>
+                <li> Allow the car to rest for 1 minute after data collection before shutting down.</li>
+                <li> Recharge the used batteries.</li>
+                <li> Repeat the process as needed for additional data collection.</li>
+              </ul>
+              <h4 class="mb-2 fs-5">Deploying the Trained Model:</h4>
+              <ul class="mb-3">
+                <li> Open the deployment script for modifications: `sudo nano final3d.py`. Adjust the hyperparameters for desired speed at the beginning of your deployment session.</li>
+                <li> Launch the deployment script: `<code>python3 final3d.py</code>`.</li>
+                <li> Position the RC car at the original location where the model was trained to ensure consistency.</li>
+                <li> Carefully observe the car's behavior during operation. Note any steering issues or excessive speed. If the car steers off-course due to tire conditions or debris, or if the speed is inconsistent (potentially due to variations in battery power output), terminate the script by pressing `Ctrl+C`.</li>
+                <li> Re-open the deployment script for further modifications: `<code>sudo nano final3d.py</code>`.</li>
+                <li> Fine-tune the hyperparameters at the end of the script based on your observations.</li>
+                <li> Redeploy the script and repeat the steps until the car reliably completes laps autonomously.</li>
+              </ul>
+            </div>
+          </section>
+          <style type="text/css">
+            #ch-SSH ul{
+              padding-left: 20px;
+            }
+            #ch-SSH  li{
+              list-style: upper-alpha;
+            }
+            #ch-SSH .decimal li{
+              list-style: decimal;
+            }
+          </style>
+
+          
+        </div>
+      </div>
+
+
+      <footer>
+        <div class="container text-center">
+          <p class="mb-2">Natural Sciences Division. Pepperdine University. Malibu, CA, USA, 90263</p>
+          <p>Licensed under the <a href="LICENSE.txt">MIT License</a>.</p>
+
+          <p>&copy; All right Reserved</p>
+        </div>
+      </footer>
+
+
+    <!-- Back to Top -->
+    <button type="button" class="back-to-top"></button>
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            const $navLinks = $('#content-blocks a');
+            const $sections = $('section');
+
+            function onScroll() {
+                const scrollPos = $(document).scrollTop();
+
+                $sections.each(function() {
+                    const $section = $(this);
+                    const sectionTop = $section.offset().top - 130; // Adjust based on the fixed header height
+                    const sectionBottom = sectionTop + $section.outerHeight();
+
+                    if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                        const id = $section.attr('id');
+                        $navLinks.removeClass('active');
+                        $navLinks.filter(`[href="#${id}"]`).addClass('active');
+                    }
+                });
+            }
+
+            $(document).on('scroll', onScroll);
+
+            // Call onScroll to set the active class on load
+            onScroll();
+        });
+    </script>
+  </body>
+</html>
+
+
